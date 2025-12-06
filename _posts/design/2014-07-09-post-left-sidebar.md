@@ -29,5 +29,9 @@ show_meta: false
 
 
 ## Other Post Formats
+### design
 {: .t60 }
 {% include list-posts tag='post format' %}
+### lx
+{: .t60 }
+{% include list-posts tag='LX' %}
