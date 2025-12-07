@@ -6,11 +6,29 @@
 		window.open("https://www.google.com/search?q=" + query + "+site:" + "{{ google_search_site | cgi_escape }}");
 	}
 </script>
+<script src="https://unpkg.com/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
 
-<form id="search" onsubmit="google_search(); return false;">
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/assets/js/data/search.json',
+    searchResultTemplate: '{% raw %}{% include_cached search-results.html %}{% endraw %}',
+  })
+</script>
+<form id="search" onsubmit="SimpleJekyllSearch(); return false;">
+	<input type="text" id="search-input" placeholder="{{ site.data.language.enter_search_term }}">
+</form>
+<!-- <noscript>
+	Search <a href="https://www.google.com/search?q=site:{{ google_search_site | cgi_escape }}" target="_blank">Google</a> for:
+	<pre><code>search-term site:{{ google_search_site }}</code></pre>
+</noscript> -->
+
+<!-- <form id="search" onsubmit="google_search(); return false;">
 	<input type="text" id="google-search" placeholder="{{ site.data.language.enter_search_term }}">
 </form>
 <noscript>
 	Search <a href="https://www.google.com/search?q=site:{{ google_search_site | cgi_escape }}" target="_blank">Google</a> for:
 	<pre><code>search-term site:{{ google_search_site }}</code></pre>
-</noscript>
+</noscript> -->
+<div id="search-results">not yet found</div>

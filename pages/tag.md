@@ -5,7 +5,7 @@ title: "tags!"
 subheadline: "tag responsive"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/design/"
+permalink: "/tags/"
 ---
 <ul>
     {% for post in site.categories.design %}
