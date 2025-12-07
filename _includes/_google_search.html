@@ -1,131 +1,24 @@
-<!-- {% comment %}TODO consider https://developers.google.com/custom-search/docs/element{% endcomment %}
-{% capture google_search_site %}{{ site.url }}{{ site.baseurl }}/{% endcapture %} -->
-<!-- <script language="Javascript" type="text/javascript">
-	function google_search() {
-		var query = document.getElementById("google-search").value;
-		window.open("https://www.google.com/search?q=" + query + "+site:" + "{{ google_search_site | cgi_escape }}");
-	}
-</script> -->
 <script src="/DC-LX/assets/simple-jekyll-search/simple-jekyll-search.min.js"></script>
-<script language="Javascript" type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-        SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('search-results'),
-            json: '/DC-LX/assets/js/data/search.json',
-            searchResultTemplate: '<article class="px-1 px-sm-2 px-lg-4 px-xl-0"><header><h2><a href="{url}">{title}</a></h2><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div></header></article>',
-            noResultsText: '<p class="mt-5">Oops! No results found.</p>'//,
-            // templateMiddleware: function(prop, value, template) {
-            //     if (prop === 'categories') {
-            //         if (value === '') {
-            //             return `${value}`;
-            //         } else {
-            //             return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
-            //         }
-            //     }
-            //     if (prop === 'tags') {
-            //         if (value === '') {
-            //             return `${value}`;
-            //         } else {
-            //             return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
-            //         }
-            //     }
-            // }
-        });
-    });
-</script>
-<script language="Javascript" type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-        SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input'),
-            resultsContainer: document.getElementById('search-results'),
-            json: '/DC-LX/assets/js/data/search.json',
-            searchResultTemplate: '<article class="px-1 px-sm-2 px-lg-4 px-xl-0"><header><h2><a href="{url}">{title}</a></h2><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div></header></article>',
-            noResultsText: '<p class="mt-5">Oops! No results found.</p>',
-			fuzzy: true,
-            templateMiddleware: function(prop, value, template) {
-                if (prop === 'categories') {
-                    if (value === '') {
-                        return `${value}`;
-                    } else {
-                        return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
-                    }
-                }
-                if (prop === 'tags') {
-                    if (value === '') {
-                        return `${value}`;
-                    } else {
-                        return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
-                    }
-                }
-            }
-        });
-    });
-</script>
-<script language="Javascript" type="text/javascript">
-    function callJekyllSearch(){
-	document.addEventListener('DOMContentLoaded', () => {
-        SimpleJekyllSearch({
-            searchInput: document.getElementById('search-input-m'),
-            resultsContainer: document.getElementById('search-results'),
-            json: '/DC-LX/assets/js/data/search.json',
-            searchResultTemplate: '<article class="px-1 px-sm-2 px-lg-4 px-xl-0"><header><h2><a href="{url}">{title}</a></h2><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div></header></article>',
-            noResultsText: '<p class="mt-5">Oops! No results found.</p>'//,
-            // templateMiddleware: function(prop, value, template) {
-            //     if (prop === 'categories') {
-            //         if (value === '') {
-            //             return `${value}`;
-            //         } else {
-            //             return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
-            //         }
-            //     }
-            //     if (prop === 'tags') {
-            //         if (value === '') {
-            //             return `${value}`;
-            //         } else {
-            //             return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
-            //         }
-            //     }
-            // }
-        });
-	});
-	const query = 	document.getElementById("search-input").value;
-	document.getElementById("search-results").innerHTML = query;
-}
-</script>
-<script>
-  SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input-m'),
-    resultsContainer: document.getElementById('search-results'),
-    json: '/DC-LX/assets/js/data/search.json',
-    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-    noResultsText: '<li>No results found</li>',
-    fuzzy: true
-  });
 
-</script>
-<!-- HTML elements for search -->
-<input type="text" id="search-input-d" placeholder="Search simple d..">
-<ul id="results-container"></ul>
-
-<!-- or without installing anything -->
-<!-- <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script> -->
-<script>
-var sjs = SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input-d'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '/DC-LX/assets/js/data/search.json',
-  searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
-})
-</script>
-
-<form id="search_m" onsubmit="callJekyllSearch();">
-	<input type="text" id="search-input-m" placeholder="{{ site.data.language.enter_search_term }}">
-</form>
-<div id="s1" class="align-items-center"> 
-	<i class="fas fa-search fa-fw"></i> 
-	<!-- <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> -->
-	<input id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search...">
+<div id="s1">
+    <input id="search-input" 
+           type="search" 
+           aria-label="search" 
+           autocomplete="off" 
+           placeholder="Search...">
 </div>
-<div id="search-results">not yet found</div>
-<p>search input</p>
+
+<div id="search-results"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('search-results'),
+        json: '/DC-LX/assets/js/data/search.json',
+        searchResultTemplate: '<article><header><h2><a href="{url}">{title}</a></h2><div class="post-meta">{categories} {tags}</div></header></article>',
+        noResultsText: '<p>No results found.</p>',
+        fuzzy: false
+    });
+});
+</script>
