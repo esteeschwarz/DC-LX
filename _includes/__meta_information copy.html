@@ -16,6 +16,7 @@
     {% if page.categories.size > 0 %}
       <div class="post-meta mb-3">
         <i class="far fa-folder-open fa-fw me-1"></i>
+		<span class="icon-archive pr20"></span>
         {% for category in page.categories %}
           <a href="{{ site.baseurl }}/{{ category | slugify | url_encode }}/"> {{ category | upcase }}</a>
           {%- unless forloop.last -%},{%- endunless -%}
@@ -38,6 +39,10 @@
       </div>
     {% endif %}
 
+				{% if page.categories != empty %}<span class="icon-archive pr20"> {{ page.categories | join: ' · ' | upcase }}{% endif %}</span>
+				<br />
+				<span class="pr20">{% for tag in page.tags %}<span class="icon-price-tag pr10"> {{tag}}</span> {% endfor %}</span>
+			</p>
 
 			{% if page.collection == "posts" %}
 			<div id="post-nav" class="row">
