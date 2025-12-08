@@ -2,7 +2,7 @@
 title: "coherence & proposition"
 subtitle: "measuring reference distance in :schizophrenia: threads"
 author: "st. schwarz"
-date: "`r Sys.Date()`"
+date: "2025-10-22"
 output: 
   revealjs::revealjs_presentation:
       css: '/Users/guhl/Documents/GitHub/SPUND-LX/FRZ/reveal.css'
