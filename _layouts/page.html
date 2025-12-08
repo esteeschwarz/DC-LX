@@ -36,6 +36,25 @@ format: post
 			{% endif %}
 
 			<div itemprop="articleSection">
+			<!-- <p>test modify page.html</p> -->
+			       <!-- <p>testmodify div content</p> -->
+          {% if page.class %}
+
+  <h1>info</h1>
+   {{ page.class }}
+       {% endif %}
+{% if page.task %}
+    <h1>task</h1>
+   {{ page.task }}
+    {% endif %}
+   {% if page.site_link_text and page.ids %}
+   <h1>view</h1>
+       <a href="../../essais/{{ page.ids }}"> {{ page.site_link_text }}</a>
+
+   {% endif %}
+   
+    <!-- {{ content }} -->
+ 
 			{{ content }}
 			</div>
 

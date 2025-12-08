@@ -241,10 +241,14 @@ blockquote {
     border: none;
     margin: 0 30px 30px 30px;
     color:  $grey-11;
+
 }
 
-    blockquote p {font-style: italic; color: $grey-10; }
-
+    blockquote p {font-style: italic; color: $grey-10; 
+        border-left: 4px solid lightgrey;
+        padding-left: 10px;
+    }
+/*
     blockquote:before {
         display:block;content:"\00BB";
         font-size:80px;
@@ -264,6 +268,7 @@ blockquote {
         bottom: 20px;
         color: $grey-11;
     }
+  */
     blockquote cite:before {
         content:"\2014 \0020"
     }
