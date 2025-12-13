@@ -1,8 +1,0 @@
-blockquote {
-  padding: .5rem 1rem;
-  border-left: .25rem solid var(--text-color);
-  color: var(--text-muted);
-}
-blockquote > p {
-  margin: 0;
-}

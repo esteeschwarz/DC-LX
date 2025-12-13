@@ -1,0 +1,166 @@
+/***********************************************
+ * CHIRPY ROUGE SYNTAX HIGHLIGHTING THEME
+ * extracted & rewritten as standalone CSS
+ ***********************************************/
+
+
+/* disable FR’s table-based code layout */
+.highlight table,
+.highlight tr,
+.highlight td {
+  display: block !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+}
+
+.highlight .gutter {
+  display: none !important;
+}
+
+.highlight .code {
+  padding: 0 !important;
+}
+
+
+/* Base */
+.highlight,
+.highlighter-rouge {
+  color: #e7e9db;
+  background: #1c1c1c;
+}
+
+.highlight pre,
+.highlighter-rouge pre {
+  background: inherit !important;
+  color: inherit !important;
+}
+
+/* --------------------------------------------
+ * General token colors (as in Chirpy)
+ * -------------------------------------------- */
+
+/* Comments */
+.highlight .c,
+.highlight .cd,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+  color: #6c6c6c;
+  font-style: italic;
+}
+
+/* Keywords */
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+  color: #cf8e6d;
+  font-weight: 600;
+}
+
+/* Strings */
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .ss,
+.highlight .s1 {
+  color: #98c379;
+}
+
+/* Numbers */
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+  color: #d19a66;
+}
+
+/* Booleans */
+.highlight .kc,
+.highlight .kp,
+.highlight .kr {
+  color: #e06c75;
+}
+
+/* Class names */
+.highlight .nc,
+.highlight .nn,
+.highlight .ne {
+  color: #61afef;
+  font-weight: 600;
+}
+
+/* Functions */
+.highlight .nf,
+.highlight .fm {
+  color: #61afef;
+}
+
+/* Operators & punctuation */
+.highlight .o,
+.highlight .p {
+  color: #e7e9db;
+}
+
+/* Constants */
+.highlight .no {
+  color: #d19a66;
+}
+
+/* Attributes */
+.highlight .na {
+  color: #d19a66;
+  font-weight: 600;
+}
+
+/* HTML tags */
+.highlight .nt {
+  color: #e06c75;
+}
+
+/* Tag delimiter (< >) */
+.highlight .ni {
+  color: #56b6c2;
+}
+
+/* Regex */
+.highlight .sr {
+  color: #c678dd;
+}
+
+/* Escape chars */
+.highlight .se {
+  color: #c678dd;
+}
+
+/* Diff additions */
+.highlight .gi {
+  color: #98c379;
+  background: #04260f;
+}
+
+/* Diff deletions */
+.highlight .gd {
+  color: #e06c75;
+  background: #2c0c0c;
+}
+
+/* Emphasis & strong */
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gs {
+  font-weight: bold;
+}

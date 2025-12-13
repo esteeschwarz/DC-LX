@@ -1,0 +1,328 @@
+/* ========================================================================
+   Chirpy-style Code Block Styling for Feeling Responsive Theme
+   ======================================================================== */
+
+/* Code Block Container */
+.highlight,
+div.highlighter-rouge {
+  color: var(--highlighter-rouge-color, #e8eaed);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+  overflow: hidden;
+
+  pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    background-color: transparent;
+    border: none;
+
+    code {
+      background-color: transparent;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    }
+  }
+}
+
+/* Code Header (for file names) */
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--code-header-bg, #2d2d2d);
+  border-bottom: 1px solid var(--code-header-border, #3d3d3d);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--code-header-text-color, #e8eaed);
+
+  span {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  }
+
+  button {
+    padding: 0.25rem 0.5rem;
+    background-color: transparent;
+    border: 1px solid var(--code-header-border, #3d3d3d);
+    color: var(--code-header-text-color, #e8eaed);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: var(--code-header-hover-bg, #3d3d3d);
+    }
+  }
+}
+
+/* Inline Code */
+code.highlighter-rouge {
+  background-color: var(--inline-code-bg, #f5f5f5);
+  color: var(--inline-code-color, #c7254e);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  border: 1px solid var(--inline-code-border, #e1e4e8);
+}
+
+/* Line Numbers */
+.highlight .lineno {
+  color: var(--code-lineno-color, #6e7681);
+  padding-right: 1rem;
+  border-right: 1px solid var(--code-lineno-border, #3d3d3d);
+  margin-right: 1rem;
+  user-select: none;
+}
+
+/* Syntax Highlighting Colors (Dark Theme - Base16 Dark inspired) */
+.highlight {
+  .c,  /* Comment */
+  .cm, /* Comment.Multiline */
+  .cp, /* Comment.Preproc */
+  .c1, /* Comment.Single */
+  .cs { /* Comment.Special */
+    color: #6e7681;
+    font-style: italic;
+  }
+
+  .err { /* Error */
+    color: #f97583;
+    background-color: #1e1e1e;
+  }
+
+  .k,  /* Keyword */
+  .kc, /* Keyword.Constant */
+  .kd, /* Keyword.Declaration */
+  .kn, /* Keyword.Namespace */
+  .kp, /* Keyword.Pseudo */
+  .kr, /* Keyword.Reserved */
+  .kt { /* Keyword.Type */
+    color: #f97583;
+    font-weight: bold;
+  }
+
+  .o,  /* Operator */
+  .ow { /* Operator.Word */
+    color: #f97583;
+  }
+
+  .m,  /* Literal.Number */
+  .mb, /* Literal.Number.Bin */
+  .mf, /* Literal.Number.Float */
+  .mh, /* Literal.Number.Hex */
+  .mi, /* Literal.Number.Integer */
+  .mo, /* Literal.Number.Oct */
+  .il { /* Literal.Number.Integer.Long */
+    color: #79c0ff;
+  }
+
+  .s,  /* Literal.String */
+  .sb, /* Literal.String.Backtick */
+  .sc, /* Literal.String.Char */
+  .sd, /* Literal.String.Doc */
+  .s2, /* Literal.String.Double */
+  .se, /* Literal.String.Escape */
+  .sh, /* Literal.String.Heredoc */
+  .si, /* Literal.String.Interpol */
+  .sx, /* Literal.String.Other */
+  .sr, /* Literal.String.Regex */
+  .s1, /* Literal.String.Single */
+  .ss { /* Literal.String.Symbol */
+    color: #a5d6ff;
+  }
+
+  .n,  /* Name */
+  .na, /* Name.Attribute */
+  .nb, /* Name.Builtin */
+  .bp, /* Name.Builtin.Pseudo */
+  .nc, /* Name.Class */
+  .no, /* Name.Constant */
+  .nd, /* Name.Decorator */
+  .ni, /* Name.Entity */
+  .ne, /* Name.Exception */
+  .nf, /* Name.Function */
+  .nl, /* Name.Label */
+  .nn, /* Name.Namespace */
+  .py, /* Name.Property */
+  .nv, /* Name.Variable */
+  .vc, /* Name.Variable.Class */
+  .vg, /* Name.Variable.Global */
+  .vi { /* Name.Variable.Instance */
+    color: #d2a8ff;
+  }
+
+  .nt { /* Name.Tag */
+    color: #7ee787;
+  }
+
+  .ge { /* Generic.Emph */
+    font-style: italic;
+  }
+
+  .gs { /* Generic.Strong */
+    font-weight: bold;
+  }
+
+  .gu { /* Generic.Subheading */
+    color: #79c0ff;
+    font-weight: bold;
+  }
+
+  .gd { /* Generic.Deleted */
+    color: #ffa198;
+    background-color: #490202;
+  }
+
+  .gi { /* Generic.Inserted */
+    color: #56d364;
+    background-color: #0d4429;
+  }
+}
+
+/* Light Theme Syntax Highlighting (GitHub inspired) */
+@media (prefers-color-scheme: light) {
+  .highlight,
+  div.highlighter-rouge {
+    background-color: #f6f8fa;
+    color: #24292f;
+  }
+
+  .code-header {
+    background-color: #eaeef2;
+    border-bottom: 1px solid #d0d7de;
+    color: #24292f;
+  }
+
+  code.highlighter-rouge {
+    background-color: #f6f8fa;
+    color: #d73a49;
+    border: 1px solid #d0d7de;
+  }
+
+  .highlight {
+    .c,  .cm, .cp, .c1, .cs {
+      color: #6a737d;
+    }
+
+    .err {
+      color: #d73a49;
+      background-color: transparent;
+    }
+
+    .k, .kc, .kd, .kn, .kp, .kr, .kt {
+      color: #d73a49;
+    }
+
+    .o, .ow {
+      color: #d73a49;
+    }
+
+    .m, .mb, .mf, .mh, .mi, .mo, .il {
+      color: #005cc5;
+    }
+
+    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss {
+      color: #032f62;
+    }
+
+    .n, .na, .nb, .bp, .nc, .no, .nd, .ni, .ne, .nf, .nl, .nn, .py, .nv, .vc, .vg, .vi {
+      color: #6f42c1;
+    }
+
+    .nt {
+      color: #22863a;
+    }
+
+    .lineno {
+      color: #6a737d;
+      border-right: 1px solid #d0d7de;
+    }
+
+    .gd {
+      color: #d73a49;
+      background-color: #ffeef0;
+    }
+
+    .gi {
+      color: #22863a;
+      background-color: #f0fff4;
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .highlight pre {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+
+  .code-header {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+/* Scrollable code blocks */
+.highlight pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  
+  &::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-bg, #2d2d2d);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-bg, #555);
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: var(--scrollbar-thumb-hover-bg, #666);
+    }
+  }
+}
+
+/* Additional Features - Copy button styling */
+.copy-code-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--copy-button-bg, #2d2d2d);
+  color: var(--copy-button-color, #e8eaed);
+  border: 1px solid var(--copy-button-border, #3d3d3d);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+    background-color: var(--copy-button-hover-bg, #3d3d3d);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+/* Wrapper for relative positioning */
+.code-wrapper {
+  position: relative;
+  margin: 1.5rem 0;
+}
