@@ -5,8 +5,7 @@ layout: page
 date: "2025-10-18"
 categories: [linguistics]
 tags: [psych,HA,LX,corpus]
-render_with_liquid: false
-
+pid: 1
 ---
 
 

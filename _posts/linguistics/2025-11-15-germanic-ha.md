@@ -11,6 +11,7 @@ url: "https://esteeschwarz.github.io/open-lx/posts/germanic-001"
 description: "term project drafts"
 github-repo: "esteeschwarz/SPUND-LX/tree/main/germanic"
 layout: page
+pid: 6
 ---
 
 # index
@@ -20,5 +21,6 @@ I decided for draft A out of pure interest in sociolinguistic and register/style
 - B: AI and language development: The influence of new media on the fixation of language.
 - C: xtitle: The choice of english L1/L2 structures in german >L1 speakers. A corpus based investigation of english language patterns in german term papers of exchange students.
 
+<!--
 ## view 
-[drafts page](../../essais/germanic/001)
+[drafts page](../../essais/germanic/001)-->

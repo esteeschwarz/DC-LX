@@ -38,7 +38,7 @@ format: post
 			<div itemprop="articleSection">
 			<!-- <p>test modify page.html</p> -->
 			       <!-- <p>testmodify div content</p> -->
-          {% if page.class %}
+<!--          {% if page.class %}
 
   <h1>info</h1>
    {{ page.class }}
@@ -51,9 +51,30 @@ format: post
    <h1>view</h1>
        <a href="../../essais/{{ page.ids }}"> {{ page.site_link_text }}</a>
 
-   {% endif %}
-   
-    <!-- {{ content }} -->
+   {% endif %}-->
+{% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
+{% assign row = site.data.postmeta | where: "name", page_id | first %}
+
+{% if row %}
+  <h3>about</h3>
+  <p>class: {{ row.class }}.</p>
+  <p>tutor: {{ row.tutor }}.</p>
+  <p>term: {{ row.term }}.</p>
+{% if row.subject %}
+  <p>subject: {{ row.subject }}.</p>
+{% endif %}
+{% if row.abstract %}
+  <p>abstract: {{ row.abstract }}</p>
+{% endif %}
+{% if row.site_link_text %}
+  <h2>view:</h2>
+  <a href="{{ row.link }}">{{ row.site_link_text }}</a>
+  <br>
+{% endif %}
+  <hr>
+
+{% endif %}
+
  
 			{{ content }}
 			</div>

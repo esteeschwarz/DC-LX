@@ -16,4 +16,5 @@ class: georg büchner. mara ruwe. WS25 FUB.
 task: 'session preparation to: buechner & reception'
 ids: buechner-a
 description: a georg buechner reception task
+pid: 11
 ---

@@ -3,8 +3,8 @@ layout: page
 show_meta: false
 title: "AVL content!"
 subheadline: "comparative literature essais"
-header:
-   image_fullwidth: "header_unsplash_5.jpg"
+# header:
+#    image_fullwidth: "header_unsplash_5.jpg"
 permalink: "/avl/"
 ---
 <ul>
