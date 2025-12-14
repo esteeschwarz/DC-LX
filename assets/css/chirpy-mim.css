@@ -1,0 +1,204 @@
+    :root {
+      --code-font-family: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      /* Light theme (roughly github) */
+      --code-bg: #f6f8fa;
+      --code-border: #d0d7de;
+      --code-header-bg: #f3f4f6;
+      --code-header-border: #d0d7de;
+      --code-color: #24292f;
+      --code-keyword: #d73a49;
+      --code-string: #032f62;
+      --code-number: #005cc5;
+      --code-comment: #6a737d;
+      --code-type: #005cc5;
+      --code-function: #6f42c1;
+      --code-meta: #6f42c1;
+      --copy-btn-bg: transparent;
+      --copy-btn-color: #6b7280;
+      --copy-btn-hover-bg: #e5e7eb;
+      --copy-btn-success-color: #16a34a;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html:not([data-mode]), html[data-mode="dark"] {
+        --code-bg: #161b22;
+        --code-border: #30363d;
+        --code-header-bg: #0d1117;
+        --code-header-border: #30363d;
+        --code-color: #c9d1d9;
+        --code-keyword: #ff7b72;
+        --code-string: #a5d6ff;
+        --code-number: #79c0ff;
+        --code-comment: #8b949e;
+        --code-type: #d2a8ff;
+        --code-function: #d2a8ff;
+        --code-meta: #ffa657;
+        --copy-btn-bg: transparent;
+        --copy-btn-color: #8b949e;
+        --copy-btn-hover-bg: #21262d;
+        --copy-btn-success-color: #3fb950;
+      }
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      margin: 2rem;
+    }
+
+    /* Container mimicking Chirpy's main code wrapper */
+    .code-block {
+      margin: 1.5rem 0;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--code-header-border);
+      border-bottom: none;
+      border-radius: 0.5rem 0.5rem 0 0;
+      background-color: var(--code-header-bg);
+      font-family: var(--code-font-family);
+      font-size: 0.75rem;
+      line-height: 1.4;
+      color: #6b7280;
+    }
+
+    .code-header-left {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .code-header-left i {
+      font-size: 0.75rem;
+    }
+
+    .code-header .code-lang {
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+
+    .code-header button {
+      border: none;
+      background: var(--copy-btn-bg);
+      color: var(--copy-btn-color);
+      padding: 0.1rem 0.35rem;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .code-header button:hover {
+      background-color: var(--copy-btn-hover-bg);
+    }
+
+    .code-header button.copied {
+      color: var(--copy-btn-success-color);
+    }
+
+    /* Main highlight wrapper (Rouge-like) */
+    .highlight {
+      border-radius: 0 0 0.5rem 0.5rem;
+      border: 1px solid var(--code-border);
+      background-color: var(--code-bg);
+      overflow: auto;
+    }
+
+    .highlight pre {
+      margin: 0;
+      padding: 0.75rem 1rem;
+      font-family: var(--code-font-family);
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--code-color);
+      tab-size: 2;
+      -moz-tab-size: 2;
+      -webkit-font-smoothing: antialiased;
+      white-space: pre;
+    }
+
+    .highlight code {
+      font-family: inherit;
+      font-size: inherit;
+      background: none;
+      padding: 0;
+    }
+
+    /* Basic Rouge token classes approximating Chirpy's github/github-dark stack */
+    .highlight .k,  /* keyword */
+    .highlight .kd,
+    .highlight .kn,
+    .highlight .kp,
+    .highlight .kr,
+    .highlight .kt {
+      color: var(--code-keyword);
+      font-weight: 500;
+    }
+
+    .highlight .s,  /* string */
+    .highlight .s1,
+    .highlight .s2,
+    .highlight .sb,
+    .highlight .sd,
+    .highlight .sh,
+    .highlight .si,
+    .highlight .sx {
+      color: var(--code-string);
+    }
+
+    .highlight .mi,
+    .highlight .mf,
+    .highlight .mh,
+    .highlight .il {
+      color: var(--code-number);
+    }
+
+    .highlight .c, /* comment */
+    .highlight .c1,
+    .highlight .cm,
+    .highlight .cp,
+    .highlight .cs {
+      color: var(--code-comment);
+      font-style: italic;
+    }
+
+    .highlight .n, .highlight .p {
+      color: var(--code-color);
+    }
+
+    .highlight .nc, .highlight .nn, .highlight .no, .highlight .nt {
+      color: var(--code-type);
+    }
+
+    .highlight .nf, .highlight .fm {
+      color: var(--code-function);
+    }
+
+    .highlight .na,
+    .highlight .nb,
+    .highlight .bp {
+      color: var(--code-meta);
+    }
+
+    /* Small toggle button to flip light/dark by data-mode like Chirpy */
+    .theme-toggle {
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .theme-toggle button {
+      font-size: 0.8rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #f9fafb;
+      cursor: pointer;
+    }

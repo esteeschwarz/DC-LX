@@ -1,0 +1,48 @@
+require 'nokogiri'
+
+
+module Jekyll
+  class StringReplacer < Converter
+    safe true
+    priority :high
+
+    def matches(ext)
+      ext =~ /^\.html$/
+    end
+
+    def convert(input)
+      puts "=== TEST: StringReplacer running ==="
+      result = input.gsub('Hello', '<span style="color:red;background:yellow">HELLO WORLD</span>')
+      puts "=== TEST: Replaced #{input.scan('Hello').count} → #{result.scan('HELLO WORLD').count} ==="
+      result
+    end
+
+    def output_ext(ext)
+      ext
+    end
+  end
+end
+
+# module Jekyll
+#   class StringReplacer < Converter
+#     safe true
+#     priority :high
+
+#     def matches(ext)
+#       ext =~ /^\.md$/  # ← Process .md → .html conversion
+#     end
+
+#     def convert(input)
+#       puts "=== TEST md: StringReplacer running on #{input.length} chars ==="
+#       count_before = input.scan('Hello').count
+#       result = input.gsub('Hello', '<span style="color:red;background:yellow">HELLO WORLD</span>')
+#       count_after = result.scan('HELLO WORLD').count
+#       puts "=== TEST md: Replaced #{count_before} → #{count_after} ==="
+#       result
+#     end
+
+#     def output_ext(ext)
+#       '.html'
+#     end
+#   end
+# end

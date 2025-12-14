@@ -46,7 +46,9 @@ sitemap:
 @import "10_asciidoc.scss";
 {% endif %}
 
-@import "11_syntax-highlighting.scss";
+@import "chirpy-mim.css";
+
+//@import "11_syntax-highlighting.scss";
 
 /* from chirpy */
 

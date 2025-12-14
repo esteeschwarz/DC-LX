@@ -230,6 +230,12 @@ socialmedia:
 sass:
     sass_dir : _sass
     style    : :compressed
+    quiet_deps: true
+    silence_deprecations:  # Specifically kill import spam
+      - import
+      - mixed-decls
+      - global-builtin
+      - all
 
 
 #       ___                __      __  _

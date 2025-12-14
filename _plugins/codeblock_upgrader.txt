@@ -1,0 +1,306 @@
+require 'nokogiri'
+
+
+# def return_raw(item)
+#   return unless item.output_ext == '.html'
+  
+#   puts "=== DEBUG: Processing #{item.relative_path} ==="
+#   content = item.content.dup
+  
+#   # SHOW RAW STRUCTURE
+#   puts "=== RAW SNIPPET (first 500 chars): ==="
+#   puts content[0..500]
+#   puts "=== ALL <pre> tags: ==="
+#   puts content.scan(/<pre[^>]*>/).join("\n")
+#   puts "=== ALL div classes: ==="
+#   puts content.scan(/class="([^"]*)"/).flatten.join("\n")
+  
+#   doc = Nokogiri::HTML(content)
+#   puts "=== DEBUG: Found:"
+#   puts "- .highlight: #{doc.css('.highlight').count}"
+#   puts "- .highlighter-rouge: #{doc.css('.highlighter-rouge').count}"
+#   puts "- pre: #{doc.css('pre').count}"
+#   puts "- code: #{doc.css('code').count}"
+# end
+
+def return_raw(content)
+#  return unless item.output_ext == '.html'
+  
+ # puts "=== DEBUG: Processing #{item.relative_path} ==="
+  content = content.dup
+  
+  # SHOW RAW STRUCTURE
+  puts "=== RAW SNIPPET (first 500 chars): ==="
+  puts content[0..500]
+  puts "=== ALL <pre> tags: ==="
+  puts content.scan(/<pre[^>]*>/).join("\n")
+  puts "=== ALL div classes: ==="
+  puts content.scan(/class="([^"]*)"/).flatten.join("\n")
+  
+  doc = Nokogiri::HTML(content)
+  puts "=== DEBUG: Found:"
+  puts "- .highlight: #{doc.css('.highlight').count}"
+  puts "- .highlighter-rouge: #{doc.css('.highlighter-rouge').count}"
+  puts "- pre: #{doc.css('pre').count}"
+  puts "- code: #{doc.css('code').count}"
+end
+require 'nokogiri'
+
+require 'nokogiri'
+require 'nokogiri'
+
+module Jekyll
+  class ChirpyFinalizer < Generator
+    safe true
+    priority :low
+
+    def generate(site)
+      # Process after Jekyll finishes all rendering
+      site.pages.concat(site.posts.docs).each do |item|
+        next unless item.output_ext == '.html'
+        
+        # Read the already-rendered HTML file from _site
+        site_path = File.join(site.dest, item.url.sub(/index$/, ''))
+        next unless File.exist?(site_path)
+        
+        puts "=== DEBUG: Processing #{item.relative_path} (#{site_path}) ==="
+        
+        html = File.read(site_path)
+        doc = Nokogiri::HTML(html)
+        containers = doc.css('div.highlighter-rouge')
+        
+        puts "=== DEBUG: Found #{containers.count} highlighter-rouge blocks ==="
+        next unless containers.any?
+        
+        containers.each_with_index do |container, i|
+          lang = container['class'].match(/language-(\w+)/)[1]&.upcase || 'CODE'
+          highlight = container.css('div.highlight').first
+          
+          puts "=== Block #{i+1}: #{lang} ==="
+          
+          chirpy_wrapper = Nokogiri::XML::DocumentFragment.parse(<<~HTML)
+            <div class="code-block" data-lang="#{lang}">
+              <div class="code-header">
+                <div class="code-header-left">
+                  <i class="fas fa-code fa-fw small"></i>
+                  <span class="code-lang">#{lang}</span>
+                </div>
+                <button class="copy-btn" type="button" aria-label="Copy code">
+                  <i class="far fa-clipboard"></i>
+                  <span class="copy-label">Copy</span>
+                </button>
+              </div>
+              #{highlight.to_html}
+            </div>
+          HTML
+          
+          container.replace(chirpy_wrapper)
+        end
+        
+        # Overwrite the final file
+        File.write(site_path, doc.to_html)
+        puts "=== Saved #{doc.css('.code-block').count} Chirpy blocks ==="
+      end
+    end
+  end
+end
+
+### no
+# module Jekyll
+#   class ChirpyFinalizer < Generator
+#     safe true
+#     priority :low
+
+#     def generate(site)
+#       site.pages.each do |page|
+#         transform_page(page, site)
+#       end
+#       site.posts.docs.each do |post|
+#         transform_page(post, site)
+#       end
+#     end
+
+#     def transform_page(item, site)
+#       return unless item.output_ext == '.html'
+      
+#       rendered = item.render(site.layouts, site.payloads(nil))
+#       puts "=== DEBUG: Finalizer sees #{rendered.length} chars in #{item.relative_path} ==="
+      
+#       doc = Nokogiri::HTML(rendered)
+#       containers = doc.css('div.highlighter-rouge')
+#       puts "=== DEBUG: Found #{containers.count} highlighter-rouge in FINAL output ==="
+      
+#       return unless containers.any?
+      
+#       containers.each_with_index do |container, i|
+#         lang = container['class'].match(/language-(\w+)/)[1]&.upcase || 'CODE'
+#         highlight = container.css('div.highlight').first
+        
+#         chirpy_wrapper = Nokogiri::XML::DocumentFragment.parse(<<~HTML)
+#           <div class="code-block" data-lang="#{lang}">
+#             <div class="code-header">
+#               <div class="code-header-left">
+#                 <i class="fas fa-code fa-fw small"></i>
+#                 <span class="code-lang">#{lang}</span>
+#               </div>
+#               <button class="copy-btn" type="button" aria-label="Copy code">
+#                 <i class="far fa-clipboard"></i>
+#                 <span class="copy-label">Copy</span>
+#               </button>
+#             </div>
+#             #{highlight.to_html}
+#           </div>
+#         HTML
+        
+#         container.replace(chirpy_wrapper)
+#       end
+      
+#       # Write back to destination
+#       dest_path = site.in_destination_dir(item.url)
+#       dest_path.dirname.mkpath unless dest_path.dirname.exist?
+#       dest_path.open('w', 0644) do |f|
+#         f.write(doc.to_html)
+#       end
+#     end
+#   end
+# end
+
+### no
+module Jekyll
+  class ChirpyConverter < Converter
+    safe true
+    priority :low  # Run AFTER highlighter
+
+    def matches(ext)
+      ext =~ /^\.html$/
+    end
+    
+    def convert(content)
+#      puts "=== DEBUG: Processing #{item.relative_path} ==="
+      puts "=== DEBUG: Converter running on #{content.length} chars ==="
+      return_raw(content)
+      
+      # Check structure
+      doc = Nokogiri::HTML(content)
+      puts "- highlighter-rouge: #{doc.css('.highlighter-rouge').count}"
+      puts "- highlight: #{doc.css('.highlight').count}"
+      
+      # Target your exact structure
+      containers = doc.css('div.highlighter-rouge')
+      return content unless containers.any?
+      
+      puts "=== Found #{containers.count} code blocks ==="
+      
+      containers.each_with_index do |container, i|
+        lang = container['class'][/language-(\w+)/, 1]&.upcase || 'CODE'
+        highlight = container.css('div.highlight').first
+        
+        puts "=== Block #{i+1}: #{lang} ==="
+        
+        chirpy_wrapper = Nokogiri::XML::DocumentFragment.parse(<<~HTML)
+          <div class="code-block" data-lang="#{lang}">
+            <div class="code-header">
+              <div class="code-header-left">
+                <i class="fas fa-code fa-fw small"></i>
+                <span class="code-lang">#{lang}</span>
+              </div>
+              <button class="copy-btn" type="button" aria-label="Copy code">
+                <i class="far fa-clipboard"></i>
+                <span class="copy-label">Copy</span>
+              </button>
+            </div>
+            #{highlight.to_html}
+          </div>
+        HTML
+        
+        container.replace(chirpy_wrapper)
+              # String test
+        # puts "=== TEST: Replacing 'Hello' ==="
+      # if container.match?(/Hello/i)
+      #   puts "=== TEST: found 'Hello' ==="
+      #   container.gsub!('Hello', '<span style="color:red;background:yellow">HELLO WORLD</span>')
+      # end
+
+      end
+      
+      doc.to_html
+    end
+
+    def output_ext(ext)
+      ext
+    end
+  end
+end
+
+### no
+# module Jekyll
+#   class ChirpyCodeBlocks < Generator
+#     safe true
+#     priority :low
+
+#     def generate(site)
+#       site.pages.each do |page|
+#         process_content(page)
+#       end
+      
+#       site.posts.docs.each do |post|
+#         process_content(post)
+#       end
+#     end
+    
+        
+
+#     private
+    
+#     def process_content(item)
+#       return unless item.output_ext == '.html'
+#       puts "=== DEBUG: Processing #{item.relative_path} ==="
+#       return_raw(item)
+      
+#       content = item.content.dup
+#       doc = Nokogiri::HTML(content)
+#       puts "=== DEBUG: found #{doc.css('.highlight').count} highlight blocks ==="
+
+#       # Target YOUR exact structure: div.language-r.highlighter-rouge > div.highlight
+#       rouge_containers = doc.css('div.language-r')
+#       original_count = rouge_containers.count
+#       puts "=== DEBUG: Found #{original_count} highlighter-rouge containers ==="
+      
+#       rouge_containers.each_with_index do |container, i|
+#         lang = container['class'].match(/language-(\w+)/)[1].upcase rescue 'CODE'
+#         inner_highlight = container.css('div.highlight').first
+        
+#         puts "=== DEBUG: Block #{i+1} lang: #{lang} ==="
+        
+#         chirpy_wrapper = Nokogiri::XML::DocumentFragment.parse(<<~HTML)
+#           <div class="code-block" data-lang="#{lang}">
+#             <div class="code-header">
+#               <div class="code-header-left">
+#                 <i class="fas fa-code fa-fw small"></i>
+#                 <span class="code-lang">#{lang}</span>
+#               </div>
+#               <button class="copy-btn" type="button" aria-label="Copy code">
+#                 <i class="far fa-clipboard"></i>
+#                 <span class="copy-label">Copy</span>
+#               </button>
+#             </div>
+#             #{inner_highlight.to_html}
+#           </div>
+#         HTML
+        
+#         container.replace(chirpy_wrapper)
+#       end
+      
+#       item.content = doc.to_html
+#       # item.content = doc
+#       puts "=== DEBUG: Created #{doc.css('.code-block').count} Chirpy blocks ==="
+#       puts "=== DEBUG: found #{doc.css('.highlight').count} highlight blocks ==="
+      
+#       # String test
+#       if content.match?(/Hello/i)
+#         puts "=== TEST: Replacing 'Hello' ==="
+#         item.content.gsub!('Hello', '<span style="color:red;background:yellow">HELLO WORLD</span>')
+#       end
+#     end
+#   end
+# end

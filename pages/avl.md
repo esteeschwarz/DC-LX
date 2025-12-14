@@ -1,7 +1,7 @@
 ---
 layout: page
 show_meta: false
-title: "AVl content!"
+title: "AVL content!"
 subheadline: "comparative literature essais"
 header:
    image_fullwidth: "header_unsplash_5.jpg"

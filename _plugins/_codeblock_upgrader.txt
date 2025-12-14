@@ -1,0 +1,54 @@
+require 'nokogiri'
+
+module Jekyll
+  class CodeBlockUpgrader < Converter
+    safe true
+    priority :high
+
+    def matches(ext)
+      ext =~ /^\.html$/
+    end
+
+    def convert(input)
+      puts "=== DEBUG: CodeBlockUpgrader running on #{input.length} chars ==="
+      
+      doc = Nokogiri::HTML(input)
+      original_count = doc.css('div.highlight').count
+      puts "=== DEBUG: Found #{original_count} .highlight blocks ==="
+      
+      doc.css('div.highlight').each_with_index do |highlight, i|
+        lang_match = highlight['class']&.match(/language-(\w+)/) || 
+                     highlight.at_css('code')&.[]('class')&.match(/language-(\w+)/)
+        lang = lang_match ? lang_match[1].upcase : 'CODE'
+        
+        puts "=== DEBUG: Processing block #{i+1} (lang: #{lang}) ==="
+        
+        chirpy_wrapper = Nokogiri::XML::DocumentFragment.parse(<<~HTML)
+          <div class="code-block" data-lang="#{lang}">
+            <div class="code-header">
+              <div class="code-header-left">
+                <i class="fas fa-code fa-fw small"></i>
+                <span class="code-lang">#{lang}</span>
+              </div>
+              <button class="copy-btn" type="button" aria-label="Copy code">
+                <i class="far fa-clipboard"></i>
+                <span class="copy-label">Copy</span>
+              </button>
+            </div>
+            #{highlight.to_html}
+          </div>
+        HTML
+        
+        highlight.replace(chirpy_wrapper)
+      end
+      
+      result = doc.to_html
+      puts "=== DEBUG: Output #{result.length} chars (#{doc.css('.code-block').count} Chirpy blocks) ==="
+      result
+    end
+
+    def output_ext(ext)
+      ext
+    end
+  end
+end
