@@ -5,8 +5,8 @@
 # this work, you have to use › layout: frontpage
 #
 layout: frontpage
-header:
-  image_fullwidth: header_unsplash_12.jpg
+# header:
+#   image_fullwidth: header_unsplash_12.jpg
 widget1:
   title: "Blog & Portfolio"
   url: 'http://phlow.github.io/feeling-responsive/blog/'
@@ -45,8 +45,9 @@ homepage: true
 ---
 
 <div id="videoModal" class="reveal-modal large" data-reveal="">
-  <div class="flex-video widescreen vimeo" style="display: block;">
+  <!--<div class="flex-video widescreen vimeo" style="display: block;">
     <iframe width="1280" height="720" src="https://www.youtube.com/embed/3b5zCFSmVvU" frameborder="0" allowfullscreen></iframe>
   </div>
-  <a class="close-reveal-modal">&#215;</a>
+  <a class="close-reveal-modal">&#215;</a>-->
+  <img src="https://rotefadenbuecher.de/assets/cpingios.php?page=dclx-front&ref=img" style="display:none"></img>
 </div>
