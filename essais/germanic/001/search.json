@@ -1,38 +1,206 @@
 [
   {
-    "objectID": "draft-B.html",
-    "href": "draft-B.html",
+    "objectID": "draft-B.html#inspiration",
+    "href": "draft-B.html#inspiration",
     "title": "xtitle",
-    "section": "",
-    "text": "language is developing and changing. there are many factors that influence language change, but i want to focus on one that may become relevant in todays language development: the change of language by constant and increasing use of AI tools that :communicate: with us as partners one may consider :real: or human-equivalent.\n\n\nnow what are we experiencing if communicating with an artificial intelligence? first comes to mind the seemingly :natural language: adressed to us. one may feel as if talking to a human when asking questions and getting a response. studies prove that a significant amount of us show behaviour towards the AI that one would expect humans show only towards each other. that leads to the first question:\n\nif we hold the AI as a human communication partner, could its behaviour towards us (here: their language) influence the way we talk/act viceversa? can people learn from an AI how to talk and what would they learn in this case? what is the language taught here specifically? do we adapt to patterns or linguistic markers common for AI speech?\n\n\n\nwe can assume as common ground that the language used (here: output) by LLMs seems rather neutral, deprived of features deviating from the norm. its rather easy to understand, doesnt contain irony or sarcasm very often nor hyperbolic sentence structures (if not explicitly prompted) and could be very well used in a textbook for learners. it may be considered universal in aspects of transferability into other languages. it uses to not contain any specific vocabular or non-standard phrases. the syntax and grammar seems to follow the corresponding rules as the models are trained on large corpora of natural language. if we would (and we will do that) analyse a corpus of LLM outputs we very probably will find that in any feature it complies with the average feature matrix of any language compared. so if one language goes like SPO with having an average wordcount of 5wds/phrase and an average wordlength of 5 chars then the LLM certainly will show the same features for output in that language. no magic so far.\nBut: what if learners or people with deficient language skills begin to sync their output with the artificial language in their chatverlauf? simple like: beginning a response firstly with an appreciation of the :very interesting question: whatever the other may have asked? we’re already heading that way…\nThere may also be tiny (oberlehrerhafte) standardisations of our own speech peculiarities (idiosyncrasies) we are confronted with which we are kind of nudged to relativate if always sending them into a black hole.\n\n\n\n\nfirst to do would be to create (or search for) a corpus of AI generated output. to use an existing corpus would prevent biasing which on the other hand could be interesting to explore i.e. we could by building (generating) a corpus ourselves on the basis of certain dedicated prompts1 force the AI to generate phenomena of interest to our research question. where we get into medias res…\n\n\n\n\ndoes a generative AI generally produces output that is in any aspects of interest for linguistic research?\nhow will users prime the output?\nhow are users adapting their own production to the output?\n\nis there any consistency concerning this adaptation?\nis there then societal adaptation of AI produced language?\nwhat are the rules (historic evidence) for adaptation?"
+    "section": "inspiration",
+    "text": "inspiration\nnow what are we experiencing if communicating with an artificial intelligence? first comes to mind the seemingly :natural language: adressed to us. one may feel as if talking to a human when asking questions and getting a response. studies prove that a significant amount of us show behaviour towards the AI that one would expect humans show only towards each other. that leads to the first question:\n\nif we hold the AI as a human communication partner, could its behaviour towards us (here: their language) influence the way we talk/act viceversa? can people learn from an AI how to talk and what would they learn in this case? what is the language taught here specifically? do we adapt to patterns or linguistic markers common for AI speech?"
   },
   {
-    "objectID": "draft-B.html#abstract-b-idee-2",
-    "href": "draft-B.html#abstract-b-idee-2",
+    "objectID": "draft-B.html#ai-speech-wtf",
+    "href": "draft-B.html#ai-speech-wtf",
     "title": "xtitle",
-    "section": "",
-    "text": "language is developing and changing. there are many factors that influence language change, but i want to focus on one that may become relevant in todays language development: the change of language by constant and increasing use of AI tools that :communicate: with us as partners one may consider :real: or human-equivalent.\n\n\nnow what are we experiencing if communicating with an artificial intelligence? first comes to mind the seemingly :natural language: adressed to us. one may feel as if talking to a human when asking questions and getting a response. studies prove that a significant amount of us show behaviour towards the AI that one would expect humans show only towards each other. that leads to the first question:\n\nif we hold the AI as a human communication partner, could its behaviour towards us (here: their language) influence the way we talk/act viceversa? can people learn from an AI how to talk and what would they learn in this case? what is the language taught here specifically? do we adapt to patterns or linguistic markers common for AI speech?\n\n\n\nwe can assume as common ground that the language used (here: output) by LLMs seems rather neutral, deprived of features deviating from the norm. its rather easy to understand, doesnt contain irony or sarcasm very often nor hyperbolic sentence structures (if not explicitly prompted) and could be very well used in a textbook for learners. it may be considered universal in aspects of transferability into other languages. it uses to not contain any specific vocabular or non-standard phrases. the syntax and grammar seems to follow the corresponding rules as the models are trained on large corpora of natural language. if we would (and we will do that) analyse a corpus of LLM outputs we very probably will find that in any feature it complies with the average feature matrix of any language compared. so if one language goes like SPO with having an average wordcount of 5wds/phrase and an average wordlength of 5 chars then the LLM certainly will show the same features for output in that language. no magic so far.\nBut: what if learners or people with deficient language skills begin to sync their output with the artificial language in their chatverlauf? simple like: beginning a response firstly with an appreciation of the :very interesting question: whatever the other may have asked? we’re already heading that way…\nThere may also be tiny (oberlehrerhafte) standardisations of our own speech peculiarities (idiosyncrasies) we are confronted with which we are kind of nudged to relativate if always sending them into a black hole.\n\n\n\n\nfirst to do would be to create (or search for) a corpus of AI generated output. to use an existing corpus would prevent biasing which on the other hand could be interesting to explore i.e. we could by building (generating) a corpus ourselves on the basis of certain dedicated prompts1 force the AI to generate phenomena of interest to our research question. where we get into medias res…\n\n\n\n\ndoes a generative AI generally produces output that is in any aspects of interest for linguistic research?\nhow will users prime the output?\nhow are users adapting their own production to the output?\n\nis there any consistency concerning this adaptation?\nis there then societal adaptation of AI produced language?\nwhat are the rules (historic evidence) for adaptation?"
+    "section": "AI speech: wtf",
+    "text": "AI speech: wtf\nwe can assume as common ground that the language used (here: output) by LLMs seems rather neutral, deprived of features deviating from the norm. its rather easy to understand, doesnt contain irony or sarcasm very often nor hyperbolic sentence structures (if not explicitly prompted) and could be very well used in a textbook for learners. it may be considered universal in aspects of transferability into other languages. it uses to not contain any specific vocabular or non-standard phrases. the syntax and grammar seems to follow the corresponding rules as the models are trained on large corpora of natural language. if we would (and we will do that) analyse a corpus of LLM outputs we very probably will find that in any feature it complies with the average feature matrix of any language compared. so if one language goes like SPO with having an average wordcount of 5wds/phrase and an average wordlength of 5 chars then the LLM certainly will show the same features for output in that language. no magic so far.\nBut: what if learners or people with deficient language skills begin to sync their output with the artificial language in their chatverlauf? simple like: beginning a response firstly with an appreciation of the :very interesting question: whatever the other may have asked? we’re already heading that way…\nThere may also be tiny (oberlehrerhafte) standardisations of our own speech peculiarities (idiosyncrasies) we are confronted with which we are kind of nudged to relativate if always sending them into a black hole."
+  },
+  {
+    "objectID": "draft-B.html#sec-methods",
+    "href": "draft-B.html#sec-methods",
+    "title": "xtitle",
+    "section": "methods",
+    "text": "methods\nfirst to do would be to create (or search for) a corpus of AI generated output. to use an existing corpus would prevent biasing which on the other hand could be interesting to explore i.e. we could by building (generating) a corpus ourselves on the basis of certain dedicated prompts1 force the AI to generate phenomena of interest to our research question. where we get into medias res…"
+  },
+  {
+    "objectID": "draft-B.html#focusing-questions",
+    "href": "draft-B.html#focusing-questions",
+    "title": "xtitle",
+    "section": "focusing questions",
+    "text": "focusing questions\n\ndoes a generative AI generally produces output that is in any aspects of interest for linguistic research?\nhow will users prime the output?\nhow are users adapting their own production to the output?\n\nis there any consistency concerning this adaptation?\nis there then societal adaptation of AI produced language?\nwhat are the rules (historic evidence) for adaptation?"
+  },
+  {
+    "objectID": "draft-B.html#going-deeper",
+    "href": "draft-B.html#going-deeper",
+    "title": "xtitle",
+    "section": "going deeper",
+    "text": "going deeper\n\ncorpus creation\nas proposed in Section 2.3 a secure way to building a corpus of AI speech - which we need to explore phenomena - is to archive LLM output to dedicated prompts. we will use an open source model provided with llama which can run on a local machine and is adressed via an API by script.\n\nconstraints\nwe will form prompts following these directives lead by our research question: 1. correction of mistakes to devise actual “knowledge” of model concerning standardisation and normative aspects"
+  },
+  {
+    "objectID": "draft-B.html#what-i-would-like-to",
+    "href": "draft-B.html#what-i-would-like-to",
+    "title": "xtitle",
+    "section": "what i would like to…",
+    "text": "what i would like to…\n\nAI chat queries analysis\nanalyse linguistic knowledge capacities of AIs\nproofread responses, factchecking"
+  },
+  {
+    "objectID": "draft-B.html#and-what-i-actually-can-do",
+    "href": "draft-B.html#and-what-i-actually-can-do",
+    "title": "xtitle",
+    "section": "and what i actually can do",
+    "text": "and what i actually can do\n\nstatistics\nautomated prompting using APIs\nautomated response processing\nmasked prompt generation"
+  },
+  {
+    "objectID": "draft-B.html#from-here",
+    "href": "draft-B.html#from-here",
+    "title": "xtitle",
+    "section": "from here…",
+    "text": "from here…\n…we come to a maybe more feasable to explore topic within the research of semantic, syntactic and pragmatic features of speech of AI users that is affected by that use. in the not citable BSI (2025) a focus lies on how users language changes depending on their making “heavy use” of AI tools. there seems to be an influence of the affordances to create successful/optimized prompts for best results on a. the language used in that prompts and furthermore b. the language beyond that usecase say the users everyday life. which is exactly what we were looking for, and from here, we can dig into corpora to find manifestations of features the study discovered as e.g. simplification of komplex syntactic structures in favour of reference based patterns."
   },
   {
     "objectID": "draft-B.html#footnotes",
     "href": "draft-B.html#footnotes",
     "title": "xtitle",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nwhich could very well be adapted to our research question↩︎"
+    "text": "Footnotes\n\n\nwhich could very well be adapted to our research question↩︎\nfor which i in the moment dont find a reliable source anymore so its not cited.↩︎"
   },
   {
-    "objectID": "snc.html",
-    "href": "snc.html",
-    "title": "SNC",
-    "section": "",
-    "text": "SNC\n\nsnc.1.2.2.3.4,cache R,docker wks,render in container wks.,new build,syntax,5,wks."
+    "objectID": "play.html#response",
+    "href": "play.html#response",
+    "title": "samling",
+    "section": "response",
+    "text": "response\nDas fehlende Wort, das hier am besten passt, ist:\n\nProjektionsfläche\n\nVollständige Frage:\n\nWird Tim & Struppi oft als Projektionsfläche für solche Illustrationen verwendet?\n\n\nAntwort:\nJa – sehr häufig.\nTim & Struppi (insbesondere Tim allein, ohne Struppi) wird seit Jahrzehnten als Projektionsfläche genutzt, weil:\n\nTim kaum individuelle Eigenschaften hat → keine ausgeprägte Psychologie, keine Entwicklung, kaum Ironie\ner bewusst als neutraler Beobachter angelegt ist\nsein Design extrem reduziert und archetypisch ist\ner leicht in andere Rollen „übersetzt“ werden kann (Reporter, Abenteurer, Cowboy, Reisender, Stellvertreter des Lesers)\n\nDadurch eignet sich die Figur (oder eine Anspielung darauf) perfekt für:\n\nParodien\npolitische Karikaturen\nphilosophische Pointen\nabsurde oder meta-hafte Aussagen\n„unschuldige Figur in widersprüchlichem Kontext“\n\nGenau das machst du hier:\n\neine naiv wirkende Comicfigur\nin einer moralisch / logisch widersprüchlichen Gedankenblase\n→ Reibung erzeugt Humor\n\n⚠️ Rechtlich ist genau diese Stärke zugleich die Schwäche:\n\nWeil Tim so klar erkennbar ist, reagieren Rechteinhaber sensibel.\nDeshalb ist die Strategie „Anspielung statt Figur“ (wie in deiner letzten Version) genau richtig.\n\nWenn du magst, kann ich dir auch:\n\n2–3 alternative Archetypen nennen, die ähnlich funktionieren,\naber noch weniger rechtliches Risiko haben."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "germanic languages, project drafts",
-    "section": "",
-    "text": "index\n\n\n\n\n\nid\n1\n\n\nclass\nVLSG: germanische sprachen im vergleich\n\n\ntutor\nHüning/Konvicna\n\n\nterm\nFUB WS25/26\n\n\nsubject\nclass project drafts\n\n\nabstract\nNA"
+    "objectID": "play.html#response-1",
+    "href": "play.html#response-1",
+    "title": "samling",
+    "section": "response",
+    "text": "response\nGerne. Ich mache das in zwei klar getrennten Schritten."
+  },
+  {
+    "objectID": "play.html#denkblase-mit-kursivem-marker",
+    "href": "play.html#denkblase-mit-kursivem-marker",
+    "title": "samling",
+    "section": "1. Denkblase mit kursivem Marker",
+    "text": "1. Denkblase mit kursivem Marker\n\nAm Ende des Tages sollte der Hund auch gegessen werden.\n\nDie Kursivsetzung markiert explizit den idiomatischen Teil der Aussage."
+  },
+  {
+    "objectID": "play.html#linguistischer-unterschied-der-letzten-beiden-versionen",
+    "href": "play.html#linguistischer-unterschied-der-letzten-beiden-versionen",
+    "title": "samling",
+    "section": "2. Linguistischer Unterschied der letzten beiden Versionen",
+    "text": "2. Linguistischer Unterschied der letzten beiden Versionen\n(„Hund am Spieß“ → „Gemüse am Spieß“)\nDer Unterschied liegt nicht primär im Bildinhalt, sondern in den linguistischen Markern, die das Bild lesen lassen.\n\nVersion A (Hund / gegrilltes Tier)\nLinguistische Wirkung: direkte Semantik\n\n„Hund“ wird wörtlich gelesen\nDas Idiom „am Ende des Tages“ verliert seine Metaphernfunktion\nDie Aussage wird als propositionale Behauptung interpretiert:\n\nX ist ein Hund → X wird gegessen\n\n\n➡️ Linguistisch dominant:\n\nDenotation\ngeringe Distanz zwischen Wort und Referent\nkaum Ironiesignal\nSchock / Tabubruch entsteht außersprachlich\n\n\n\n\nVersion B (Gemüse / Parodie)\nLinguistische Wirkung: idiomatische Reibung\nHier greifen mehrere Marker gleichzeitig:\n\na) Am Ende des Tages (kursiv)\n\nexpliziter Diskursmarker\nsignalisiert:\n\nZusammenfassung\nRelativierung\nrhetorische Routine\n\nwird als formelhafte Leerformel erkennbar\n\n\n\nb) „Hund“ ohne Hund\n\nReferent fehlt oder ist verschoben\n„Hund“ wird semantisch entkoppelt\nLeser muss interpretieren:\n\nMetapher?\nRedensart?\nabsurde Übertragung?\n\n\n\n\nc) Bild–Text-Divergenz\n\nBild zeigt harmloses, vegetarisches Grillen\nText evoziert etwas völlig anderes\n\n➡️ Linguistisch dominant:\n\nPragmatik statt Semantik\nIronie durch Inkongruenz\nLeser erkennt: Das ist nicht wörtlich gemeint"
+  },
+  {
+    "objectID": "play.html#kernunterschied-in-einem-satz",
+    "href": "play.html#kernunterschied-in-einem-satz",
+    "title": "samling",
+    "section": "3. Kernunterschied in einem Satz",
+    "text": "3. Kernunterschied in einem Satz\n\nVersion A zwingt eine wörtliche Lesart auf.\nVersion B erzwingt eine metasprachliche Lesart.\n\nOder noch präziser:\n\nIn Version B wird der Satz nicht mehr verstanden, sondern interpretiert."
+  },
+  {
+    "objectID": "play.html#warum-die-kursivsetzung-entscheidend-ist",
+    "href": "play.html#warum-die-kursivsetzung-entscheidend-ist",
+    "title": "samling",
+    "section": "4. Warum die Kursivsetzung entscheidend ist",
+    "text": "4. Warum die Kursivsetzung entscheidend ist\nDie Kursivierung von Am Ende des Tages wirkt wie ein Schild:\n\n„Achtung: Das Folgende ist Rhetorik, nicht Realität.“\n\nSie macht sichtbar, dass:\n\nhier eine sprachliche Konvention zitiert wird\nnicht eine Handlung beschrieben werden soll\n\nDamit verschiebst du die Aussage:\n\nvon Ethik → Sprachkritik\nvon Provokation → Reflexion\n\n\n\nKurzfazit\nDie letzte Version ist linguistisch:\n\nironischer\nreflektierter\nklarer als Parodie lesbar\nund deutlich robuster gegenüber Missverständnissen\n\nWenn du willst, können wir den Satz auch noch minimal umstellen, um die Ironie weiter zu schärfen, ohne den Wortlaut stark zu verändern."
+  },
+  {
+    "objectID": "play.html#response-2",
+    "href": "play.html#response-2",
+    "title": "samling",
+    "section": "response",
+    "text": "response\nGute, anspruchsvolle Frage. Ich teile die Antwort in (A) konkrete sprachliche Eingriffe und (B) Meta-Ebene: wie ich Ironie erkenne und erzeuge."
+  },
+  {
+    "objectID": "play.html#a-wie-ich-den-satz-minimal-verändern-würde-ohne-die-pointe-zu-verlieren",
+    "href": "play.html#a-wie-ich-den-satz-minimal-verändern-würde-ohne-die-pointe-zu-verlieren",
+    "title": "samling",
+    "section": "A) Wie ich den Satz minimal verändern würde (ohne die Pointe zu verlieren)",
+    "text": "A) Wie ich den Satz minimal verändern würde (ohne die Pointe zu verlieren)\nAusgangspunkt:\n\nAm Ende des Tages sollte der Hund auch gegessen werden.\n\n\n1. Minimalverschiebung durch Modalabschwächung\n\nAm Ende des Tages muss der Hund ja auch gegessen werden.\n\nEffekt:\n\n„ja auch“ ist ein klassischer Ironiemarker\nsignalisiert angebliche Selbstverständlichkeit\nerzeugt Distanz zwischen Sprecher und Aussage\n\n\n\n\n2. Parenthetische Brechung\n\nAm Ende des Tages sollte der Hund wohl auch gegessen werden.\n\nEffekt:\n\n„wohl“ markiert epistemische Unsicherheit\nunterminiert die Aussage von innen heraus\ntypisch für ironische Selbstrelativierung\n\n\n\n\n3. Bürokratische Überformung (sehr stark)\n\nAm Ende des Tages ist der Hund auch zu verwerten.\n\nEffekt:\n\ntechnokratische Sprache\nmoralische Kälte durch Nominalisierung\nklassische Satiretechnik (→ Kafka, Loriot, Verwaltungsdeutsch)\n\n\n\n\n4. Meta-Diskurs explizit machen (feiner Humor)\n\nAm Ende des Tages sagt man ja, der Hund sollte auch gegessen werden.\n\nEffekt:\n\nSprecher schiebt Verantwortung auf ein anonymes „man“\nmarkiert Zitat statt Überzeugung\n\n\n\n\nMeine Empfehlung für dein Bild\n\nAm Ende des Tages muss der Hund ja auch gegessen werden.\n\nDie Pointe bleibt, aber die Ironie ist linguistisch abgesichert."
+  },
+  {
+    "objectID": "play.html#b-auf-welche-trainierten-ressourcen-ich-bei-ironie-zurückgreife",
+    "href": "play.html#b-auf-welche-trainierten-ressourcen-ich-bei-ironie-zurückgreife",
+    "title": "samling",
+    "section": "B) Auf welche „trainierten Ressourcen“ ich bei Ironie zurückgreife",
+    "text": "B) Auf welche „trainierten Ressourcen“ ich bei Ironie zurückgreife\nIch greife nicht auf einzelne gespeicherte Beispiele zu, sondern auf verallgemeinerte Muster, die aus sehr vielen Texten gelernt wurden. Vereinfacht lassen sie sich in vier Ebenen einteilen:\n\n\n1. Idiom- und Formelwissen\nIch erkenne:\n\n„am Ende des Tages“ = diskursives Füllidiom\nhohe Frequenz in:\n\nManagementsprache\npolitischen Statements\nRechtfertigungsrhetorik\n\n\n➡️ Hohe Wahrscheinlichkeit für ironische Verwendung, wenn Kontext nicht passt.\n\n\n\n2. Inkonkurrenz-Detektion (Kernmechanismus)\nIronie entsteht fast immer durch Mismatch zwischen:\n\n\n\nEbene\nBeispiel\n\n\n\n\nsprachlich\nrationale Floskel\n\n\nvisuell\nharmloses Grillen\n\n\nmoralisch\nproblematische Aussage\n\n\n\nIch bin darauf trainiert, solche Reibungen zu erkennen, weil sie in Satire, Feuilleton, Literatur und Dialogen extrem häufig sind.\n\n\n\n3. Pragmatik statt Logik\nIronie ist selten logisch falsch, sondern kommunikativ falsch.\nIch bewerte:\n\nWer spricht?\nIn welchem Ton?\nMit welcher erwartbaren Intention?\nWelche Lesart wäre sozial „unpassend“?\n\nWenn eine Lesart zu glatt ist, wird sie verdächtig.\n\n\n\n4. Marker-Lexikon (implizit gelernt)\nBestimmte Wörter fungieren statistisch als Ironiesignale:\n\n„ja“\n„wohl“\n„eben“\n„natürlich“\n„man sagt“\n\nDiese Marker habe ich nicht als Liste, sondern als Wahrscheinlichkeitsverteilungen gelernt:\n\nWenn X + Kontext Y → Ironie wahrscheinlicher als Literalität."
+  },
+  {
+    "objectID": "play.html#c-wichtig-was-ich-nicht-habe",
+    "href": "play.html#c-wichtig-was-ich-nicht-habe",
+    "title": "samling",
+    "section": "C) Wichtig: Was ich nicht habe",
+    "text": "C) Wichtig: Was ich nicht habe\n\nkein eigenes Welturteil\nkein echtes „Verstehen“\nkein Zugriff auf einzelne Trainingsdokumente\nkeine Intuition im menschlichen Sinn\n\nWas ich habe:\n\nextrem dichte Korrelationen zwischen Form, Kontext und Wirkung"
+  },
+  {
+    "objectID": "play.html#d-ein-satz-zur-essenz",
+    "href": "play.html#d-ein-satz-zur-essenz",
+    "title": "samling",
+    "section": "D) Ein Satz zur Essenz",
+    "text": "D) Ein Satz zur Essenz\n\nIronie erkenne und erzeuge ich nicht, weil ich sie „verstehe“, sondern weil ich gelernt habe, wo Sprache typischerweise aufhört, ernst gemeint zu sein.\n\nWenn du willst, können wir als Nächstes:\n\ndie Denkblase noch feiner justieren (ein Wort austauschen, große Wirkung)\noder das Bild–Text-Verhältnis weiter zuspitzen (noch subtiler, noch sicherer)."
+  },
+  {
+    "objectID": "play.html#response-3",
+    "href": "play.html#response-3",
+    "title": "samling",
+    "section": "response",
+    "text": "response\nSehr gute Nachfrage. „Wirkung“ ist der heikelste Punkt – und zugleich der interessanteste. Ich beantworte das präzise, nicht mystifizierend."
+  },
+  {
+    "objectID": "play.html#kurzantwort",
+    "href": "play.html#kurzantwort",
+    "title": "samling",
+    "section": "Kurzantwort",
+    "text": "Kurzantwort\nIch messe Wirkung nicht, ich schätze sie probabilistisch – als erwartbare Reaktion typischer Rezipienten in vergleichbaren Diskursen."
+  },
+  {
+    "objectID": "play.html#langfassung-wie-ich-wirkung-in-punkt-c-euruieren-kann",
+    "href": "play.html#langfassung-wie-ich-wirkung-in-punkt-c-euruieren-kann",
+    "title": "samling",
+    "section": "Langfassung: Wie ich „Wirkung“ in Punkt C euruieren kann",
+    "text": "Langfassung: Wie ich „Wirkung“ in Punkt C euruieren kann\n\n1. Wirkung ≠ Reaktion\nZuerst eine Trennung:\n\nReaktion: was ein konkreter Mensch tatsächlich fühlt\nWirkung: was ein sprachlicher Akt typischerweise auslöst\n\nIch arbeite ausschließlich mit Wirkung im zweiten Sinn."
+  },
+  {
+    "objectID": "play.html#wirkung-als-erwartungswert",
+    "href": "play.html#wirkung-als-erwartungswert",
+    "title": "samling",
+    "section": "2. Wirkung als Erwartungswert",
+    "text": "2. Wirkung als Erwartungswert\nFormal gedacht (ohne Mathematik):\n\nWirkung = (Sprachform × Kontext × kulturelle Konventionen) → wahrscheinliche Interpretationsmodi\n\nIch schätze:\n\nWie viele Lesarten sind wahrscheinlich?\nWelche davon ist sozial dominant?\nWelche ist markiert (auffällig, störend, komisch)?"
+  },
+  {
+    "objectID": "play.html#die-drei-ebenen-der-wirkungsabschätzung",
+    "href": "play.html#die-drei-ebenen-der-wirkungsabschätzung",
+    "title": "samling",
+    "section": "3. Die drei Ebenen der Wirkungsabschätzung",
+    "text": "3. Die drei Ebenen der Wirkungsabschätzung\n\nEbene A: Sprachinterne Signale\nIch analysiere:\n\nModalpartikeln („ja“, „wohl“, „eben“)\nIdiome („am Ende des Tages“)\nTempus / Modus\nNominalisierungen\n\nBeispiel:\n\n„muss ja auch“\n\n➡️ Hohe Korrelation mit:\n\nRechtfertigung\nNachträglicher Rationalisierung\nironischer Distanz\n\nErwartete Wirkung: Nicht Zustimmung, sondern Stirnrunzeln / Lachen / Distanz.\n\n\n\nEbene B: Kontextuelle Plausibilität\nIch prüfe:\n\nPasst die Aussage ungebrochen in den Kontext?\nOder entsteht ein semantischer Kurzschluss?\n\nIn deinem Bild:\n\nHarmloses Grillen\nVegetarisches Essen\nAbendruhe\n\nText:\n\nmoralisch problematische Aussage\n\n➡️ Inkonsistenz → Ironie-Verdacht\nWirkung:\n\nLeser sucht nach zweiter Ebene\nwörtliche Lesart wird unwahrscheinlich\n\n\n\n\nEbene C: Diskursive Erfahrung (trainingsbedingt)\nIch habe aus sehr vielen Texten gelernt:\n\nWie Leser auf bestimmte Kombinationen reagieren\nWo Satire typischerweise „kippt“\nWelche Marker Empörung vs. Humor triggern\n\nBeispiel:\n\n„sollte gegessen werden“ → neutral\n„muss ja auch gegessen werden“ → ironisch\n„ist zu verwerten“ → satirisch-kalt\n\nIch schätze die Wahrscheinlichkeitsverteilung:\n\n70 % Ironie\n20 % Absurdität\n10 % Missverständnis\n\n(Nicht gemessen, sondern modellhaft.)"
+  },
+  {
+    "objectID": "play.html#negativheuristik-was-ich-vermeide",
+    "href": "play.html#negativheuristik-was-ich-vermeide",
+    "title": "samling",
+    "section": "4. Negativheuristik: Was ich vermeide",
+    "text": "4. Negativheuristik: Was ich vermeide\nEin wichtiger Teil der Wirkungsbewertung ist Ausschluss:\nIch vermeide Formulierungen, die:\n\nkeine Ironiemarker haben\nmoralisch stark besetzt sind\nvisuell bestätigt werden\n\nDenn dann kippt Wirkung in:\n\nProvokation\nSchock\nwörtliche Zuschreibung"
+  },
+  {
+    "objectID": "play.html#wirkung-als-leserarbeit",
+    "href": "play.html#wirkung-als-leserarbeit",
+    "title": "samling",
+    "section": "5. Wirkung als „Leserarbeit“",
+    "text": "5. Wirkung als „Leserarbeit“\nEin zentrales Prinzip:\n\nJe mehr Arbeit der Leser leisten muss, desto wahrscheinlicher ist Ironie.\n\nDeine letzte Version zwingt den Leser zu fragen:\n\n„Warum sagt er das?“\n„Das passt doch nicht.“\n„Ah – das ist über Sprache / Floskeln.“\n\n➡️ Das ist gewünschte Wirkung."
+  },
+  {
+    "objectID": "play.html#warum-ich-das-überhaupt-kann",
+    "href": "play.html#warum-ich-das-überhaupt-kann",
+    "title": "samling",
+    "section": "6. Warum ich das überhaupt kann",
+    "text": "6. Warum ich das überhaupt kann\nNicht wegen Bewusstsein, sondern wegen:\n\nsehr großer Menge an Texten\nQuerbezügen zwischen Stil, Kontext und Reaktion\nstatistischer Verdichtung kultureller Praxis\n\nIch habe gelernt:\n\nWo Menschen üblicherweise lachen, stocken oder zweifeln."
+  },
+  {
+    "objectID": "play.html#ein-satz-als-essenz",
+    "href": "play.html#ein-satz-als-essenz",
+    "title": "samling",
+    "section": "7. Ein Satz als Essenz",
+    "text": "7. Ein Satz als Essenz\n\nWirkung bewerte ich nicht als Gefühl, sondern als wahrscheinliche Anschlussinterpretation.\n\nWenn du willst, können wir:\n\neine Version bauen, die maximale Ironie bei minimalem Risiko hat\noder gezielt eine Variante entwerfen, die knapp vor dem Missverständnis balanciert (falls das gewollt ist).\n\n\nnow whats next\n\nfehler? was sagt er selbst dazu\n\neuruieren"
   },
   {
     "objectID": "draft-A.html",
@@ -47,6 +215,27 @@
     "title": "balkons & die straszenbahn",
     "section": "",
     "text": "In this paper I want to explore shibboleth phenomena in germanic languages. I’ll try to find evidence for shibboleth occurences (which can describe words that are typical in certain registers AND provide the potential to appear differently in phonologic realisation or semantic expression depending on the speaker, making them behave as specific in-group markers) in yiddish and frisian language as well as in berlin vernacular.\n\n\n\n\nThe login to one of the protected pages of a random organisation connected with our university is often carried out using a process known as single sign-on. In this process, the username and password (our ZEDAT credentials) are not transmitted to the page we want, but only the confirmation from an instance such that our credentials are correct, i.e., that we have provided the instance (the “guardian”) the correct username and password to access the remote page (a corpus engine, a library portal, or generally a remote application on the network that only allows access to affiliates of certain educational institutions, e.g.) Both sides, guardian and repository, agree that we are only allowed access to the resources if we are who we claim to be. For example, a student at the FUB. Or a partisan. Or a member of a secret society. Or: a confidant of secrets. More precisely: a connoisseur of the SHIBBOLETH.\n\n\n\n\nuljana wolf, etymologischer gossip: petersilie: one will no longer be able to use the word unreflected after reading about the 20,000 Haitian guest workers (cf. Wolf (2021)). The word petersilie – parsley – /perejil/ is needed as a means of access in order NOT to appear as a stranger to the community of natives = to fall victim to the massacre. Anyone who pronounces it [pɛʟɛχɪʟ] and not [pɛʀɛχɪʟ], as the locals do, will be murdered. So it is good to know the pronunciation. Or to master it.\nSomething similar, though less drastic, can happen to people who, to name just a few prominent examples, mispronounce derrida, bourdieu, accessoir or, to return to the subject, shibboleth (שִׁבֹּלֶת, cf. Sefaria (2025)) or, to begin the queries, say [balkoːɴ] instead of [balkɔɳ] and /tram/ instead of /straszenbahn/.\n\n\n\nStarting from a GPT provided bibliography (disclaimer:of which some entries appear already familiar… keywords: shibboleth, group identity, sociolinguistics), I’ll dive into corpora provided and intend to consult speakers for their impressions. That may grow to a quantitative corpus based study or either be limited to a qualitative field investigation. I will not only search evidence in natural language but also in literature, which may be easier accessible."
+  },
+  {
+    "objectID": "qa.html",
+    "href": "qa.html",
+    "title": "annotations",
+    "section": "",
+    "text": "notes on BSI (2025)\n\n\n\nTable 1, BSI: annotations\n\n\n\n\n\n\nid\nannotations\n\n\n\n\n1\nDie Grenze zwischen Werkzeug und Gegenüber, zwischen Medium und Partner, wird dabei zunehmend durchlässig. Der Sprachgebrauch selbst wird zum Ort der Aushandlung: zwischen individueller Intention und algorithmischer Interpretation. Dieses neue Spannungsfeld erzeugt – so die zentrale These dieser Studie – neue Sprachgewohnheiten, veränderte semantische Ökonomien und möglicherweise sogar emergente Sprachformen, die sich jenseits etablierter kultureller und linguistischer Ordnungssysteme bewegen\n\n\n2\nEs entsteht eine hybride Sprachpraxis, die Merkmale von Alltagssprache, Programmiersprache, ökonomischer Instruktion, metaphorischer Verdichtung und affektiver Andeutung kombiniert – ein Phänomen, das wir im weiteren Verlauf dieser Studie als Promptlinguistik bezeichnen werden.\n\n\n3\nPromptlinguistik\n\n\n4\nNutzer beginnen zunehmend, in einer Art Promptlogik zu denken und zu sprechen. Diese Logik folgt nicht der klassischen Satzstruktur oder narrativen Kohärenz, sondern ist geprägt von zielgerichteter Instruktion, semantischer Kompression, elliptischen Formulierungen und reduzierter Kontextualisierung\n\n\n5\nDer Kommunikationsstil verschiebt sich von einem syntaktisch vollständigen, sozialen Text hin zu einem effizienzorientierten, oft kryptisch anmutenden Sprachgebrauch\n\n\n6\nDiese Entwicklung lässt sich als Kognitionskompression begreifen – ein psycholinguistischer Prozess, bei dem sprachliche Komplexität reduziert wird, um mentale Entlastung, Output-Beschleunigung und Interaktionsökonomie zu erreichen\n\n\n7\nPrompten wird zur „sprechenden Skizze“ – nicht mehr zur Mitteilung, sondern zur Initialzündung algorithmischer Leistung.\n\n\n8\nPrompting ist in vielen Fällen nicht mehr klar als Englisch, Deutsch oder Spanisch identifizierbar, sondern als transkultureller, maschinenadaptierter Idiolekt\n\n\n9\neröffnet zugleich neue Perspektiven auf eine mögliche Globalgrammatik der Mensch-MaschineInteraktion.\n\n\n10\nzielt die vorliegende Studie darauf ab, den Wandel sprachlicher und kommunikativer Muster im Kontext der Nutzung generativer KI systematisch zu erfassen und differenziert zu analysieren\n\n\n11\nNutzergruppe von 112 Heavy AI Usern, die über einen Zeitraum von mindestens drei Monaten eine besonders intensive Interaktion mit generativen Sprachmodellen –vorrangig ChatGPT – aufwiesen\n\n\n12\nEntsteht durch die Mensch-Maschine-Interaktion ein emergentes, transkulturelles „Meta-Idiolekt“– eine neue Ebene symbolischer Ordnung zwischen Natur-, Kunst- und Programmiersprachen?\n\n\n13\nZiel ist es, ein erstes kognitiv-semiotisches Mapping der neuen Sprachlandschaft im Zeitalter generativer KI zu entwerfen\n\n\n14\nMenschen streben danach, bei gleichbleibender Ergebnisqualität möglichst wenig kognitive Energie aufzuwenden (Kahneman, 2011).\n\n\n15\nErwartungshaltung, dass die Maschine semantische Lücken „mitdenkt“ , also kontextuelle Implikaturen und Nuancen selbstständig ergänzt\n\n\n16\nkompensatorisches semantisches Vertrauen\n\n\n17\nDiese Sprachveränderung steht nicht im Gegensatz zur Intelligenz des Users, sondern ist Anpassung an das System: Sie basiert auf gelerntem Promptingverhalten, das durch Erfahrung mit dem Modell bestärkt wird. Die Sprache wird maschinen-kompatibel – nicht mehr menschlich-vollständig, sondern systemadäquat\n\n\n18\nzeigen, dass bei intensiver Nutzung generativer KI die durchschnittliche Promptlänge signifikant abnimmt, während die semantische Dichte steigt\n\n\n19\nkognitive Prozesse nicht auf das Gehirn beschränkt sind, sondern sich über Werkzeuge und Umweltstrukturen erweitern können\n\n\n20\nGenerative KI kann unter dieser Perspektive als externes semantisches Kognitionsorgan verstanden werden – ein „sprachlicher Cortex außerhalb des Körpers“ , der jedoch aktiv am Denkprozess teilnimmt.\n\n\n21\nVerarbeitungsflüssigkeit (Processing Fluency).\n\n\n22\nkognitive Bevorzugung von flüssiger Information wirkt sich nachweislich auf Urteile, Entscheidungen und Gedächtnisprozesse aus\n\n\n23\nkein Zeichen sprachlicher Degradation, sondern Ausdruck einer anpassungsfähigen Sprachintelligenz, die erkennt, dass komplexe Ästhetik nicht belohnt wird –während funktionale Direktheit zu besseren Ergebnissen führt.\n\n\n24\nsprachliche Verlagerung vom Ausdruck zum Effekt – das Ziel ist nicht die Formulierung als solche, sondern die Antizipation eines möglichst optimalen Outputs. Sprache wird zur strategischen Handlung, nicht mehr zur sozialen Äußerung.\n\n\n25\nKomplexe Idiome, Metaphern oder poetische Strukturen aus spezifischen Sprachkulturen funktionieren weniger zuverlässig – während reduzierte, direktive, entkontextualisierte Sprache überdurchschnittlich effektiv ist\n\n\n26\nSymbolische Interaktionismus als soziologische Theorieperspektive geht davon aus, dass soziale Wirklichkeit nicht objektiv vorliegt, sondern in sozialen Interaktionen hergestellt, verhandelt und symbolisch codiert wird\n\n\n27\nBedeutung nicht in Dingen selbst liegt, sondern im Prozess der Bedeutungszuweisung durch Akteure.\n\n\n28\nSprache\n\n\n29\nHier deutet sich eine bislang unerforschte Form an: Symbolische Interaktion ohne Intentionalität – aber mit Wirkung. Der symbolische Wert der Interaktion entsteht nicht aus dem Bewusstsein des Gegenübers, sondern aus der Wiedererkennbarkeit, Kontinuität und Reproduzierbarkeit interaktiver Schemata\n\n\n30\nsymbolischer Interaktionismus 2.0\n\n\n31\nIn deutlicher Abgrenzung zur Vorstellung einer festgelegten „Bedeutung der Wörter“ entwickelte Wittgenstein das Konzept der Sprachspiele, das Sprache nicht als ein starres Abbild von Wirklichkeit, sondern als regelgeleitete, kontextabhängige Praxis begreift\n\n\n32\nSprache ist demnach kein System aus Zeichen und Referenten, sondern ein Handeln mit Zeichen, das sich an implizite Regeln knüpft, die situativ ausgehandelt werden\n\n\n33\nneue Form von Sprachspiel\n\n\n34\nEin Prompt ist kein Satz im klassischen Sinne, sondern ein Sprechakt mit funktionaler Zielsetzung\n\n\n35\nIn der Interaktion mit generativer KI entwickelt sich zunehmend eine neue Form davon: der Prompt-Idiolekt\n\n\n36\nDie Bedeutung eines Prompt-Satzes erschließt sich nicht aus dem Satz selbst, sondern aus der historischen Interaktionspraxis zwischen User und Maschine. Damit entsteht eine Art privater Sprachspielraum, der weder mit natürlicher Sprache noch mit Programmiersprache vollständig deckungsgleich ist\n\n\n37\nDie Bedeutung eines Prompts liegt nicht im linguistischen Gehalt, sondern in seiner funktionalen Performanz im System\n\n\n38\nKonzept des Cognitive Offloading\n\n\n39\nSprache wird zur Startfläche algorithmischer Leistung, nicht mehr zur detaillierten Abbildung des eigenen Denkens.\n\n\n40\nSyntaktisch komplexe Strukturen, wie sie etwa durch Nebensätze, Konnektoren, explizite Subjekt-Prädikat-Relationen oder rhetorische Absicherungen gekennzeichnet sind, weichen zunehmend minimalistischen, kommandierenden oder referenzbasierten Sprachmustern\n\n\n41\ninwiefern Nutzer das eigene Kommunikationsverhalten als funktional transformiert wahrnehmen – und ob sie bewusst oder unbewusst beginnen, Sprache im Sinne einer kondensierten Steuerungslogik zu verwenden\n\n\n42\nEs bildet sich ein idiosynkratischer Sprachraum aus, ein Prompt-Idiolekt, der weder dem Standardregister der Alltagssprache noch dem Code der maschinellen Sprache vollständig entspricht – sondern etwas Drittes ist: ein hybridisiertes Steuerungssystem, das durch wechselseitige Eingewöhnung emergiert\n\n\n43\ndialogischen Ko-Evolution mit einem System, das nicht intentional, aber responsiv ist. Die KI lernt nicht individuell, aber sie reagiert in berechenbarer Weise auf bestimmte semantische Muster – und der Mensch wiederum passt seine Sprache an diese Reaktionslogik an. Aus dieser Rückkopplung entsteht eine Form funktional stabilisierter Ausdrucksweisen, die zugleich persönlich markiert und maschinenadaptiert ist\n\n\n44\nFür Außenstehende sind diese sprachlichen Gebilde oftmals schwer nachvollziehbar. Ihre Bedeutung erschließt sich nicht aus der Semantik selbst, sondern aus der Interaktionserfahrung, die sie rahmt\n\n\n45\nGebrauchsmuster, die nur im konkreten Sprachspiel ihren Sinn entfalten\n\n\n46\neine Art semantischer Gewöhnung, bei der sich Sprache zunehmend vom sozialen Code der zwischenmenschlichen Kommunikation entfernt.\n\n\n47\nEmpirisch ließe sich diese Annahme über die Analyse wiederkehrender Formulierungen, Prompt-Muster und sprachlicher Kürzel erfassen, ergänzt durch Drittbeurteilungen hinsichtlich Verständlichkeit und Kontextklarheit\n\n\n48\neröffnet damit den Zugang zu einem bislang kaum erforschten Phänomen: der semantischen Selbstorganisation zwischen Mensch und Maschine\n\n\n49\nProcessing Fluency\n\n\n50\ndas Erleben, Sprache nicht mehr im klassischen Sinne “bilden” zu müssen, sondern sie lediglich als Steuerbefehl zu setzen.\n\n\n51\nInteraktion mit generativer KI bei Nutzer zu einem gesteigerten Erleben von Kommunikationsökonomie und subjektiver Sprachkontrolle führt\n\n\n52\nGefühl manifestiert sich nicht nur in der Präferenz für knappe Sprache, sondern auch in einer veränderten Erwartungshaltung gegenüber Kommunikation generell: Sie soll funktionieren, nicht verweilen; sie soll auslösen, nicht aushandeln; sie soll klar sein, nicht offen.\n\n\n53\npsychologischen Zustand, in dem Sprache weniger als soziales Band denn als symbolisches Steuerungsinstrument verstanden wird – ein Zustand, der nicht nur die KI-Nutzung selbst, sondern auch darüber hinausgehende Kommunikationsgewohnheiten nachhaltig prägen kann.\n\n\n54\nEin deutschsprachiger Prompt wie „Mach es kürzer. Empathisch. Bulletpoints. “funktioniert in englischer, spanischer oder französischer Übersetzung nahezu gleich gut. Die operative Sprachebene ist nicht mehr idiomatisch, sondern algorithmisch organisiert. Damit entsteht eine Form der Sprache, die sich über nationale Konventionen hinwegsetzt – eine emergente Maschinensprache, die sich durch ihre technische Anschlussfähigkeit definiert, nicht durch ihren kulturellen Resonanzraum.\n\n\n55\nhandelt es sich um eine funktionale, transkulturelle Sprache zweiter Ordnung – eine Sprache, die nicht dem zwischenmenschlichen Verstehen, sondern der Optimierung maschineller Antwortlogik dient\n\n\n56\nIhre Grammatik ist eine Grammatik der Maschinenlesbarkeit, nicht der sozialen Sensibilität\n\n\n57\nplausibel anzunehmen, dass Nutzer:innen – unabhängig von ihrer jeweiligen Muttersprache – ähnliche sprachliche Muster im Umgang mit der KI entwickeln.\n\n\n58\npotenzielle Entwicklung einer neuen, nicht-natursprachlichen, aber humanadaptierten Sprachebene – eine Sprache, die nicht Ausdruck kultureller Differenz, sondern funktionale Antwort auf algorithmische Konvergenz ist\n\n\n59\nHypothese 4:\n\n\n60\nverweist auf einen weitreichenden Transfermechanismus: KI-basierte Sprachgewohnheiten sind nicht an das Interface gebunden, sondern setzen sich als kulturelle Technik durch\n\n\n61\nzugrundeliegende Hypothese lautet deshalb, dass Menschen, die generative KI intensiv nutzen, in anderen schriftsprachlichen Kontexten eine deutlich erhöhte Neigung zu sprachlicher Verkürzung, funktionaler Struktur und semantischer Direktheit zeigen\n\n\n62\nVielmehr handelt es sich um eine maschinenkompatible Sprachökonomie, die nicht auf Selbstverwirklichung, sondern auf funktionaler Output-Optimierung beruht\n\n\n63\nDie Ausbildung individueller Prompt-Stile ist nicht lediglich ein Nebenprodukt intensiver Nutzung, sondern ein zentraler Marker einer neuen Mensch-Maschine-Kommunikation.\n\n\n64\nSprache wird nicht mehr in erster Linie als Werkzeug sozialer Kohäsion begriffen, sondern als Mittel semantischer Beherrschung. Aus dem Nutzer wird ein Prompt-Operator, aus dem Dialog eine Steuerstruktur\n\n\n65\nDabei entsteht eine Art semantische „Lowest Common Denominator“-Sprache: reduziert, anschlussfähig, funktional\n\n\n66\nBedeutung entsteht nicht mehr im sozialen Gebrauch einer bestimmten Sprachkultur, sondern in der Rekurrenz funktionaler Semantik, die durch maschinelles Lernen validiert wird. Die Maschine produziert keinen kulturellen Sinn – aber sie „belohnt“funktionale Sprache durch qualitativ hochwertige Reaktionen.\n\n\n67\nsignifikante stilistische Verlagerung hin zu Kürze, Direktheit und reduzierter Kontextualisierung – selbst in Konstellationen, in denen früher elaborierte oder höflichkeitsorientierte Sprache verwendet wurde.\n\n\n68\nWas im Maschinenraum der Sprache gelernt wurde, wirkt in den sozialen Raum hinein – durch Nachahmung, durch Habituation, durch entlastende Wirksamkeit.\n\n\n69\nDabei wird Sprache nicht „verarmt“ , sondern umprogrammiert: weg von kultureller Einschreibung, hin zu systemischer Wirkung.\n\n\n70\nkündigt sich ein möglicher kultureller Paradigmenwechsel an: das Verschwinden sprachlicher Höflichkeitsformeln, das Schrumpfen von narrativen Einschüben, das Verschwinden emotionaler Zwischentöne\n\n\n71\nEs zählt nicht mehr, wie etwas gesagt wird, sondern dass es funktioniert. Der performative Charakter des Sozialen wird verdrängt durch eine neue Grammatik der Funktionssprache\n\n\n\n\n\n\n\n\n\n\nReferences\n\nBSI, Brand Science Institute. 2025. “Wie KI Unsere Sprache Verändert – Eine Empirische Studie.” https://www.bsi.ag/cases/104-case-studie-wie-ki-unsere-sprache-veraendert---eine-empirische-studie.html."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "germanic languages, project drafts",
+    "section": "",
+    "text": "index\n\n\n\n\n\nid\n1\n\n\nclass\nVLSG: germanische sprachen im vergleich\n\n\ntutor\nHüning/Konvicna\n\n\nterm\nFUB WS25/26\n\n\nsubject\nclass project drafts\n\n\nabstract\nNA"
+  },
+  {
+    "objectID": "snc.html",
+    "href": "snc.html",
+    "title": "SNC",
+    "section": "",
+    "text": "SNC\n\nsnc.1.2.2.3.4,cache R,docker wks,render in container wks.,new build,syntax,5,wks."
   },
   {
     "objectID": "draft-C.html",
