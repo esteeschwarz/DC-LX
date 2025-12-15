@@ -51,24 +51,26 @@
     {% endif %}
 <!--</p>-->
 </div>
-<br>
+<hr>
 
 			{% if page.collection == "posts" %}
 			<div id="post-nav" class="row">
 				{% if page.previous.url %}
-				<div class="small-4 columns text-left">
+				<div class="small-4 columns">
 					<a class="button small radius prev" href="{{ site.url }}{{ site.baseurl }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
 				</div><!-- /.small-4.columns -->
 				{% endif %}
-				<div class="small-4 columns text-center">
+				<div class="small-4 columns">
 					<a class="button small radius expand" href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a>
 				</div><!-- /.medium-2.columns -->
 				{% if page.next.url %}
-				<div class="small-4 columns text-right">
+				<div class="small-4 columns">
 					<a class="button small radius next" href="{{ site.url }}{{ site.baseurl }}{{page.next.url}}">{{page.next.title}} &raquo;</a>
-				</div><!-- /.medium-5.columns -->
+				</div><!-- /.small-4.columns -->
 				{% else %}
-				<div class="medium-5 columns text-right"></div><!-- /.small-4.columns -->
+				<div class="small-4 columns">
+
+				</div><!-- /.small-4.columns -->
 				{% endif %}
 			</div>
 			{% endif %}
