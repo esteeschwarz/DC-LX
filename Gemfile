@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+# gem 'jekyll'
+gem "github-pages", group: :jekyll_plugins # git used 4.3.2, local 4.4.1
 
 group :jekyll_plugins do
   gem 'jekyll-gist'
