@@ -7,7 +7,7 @@ layout: page
 #date: "2025-10-18"
 categories: [linguistics]
 tags: [LX,sociolinguistics,HA,shibboleth,AI speech,L1/L2,register]
-url: "https://esteeschwarz.github.io/open-lx/posts/germanic-001"
+url: "https://esteeschwarz.github.io/DC-LX/posts/germanic-ha"
 description: "term project drafts"
 github-repo: "esteeschwarz/SPUND-LX/tree/main/germanic"
 layout: page

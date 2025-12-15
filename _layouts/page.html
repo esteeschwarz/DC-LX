@@ -35,7 +35,7 @@ format: post
 			</p>
 			{% endif %}
 
-			<div itemprop="articleSection">
+<div itemprop="articleSection">
 			<!-- <p>test modify page.html</p> -->
 			       <!-- <p>testmodify div content</p> -->
 <!--          {% if page.class %}
@@ -71,16 +71,16 @@ format: post
   <br>
   <a class="button tiny radius" href="{{ row.link }}">{{ row.site_link_text }}</a>
  <!-- <a href="{{ row.link }}">{{ row.site_link_text }}</a>-->
-  <br>
+  <br><!--<p>button if sit link</p>-->
 {% endif %}
-  <hr>
-
+<!--<p>endif row</p>-->
 {% endif %}
 
  
 			{{ content }}
-			<br>
-			</div>
+			  <hr>
+
+</div> <!--- /.articlesection-->
 <p>META:</p>
 			{% if page.show_meta == true %}
 			{% include _meta_information.html %}
