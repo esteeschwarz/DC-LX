@@ -61,14 +61,16 @@ format: post
   <p>tutor: {{ row.tutor }}.</p>
   <p>term: {{ row.term }}.</p>
 {% if row.subject %}
-  <p>subject: {{ row.subject }}.</p>
+  <h4>subject:</h4><p>{{ row.subject }}.</p>
 {% endif %}
 {% if row.abstract %}
-  <p>abstract: {{ row.abstract }}</p>
+  <h4>abstract:</h4><p>{{ row.abstract }}</p>
 {% endif %}
 {% if row.site_link_text %}
   <h2>view:</h2>
-  <a href="{{ row.link }}">{{ row.site_link_text }}</a>
+  <br>
+  <a class="button tiny radius" href="{{ row.link }}">{{ row.site_link_text }}</a>
+ <!-- <a href="{{ row.link }}">{{ row.site_link_text }}</a>-->
   <br>
 {% endif %}
   <hr>
