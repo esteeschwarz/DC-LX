@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-# gem 'jekyll'
-gem "github-pages", group: :jekyll_plugins # git used 4.3.2, local 4.4.1
+gem 'jekyll'
+# gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
   gem 'jekyll-gist'
@@ -9,6 +9,7 @@ group :jekyll_plugins do
   gem "jekyll-asciidoc"
 end
 
+gem 'kramdown-parser-gfm'
 gem 'asciidoctor', '~> 1.5.4'
 gem 'coderay', '1.1.1'
 
