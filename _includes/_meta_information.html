@@ -1,17 +1,19 @@
 			<div id="page-meta" class="t30">
+				  <div class="post-tail-wrapper text-muted">
+	  <p>post meta...</p>
+
 				<p>
 					<!-- Look the author details up from the site config. -->
 					{% assign author = site.data.authors[page.author] %}
 					<!-- Output author details if some exist. -->
 					{% if author %}
-					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="{{ author.uri }}" target="_blank"> {{ author.name }}</a></span>
-				</span>
+<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="{{ author.uri }}" target="_blank"> {{ author.name }}</a></span></span>
 				{% endif %}
 
 				{% if page.date %}
 				<time class="icon-calendar pr20" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"> {{ page.date | date: "%Y-%m-%d" }}</time>
 				{% endif %}
-  <div class="post-tail-wrapper text-muted">
+  <!-- <div class="post-tail-wrapper text-muted"> -->
     <!-- categories -->
     {% if page.categories.size > 0 %}
       <div class="post-meta mb-3">
@@ -19,10 +21,10 @@
        		<span class="icon-archive pr20"></span>
 
 		{% for category in page.categories %}
-          <a href="{{ site.baseurl }}/{{ category | slugify | url_encode }}/"> {{ category | upcase }}</a>
-          {%- unless forloop.last -%},{%- endunless -%}
+         <span><a href="{{ site.baseurl }}/{{ category | slugify | url_encode }}/">{{ category | upcase }}</a>
+          {%- unless forloop.last -%},{%- endunless -%}</span>
         {% endfor %}
-      </div>
+      </div> <!-- cats-->
 	      
 
     {% endif %}
@@ -41,8 +43,11 @@
             {{- tag -}}  / 
           </a> 
         {% endfor %}
-      </div>
+      </div> <!-- tags-->
+	  <p>end meta...</p>
     {% endif %}
+</p>
+</div>
 <br>
 
 			{% if page.collection == "posts" %}
