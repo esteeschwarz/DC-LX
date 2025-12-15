@@ -78,11 +78,13 @@ format: post
 
  
 			{{ content }}
-			  <hr>
 
 </div> <!--- /.articlesection-->
-<p>META:</p>
 			{% if page.show_meta == true %}
+						  <hr>
+
+			<p>META:</p>
+
 			{% include _meta_information.html %}
 			{% endif %}
 
