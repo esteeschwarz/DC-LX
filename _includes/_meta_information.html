@@ -2,12 +2,16 @@
 				  <div class="post-tail-wrapper text-muted">
 	  <p>post meta...</p>
 
-				<p>
+				<!--<p>-->
 					<!-- Look the author details up from the site config. -->
 					{% assign author = site.data.authors[page.author] %}
 					<!-- Output author details if some exist. -->
 					{% if author %}
-<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="{{ author.uri }}" target="_blank"> {{ author.name }}</a></span></span>
+<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+	<span itemprop="name" class="pr20 icon-edit">
+		<a href="{{ author.uri }}" target="_blank"> {{ author.name }}</a>
+	</span>
+</span>
 				{% endif %}
 
 				{% if page.date %}
@@ -39,28 +43,34 @@
           <a
             href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/"
             class="post-tag no-text-decoration"
-          >
-            {{- tag -}}  / 
+          >{{- tag -}}  / 
           </a> 
         {% endfor %}
       </div> <!-- tags-->
 	  <p>end meta...</p>
     {% endif %}
-</p>
+<!--</p>-->
 </div>
 <br>
 
 			{% if page.collection == "posts" %}
 			<div id="post-nav" class="row">
 				{% if page.previous.url %}
-				<div class="medium-5 columns"><a class="button small radius prev" href="{{ site.url }}{{ site.baseurl }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a></div><!-- /.small-4.columns -->
+				<div class="small-4 columns text-left">
+					<a class="button small radius prev" href="{{ site.url }}{{ site.baseurl }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+				</div><!-- /.small-4.columns -->
 				{% endif %}
-				<div class="medium-2 columns text-center"><a class="button small radius expand" href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a></div><!-- /.small-4.columns -->
+				<div class="small-4 columns text-center">
+					<a class="button small radius expand" href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a>
+				</div><!-- /.medium-2.columns -->
 				{% if page.next.url %}
-				<div class="medium-5 columns text-right"><a class="button small radius next" href="{{ site.url }}{{ site.baseurl }}{{page.next.url}}">{{page.next.title}} &raquo;</a></div><!-- /.small-4.columns -->
+				<div class="small-4 columns text-right">
+					<a class="button small radius next" href="{{ site.url }}{{ site.baseurl }}{{page.next.url}}">{{page.next.title}} &raquo;</a>
+				</div><!-- /.medium-5.columns -->
 				{% else %}
 				<div class="medium-5 columns text-right"></div><!-- /.small-4.columns -->
 				{% endif %}
 			</div>
 			{% endif %}
+			<br>
 			</div><!--  /.page-meta -->
