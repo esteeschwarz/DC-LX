@@ -45,6 +45,9 @@ urlimg: '/DC-LX/images/'
 # Logo size is 600x80 pixels
 logo: "logo.png"
 
+# build
+incremental: true
+
 # Plugins
 plugins:
     - jekyll-asciidoc
