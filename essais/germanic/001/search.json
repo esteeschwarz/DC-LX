@@ -2,63 +2,63 @@
   {
     "objectID": "draft-B.html#inspiration",
     "href": "draft-B.html#inspiration",
-    "title": "xtitle",
+    "title": "xtitle/AI",
     "section": "inspiration",
     "text": "inspiration\nnow what are we experiencing if communicating with an artificial intelligence? first comes to mind the seemingly :natural language: adressed to us. one may feel as if talking to a human when asking questions and getting a response. studies prove that a significant amount of us show behaviour towards the AI that one would expect humans show only towards each other. that leads to the first question:\n\nif we hold the AI as a human communication partner, could its behaviour towards us (here: their language) influence the way we talk/act viceversa? can people learn from an AI how to talk and what would they learn in this case? what is the language taught here specifically? do we adapt to patterns or linguistic markers common for AI speech?"
   },
   {
     "objectID": "draft-B.html#ai-speech-wtf",
     "href": "draft-B.html#ai-speech-wtf",
-    "title": "xtitle",
+    "title": "xtitle/AI",
     "section": "AI speech: wtf",
     "text": "AI speech: wtf\nwe can assume as common ground that the language used (here: output) by LLMs seems rather neutral, deprived of features deviating from the norm. its rather easy to understand, doesnt contain irony or sarcasm very often nor hyperbolic sentence structures (if not explicitly prompted) and could be very well used in a textbook for learners. it may be considered universal in aspects of transferability into other languages. it uses to not contain any specific vocabular or non-standard phrases. the syntax and grammar seems to follow the corresponding rules as the models are trained on large corpora of natural language. if we would (and we will do that) analyse a corpus of LLM outputs we very probably will find that in any feature it complies with the average feature matrix of any language compared. so if one language goes like SPO with having an average wordcount of 5wds/phrase and an average wordlength of 5 chars then the LLM certainly will show the same features for output in that language. no magic so far.\nBut: what if learners or people with deficient language skills begin to sync their output with the artificial language in their chatverlauf? simple like: beginning a response firstly with an appreciation of the :very interesting question: whatever the other may have asked? we’re already heading that way…\nThere may also be tiny (oberlehrerhafte) standardisations of our own speech peculiarities (idiosyncrasies) we are confronted with which we are kind of nudged to relativate if always sending them into a black hole."
   },
   {
     "objectID": "draft-B.html#sec-methods",
     "href": "draft-B.html#sec-methods",
-    "title": "xtitle",
+    "title": "xtitle/AI",
     "section": "methods",
     "text": "methods\nfirst to do would be to create (or search for) a corpus of AI generated output. to use an existing corpus would prevent biasing which on the other hand could be interesting to explore i.e. we could by building (generating) a corpus ourselves on the basis of certain dedicated prompts1 force the AI to generate phenomena of interest to our research question. where we get into medias res…"
   },
   {
     "objectID": "draft-B.html#focusing-questions",
     "href": "draft-B.html#focusing-questions",
-    "title": "xtitle",
+    "title": "xtitle/AI",
     "section": "focusing questions",
     "text": "focusing questions\n\ndoes a generative AI generally produces output that is in any aspects of interest for linguistic research?\nhow will users prime the output?\nhow are users adapting their own production to the output?\n\nis there any consistency concerning this adaptation?\nis there then societal adaptation of AI produced language?\nwhat are the rules (historic evidence) for adaptation?"
   },
   {
     "objectID": "draft-B.html#going-deeper",
     "href": "draft-B.html#going-deeper",
-    "title": "xtitle",
+    "title": "xtitle/AI",
     "section": "going deeper",
     "text": "going deeper\n\ncorpus creation\nas proposed in Section 2.3 a secure way to building a corpus of AI speech - which we need to explore phenomena - is to archive LLM output to dedicated prompts. we will use an open source model provided with llama which can run on a local machine and is adressed via an API by script.\n\nconstraints\nwe will form prompts following these directives lead by our research question: 1. correction of mistakes to devise actual “knowledge” of model concerning standardisation and normative aspects"
   },
   {
     "objectID": "draft-B.html#what-i-would-like-to",
     "href": "draft-B.html#what-i-would-like-to",
-    "title": "xtitle",
+    "title": "xtitle/AI",
     "section": "what i would like to…",
     "text": "what i would like to…\n\nAI chat queries analysis\nanalyse linguistic knowledge capacities of AIs\nproofread responses, factchecking"
   },
   {
     "objectID": "draft-B.html#and-what-i-actually-can-do",
     "href": "draft-B.html#and-what-i-actually-can-do",
-    "title": "xtitle",
+    "title": "xtitle/AI",
     "section": "and what i actually can do",
     "text": "and what i actually can do\n\nstatistics\nautomated prompting using APIs\nautomated response processing\nmasked prompt generation"
   },
   {
     "objectID": "draft-B.html#from-here",
     "href": "draft-B.html#from-here",
-    "title": "xtitle",
+    "title": "xtitle/AI",
     "section": "from here…",
     "text": "from here…\n…we come to a maybe more feasable to explore topic within the research of semantic, syntactic and pragmatic features of speech of AI users that is affected by that use. in the not citable BSI (2025) a focus lies on how users language changes depending on their making “heavy use” of AI tools. there seems to be an influence of the affordances to create successful/optimized prompts for best results on a. the language used in that prompts and furthermore b. the language beyond that usecase say the users everyday life. which is exactly what we were looking for, and from here, we can dig into corpora to find manifestations of features the study discovered as e.g. simplification of komplex syntactic structures in favour of reference based patterns."
   },
   {
     "objectID": "draft-B.html#footnotes",
     "href": "draft-B.html#footnotes",
-    "title": "xtitle",
+    "title": "xtitle/AI",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nwhich could very well be adapted to our research question↩︎\nfor which i in the moment dont find a reliable source anymore so its not cited.↩︎"
   },
