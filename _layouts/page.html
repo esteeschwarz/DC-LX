@@ -38,7 +38,7 @@ format: post
 <div itemprop="articleSection">
 			<!-- <p>test modify page.html</p> -->
 			       <!-- <p>testmodify div content</p> -->
-<!--          {% if page.class %}
+          <!-- {% if page.class %}
 
   <h1>info</h1>
    {{ page.class }}
@@ -46,12 +46,12 @@ format: post
 {% if page.task %}
     <h1>task</h1>
    {{ page.task }}
-    {% endif %}
+    {% endif %} -->
    {% if page.site_link_text and page.ids %}
    <h1>view</h1>
        <a href="../../essais/{{ page.ids }}"> {{ page.site_link_text }}</a>
 
-   {% endif %}-->
+   {% endif %}
 {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
 {% assign row = site.data.postmeta | where: "name", page_id | first %}
 
@@ -70,16 +70,16 @@ format: post
   <h2>view:</h2>
   <br>
   <a class="button tiny radius" href="{{ row.link }}">{{ row.site_link_text }}</a>
- <!-- <a href="{{ row.link }}">{{ row.site_link_text }}</a>-->
-  <br><!--<p>button if sit link</p>-->
+ <!-- <a href="{{ row.link }}">{{ row.site_link_text }}</a> -->
+  <br><!-- <p>button if site link</p> -->
 {% endif %}
-<!--<p>endif row</p>-->
+<!-- <p>endif row</p> -->
 {% endif %}
 
  
 			{{ content }}
 
-</div> <!--- /.articlesection-->
+</div> <!-- /.articlesection -->
 			{% if page.show_meta == true %}
 						  <hr>
 
