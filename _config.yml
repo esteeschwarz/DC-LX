@@ -46,7 +46,7 @@ urlimg: '/DC-LX/images/'
 logo: "logo.png"
 
 # build
-incremental: true
+incremental: false
 
 # Plugins
 plugins:
