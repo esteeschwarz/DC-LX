@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
+# lapsi: 4.4.1, artefact atom.xml shows git uses the same version
 # gem "github-pages", group: :jekyll_plugins
 
 group :jekyll_plugins do
