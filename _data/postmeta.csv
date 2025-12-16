@@ -1,11 +1,11 @@
-pid,name,about,link,site_link_text,term,class,tutor,subject,abstract
+pid,name,subject,link,site_link_text,term,class,tutor,about,abstract
 10,sebald,w.g. sebald session preparation,../../essais/sebald/001,page intern,WS25/26,dokufiktion,Brüggermann,,
 4,snc,testing frontend,..,parent index (..),,,,try update dynamic,
 3,sbc,santa santa barbara corpus essai,../../essais/sbc/,page,SoSe24,corpus linguistics,stefanowitsch,,
 5,publx,why & how to public LX,,,WS25,linguistik und öffentlichkeit,stefanowitch,,
 6,germanic-ha,term project drafts,../../essais/germanic/001,paper drafts,WS25,germanische sprachen im vergleich,hüning/konvicna,,
 2,germanic,yiddish grammar paradigms,https://ada-sub.dh-index.org/shiny/work/essais/germanic-001/,shiny app,WS25,germanische sprachen im vergleich,hüning/konvicna,,
-7,g-mcculloch,analyse einer linguistischen öffentlichkeit anhand vorhandener kategorien,../../essais/publx/001,view analysis here,WS25,linguistik und öffentlichkeit,stefanowitch,,
+7,g-mcculloch,analyse einer linguistischen öffentlichkeit anhand vorhandener kategorien,../../essais/publx/001,view analysis here,WS25,linguistik und öffentlichkeit,stefanowitch,g. mcculloch site analysis,
 8,dcl,dahlem center for linguistics site proposal,,,WS25,linguistik und öffentlichkeit,stefanowitch,,
 9,smi-a,research questions and hypothesis for group research project,../../essais/smi/001,draft,WS25,schizophrenie and mental images; x-student research group, wilck/nenchev charite berlin (BUA),,
 1,coherence,term paper,../../essais/coherence/,paper,SoSe25,sprache und psychose,stefanowitsch,,
