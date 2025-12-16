@@ -1,6 +1,6 @@
 
     // Copy-to-clipboard behavior similar to Chirpy's header button
-    document.querySelectorAll('.code-block').forEach(function (block) {
+    document.querySelectorAll('.code-header').forEach(function (block) {
       var btn = block.querySelector('.copy-btn');
       var labelSpan = btn.querySelector('.copy-label');
 
