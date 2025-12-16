@@ -2,3 +2,7 @@
 .huhn {
     display: none;
 }
+
+	.navitable table {
+		border: none;
+	}

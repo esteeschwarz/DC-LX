@@ -75,9 +75,9 @@ Starting from a GPT provided bibliography (disclaimer:of which some entries appe
 
 # 2 References
 
-<!--\clearpage-->
+<!-- \clearpage -->
 
-<!--chapter:end:index.Rmd-->
+<!-- chapter:end:index.Rmd -->
 
 <div id="refs" class="references csl-bib-body hanging-indent">
 

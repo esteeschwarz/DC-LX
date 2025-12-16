@@ -17,17 +17,36 @@
 				<span class="pr20">{% for tag in page.tags %}<span class="icon-price-tag pr10"> {{tag}}</span> {% endfor %}</span>
 			</p>
 
+
+<!-- <style>
+	.navitable table {
+		border: none;
+	}
+	td {
+		padding: 10px;
+	}
+</style> -->
 			{% if page.collection == "posts" %}
-			<div id="post-nav" class="row">
-				{% if page.previous.url %}
-				<div class="medium-5 columns"><a class="button small radius prev" href="{{ site.url }}{{ site.baseurl }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a></div><!-- /.small-4.columns -->
-				{% endif %}
-				<div class="medium-2 columns text-center"><a class="button small radius expand" href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a></div><!-- /.small-4.columns -->
-				{% if page.next.url %}
-				<div class="medium-5 columns text-right"><a class="button small radius next" href="{{ site.url }}{{ site.baseurl }}{{page.next.url}}">{{page.next.title}} &raquo;</a></div><!-- /.small-4.columns -->
-				{% else %}
-				<div class="medium-5 columns text-right"></div><!-- /.small-4.columns -->
-				{% endif %}
-			</div>
-			{% endif %}
-			</div><!--  /.page-meta -->
+
+			<div class="navitable">
+		<table>
+					<tr>{% if page.previous.url %}
+						<td><a class="button small radius prev" href="{{ site.url }}{{ site.baseurl }}{{page.previous.url}}">&lt; {{page.previous.title}}</a></td>{% endif %}
+					
+					<td>
+<a class="button small radius prev" href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a>
+					</td>
+					{% if page.next.url %}
+					<td>
+<a class="button small radius next" href="{{ site.url }}{{ site.baseurl }}{{page.next.url}}">{{page.next.title}} &gt;</a>
+					</td>
+					{% else %}
+					<td>
+<a class="button small radius next" href="#">NO.</a>
+					</td>{% endif %}
+					</tr>
+				</table>
+
+</div> <!-- post navi table -->
+{% endif %}
+</div> <!-- post meta -->

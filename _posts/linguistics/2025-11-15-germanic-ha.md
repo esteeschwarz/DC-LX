@@ -23,4 +23,4 @@ I decided for draft A out of pure interest in sociolinguistic and register/style
 
 <!--
 ## view 
-[drafts page](../../essais/germanic/001)-->
+[drafts page](../../essais/germanic/001) -->
