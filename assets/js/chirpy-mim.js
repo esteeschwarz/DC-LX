@@ -9,13 +9,13 @@
               navigator.clipboard.writeText(text).then(function() {
                 const icon = btn.querySelector('i');
                 icon.className = 'fas fa-check';
-                btn.style.background = '#2ea043';
+               // btn.style.background = '#2ea043';
                 btn.setAttribute('aria-label', 'Copied!');
                 btn.setAttribute('title', 'Copied!');
                 
                 setTimeout(function() {
                   icon.className = 'far fa-clipboard';
-                  btn.style.background = '#444';
+                 // btn.style.background = '#444';
                   btn.setAttribute('aria-label', 'Copy code');
                   btn.setAttribute('title', 'Copy code');
                 }, 2000);
@@ -26,7 +26,7 @@
                 btn.style.background = '#dc3545';
                 setTimeout(function() {
                   icon.className = 'far fa-clipboard';
-                  btn.style.background = '#444';
+                 // btn.style.background = '#444';
                 }, 1500);
               });
             };
