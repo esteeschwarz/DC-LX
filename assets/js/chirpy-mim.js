@@ -1,36 +1,34 @@
-
-    // Copy-to-clipboard behavior similar to Chirpy's header button
-    document.querySelectorAll('.code-header').forEach(function (block) {
-      var btn = block.querySelector('.copy-btn');
-      var labelSpan = btn.querySelector('.copy-label');
-
-      btn.addEventListener('click', function () {
-        var codeElement = block.querySelector('pre code');
-        var text = codeElement.innerText.replace(/\n\s+$/g, '\n');
-        navigator.clipboard.writeText(text).then(function () {
-          var original = labelSpan.textContent;
-          labelSpan.textContent = 'Copied';
-          btn.classList.add('copied');
-          setTimeout(function () {
-            labelSpan.textContent = original;
-            btn.classList.remove('copied');
-          }, 2000);
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('.copy-btn').forEach(function(btn) {
+            btn.onclick = function() {
+              const header = this.closest('.code-header');
+              const wrapper = header.closest('.code-block-wrapper');
+              const codeBlock = wrapper.querySelector('code');
+              const text = codeBlock.innerText || codeBlock.textContent;
+              
+              navigator.clipboard.writeText(text).then(function() {
+                const icon = btn.querySelector('i');
+                icon.className = 'fas fa-check';
+                btn.style.background = '#2ea043';
+                btn.setAttribute('aria-label', 'Copied!');
+                btn.setAttribute('title', 'Copied!');
+                
+                setTimeout(function() {
+                  icon.className = 'far fa-clipboard';
+                  btn.style.background = '#444';
+                  btn.setAttribute('aria-label', 'Copy code');
+                  btn.setAttribute('title', 'Copy code');
+                }, 2000);
+              }).catch(function(err) {
+                console.error('Failed to copy:', err);
+                const icon = btn.querySelector('i');
+                icon.className = 'fas fa-times';
+                btn.style.background = '#dc3545';
+                setTimeout(function() {
+                  icon.className = 'far fa-clipboard';
+                  btn.style.background = '#444';
+                }, 1500);
+              });
+            };
+          });
         });
-      });
-    });
-
-    // Simple theme toggle using data-mode like Chirpy
-    // document.getElementById('toggle-theme').addEventListener('click', function () {
-    //   var html = document.documentElement;
-    //   var mode = html.getAttribute('data-mode');
-    //   html.setAttribute('data-mode', mode === 'dark' ? 'light' : 'dark');
-    // });
-
-    // Optional: set the visible language label from data-lang, like Chirpy's language-alias include
-    document.querySelectorAll('.code-block').forEach(function (block) {
-      var lang = block.getAttribute('data-lang');
-      if (!lang) return;
-      var span = block.querySelector('.code-lang');
-      if (span) span.textContent = lang.toUpperCase();
-    });
-  

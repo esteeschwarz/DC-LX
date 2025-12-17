@@ -34,96 +34,96 @@ Jekyll::Hooks.register [:documents, :pages], :post_render do |doc|
   end
 end
 
-# Add the copy functionality script once at the end of the body
-Jekyll::Hooks.register :site, :post_render do |site|
-  site.pages.each do |page|
-    if page.output =~ /<\/body>/
-      copy_script = <<~SCRIPT
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          document.querySelectorAll('.copy-btn').forEach(function(btn) {
-            btn.onclick = function() {
-              const header = this.closest('.code-header');
-              const wrapper = header.closest('.code-block-wrapper');
-              const codeBlock = wrapper.querySelector('code');
-              const text = codeBlock.innerText || codeBlock.textContent;
+# # Add the copy functionality script once at the end of the body
+# Jekyll::Hooks.register :site, :post_render do |site|
+#   site.pages.each do |page|
+#     if page.output =~ /<\/body>/
+#       copy_script = <<~SCRIPT
+#         <script>
+#         document.addEventListener('DOMContentLoaded', function() {
+#           document.querySelectorAll('.copy-btn').forEach(function(btn) {
+#             btn.onclick = function() {
+#               const header = this.closest('.code-header');
+#               const wrapper = header.closest('.code-block-wrapper');
+#               const codeBlock = wrapper.querySelector('code');
+#               const text = codeBlock.innerText || codeBlock.textContent;
               
-              navigator.clipboard.writeText(text).then(function() {
-                const icon = btn.querySelector('i');
-                icon.className = 'fas fa-check';
-                btn.style.background = '#2ea043';
-                btn.setAttribute('aria-label', 'Copied!');
-                btn.setAttribute('title', 'Copied!');
+#               navigator.clipboard.writeText(text).then(function() {
+#                 const icon = btn.querySelector('i');
+#                 icon.className = 'fas fa-check';
+#                 btn.style.background = '#2ea043';
+#                 btn.setAttribute('aria-label', 'Copied!');
+#                 btn.setAttribute('title', 'Copied!');
                 
-                setTimeout(function() {
-                  icon.className = 'far fa-clipboard';
-                  btn.style.background = '#444';
-                  btn.setAttribute('aria-label', 'Copy code');
-                  btn.setAttribute('title', 'Copy code');
-                }, 2000);
-              }).catch(function(err) {
-                console.error('Failed to copy:', err);
-                const icon = btn.querySelector('i');
-                icon.className = 'fas fa-times';
-                btn.style.background = '#dc3545';
-                setTimeout(function() {
-                  icon.className = 'far fa-clipboard';
-                  btn.style.background = '#444';
-                }, 1500);
-              });
-            };
-          });
-        });
-        </script>
-      SCRIPT
+#                 setTimeout(function() {
+#                   icon.className = 'far fa-clipboard';
+#                   btn.style.background = '#444';
+#                   btn.setAttribute('aria-label', 'Copy code');
+#                   btn.setAttribute('title', 'Copy code');
+#                 }, 2000);
+#               }).catch(function(err) {
+#                 console.error('Failed to copy:', err);
+#                 const icon = btn.querySelector('i');
+#                 icon.className = 'fas fa-times';
+#                 btn.style.background = '#dc3545';
+#                 setTimeout(function() {
+#                   icon.className = 'far fa-clipboard';
+#                   btn.style.background = '#444';
+#                 }, 1500);
+#               });
+#             };
+#           });
+#         });
+#         </script>
+#       SCRIPT
       
-      page.output = page.output.sub(/<\/body>/, "#{copy_script}</body>")
-    end
-  end
+#       page.output = page.output.sub(/<\/body>/, "#{copy_script}</body>")
+#     end
+#   end
   
-  # Also handle documents (posts, etc.)
-  site.documents.each do |doc|
-    if doc.output =~ /<\/body>/
-      copy_script = <<~SCRIPT
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          document.querySelectorAll('.copy-btn').forEach(function(btn) {
-            btn.onclick = function() {
-              const header = this.closest('.code-header');
-              const wrapper = header.closest('.code-block-wrapper');
-              const codeBlock = wrapper.querySelector('code');
-              const text = codeBlock.innerText || codeBlock.textContent;
+#   # Also handle documents (posts, etc.)
+#   site.documents.each do |doc|
+#     if doc.output =~ /<\/body>/
+#       copy_script = <<~SCRIPT
+#         <script>
+#         document.addEventListener('DOMContentLoaded', function() {
+#           document.querySelectorAll('.copy-btn').forEach(function(btn) {
+#             btn.onclick = function() {
+#               const header = this.closest('.code-header');
+#               const wrapper = header.closest('.code-block-wrapper');
+#               const codeBlock = wrapper.querySelector('code');
+#               const text = codeBlock.innerText || codeBlock.textContent;
               
-              navigator.clipboard.writeText(text).then(function() {
-                const icon = btn.querySelector('i');
-                icon.className = 'fas fa-check';
-                btn.style.background = '#2ea043';
-                btn.setAttribute('aria-label', 'Copied!');
-                btn.setAttribute('title', 'Copied!');
+#               navigator.clipboard.writeText(text).then(function() {
+#                 const icon = btn.querySelector('i');
+#                 icon.className = 'fas fa-check';
+#                 btn.style.background = '#2ea043';
+#                 btn.setAttribute('aria-label', 'Copied!');
+#                 btn.setAttribute('title', 'Copied!');
                 
-                setTimeout(function() {
-                  icon.className = 'far fa-clipboard';
-                  btn.style.background = '#444';
-                  btn.setAttribute('aria-label', 'Copy code');
-                  btn.setAttribute('title', 'Copy code');
-                }, 2000);
-              }).catch(function(err) {
-                console.error('Failed to copy:', err);
-                const icon = btn.querySelector('i');
-                icon.className = 'fas fa-times';
-                btn.style.background = '#dc3545';
-                setTimeout(function() {
-                  icon.className = 'far fa-clipboard';
-                  btn.style.background = '#444';
-                }, 1500);
-              });
-            };
-          });
-        });
-        </script>
-      SCRIPT
+#                 setTimeout(function() {
+#                   icon.className = 'far fa-clipboard';
+#                   btn.style.background = '#444';
+#                   btn.setAttribute('aria-label', 'Copy code');
+#                   btn.setAttribute('title', 'Copy code');
+#                 }, 2000);
+#               }).catch(function(err) {
+#                 console.error('Failed to copy:', err);
+#                 const icon = btn.querySelector('i');
+#                 icon.className = 'fas fa-times';
+#                 btn.style.background = '#dc3545';
+#                 setTimeout(function() {
+#                   icon.className = 'far fa-clipboard';
+#                   btn.style.background = '#444';
+#                 }, 1500);
+#               });
+#             };
+#           });
+#         });
+#         </script>
+#       SCRIPT
       
-      doc.output = doc.output.sub(/<\/body>/, "#{copy_script}</body>")
-    end
-  end
-end
+#       doc.output = doc.output.sub(/<\/body>/, "#{copy_script}</body>")
+#     end
+#   end
+# end
