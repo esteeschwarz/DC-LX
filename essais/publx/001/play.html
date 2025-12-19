@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="st. schwarz">
-<meta name="dcterms.date" content="2025-12-19">
-<meta name="description" content="germanic languages project draft B">
 
-<title>xtitle/AI – 006</title>
+<title>play – 007</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -63,7 +40,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-769748618214d3e7f46e1f6168e155a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,11 +68,15 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<!-- HTML simply prints the inner text -->
-<!-- 16482.snc -->
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
 <script type="application/latex">
 \newcommand{\he}[1]{#1}
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -109,7 +90,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">006</span>
+    <span class="navbar-title">007</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -122,40 +103,6 @@ div.csl-indent {
     <a class="nav-link" href="./../../.."> 
 <span class="menu-text"><img src="../../../images/backward.end.alt.svg" style="height:1em; vertical-align:-0.1em;"></span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-expose" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">expose</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-expose">    
-        <li>
-    <a class="dropdown-item" href="./draft-B.html">
- <span class="dropdown-text">draft B</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./qa.html">
- <span class="dropdown-text">annotations</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./play.html"> 
-<span class="menu-text">samling</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-drafts-out" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">drafts out</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-drafts-out">    
-        <li>
-    <a class="dropdown-item" href="./draft-A.html">
- <span class="dropdown-text">draft A</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./draft-C.html">
- <span class="dropdown-text">draft C</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -163,7 +110,7 @@ div.csl-indent {
 <span class="menu-text">SNC</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/esteeschwarz/SPUND-LX/tree/main/germanic"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/esteeschwarz/SPUND-LX/tree/main/lx-public"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -183,62 +130,26 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#index" id="toc-index" class="nav-link active" data-scroll-target="#index">index</a></li>
-  <li><a href="#abstract-b-idee-2" id="toc-abstract-b-idee-2" class="nav-link" data-scroll-target="#abstract-b-idee-2">abstract B: idee 2</a>
+  <li><a href="#snc.play" id="toc-snc.play" class="nav-link active" data-scroll-target="#snc.play">16516.snc.play</a>
   <ul class="collapse">
-  <li><a href="#inspiration" id="toc-inspiration" class="nav-link" data-scroll-target="#inspiration">inspiration</a></li>
-  <li><a href="#ai-speech-wtf" id="toc-ai-speech-wtf" class="nav-link" data-scroll-target="#ai-speech-wtf">AI speech: wtf</a></li>
-  <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods">methods</a></li>
-  <li><a href="#focusing-questions" id="toc-focusing-questions" class="nav-link" data-scroll-target="#focusing-questions">focusing questions</a></li>
-  <li><a href="#going-deeper" id="toc-going-deeper" class="nav-link" data-scroll-target="#going-deeper">going deeper</a>
-  <ul class="collapse">
-  <li><a href="#corpus-creation" id="toc-corpus-creation" class="nav-link" data-scroll-target="#corpus-creation">corpus creation</a></li>
+  <li><a href="#mermaid" id="toc-mermaid" class="nav-link" data-scroll-target="#mermaid">mermaid</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#capacities" id="toc-capacities" class="nav-link" data-scroll-target="#capacities">capacities</a>
-  <ul class="collapse">
-  <li><a href="#what-i-would-like-to" id="toc-what-i-would-like-to" class="nav-link" data-scroll-target="#what-i-would-like-to">what i would like to…</a></li>
-  <li><a href="#and-what-i-actually-can-do" id="toc-and-what-i-actually-can-do" class="nav-link" data-scroll-target="#and-what-i-actually-can-do">and what i actually <strong>can</strong> do</a></li>
-  </ul></li>
-  <li><a href="#annotations" id="toc-annotations" class="nav-link" data-scroll-target="#annotations">annotations</a>
-  <ul class="collapse">
-  <li><a href="#from-here" id="toc-from-here" class="nav-link" data-scroll-target="#from-here">from here…</a></li>
-  </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="draft-B.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">xtitle/AI</h1>
-<p class="subtitle lead">AI and language change &amp; variation</p>
+<h1 class="title">play</h1>
 </div>
 
-<div>
-  <div class="description">
-    germanic languages project draft B
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>st. schwarz </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 19, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -248,134 +159,48 @@ div.csl-indent {
 </header>
 
 
-<!--
-::: {.content-visible when-format="html"}
+<section id="snc.play" class="level1">
+<h1>16516.snc.play</h1>
+<section id="mermaid" class="level2">
+<h2 class="anchored" data-anchor-id="mermaid">mermaid</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
 
-load pdf [here](.pdf)
-
-:::
--->
-<section id="index" class="level1">
-<h1>index</h1>
-</section>
-<section id="abstract-b-idee-2" class="level1">
-<h1>abstract B: idee 2</h1>
-<p>language is developing and changing. there are many factors that influence language change, but i want to focus on one that may become relevant in todays language development: the change of language by constant and increasing use of AI tools that :communicate: with us as partners one may consider :real: or human-equivalent.</p>
-<section id="inspiration" class="level2">
-<h2 class="anchored" data-anchor-id="inspiration">inspiration</h2>
-<p>now what are we experiencing if communicating with an artificial intelligence? first comes to mind the seemingly :natural language: adressed to us. one may feel as if talking to a human when asking questions and getting a response. studies prove that a significant amount of us show behaviour towards the AI that one would expect humans show only towards each other. that leads to the first question:</p>
-<blockquote class="blockquote">
-<p>if we hold the AI as a human communication partner, could its behaviour towards us (here: their language) influence the way we talk/act viceversa? can people learn from an AI <em>how</em> to talk and what would they learn in this case? what is the language <em>taught</em> here specifically? do we adapt to patterns or linguistic markers common for <em>AI speech</em>?</p>
-</blockquote>
-</section>
-<section id="ai-speech-wtf" class="level2">
-<h2 class="anchored" data-anchor-id="ai-speech-wtf">AI speech: wtf</h2>
-<p>we can assume as common ground that the language used (here: output) by LLMs seems rather neutral, deprived of features deviating from the norm. its rather easy to understand, doesnt contain irony or sarcasm very often nor hyperbolic sentence structures (if not explicitly prompted) and could be very well used in a textbook for learners. it may be considered <em>universal</em> in aspects of transferability into other languages. it uses to not contain any specific vocabular or non-standard phrases. the syntax and grammar seems to follow the corresponding rules as the models are trained on large corpora of natural language. if we would (and we will do that) analyse a corpus of LLM outputs we very probably will find that in any feature it complies with the average feature matrix of any language compared. so if one language goes like SPO with having an average wordcount of 5wds/phrase and an average wordlength of 5 chars then the LLM certainly will show the same features for output in that language. no magic so far.</p>
-<p>But: what if learners or people with deficient language skills begin to sync their output with the artificial language in their chatverlauf? simple like: beginning a response firstly with an appreciation of the :very interesting question: whatever the other may have asked? we’re already heading that way…</p>
-<p>There may also be tiny (oberlehrerhafte) standardisations of our own speech peculiarities (idiosyncrasies) we are confronted with which we are kind of nudged to relativate if always sending them into a black hole.</p>
-</section>
-<section id="sec-methods" class="level2">
-<h2 class="anchored" data-anchor-id="sec-methods">methods</h2>
-<p>first to do would be to create (or search for) a corpus of AI generated output. to use an existing corpus would prevent biasing which on the other hand could be interesting to explore i.e.&nbsp;we could by building (generating) a corpus ourselves on the basis of certain dedicated prompts<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> force the AI to generate phenomena of interest to our research question. where we get into medias res…</p>
-</section>
-<section id="focusing-questions" class="level2">
-<h2 class="anchored" data-anchor-id="focusing-questions">focusing questions</h2>
-<ol type="1">
-<li>does a generative AI generally produces output that is in any aspects of interest for linguistic research?</li>
-<li>how will users prime the output?</li>
-<li>how are users adapting their own production to the output?
-<ol type="1">
-<li>is there any consistency concerning this adaptation?</li>
-<li>is there then societal adaptation of AI produced language?</li>
-<li>what are the rules (historic evidence) for adaptation?</li>
-</ol></li>
-</ol>
-</section>
-<section id="going-deeper" class="level2">
-<h2 class="anchored" data-anchor-id="going-deeper">going deeper</h2>
-<section id="corpus-creation" class="level3">
-<h3 class="anchored" data-anchor-id="corpus-creation">corpus creation</h3>
-<p>as proposed in <a href="#sec-methods" class="quarto-xref">Section&nbsp;2.3</a> a secure way to building a corpus of AI speech - which we need to explore phenomena - is to archive LLM output to dedicated prompts. we will use an open source model provided with llama which can run on a local machine and is adressed via an API by script.</p>
-<section id="constraints" class="level4">
-<h4 class="anchored" data-anchor-id="constraints">constraints</h4>
-<p>we will form prompts following these directives lead by our research question: 1. correction of mistakes to devise actual “knowledge” of model concerning standardisation and normative aspects</p>
-</section>
-</section>
-</section>
-</section>
-<section id="capacities" class="level1">
-<h1>capacities</h1>
-<p>to arrive at a research question, maybe discarding above</p>
-<section id="what-i-would-like-to" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-would-like-to">what i would like to…</h2>
-<ul>
-<li>AI chat queries analysis</li>
-<li>analyse linguistic knowledge capacities of AIs</li>
-<li>proofread responses, factchecking</li>
-</ul>
-</section>
-<section id="and-what-i-actually-can-do" class="level2">
-<h2 class="anchored" data-anchor-id="and-what-i-actually-can-do">and what i actually <strong>can</strong> do</h2>
-<ul>
-<li>statistics</li>
-<li>automated prompting using APIs</li>
-<li>automated response processing</li>
-<li>masked prompt generation</li>
-</ul>
-</section>
-</section>
-<section id="annotations" class="level1">
-<h1>annotations</h1>
-<p>the research-question-still-to-develop will orientate on the findings (<a href="./qa.html#tbl_qa">Table 1</a>, my annotations) in <span class="citation" data-cites="bsi_wie_2025">BSI (<a href="#ref-bsi_wie_2025" role="doc-biblioref">2025</a>)</span> where i see some interesting points although the source itself may be subject to doubt.</p>
-<p><strong>prompt-linguistics</strong> seems to be a promising keyword in this context, also <span class="citation" data-cites="vechta_u_beyond_2024">Vechta U (<a href="#ref-vechta_u_beyond_2024" role="doc-biblioref">2024</a>)</span> published a CfP<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> in that genre for a themenheft which will be published april 2026 titled: <strong>Themenheft Beyond Prompting?! Sozio-technische Systeme, KI und Medienbildung in der Post-Digitalität</strong>, edited by Annekatrin Bock, Lina Franken, Franco Rau, Jessica Kühn und Ada Fehr.</p>
-<section id="from-here" class="level2">
-<h2 class="anchored" data-anchor-id="from-here">from here…</h2>
-<p>…we come to a maybe more feasable to explore topic within the research of semantic, syntactic and pragmatic features of speech of AI users that is affected by that use. in the not citable <span class="citation" data-cites="bsi_wie_2025">BSI (<a href="#ref-bsi_wie_2025" role="doc-biblioref">2025</a>)</span> a focus lies on how users language changes depending on their making “heavy use” of AI tools. there seems to be an influence of the affordances to create successful/optimized prompts for best results on a. the language used in that prompts and furthermore b. the language beyond that usecase say the users everyday life. which is exactly what we were looking for, and from here, we can dig into corpora to find manifestations of features the study discovered as e.g.&nbsp;simplification of komplex syntactic structures in favour of reference based patterns.</p>
-</section>
-</section>
-<section id="references" class="level1">
-
-
+T[target group] --&gt;
+WH[who writes] --&gt;
+CP[with what capacities] --&gt;
+        TECH[technical]
+        CP --&gt; SC[scientifically]
+        CP--&gt;EFF[time effort]
+WH --&gt; PU[whats her use purpose of the center page] --&gt;
+        LP[landing page for individually set up project page] --&gt;
+        AB[with only project abstract]
+        --&gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]
+        LP--&gt;CPP[complete project presentation]--&gt;
+            IMP[needs to implement complex built paper?]--&gt;
+            STL[standard paper layout?]--&gt;
+              BU[built-in pdf export extra to online version --&gt; quarto, rmarkdown, python notebooks]
+        NOW--&gt;UI[user interaction needed?]--&gt;
+            BL[blog format]
+        NOW--&gt;META[number of metadata to be included and how displayed?]--&gt;
+         CSV[meta from .csv table, layout template to include preformatted display fields for metadata]
+    IMP --&gt; META
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 
 
 </section>
+</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-aleksic_opinion_2025" class="csl-entry" role="listitem">
-Aleksic, Adam. 2025. <span>“Opinion <span></span> <span>It</span>’s Happening: <span>People</span> Are Starting to Talk Like <span>ChatGPT</span>.”</span> <em>The Washington Post</em>, August. <a href="https://www.washingtonpost.com/opinions/2025/08/20/chatgpt-claude-chatbots-language/">https://www.washingtonpost.com/opinions/2025/08/20/chatgpt-claude-chatbots-language/</a>.
-</div>
-<div id="ref-bsi_wie_2025" class="csl-entry" role="listitem">
-BSI, Brand Science Institute. 2025. <span>“Wie <span>KI</span> Unsere <span>Sprache</span> Verändert – <span>Eine</span> Empirische <span>Studie</span>.”</span> <a href="https://www.bsi.ag/cases/104-case-studie-wie-ki-unsere-sprache-veraendert---eine-empirische-studie.html">https://www.bsi.ag/cases/104-case-studie-wie-ki-unsere-sprache-veraendert---eine-empirische-studie.html</a>.
-</div>
-<div id="ref-duke_upress_critical_2025" class="csl-entry" role="listitem">
-Duke UPress. 2025. <span>“Critical <span>AI</span>.”</span> <a href="https://www.dukeupress.edu/critical-ai">https://www.dukeupress.edu/critical-ai</a>.
-</div>
-<div id="ref-kalwa_noch_2025" class="csl-entry" role="listitem">
-Kalwa, Nina. 2025. <span>“»<span>Noch</span> Steckt <span>KI</span> in Den <span>Kinderschuhen</span>«.”</span> <em>Zeitschrift Für Literaturwissenschaft Und Linguistik</em> 55 (2): 379–405. <a href="https://doi.org/10.1007/s41244-025-00379-0">https://doi.org/10.1007/s41244-025-00379-0</a>.
-</div>
-<div id="ref-kraus_studie_2025" class="csl-entry" role="listitem">
-Krauß, Patrick, and FAU U. 2025. <span>“Studie Zeigt: <span>KI</span> Lernt <span>Sprachregeln</span> Beim <span>Lesen</span>.”</span> <em>FAU</em>. <a href="https://www.fau.de/2025/11/news/forschung/studie-ki-lernt-sprachregeln-beim-lesen/">https://www.fau.de/2025/11/news/forschung/studie-ki-lernt-sprachregeln-beim-lesen/</a>.
-</div>
-<div id="ref-milicka_ai_2025" class="csl-entry" role="listitem">
-Milička, Jiří, Anna Marklová, and Václav Cvrček. 2025. <span>“<span>AI</span> <span>Brown</span> and <span>AI</span> <span>Koditex</span>: <span>LLM</span>-<span>Generated</span> <span>Corpora</span> <span>Comparable</span> to <span>Traditional</span> <span>Corpora</span> of <span>English</span> and <span>Czech</span> <span>Texts</span>.”</span> <a href="https://doi.org/10.48550/arxiv.2509.22996">https://doi.org/10.48550/arxiv.2509.22996</a>.
-</div>
-<div id="ref-ramirez_chatgpt_2025" class="csl-entry" role="listitem">
-Ramirez, Vanessa Bates. 2025. <span>“<span>ChatGPT</span> <span>Is</span> <span>Changing</span> the <span>Words</span> <span>We</span> <span>Use</span> in <span>Conversation</span>.”</span> <em>Scientific American</em>. <a href="https://www.scientificamerican.com/article/chatgpt-is-changing-the-words-we-use-in-conversation/">https://www.scientificamerican.com/article/chatgpt-is-changing-the-words-we-use-in-conversation/</a>.
-</div>
-<div id="ref-roussel_einsatz_2024" class="csl-entry" role="listitem">
-Roussel, Stephanie, and Ayaal Herdam. 2024. <span>“Einsatz von Künstlicher <span>Intelligenz</span> Im Überarbeitungsprozess von <span>Texten</span> in Der <span>Fremdsprache</span> <span>Deutsch</span>: <span>Fokus</span> Auf <span>Wortschatz</span> Und <span>Syntax</span>.”</span> <em>German as a Foreign Language</em> 2024 (3): 61–86. <a href="https://hal.science/hal-04999057">https://hal.science/hal-04999057</a>.
-</div>
-<div id="ref-vechta_u_beyond_2024" class="csl-entry" role="listitem">
-Vechta U. 2024. <span>“Beyond <span>Prompting</span>.”</span> <a href="https://www.uni-vechta.de/beyondprompting/news/details/projekt-beyond-prompting-erfolgreiche-drittmitteleinwerbung">https://www.uni-vechta.de/beyondprompting/news/details/projekt-beyond-prompting-erfolgreiche-drittmitteleinwerbung</a>.
-</div>
-</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>which could very well be adapted to our research question<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>for which i in the moment dont find a reliable source anymore so its not cited.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
