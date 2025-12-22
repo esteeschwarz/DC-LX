@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "snc.html",
+    "href": "snc.html",
+    "title": "SNC",
+    "section": "",
+    "text": "q workflow, didnt find source html dir, wt target\nfetch bib entries from zotero, including notes, and display"
+  },
+  {
+    "objectID": "snc.html#section",
+    "href": "snc.html#section",
+    "title": "SNC",
+    "section": "",
+    "text": "q workflow, didnt find source html dir, wt target\nfetch bib entries from zotero, including notes, and display"
+  },
+  {
+    "objectID": "play.html",
+    "href": "play.html",
+    "title": "preliminary",
+    "section": "",
+    "text": "graph TD\n\nT[target group] --&gt;\nWH[who writes] --&gt;\nCP[with what capacities] --&gt;\n        TECH[technical]\n        CP --&gt; SC[scientifically]\n        CP--&gt;EFF[time effort]\nWH --&gt; PU[whats her use purpose of the center page] --&gt;\n        LP[landing page for individually set up project page] --&gt;\n        AB[with only project abstract]\n        --&gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]\n        LP--&gt;CPP[complete project presentation]--&gt;\n            IMP[needs to implement complex built paper?]--&gt;\n            STL[standard paper layout?]--&gt;\n              BU[built-in pdf export extra to online version --&gt; quarto, rmarkdown, python notebooks]\n        NOW--&gt;UI[user interaction needed?]--&gt;\n            BL[blog format]\n        NOW--&gt;META[number of metadata to be included and how displayed?]--&gt;\n         CSV[meta from .csv table, layout template to include preformatted display fields for metadata]\n    IMP --&gt; META"
+  },
+  {
+    "objectID": "play.html#snc",
+    "href": "play.html#snc",
+    "title": "preliminary",
+    "section": "",
+    "text": "graph TD\n\nT[target group] --&gt;\nWH[who writes] --&gt;\nCP[with what capacities] --&gt;\n        TECH[technical]\n        CP --&gt; SC[scientifically]\n        CP--&gt;EFF[time effort]\nWH --&gt; PU[whats her use purpose of the center page] --&gt;\n        LP[landing page for individually set up project page] --&gt;\n        AB[with only project abstract]\n        --&gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]\n        LP--&gt;CPP[complete project presentation]--&gt;\n            IMP[needs to implement complex built paper?]--&gt;\n            STL[standard paper layout?]--&gt;\n              BU[built-in pdf export extra to online version --&gt; quarto, rmarkdown, python notebooks]\n        NOW--&gt;UI[user interaction needed?]--&gt;\n            BL[blog format]\n        NOW--&gt;META[number of metadata to be included and how displayed?]--&gt;\n         CSV[meta from .csv table, layout template to include preformatted display fields for metadata]\n    IMP --&gt; META"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "bib embed head",
+    "section": "",
+    "text": "bibyml&lt;-rmarkdown::metadata$bibliography\ntag&lt;-rmarkdown::metadata$bibtag\nprint(bibyml)\n\n[1] \"lx-pub.bib\"\n\nprint(tag)\n\n[1] \"dcl\""
+  },
+  {
+    "objectID": "index.html#preliminary-link-assembly",
+    "href": "index.html#preliminary-link-assembly",
+    "title": "bib embed head",
+    "section": "preliminary link assembly",
+    "text": "preliminary link assembly\n\n“Chirpy” (2025)\n\n\na basic theme for the display styling of a jekyll page. well documented for starting a jekyll page.\n\n\n“Quarto” (2025)\n\n\na framework for rendering markdown to html or pdf\n\n\nwith complex built in capacities to include R or Python scripting.\n\n\n“Jekyll • Simple, Blog-Aware, Static Sites” (2025)\n\n\na framework to render markdown to html pages which then easily can be hosted on github or private server."
+  },
+  {
+    "objectID": "index.html#snc",
+    "href": "index.html#snc",
+    "title": "bib embed head",
+    "section": "snc",
+    "text": "snc\n\nno new\n\n\n\n\nTable 1: publication in categories\n\n\n\n\n\n\n\n\n\nplay\n\n\n\ndeep\ndigging deeper into the blog, we find that the site is built upon wordpress and also hosted via wordpress. that hints to some basics to mention.\n\nheight\nhosting a site via wordpress.com is not a cheap business, cf. Wordpress (2023); the technical affordances are moderate to low i.e. with minimal tech knowledge you can build a nice looking and good working web presence. since the site itself doesnt offer own posts which are not announcements or links to articles on magazines or newspapers, we conclude that its not really active posting here or :content creating: in the sense of a blog. it’s more a landing page for content published elsewhere which means we won’t find content that has not undergone external review process. so no amateur business at all.\n\n\nactual\nconcerning our validating the article links provided on the page we can say, that there’s less effort spent on keeping the site uptodate. it’s bit frustrating to land on 404 pages; at least the toast articles are archived at McCulloch (2025)."
+  },
+  {
+    "objectID": "mermaids.html",
+    "href": "mermaids.html",
+    "title": "mermaids",
+    "section": "",
+    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[SETUP]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]"
+  },
+  {
+    "objectID": "mermaids.html#section",
+    "href": "mermaids.html#section",
+    "title": "mermaids",
+    "section": "",
+    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[SETUP]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]"
+  },
+  {
+    "objectID": "workflow.html",
+    "href": "workflow.html",
+    "title": "workflow",
+    "section": "",
+    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\ngraph TD\n\nCR[create content] --&gt;\ndcl[in blog repo]\nCR--&gt;wd[in working repo]\ndcl--&gt;se[single post]\ndcl--&gt;ml[multilayer]\nse--&gt;fm[content format markdown, no python/R embedding or complex sites. restricted to jekyll render]\nml--&gt;fmm[content may include complex page built from RMarkdown, Quarto or Python notebooks or any other framework]\no2[option 2]\n\n\n\n\nFigure 1: “publishing process options diagram”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]\nwd--&gt;p2\ns1--&gt;wd\n\n\n\n\nFigure 2: “publishing process setup status quo”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT: quarto page]--&gt;\ndcl[jekyll site: dcl: essais folder]\nwd[working dir: GIT]--&gt;wd2[spund-lx/lx-public/HA/DCL/pages]--&gt;level1[complete quarto site folder including .qmd and quarto.yml]\nlevel1--&gt;ch[changes]--&gt;r1[trigger rendering process]--&gt;\ngit1[render via github actions]--&gt;p2\nr1--&gt;srv1[render on target server]--&gt;updcl[update DCL essais]--&gt;p2\ndcl--&gt;p1[post entry]--&gt;l1[link to 2nd layer: project page]--&gt;p2\np2[2nd layer: project display]\nch--&gt;rloc[docs rendered locally]--&gt;p2\nr1--&gt;p2\nwd--&gt;csv[.csv metadata table of essais]--&gt;ch--&gt;chk1[is the project on DCL]--&gt;pdcl1[yes]\ns1--&gt;wd\npdcl1--&gt;r1\npdcl1--&gt;rloc\nchk1--&gt;pdcl0[no]--&gt;crp[create project page]--&gt;crman[manually]\ncrp--&gt;crcsv[on base of metadata.csv]--&gt;csv--&gt;pub1[publish]--&gt;p2\n\n\n\n\nFigure 3: “publishing process forward”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ncrcsv[create .csv metadata table]--&gt;\nitem[new project item]\nwf[update render git workflow]--&gt;wf1[to fire on changes in]--&gt;csv[.csv metadata table]\ncrcsv--&gt;csv--&gt;item--&gt;inc[includes]--&gt;meta--&gt;m1[render dir relative to working dir]\nmeta--&gt;m2[tags]\nmeta--&gt;m3[cats]\n\n\n\n\n\n\nFigure 4: “publishing process next todo”"
+  },
+  {
+    "objectID": "workflow.html#section",
+    "href": "workflow.html#section",
+    "title": "workflow",
+    "section": "",
+    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\ngraph TD\n\nCR[create content] --&gt;\ndcl[in blog repo]\nCR--&gt;wd[in working repo]\ndcl--&gt;se[single post]\ndcl--&gt;ml[multilayer]\nse--&gt;fm[content format markdown, no python/R embedding or complex sites. restricted to jekyll render]\nml--&gt;fmm[content may include complex page built from RMarkdown, Quarto or Python notebooks or any other framework]\no2[option 2]\n\n\n\n\nFigure 1: “publishing process options diagram”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]\nwd--&gt;p2\ns1--&gt;wd\n\n\n\n\nFigure 2: “publishing process setup status quo”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT: quarto page]--&gt;\ndcl[jekyll site: dcl: essais folder]\nwd[working dir: GIT]--&gt;wd2[spund-lx/lx-public/HA/DCL/pages]--&gt;level1[complete quarto site folder including .qmd and quarto.yml]\nlevel1--&gt;ch[changes]--&gt;r1[trigger rendering process]--&gt;\ngit1[render via github actions]--&gt;p2\nr1--&gt;srv1[render on target server]--&gt;updcl[update DCL essais]--&gt;p2\ndcl--&gt;p1[post entry]--&gt;l1[link to 2nd layer: project page]--&gt;p2\np2[2nd layer: project display]\nch--&gt;rloc[docs rendered locally]--&gt;p2\nr1--&gt;p2\nwd--&gt;csv[.csv metadata table of essais]--&gt;ch--&gt;chk1[is the project on DCL]--&gt;pdcl1[yes]\ns1--&gt;wd\npdcl1--&gt;r1\npdcl1--&gt;rloc\nchk1--&gt;pdcl0[no]--&gt;crp[create project page]--&gt;crman[manually]\ncrp--&gt;crcsv[on base of metadata.csv]--&gt;csv--&gt;pub1[publish]--&gt;p2\n\n\n\n\nFigure 3: “publishing process forward”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ncrcsv[create .csv metadata table]--&gt;\nitem[new project item]\nwf[update render git workflow]--&gt;wf1[to fire on changes in]--&gt;csv[.csv metadata table]\ncrcsv--&gt;csv--&gt;item--&gt;inc[includes]--&gt;meta--&gt;m1[render dir relative to working dir]\nmeta--&gt;m2[tags]\nmeta--&gt;m3[cats]\n\n\n\n\n\n\nFigure 4: “publishing process next todo”"
+  }
+]
