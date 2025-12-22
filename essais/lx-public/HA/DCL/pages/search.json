@@ -28,13 +28,6 @@
     "text": "graph TD\n\nT[target group] --&gt;\nWH[who writes] --&gt;\nCP[with what capacities] --&gt;\n        TECH[technical]\n        CP --&gt; SC[scientifically]\n        CP--&gt;EFF[time effort]\nWH --&gt; PU[whats her use purpose of the center page] --&gt;\n        LP[landing page for individually set up project page] --&gt;\n        AB[with only project abstract]\n        --&gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]\n        LP--&gt;CPP[complete project presentation]--&gt;\n            IMP[needs to implement complex built paper?]--&gt;\n            STL[standard paper layout?]--&gt;\n              BU[built-in pdf export extra to online version --&gt; quarto, rmarkdown, python notebooks]\n        NOW--&gt;UI[user interaction needed?]--&gt;\n            BL[blog format]\n        NOW--&gt;META[number of metadata to be included and how displayed?]--&gt;\n         CSV[meta from .csv table, layout template to include preformatted display fields for metadata]\n    IMP --&gt; META"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "bib embed head",
-    "section": "",
-    "text": "bibyml&lt;-rmarkdown::metadata$bibliography\ntag&lt;-rmarkdown::metadata$bibtag\nprint(bibyml)\n\n[1] \"lx-pub.bib\"\n\nprint(tag)\n\n[1] \"dcl\""
-  },
-  {
     "objectID": "index.html#preliminary-link-assembly",
     "href": "index.html#preliminary-link-assembly",
     "title": "bib embed head",
