@@ -10,4 +10,4 @@ pid,name,subject,link,site_link_text,term,class,tutor,about,abstract,wd,level_to
 9,smi-a,research questions and hypothesis for group research project,../../essais/smi/001,draft,WS25,schizophrenie and mental images / x-student research group,wilck/nenchev charite berlin (BUA),,,mental-img/HA,2,1,,
 1,coherence,term paper,../../essais/coherence/,paper,SoSe25,sprache und psychose,stefanowitsch,,,psych/HA/paper,3,1,,
 11,buechner-a,a georg buechner reception task,../../essais/buechner-a,class presentation,WS25,georg büchner,mara ruwe,session preparation to: buechner & reception,,szondi/buechner/site,3,1,,
-13,dcl-pr,dahlem center for linguistics project page,../../../../essais/lx-public/HA/DCL/pages,project view,WS25,linguistik und öffentlichkeit,stefanowitch,workflows and process to DCL,,lx-public/HA/DCL/pages,4,0,DC-LX,linguistics
+13,dcl-pr,dahlem center for linguistics project page,../../../essais/lx-public/HA/DCL/pages,project view,WS25,linguistik und öffentlichkeit,stefanowitch,workflows and process to DCL,,lx-public/HA/DCL/pages,4,0,DC-LX,linguistics
