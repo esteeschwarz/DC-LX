@@ -1,0 +1,455 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">
+            body {
+                font-family: "Courier New", Courier, monospace;
+                white-space:nowrap;
+            }
+            
+            div#head {
+            background-color: #40627C;
+            color:white;
+            font-size:12pt;
+            font-weight:bold;
+            padding:7px;
+            position:fixed;
+            left:3%;
+            right:3%;
+            width:94%;
+            z-index:100;
+            }
+            
+            div#main {
+            position:absolute;
+            top:80px;
+            right:0px;
+            bottom:0px;
+            width:98%;	
+            /*height:95%;*/
+            overflow:auto;	
+            /*margin-bottom : 1000px*/
+            }
+            
+            tr:nth-child(even) {
+                background-color: #FFF8DC;
+            }
+            
+            
+            tr:nth-child(odd) {
+                background-color: white;
+            }
+
+            
+            div#footer{
+            color:gray;
+            border:1px solid gray;
+            text-align:right;
+            font-size:10pt;
+            margin-top:10px;
+            margin-bottom: 10px;
+            position:absolute;
+            right:3%;
+            left:3%;
+            }
+            
+            span#corpus-title{
+            color: blue;
+            }
+            #head a {
+            text-decoration:none;
+            color:white;
+            }
+            #previous-doc {
+            font-size: 10pt;
+            }
+            #next-doc {
+            font-size: 10pt;
+            }
+            
+            
+            
+            span.subscript {
+            font-size:8pt;
+            font-weight:bold;
+            vertical-align:sub;
+            padding-left:2px;
+            padding-right:2px
+            }
+            
+            td.audioLink {
+                background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dE////////CVj33AAAAAlwSFlzAAAASAAAAEgARslrPgAAAfpJREFUSMe1VUFO20AUnRkSgVSo4wQhEErXbUyABWntLJ2eAxJvyIJcgWyBy9g3ICtChLBzBfsMtiVv/Fi9ukpkOTSqN98z89/7b+bP/yMAABCizPr++7vvA5PJ3d1kApwZnc6ZAXw92P+iaYXlPP2Iq+Jfm0iSJEkSYDQaDh0HqNWUqteBnR0pa7XNLXHkIW+pADpYlvmr3y+IWk1dP2wB0+n9/XQKLJdBsFwCcRzHcVxYztOPOPKQd1XIHwFUSsDFxfn55SUQRVEURdVHuWqJIw95HWc0cpy/BDBXPDIqLwt8c3N9PRwCaZqmaVotjDzNZqPRahVxGFfw0lAhj7CMkH693tXVzx4QhmEYhtVCyEs84wrD+PHdMIoF5rJKAO3x8dHRyQkwmz0/z2bluCDw/SAocKwawTLiAi/VpgJod3fr9b094PHx4eHpaR1PXvpr2sF+QwOUVFJKsf2npFJKCqHruq7r6+t5nud5XoyllFIqIbZOQbt9evqtDcznLy/z+edToGx78Nu2C2Wu67quW71jy+pblinEYvH29roQwjQtyzTLD9PzPM/zirE9GAzswT+U4Xh8ezseA1mWZVlWfftZJaVl+L8aEQNXNiL+lLViKmcdM5errZg7oh9xG7fiVSFUuu1jRJ7Kx6jMbvocd7tGp9v9/HP8AWIhUD3iQ2hbAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE2LTAzLTAxVDE3OjM3OjEzKzA4OjAwpgK6zQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNi0wMi0yMVQwMDowNTo0NyswODowMBVFaYsAAABUdEVYdHN2ZzpiYXNlLXVyaQBmaWxlOi8vL2hvbWUvZGIvc3ZnX2luZm8vc3ZnLzY3LzJiLzY3MmI2ZmM0OTY0YmUzNGI4NGFkYjhlZDcyOGU0ZDFlLnN2Z7DScMIAAAAASUVORK5CYII%3D);
+                background-repeat:no-repeat;
+                min-width:16px;
+                min-height:16px;
+                
+            }
+            
+            td.numbering {
+                color:rgb(150,150,150);
+                padding-right: 5px;
+            }
+            
+            
+            table {
+            margin-left:50px;
+            margin-top:0px;
+            margin-right:100px;
+            }
+            
+            td {
+            vertical-align:top
+            }
+            
+            td.speaker {
+                font-weight:bold;
+                padding-right:8px;
+                padding-left:4px
+            }
+            td.text {
+            font-size:11pt;
+            font-weight:normal;
+            padding-left:8px
+            }
+            
+            td.translation {
+            font-size:9pt;
+            font-weight:normal;
+            color:rgb(0,0,240);
+            padding-left:8px
+            }
+            
+            
+            a {
+            text-decoration:none;
+            }
+        </style><script type="text/javascript">
+            
+            function jump(time){
+                document.getElementsByTagName('audio')[0].currentTime=time;
+                document.getElementsByTagName('audio')[0].play();
+            }			
+            
+            function stop(){
+                document.getElementsByTagName('audio')[0].pause();
+            }
+                        
+            function registerAudioListener(){
+                document.getElementsByTagName('audio')[0].addEventListener("timeupdate", updateTime, true);                     
+                document.getElementsByTagName('audio')[0].addEventListener("onpause", updateTime, true);                     
+            }
+            
+            function updateTime(){
+                var player = document.getElementsByTagName('audio')[0]; 
+                var elapsedTime = player.currentTime;        
+                var trs = document.getElementsByTagName('tr');
+                for (var i = 0; i < trs.length; i++) {
+                    tr = trs[i];
+                    start = tr.getAttribute('data-start');
+                    end = tr.getAttribute('data-end');
+                    if ((!player.paused) && (start < elapsedTime) && (end > elapsedTime)){
+                        var children = tr.children;
+                        for (var j = 0; j < children.length; j++) {
+                          var td = children[j];
+                          td.style.backgroundColor = '#E0FFFF';
+                        }                        
+                    } else {
+                        var children = tr.children;
+                        for (var j = 0; j < children.length; j++) {
+                          var td = children[j];
+                          td.style.backgroundColor='';
+                        }                        
+                    }
+                }                        
+            }
+            window.addEventListener("DOMContentLoaded", registerAudioListener, false);
+            
+            </script></head>
+   <body>
+      <div id="head">
+         <audio controls="controls">
+            <source src="Bsp_Transkriptionsuebung.wav" type="audio/wav"></source>
+         </audio>
+      </div>
+      <div id="main">
+         <table>
+            <tr data-start="0.2332950769548882" data-end="0.8131999825284675">
+               <td class="audioLink"><a onClick="jump('.13');" title="Click to start player at 0.2332950769548882">&nbsp;</a></td>
+               <td class="numbering">001</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">hej&nbsp;Anna|&nbsp;</td>
+            </tr>
+            <tr data-start="0.8131999825284675" data-end="1.0289368430069827">
+               <td class="audioLink"><a onClick="jump('.71');" title="Click to start player at 0.8131999825284675">&nbsp;</a></td>
+               <td class="numbering">002</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.2)</td>
+            </tr>
+            <tr data-start="1.0289368430069827" data-end="1.2359241379559096">
+               <td class="audioLink"><a onClick="jump('.93');" title="Click to start player at 1.0289368430069827">&nbsp;</a></td>
+               <td class="numbering">003</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">Ach|&nbsp;</td>
+            </tr>
+            <tr data-start="1.2359241379559096" data-end="1.7397854224482914">
+               <td class="audioLink"><a onClick="jump('1.14');" title="Click to start player at 1.2359241379559096">&nbsp;</a></td>
+               <td class="numbering">004</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">hi&nbsp;TImo:o|&nbsp;</td>
+            </tr>
+            <tr data-start="1.7397854224482914" data-end="2.62783870109072">
+               <td class="audioLink"><a onClick="jump('1.64');" title="Click to start player at 1.7397854224482914">&nbsp;</a></td>
+               <td class="numbering">005</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">was&nbsp;machst&nbsp;DU&nbsp;denn&nbsp;hier|&nbsp;</td>
+            </tr>
+            <tr data-start="2.62783870109072" data-end="3.2488005859375004">
+               <td class="audioLink"><a onClick="jump('2.53');" title="Click to start player at 2.62783870109072">&nbsp;</a></td>
+               <td class="numbering">006</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">[voll&nbsp;GUT&nbsp;dass|&nbsp;]</td>
+            </tr>
+            <tr data-start="2.62783870109072" data-end="3.8277650486207295">
+               <td class="audioLink"><a onClick="jump('2.53');" title="Click to start player at 2.62783870109072">&nbsp;</a></td>
+               <td class="numbering">007</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">[ich&nbsp;wollt&nbsp;mich&nbsp;noch&nbsp;schnell&nbsp;An&nbsp;]melden|&nbsp;</td>
+            </tr>
+            <tr data-start="3.8277650486207295" data-end="4.148745346585007">
+               <td class="audioLink"><a onClick="jump('3.73');" title="Click to start player at 3.8277650486207295">&nbsp;</a></td>
+               <td class="numbering">008</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.3)</td>
+            </tr>
+            <tr data-start="4.148745346585007" data-end="4.811704653595337">
+               <td class="audioLink"><a onClick="jump('4.05');" title="Click to start player at 4.148745346585007">&nbsp;</a></td>
+               <td class="numbering">009</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">ANmelden?</td>
+            </tr>
+            <tr data-start="4.811704653595337" data-end="5.2287425924588735">
+               <td class="audioLink"><a onClick="jump('4.71');" title="Click to start player at 4.811704653595337">&nbsp;</a></td>
+               <td class="numbering">010</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">[woFÜR;&nbsp;]</td>
+            </tr>
+            <tr data-start="4.811704653595337" data-end="5.965688396417855">
+               <td class="audioLink"><a onClick="jump('4.71');" title="Click to start player at 4.811704653595337">&nbsp;</a></td>
+               <td class="numbering">011</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">[für&nbsp;den&nbsp;]esmerALDA&nbsp;kurs;&nbsp;</td>
+            </tr>
+            <tr data-start="6.118996589845353" data-end="6.692235921791649">
+               <td class="audioLink"><a onClick="jump('6.02');" title="Click to start player at 6.118996589845353">&nbsp;</a></td>
+               <td class="numbering">012</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">achso.&nbsp;</td>
+            </tr>
+            <tr data-start="6.692235921791649" data-end="7.265475253737947">
+               <td class="audioLink"><a onClick="jump('6.59');" title="Click to start player at 6.692235921791649">&nbsp;</a></td>
+               <td class="numbering">013</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">HAB&nbsp;ich&nbsp;schon&nbsp;gemacht;&nbsp;</td>
+            </tr>
+            <tr data-start="7.265475253737947" data-end="7.905370321957068">
+               <td class="audioLink"><a onClick="jump('7.17');" title="Click to start player at 7.265475253737947">&nbsp;</a></td>
+               <td class="numbering">014</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">ach&nbsp;echt?&nbsp;</td>
+            </tr>
+            <tr data-start="7.905370321957068" data-end="10.038353882687476">
+               <td class="audioLink"><a onClick="jump('7.81');" title="Click to start player at 7.905370321957068">&nbsp;</a></td>
+               <td class="numbering">015</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(1.5)wo:&nbsp;(--)&nbsp;äh:&nbsp;(--)&nbsp;[KANN&nbsp;man&nbsp;denn-&nbsp;]</td>
+            </tr>
+            <tr data-start="9.715073561764275" data-end="10.038353882687476">
+               <td class="audioLink"><a onClick="jump('9.62');" title="Click to start player at 9.715073561764275">&nbsp;</a></td>
+               <td class="numbering">016</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[aber|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</td>
+            </tr>
+            <tr data-start="10.038353882687476" data-end="11.218160414716479">
+               <td class="audioLink"><a onClick="jump('9.94');" title="Click to start player at 10.038353882687476">&nbsp;</a></td>
+               <td class="numbering">017</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">(0.3)wo&nbsp;KANN&nbsp;man&nbsp;das&nbsp;denn&nbsp;mAchen,&nbsp;</td>
+            </tr>
+            <tr data-start="11.278150577362023" data-end="11.918045645581143">
+               <td class="audioLink"><a onClick="jump('11.18');" title="Click to start player at 11.278150577362023">&nbsp;</a></td>
+               <td class="numbering">018</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">ähmm:|&nbsp;</td>
+            </tr>
+            <tr data-start="11.918045645581143" data-end="13.131180045746563">
+               <td class="audioLink"><a onClick="jump('11.82');" title="Click to start player at 11.918045645581143">&nbsp;</a></td>
+               <td class="numbering">019</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.5)im&nbsp;laBOR,&nbsp;</td>
+            </tr>
+            <tr data-start="13.131180045746563" data-end="14.02436691180242">
+               <td class="audioLink"><a onClick="jump('13.03');" title="Click to start player at 13.131180045746563">&nbsp;</a></td>
+               <td class="numbering">020</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">im&nbsp;AUdiolabor.&nbsp;</td>
+            </tr>
+            <tr data-start="14.02436691180242" data-end="15.570779993331966">
+               <td class="audioLink"><a onClick="jump('13.92');" title="Click to start player at 14.02436691180242">&nbsp;</a></td>
+               <td class="numbering">021</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.3)in&nbsp;raum&nbsp;HUNDertvierundvierzig;&nbsp;</td>
+            </tr>
+            <tr data-start="15.677429171368486" data-end="16.21734063517837">
+               <td class="audioLink"><a onClick="jump('15.58');" title="Click to start player at 15.677429171368486">&nbsp;</a></td>
+               <td class="numbering">022</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">ah:-&nbsp;</td>
+            </tr>
+            <tr data-start="16.21734063517837" data-end="16.910560292415752">
+               <td class="audioLink"><a onClick="jump('16.12');" title="Click to start player at 16.21734063517837">&nbsp;</a></td>
+               <td class="numbering">023</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.2)okAY.&nbsp;</td>
+            </tr>
+            <tr data-start="16.910560292415752" data-end="17.530458639753025">
+               <td class="audioLink"><a onClick="jump('16.81');" title="Click to start player at 16.910560292415752">&nbsp;</a></td>
+               <td class="numbering">024</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.2)dAn&nbsp;[ke;&nbsp;]</td>
+            </tr>
+            <tr data-start="17.3104947100527" data-end="18.990219264127894">
+               <td class="audioLink"><a onClick="jump('17.21');" title="Click to start player at 17.3104947100527">&nbsp;</a></td>
+               <td class="numbering">025</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[aber&nbsp;]IRgendwas&nbsp;wollt&nbsp;ich&nbsp;dich&nbsp;gefrAgt&nbsp;haben;&nbsp;</td>
+            </tr>
+            <tr data-start="19.203517620200937" data-end="19.65677662685615">
+               <td class="audioLink"><a onClick="jump('19.1');" title="Click to start player at 19.203517620200937">&nbsp;</a></td>
+               <td class="numbering">026</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">WAS&nbsp;denn.&nbsp;</td>
+            </tr>
+            <tr data-start="20.116701207138643" data-end="20.64994709732125">
+               <td class="audioLink"><a onClick="jump('20.02');" title="Click to start player at 20.116701207138643">&nbsp;</a></td>
+               <td class="numbering">027</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">tja:.&nbsp;</td>
+            </tr>
+            <tr data-start="20.64994709732125" data-end="21.86308149748666">
+               <td class="audioLink"><a onClick="jump('20.55');" title="Click to start player at 20.64994709732125">&nbsp;</a></td>
+               <td class="numbering">028</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.4)gute&nbsp;FRAge;&nbsp;</td>
+            </tr>
+            <tr data-start="21.86308149748666" data-end="22.682947053642412">
+               <td class="audioLink"><a onClick="jump('21.76');" title="Click to start player at 21.86308149748666">&nbsp;</a></td>
+               <td class="numbering">029</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.2)habs&nbsp;verGESSen.&nbsp;</td>
+            </tr>
+            <tr data-start="22.682947053642412" data-end="22.98289786687013">
+               <td class="audioLink"><a onClick="jump('22.58');" title="Click to start player at 22.682947053642412">&nbsp;</a></td>
+               <td class="numbering">030</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.3)</td>
+            </tr>
+            <tr data-start="22.98289786687013" data-end="23.396163431761643">
+               <td class="audioLink"><a onClick="jump('22.88');" title="Click to start player at 22.98289786687013">&nbsp;</a></td>
+               <td class="numbering">031</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">°h&nbsp;hmm;&nbsp;</td>
+            </tr>
+            <tr data-start="23.396163431761643" data-end="23.836091291162287">
+               <td class="audioLink"><a onClick="jump('23.3');" title="Click to start player at 23.396163431761643">&nbsp;</a></td>
+               <td class="numbering">032</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.4)</td>
+            </tr>
+            <tr data-start="23.836091291162287" data-end="24.20269784066283">
+               <td class="audioLink"><a onClick="jump('23.74');" title="Click to start player at 23.836091291162287">&nbsp;</a></td>
+               <td class="numbering">033</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">egal,&nbsp;</td>
+            </tr>
+            <tr data-start="24.20269784066283" data-end="25.035894544073145">
+               <td class="audioLink"><a onClick="jump('24.1');" title="Click to start player at 24.20269784066283">&nbsp;</a></td>
+               <td class="numbering">034</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.1)musz&nbsp;auch&nbsp;jetzt&nbsp;LOS.&nbsp;</td>
+            </tr>
+            <tr data-start="25.035894544073145" data-end="25.309183062791725">
+               <td class="audioLink"><a onClick="jump('24.94');" title="Click to start player at 25.035894544073145">&nbsp;</a></td>
+               <td class="numbering">035</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.3)</td>
+            </tr>
+            <tr data-start="25.309183062791725" data-end="25.71578305405596">
+               <td class="audioLink"><a onClick="jump('25.21');" title="Click to start player at 25.309183062791725">&nbsp;</a></td>
+               <td class="numbering">036</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">Okay:&nbsp;h°;&nbsp;</td>
+            </tr>
+            <tr data-start="25.71578305405596" data-end="26.04906173542009">
+               <td class="audioLink"><a onClick="jump('25.62');" title="Click to start player at 25.71578305405596">&nbsp;</a></td>
+               <td class="numbering">037</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.3)</td>
+            </tr>
+            <tr data-start="26.04906173542009" data-end="26.93558302784866">
+               <td class="audioLink"><a onClick="jump('25.95');" title="Click to start player at 26.04906173542009">&nbsp;</a></td>
+               <td class="numbering">038</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">hEUt&nbsp;noch&nbsp;zum&nbsp;SPORT.&nbsp;</td>
+            </tr>
+            <tr data-start="27.16221253117627" data-end="28.24870103242332">
+               <td class="audioLink"><a onClick="jump('27.06');" title="Click to start player at 27.16221253117627">&nbsp;</a></td>
+               <td class="numbering">039</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">UNCLEAR&nbsp;*sehn&nbsp;uns&nbsp;aber&nbsp;vorher&nbsp;ja&nbsp;dann&nbsp;noch&nbsp;in&nbsp;der*&nbsp;VORlesung.&nbsp;</td>
+            </tr>
+            <tr data-start="28.955251836915263" data-end="29.381848549061345">
+               <td class="audioLink"><a onClick="jump('28.86');" title="Click to start player at 28.955251836915263">&nbsp;</a></td>
+               <td class="numbering">040</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">oder?&nbsp;</td>
+            </tr>
+            <tr data-start="28.955251836915263" data-end="29.39517969631591">
+               <td class="audioLink"><a onClick="jump('28.86');" title="Click to start player at 28.955251836915263">&nbsp;</a></td>
+               <td class="numbering">041</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">ja-&nbsp;</td>
+            </tr>
+            <tr data-start="29.39517969631591" data-end="29.981750175516773">
+               <td class="audioLink"><a onClick="jump('29.3');" title="Click to start player at 29.39517969631591">&nbsp;</a></td>
+               <td class="numbering">042</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">DENK&nbsp;ich&nbsp;doch;&nbsp;</td>
+            </tr>
+            <tr data-start="30.181717384335247" data-end="30.654973111872305">
+               <td class="audioLink"><a onClick="jump('30.08');" title="Click to start player at 30.181717384335247">&nbsp;</a></td>
+               <td class="numbering">043</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">ja&nbsp;(.)&nbsp;cool;&nbsp;</td>
+            </tr>
+            <tr data-start="30.654973111872305" data-end="31.401517358127947">
+               <td class="audioLink"><a onClick="jump('30.55');" title="Click to start player at 30.654973111872305">&nbsp;</a></td>
+               <td class="numbering">044</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">(0.1)dAnn&nbsp;bis&nbsp;MORgen.&nbsp;</td>
+            </tr>
+            <tr data-start="31.501500962537186" data-end="32.068074720856195">
+               <td class="audioLink"><a onClick="jump('31.4');" title="Click to start player at 31.501500962537186">&nbsp;</a></td>
+               <td class="numbering">045</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">[ciao,&nbsp;]</td>
+            </tr>
+            <tr data-start="31.501500962537186" data-end="32.068074720856195">
+               <td class="audioLink"><a onClick="jump('31.4');" title="Click to start player at 31.501500962537186">&nbsp;</a></td>
+               <td class="numbering">046</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">[ciao;&nbsp;]</td>
+            </tr>
+         </table>
+         <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+      </div>
+   </body>
+</html>

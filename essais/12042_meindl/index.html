@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="https://ada-sub.dh-index.org/school/css/style.css" />
+		<title>12042_meindl_UE</title>
+	</head>
+<body>
+<h1>12042_meindl_UE</h1>
+
+<h4><a href="https://ada-sub.dh-index.org/blog/work">index</a> / <a href="https://ada-sub.dh-index.org/school/">public</a> / <a href="https://ada-sub.dh-index.org/school/essais/">essais</a> / 12042_meindl</h4>
+
+<h6>content</h6>
+
+<h1>12042.meindl übungen</h1>
+
+<p>source: <a href="https://www.online-ide.com/d4cnEMpPRU">run in online-ide</a></p>
+
+<p>script in progress still actualisé: <a href="https://github.com/esteeschwarz/essais">github</a></p>
+
+<pre><code>#12042.chitest_essai
+#20220123(21.08)
+#corpus LX
+
+
+print(&quot;12042.corpusLX&quot;)
+
+print(&quot;-------------------------&quot;)
+print(&quot;(1) meindl uebung&quot;)
+#meindl chisquare example
+
+#datensatz
+a&lt;-230
+b&lt;-70
+c&lt;-70
+d&lt;-30
+#wahrscheinlichkeiten 100/400 samples &gt; p = 0.25
+pa&lt;-0.25
+pb&lt;-0.25
+pc&lt;-0.25
+pd&lt;-0.25
+
+e&lt;-c(a,b,c,d)
+f&lt;-c(pa,pb,pc,pd)
+
+chi1&lt;-cbind(e)
+chisq.test(chi1,p=f,correct=FALSE)
+print(&quot;-------------------------&quot;)
+
+
+#übung meindl vierfeldertest
+print(&quot;(2) rosemeyer uebung&quot;)
+
+#datensatz rosemeyer übung
+sgen&lt;-c(10,30)
+ofgen&lt;-c(40,20)
+liv&lt;-c(&quot;animate&quot;,&quot;inanimate&quot;)
+chi2&lt;-cbind(sgen,ofgen)
+#wahrscheinlichkeiten summe 40/60
+f2&lt;-c(0.4,0.6)
+chisq.test(chi2,p=f2,correct=FALSE)
+print(&quot;-------------------------&quot;)
+
+##meindl uebung U test, set C
+
+#stichprobe 1,2
+cst1&lt;-c(22, 22, 29, 30, 32, 30, 21, 29, 28, 29, 25)
+cst2&lt;-c(21, 25, 20, 22, 20, 22, 20, 23, 25, 28, 23)
+
+c3&lt;-c(cst1,cst2)
+c5&lt;-rank(c3)
+
+#sum ranking
+c6&lt;-sum(c5[1:11])
+c7&lt;-sum(c5[12:22])
+
+c8&lt;-cbind(c5,c3)
+
+
+##rosemeyer uebung set D
+#stichproben 1,2
+d1&lt;-c(7, 10, 12, 12, 18,  6 , 6, 18, 18, 12,  7 ,17,  9,  6 ,16)
+d2&lt;-c(17,  5, 13, 20,  6,  6,  9, 12, 18,  7, 14, 17, 17,  6, 18)
+d3&lt;-c(d1,d2)
+
+d5&lt;-rank(d3)
+d4&lt;-cbind(d5,d3)
+d6&lt;-sum(d5[1:15])
+d7&lt;-sum(d5[16:30])
+
+#change values according to stichproben set C or D by add/remove comment (#)
+#chose set C (meindl daten)
+a1&lt;-cst1
+a2&lt;-cst2
+r1&lt;-c6
+r2&lt;-c7
+#choose set D (rosemeyer daten)
+#a1&lt;-d1
+#a2&lt;-d2
+#r1&lt;-d6
+#r2&lt;-d7
+#################
+n1&lt;-length(a1)
+n2&lt;-n1+1
+u1&lt;-r1-((n1*n2)/2)
+u2&lt;-r2-((n1*n2)/2)
+#should be 0
+uproof&lt;-(u1+u2)-(n1*n1)
+Ucpt&lt;-c(u1,u2)
+usort&lt;-sort(Ucpt)
+umin&lt;-usort[1]
+
+print(&quot;(3) U-test according to set&quot;)
+print(&quot;stichproben:&quot;)
+print(a1)
+print (a2)
+print(z1o&lt;-(umin-((n1*n1))/2))
+print(z1u&lt;-sqrt(((n1*n1)*(n1+n1+1))/12))
+print(z1&lt;-z1o/z1u)</code></pre>
+
+</body>
+</html>
+

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://www.exmaralda.org -->
+<basic-transcription>
+<head>
+<meta-information><project-name></project-name><transcription-name></transcription-name><referenced-file url="media/PRG_CA_schnipsel.wav"/><referenced-file url="media/PRG_CA_schnipsel.mp3"/><ud-meta-information><ud-information attribute-name="AutoSave">;/Users/lion/boxHKW/21S/temp/EXMARaLDA_AutoBackup_2022_10_30_04_56_10.exb at 2022_10_30_04_56_10</ud-information></ud-meta-information><comment></comment><transcription-convention></transcription-convention></meta-information><speakertable><speaker id="SPK0">
+<abbreviation>M</abbreviation>
+<sex value="m"/>
+<languages-used><language lang="deu"/></languages-used>
+<l1><language lang="deu"/></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK1">
+<abbreviation>F</abbreviation>
+<sex value="f"/>
+<languages-used><language lang="deu"/></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+</speakertable></head>
+<basic-body>
+<common-timeline>
+<tli id="T0" time="0.0"/>
+<tli id="T3" time="1.0133231786752182"/>
+<tli id="T2" time="2.0933123559474898"/>
+<tli id="T5" time="2.4499754484417275" type="intp"/>
+<tli id="T108" time="2.8066385409359653" type="intp"/>
+<tli id="T109" time="3.163301633430203" type="intp"/>
+<tli id="T4" time="5.393279286501653"/>
+<tli id="T9" time="6.893264254935364"/>
+<tli id="T11" time="7.166594849183285"/>
+<tli id="T7" time="7.733255837258242"/>
+<tli id="T8" time="8.419915622807896"/>
+<tli id="T10" time="9.599903797975749"/>
+<tli id="T12" time="10.833224772021245"/>
+<tli id="T14" time="11.966546748171158"/>
+<tli id="T15" time="13.086535524601663"/>
+<tli id="T16" time="14.013192905100713"/>
+<tli id="T17" time="14.993183084477401"/>
+<tli id="T18" time="16.439835254033472"/>
+<tli id="T20" time="16.83983124561579"/>
+<tli id="T21" time="17.133161639442832"/>
+<tli id="T99" time="17.78982172562381" type="intp"/>
+<tli id="T19" time="18.446481811804787"/>
+<tli id="T22" time="19.58647038781441"/>
+<tli id="T23" time="20.98645635835254"/>
+<tli id="T24" time="21.71978234292013"/>
+<tli id="T25" time="22.153111333800982"/>
+<tli id="T26" time="24.153111333800982"/>
+<tli id="T28" time="27.59972341918028"/>
+<tli id="T27" time="27.98638621104319"/>
+<tli id="T29" time="29.659702775829242"/>
+<tli id="T30" time="30.686359154223872"/>
+<tli id="T31" time="31.313019541036173"/>
+<tli id="T32" time="32.5796735143802"/>
+<tli id="T106" time="33.65966269165247" type="intp"/>
+<tli id="T33" time="34.739651868924746"/>
+<tli id="T34" time="35.372978855596756"/>
+<tli id="T35" time="36.12630463974346"/>
+<tli id="T37" time="37.10629481912015"/>
+<tli id="T38" time="39.10629481912015"/>
+<tli id="T40" time="40.512927347429596"/>
+<tli id="T39" time="41.10629481912015"/>
+<tli id="T41" time="41.95957951698567"/>
+<tli id="T42" time="43.232900090189396"/>
+<tli id="T45" time="44.179557270267566"/>
+<tli id="T46" time="45.67954223870127"/>
+<tli id="T47" time="47.67954223870127"/>
+<tli id="T48" time="48.25284978454755"/>
+<tli id="T49" time="50.25284978454755"/>
+<tli id="T50" time="52.29947589938872"/>
+<tli id="T51" time="52.93280288606073"/>
+<tli id="T52" time="54.22612325884357"/>
+<tli id="T54" time="55.03944844172763" type="intp"/>
+<tli id="T53" time="55.852773624611686"/>
+<tli id="T55" time="57.08609459865718"/>
+<tli id="T56" time="57.75275458462772"/>
+<tli id="T57" time="58.85274356147911"/>
+<tli id="T59" time="63.326032067341416"/>
+<tli id="T58" time="63.592696061729626"/>
+<tli id="T60" time="64.8993496342319"/>
+<tli id="T61" time="67.99265196913518"/>
+<tli id="T62" time="68.83931015131776"/>
+<tli id="T63" time="70.99262190600261"/>
+<tli id="T64" time="71.97261208537931"/>
+<tli id="T66" time="72.97261208537931" type="intp"/>
+<tli id="T65" time="73.97261208537931"/>
+<tli id="T67" time="75.13924701873937"/>
+<tli id="T68" time="77.09256077763303"/>
+<tli id="T69" time="82.03251127367471"/>
+<tli id="T70" time="82.41250746567793"/>
+<tli id="T71" time="83.0058348531917"/>
+<tli id="T72" time="87.59912215652871"/>
+<tli id="T73" time="90.48575989578114"/>
+<tli id="T74" time="91.10575368273375"/>
+<tli id="T75" time="93.10575368273375"/>
+<tli id="T76" time="95.10575368273375"/>
+<tli id="T77" time="95.40571059224372"/>
+<tli id="T78" time="96.94569515983565"/>
+<tli id="T79" time="97.3790241507165"/>
+<tli id="T80" time="99.3790241507165"/>
+<tli id="T81" time="101.3790241507165"/>
+<tli id="T82" time="102.64563803988376"/>
+<tli id="T83" time="105.76560677422587"/>
+<tli id="T107" time="106.89559545044594" type="intp"/>
+<tli id="T84" time="108.025584126666"/>
+<tli id="T85" time="110.01889748471793"/>
+<tli id="T86" time="110.60555827237197"/>
+<tli id="T87" time="112.19220903898186"/>
+<tli id="T89" time="114.9588479807596"/>
+<tli id="T36" time="116.21216875438421"/>
+<tli id="T43" time="118.21216875438421"/>
+<tli id="T44" time="119.70546708086982"/>
+<tli id="T88" time="120.17879567090891"/>
+<tli id="T90" time="120.58545826235095"/>
+<tli id="T91" time="120.92545485519591"/>
+<tli id="T92" time="121.61211464074557"/>
+<tli id="T93" time="122.8987684136687"/>
+<tli id="T94" time="123.89875839262452"/>
+<tli id="T95" time="125.59207475698967"/>
+<tli id="T96" time="125.81207255235995"/>
+<tli id="T98" time="126.27873454253934"/>
+<tli id="T100" time="126.55206513678725"/>
+<tli id="T97" time="127.93871790760596"/>
+<tli id="T101" time="128.97870748572"/>
+<tli id="T103" time="129.73203326986672"/>
+<tli id="T102" time="131.01868704278985"/>
+<tli id="T104" time="131.7186800280589"/>
+<tli id="T105" time="132.34534041487123"/>
+<tli id="T1" time="824.32"/>
+</common-timeline>
+<tier id="TIE0" speaker="SPK0" category="v" type="t" display-name="M [v]"><event start="T0" end="T3">also dis (.) dis </event>
+<event start="T3" end="T2">wärn ja hier sachen die dann </event>
+<event start="T2" end="T5">konkret in </event>
+<event start="T5" end="T108">die richtung ge</event>
+<event start="T108" end="T109">hen </event>
+<event start="T9" end="T11">ja </event>
+<event start="T17" end="T18">dis wär (.) dis wär auch für mich interessant </event>
+<event start="T18" end="T20">weil ich </event>
+<event start="T20" end="T21">(0.3) </event>
+<event start="T21" end="T99">zum beispiel mit </event>
+<event start="T99" end="T19">(0.1) </event>
+<event start="T19" end="T22">türkischen_ </event>
+<event start="T23" end="T24">türkischen_ </event>
+<event start="T24" end="T25">n_ </event>
+<event start="T25" end="T26">lern_ (.) lernern </event>
+<event start="T26" end="T28">also (...) äh deutsch als (...) zweitspra </event>
+<event start="T28" end="T27">che </event>
+<event start="T27" end="T29">(1.7) </event>
+<event start="T29" end="T30">äm_ </event>
+<event start="T30" end="T31">(0.6) </event>
+<event start="T31" end="T32">interviews viel zu tun habe </event>
+<event start="T32" end="T106">und da </event>
+<event start="T106" end="T33">(..) da wär für mich </event>
+<event start="T33" end="T34">interessant zu kucken </event>
+<event start="T34" end="T35">was sind die_ </event>
+<event start="T35" end="T37">(1.0) </event>
+<event start="T37" end="T38">dis sind interviews aus den aus den_ </event>
+<event start="T38" end="T40">((unclear)) achtzigern an </event>
+<event start="T40" end="T39">bis </event>
+<event start="T39" end="T41">(0.9) </event>
+<event start="T41" end="T42">bis zweitausendzehn </event>
+<event start="T42" end="T45">(0.9) </event>
+<event start="T45" end="T46">und was sind da so heute die_ </event>
+<event start="T46" end="T47">was is heute der stand der_ </event>
+<event start="T47" end="T48">(0.6) </event>
+<event start="T48" end="T49">ähm (...) lerner </event>
+<event start="T49" end="T50">äh oder nicht der stand aber was sind die </event>
+<event start="T50" end="T51">(0.6) </event>
+<event start="T51" end="T52">was sind zum beispiel die methoden </event>
+<event start="T52" end="T54">die die damals </event>
+<event start="T54" end="T53">verwendet haben </event>
+<event start="T53" end="T55">und die die heute verwenden </event>
+<event start="T55" end="T56">in der </event>
+<event start="T56" end="T57">(1.1) </event>
+<event start="T57" end="T59">in der äh sprach (...) stands (...) messung zum </event>
+<event start="T59" end="T58">beispiel </event>
+<event start="T58" end="T60">w was hat sich da verändert </event>
+<event start="T60" end="T61">also werden da immer noch dieselben methoden verwendet wie in den achtzigern </event>
+<event start="T61" end="T62">(0.8) </event>
+<event start="T62" end="T63">oder gibs da (..) gibs da ganz andre verfahren </event>
+<event start="T63" end="T64">wie man misst </event>
+<event start="T64" end="T66">wie weit jemand in </event>
+<event start="T66" end="T65">seiner entwicklung is </event>
+<event start="T75" end="T76">naja also dis für mich besch </event>
+<event start="T76" end="T77">(0.3) </event>
+<event start="T77" end="T78">beschränkt sich dis auf die linguistik </event>
+<event start="T79" end="T80">h° dis war jetz kein ironischer </event>
+<event start="T80" end="T81">h dis w (.) is mir so rausgerutscht </event>
+<event start="T81" end="T82">nee (.) ähm </event>
+<event start="T44" end="T88">dieses </event>
+<event start="T93" end="T94">dis (.) deutsch als fremdsprache </event>
+<event start="T94" end="T95">((unclear)) h° </event>
+<event start="T98" end="T100">nein </event>
+<event start="T100" end="T97">weil dis ja weil dis ja (.) n groszes  </event>
+<event start="T97" end="T101">(1.0) </event>
+<event start="T101" end="T103">ich w ich w </event>
+<event start="T103" end="T102">h° (...) kann mir dis garnich vorstelln </event>
+<event start="T102" end="T104">was denn da passiert </event>
+<event start="T104" end="T105">ob die nur </event>
+</tier><tier id="TIE1" speaker="SPK1" category="v" type="t" display-name="F [v]"><event start="T0" end="T3">dis is auch </event>
+<event start="T5" end="T108">ja </event>
+<event start="T108" end="T109">deu </event>
+<event start="T109" end="T4">tsch als fremdsprache äh </event>
+<event start="T4" end="T9">musz ich auch definitiv belegen </event>
+<event start="T7" end="T8">dis_s auch was </event>
+<event start="T8" end="T10">was (..) bei mir dranhängt </event>
+<event start="T10" end="T12">und dann wäre ja sowas </event>
+<event start="T12" end="T14">(1.1) </event>
+<event start="T14" end="T15">was (.) was man </event>
+<event start="T15" end="T16">(0.9) </event>
+<event start="T16" end="T17">zusammen belegen könnte </event>
+<event start="T20" end="T21">ja </event>
+<event start="T28" end="T27">ja </event>
+<event start="T32" end="T106">mh </event>
+<event start="T40" end="T39">ja </event>
+<event start="T54" end="T53">mhh </event>
+<event start="T59" end="T58">ja </event>
+<event start="T66" end="T65">ja </event>
+<event start="T65" end="T67">(1.2) </event>
+<event start="T67" end="T68">tis auf jeden fall sehr interessant </event>
+<event start="T69" end="T70">jo </event>
+<event start="T70" end="T71">(0.6) </event>
+<event start="T71" end="T72">und auch (.) was (..) was halt d interessen von uns verbindet </event>
+<event start="T72" end="T73">(2.9) </event>
+<event start="T73" end="T74">so gro_b </event>
+<event start="T79" end="T80">mh hh° (...) h° </event>
+<event start="T80" end="T81">°h </event>
+<event start="T83" end="T107">abers sis zumindest (.) äh </event>
+<event start="T107" end="T84">(0.5) </event>
+<event start="T84" end="T85">dann en seminar_ (.) was (.) äh </event>
+<event start="T85" end="T86">(0.6) </event>
+<event start="T86" end="T87">für uns beide (..) was bringt </event>
+<event start="T87" end="T89">egal (..) von welchem (..) standpunkt aus </event>
+<event start="T89" end="T36">(1.3) </event>
+<event start="T36" end="T43">man das betrachtet </event>
+<event start="T90" end="T91">nee </event>
+<event start="T91" end="T92">(0.7) </event>
+<event start="T92" end="T93">deutsch als fremdsprache </event>
+<event start="T93" end="T94">was (.) was man (.) </event>
+<event start="T94" end="T95">was wir grade planen h° was wir zusammen °h h° </event>
+<event start="T95" end="T96">°h </event>
+<event start="T96" end="T98">belegen k </event>
+<event start="T98" end="T100">°h </event>
+</tier><tier id="TIE_" category="v" type="t" display-name=""><event start="T11" end="T7">(0.6) </event>
+<event start="T22" end="T23">(1.4) </event>
+<event start="T68" end="T69">(4.9) </event>
+<event start="T74" end="T75">(2.0) </event>
+<event start="T78" end="T79">(0.4) </event>
+<event start="T82" end="T83">(3.1) </event>
+<event start="T43" end="T44">(1.5) </event>
+<event start="T88" end="T90">(0.4) </event>
+</tier></basic-body>
+</basic-transcription>

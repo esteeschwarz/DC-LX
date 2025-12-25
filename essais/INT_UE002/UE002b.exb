@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://www.exmaralda.org -->
+<basic-transcription>
+<head>
+<meta-information><project-name></project-name><transcription-name></transcription-name><referenced-file url="../../../../21S/SPUND/Materialien_GAT2/Materialiene_EXMA_PE/Bsp_Transkriptionsübung.wav"/><ud-meta-information><ud-information attribute-name="AutoSave">;/Users/lion/EXMARaLDA_AutoBackup_2022_01_05_05_31_09.exb at 2022_01_05_05_31_09;/Users/lion/EXMARaLDA_AutoBackup_2022_01_12_02_01_46.exb at 2022_01_12_02_01_46</ud-information></ud-meta-information><comment></comment><transcription-convention></transcription-convention></meta-information><speakertable><speaker id="SPK0">
+<abbreviation>M</abbreviation>
+<sex value="m"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK1">
+<abbreviation>F</abbreviation>
+<sex value="f"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+</speakertable></head>
+<basic-body>
+<common-timeline>
+<tli id="T0" time="0.0"/>
+<tli id="T2" time="0.2332950769548882"/>
+<tli id="T3" time="0.8131999825284675"/>
+<tli id="T4" time="1.0289368430069827"/>
+<tli id="T8" time="1.2359241379559096"/>
+<tli id="T5" time="1.7397854224482914"/>
+<tli id="T7" time="2.62783870109072"/>
+<tli id="T10" time="3.2488005859375004"/>
+<tli id="T9" time="3.8277650486207295"/>
+<tli id="T11" time="4.148745346585007"/>
+<tli id="T68" time="4.757707967956486"/>
+<tli id="T6" time="4.811704653595337"/>
+<tli id="T14" time="5.2287425924588735"/>
+<tli id="T13" time="5.965688396417855"/>
+<tli id="T15" time="6.118996589845353"/>
+<tli id="T16" time="6.692235921791649"/>
+<tli id="T17" time="7.265475253737947"/>
+<tli id="T18" time="7.905370321957068"/>
+<tli id="T19" time="9.391793240841071"/>
+<tli id="T21" time="9.715073561764275" type="intp"/>
+<tli id="T20" time="10.038353882687476"/>
+<tli id="T22" time="10.311642401406058"/>
+<tli id="T23" time="11.218160414716479"/>
+<tli id="T24" time="11.278150577362023"/>
+<tli id="T25" time="11.918045645581143"/>
+<tli id="T26" time="12.41129809400005"/>
+<tli id="T27" time="13.131180045746563"/>
+<tli id="T28" time="14.02436691180242"/>
+<tli id="T29" time="14.28432428326644"/>
+<tli id="T30" time="15.570779993331966"/>
+<tli id="T31" time="15.677429171368486"/>
+<tli id="T32" time="16.21734063517837"/>
+<tli id="T33" time="16.397311123114996"/>
+<tli id="T34" time="16.910560292415752"/>
+<tli id="T35" time="17.14385536937064"/>
+<tli id="T37" time="17.3104947100527"/>
+<tli id="T36" time="17.530458639753025"/>
+<tli id="T39" time="18.990219264127894"/>
+<tli id="T40" time="19.203517620200937"/>
+<tli id="T41" time="19.65677662685615"/>
+<tli id="T42" time="20.116701207138643"/>
+<tli id="T43" time="20.64994709732125"/>
+<tli id="T44" time="21.043215941330914"/>
+<tli id="T45" time="21.86308149748666"/>
+<tli id="T46" time="22.036386411796013"/>
+<tli id="T47" time="22.682947053642412"/>
+<tli id="T48" time="22.98289786687013"/>
+<tli id="T49" time="23.396163431761643"/>
+<tli id="T50" time="23.836091291162287"/>
+<tli id="T51" time="24.20269784066283"/>
+<tli id="T12" time="24.269353576935654"/>
+<tli id="T38" time="25.035894544073145"/>
+<tli id="T52" time="25.309183062791725"/>
+<tli id="T53" time="25.71578305405596"/>
+<tli id="T54" time="26.04906173542009"/>
+<tli id="T55" time="26.93558302784866"/>
+<tli id="T56" time="27.16221253117627"/>
+<tli id="T57" time="28.24870103242332"/>
+<tli id="T58" time="28.955251836915263"/>
+<tli id="T59" time="29.381848549061345"/>
+<tli id="T60" time="29.39517969631591"/>
+<tli id="T61" time="29.981750175516773"/>
+<tli id="T62" time="30.181717384335247"/>
+<tli id="T63" time="30.654973111872305"/>
+<tli id="T64" time="30.708297700890565"/>
+<tli id="T65" time="31.401517358127947"/>
+<tli id="T66" time="31.501500962537186"/>
+<tli id="T67" time="32.068074720856195"/>
+<tli id="T1" time="32.488"/>
+</common-timeline>
+<tier id="TIE0" speaker="SPK0" category="GAT" type="t" display-name="M [GAT]"><event start="T2" end="T3">hej Anna| </event>
+<event start="T3" end="T4">(0.2)</event>
+<event start="T7" end="T10">ich wollt mich noch schnell An </event>
+<event start="T10" end="T9">melden| </event>
+<event start="T9" end="T11">(0.3)</event>
+<event start="T6" end="T14">für den </event>
+<event start="T14" end="T13">esmerALDA kurs; </event>
+<event start="T17" end="T18">ach echt? </event>
+<event start="T18" end="T19">(1.5)</event>
+<event start="T19" end="T21">wo: (--) äh: (--) </event>
+<event start="T21" end="T20">KANN man denn- </event>
+<event start="T20" end="T22">(0.3)</event>
+<event start="T22" end="T23">wo KANN man das denn mAchen, </event>
+<event start="T31" end="T32">ah:- </event>
+<event start="T32" end="T33">(0.2)</event>
+<event start="T33" end="T34">okAY. </event>
+<event start="T34" end="T35">(0.2)</event>
+<event start="T35" end="T37">dAn </event>
+<event start="T37" end="T36">ke; </event>
+<event start="T40" end="T41">WAS denn. </event>
+<event start="T48" end="T49">°h hmm; </event>
+<event start="T49" end="T50">(0.4)</event>
+<event start="T52" end="T53">Okay: h°; </event>
+<event start="T53" end="T54">(0.3)</event>
+<event start="T56" end="T57">UNCLEAR *sehn uns aber vorher ja dann noch in der* VORlesung. </event>
+<event start="T58" end="T59">oder? </event>
+<event start="T62" end="T63">ja (.) cool; </event>
+<event start="T63" end="T64">(0.1)</event>
+<event start="T64" end="T65">dAnn bis MORgen. </event>
+<event start="T66" end="T67">ciao, </event>
+</tier><tier id="TIE1" speaker="SPK1" category="GAT" type="t" display-name="F [GAT]"><event start="T4" end="T8">Ach| </event>
+<event start="T8" end="T5">hi TImo:o| </event>
+<event start="T5" end="T7">was machst DU denn hier| </event>
+<event start="T7" end="T10">voll GUT dass| </event>
+<event start="T11" end="T6">ANmelden?</event>
+<event start="T6" end="T14">woFÜR; </event>
+<event start="T15" end="T16">achso. </event>
+<event start="T16" end="T17">HAB ich schon gemacht; </event>
+<event start="T21" end="T20">aber| </event>
+<event start="T24" end="T25">ähmm:| </event>
+<event start="T25" end="T26">(0.5)</event>
+<event start="T26" end="T27">im laBOR, </event>
+<event start="T27" end="T28">im AUdiolabor. </event>
+<event start="T28" end="T29">(0.3)</event>
+<event start="T29" end="T30">in raum HUNDertvierundvierzig; </event>
+<event start="T37" end="T36">aber </event>
+<event start="T36" end="T39">IRgendwas wollt ich dich gefrAgt haben; </event>
+<event start="T42" end="T43">tja:. </event>
+<event start="T43" end="T44">(0.4)</event>
+<event start="T44" end="T45">gute FRAge; </event>
+<event start="T45" end="T46">(0.2)</event>
+<event start="T46" end="T47">habs verGESSen. </event>
+<event start="T47" end="T48">(0.3)</event>
+<event start="T50" end="T51">egal, </event>
+<event start="T51" end="T12">(0.1)</event>
+<event start="T12" end="T38">musz auch jetzt LOS. </event>
+<event start="T38" end="T52">(0.3)</event>
+<event start="T54" end="T55">hEUt noch zum SPORT. </event>
+<event start="T58" end="T60">ja- </event>
+<event start="T60" end="T61">DENK ich doch; </event>
+<event start="T66" end="T67">ciao; </event>
+</tier><tier id="TIE_" category="v" type="t" display-name=""><event start="T68" end="T6">(0.1)</event>
+<event start="T13" end="T15">(0.2)</event>
+<event start="T23" end="T24">(0.1)</event>
+<event start="T30" end="T31">(0.1)</event>
+<event start="T39" end="T40">(0.2)</event>
+<event start="T41" end="T42">(0.5)</event>
+<event start="T55" end="T56">(0.2)</event>
+<event start="T57" end="T58">(0.7)</event>
+<event start="T61" end="T62">(0.2)</event>
+<event start="T65" end="T66">(0.1)</event>
+</tier></basic-body>
+</basic-transcription>

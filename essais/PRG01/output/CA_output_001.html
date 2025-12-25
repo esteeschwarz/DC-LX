@@ -1,0 +1,317 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">
+            body {
+                font-family: "Courier New", Courier, monospace;
+                white-space:nowrap;
+            }
+            
+            div#head {
+            background-color: #40627C;
+            color:white;
+            font-size:12pt;
+            font-weight:bold;
+            padding:7px;
+            position:fixed;
+            left:3%;
+            right:3%;
+            width:94%;
+            z-index:100;
+            }
+            
+            div#main {
+            position:absolute;
+            top:80px;
+            right:0px;
+            bottom:0px;
+            width:98%;	
+            /*height:95%;*/
+            overflow:auto;	
+            /*margin-bottom : 1000px*/
+            }
+            
+            tr:nth-child(even) {
+                background-color: #FFF8DC;
+            }
+            
+            
+            tr:nth-child(odd) {
+                background-color: white;
+            }
+
+            
+            div#footer{
+            color:gray;
+            border:1px solid gray;
+            text-align:right;
+            font-size:10pt;
+            margin-top:10px;
+            margin-bottom: 10px;
+            position:absolute;
+            right:3%;
+            left:3%;
+            }
+            
+            span#corpus-title{
+            color: blue;
+            }
+            #head a {
+            text-decoration:none;
+            color:white;
+            }
+            #previous-doc {
+            font-size: 10pt;
+            }
+            #next-doc {
+            font-size: 10pt;
+            }
+            
+            
+            
+            span.subscript {
+            font-size:8pt;
+            font-weight:bold;
+            vertical-align:sub;
+            padding-left:2px;
+            padding-right:2px
+            }
+            
+            td.audioLink {
+                background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dE////////CVj33AAAAAlwSFlzAAAASAAAAEgARslrPgAAAfpJREFUSMe1VUFO20AUnRkSgVSo4wQhEErXbUyABWntLJ2eAxJvyIJcgWyBy9g3ICtChLBzBfsMtiVv/Fi9ukpkOTSqN98z89/7b+bP/yMAABCizPr++7vvA5PJ3d1kApwZnc6ZAXw92P+iaYXlPP2Iq+Jfm0iSJEkSYDQaDh0HqNWUqteBnR0pa7XNLXHkIW+pADpYlvmr3y+IWk1dP2wB0+n9/XQKLJdBsFwCcRzHcVxYztOPOPKQd1XIHwFUSsDFxfn55SUQRVEURdVHuWqJIw95HWc0cpy/BDBXPDIqLwt8c3N9PRwCaZqmaVotjDzNZqPRahVxGFfw0lAhj7CMkH693tXVzx4QhmEYhtVCyEs84wrD+PHdMIoF5rJKAO3x8dHRyQkwmz0/z2bluCDw/SAocKwawTLiAi/VpgJod3fr9b094PHx4eHpaR1PXvpr2sF+QwOUVFJKsf2npFJKCqHruq7r6+t5nud5XoyllFIqIbZOQbt9evqtDcznLy/z+edToGx78Nu2C2Wu67quW71jy+pblinEYvH29roQwjQtyzTLD9PzPM/zirE9GAzswT+U4Xh8ezseA1mWZVlWfftZJaVl+L8aEQNXNiL+lLViKmcdM5errZg7oh9xG7fiVSFUuu1jRJ7Kx6jMbvocd7tGp9v9/HP8AWIhUD3iQ2hbAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE2LTAzLTAxVDE3OjM3OjEzKzA4OjAwpgK6zQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNi0wMi0yMVQwMDowNTo0NyswODowMBVFaYsAAABUdEVYdHN2ZzpiYXNlLXVyaQBmaWxlOi8vL2hvbWUvZGIvc3ZnX2luZm8vc3ZnLzY3LzJiLzY3MmI2ZmM0OTY0YmUzNGI4NGFkYjhlZDcyOGU0ZDFlLnN2Z7DScMIAAAAASUVORK5CYII%3D);
+                background-repeat:no-repeat;
+                min-width:16px;
+                min-height:16px;
+                
+            }
+            
+            td.numbering {
+                color:rgb(150,150,150);
+                padding-right: 5px;
+            }
+            
+            
+            table {
+            margin-left:50px;
+            margin-top:0px;
+            margin-right:100px;
+            }
+            
+            td {
+            vertical-align:top
+            }
+            
+            td.speaker {
+                font-weight:bold;
+                padding-right:8px;
+                padding-left:4px
+            }
+            td.text {
+            font-size:11pt;
+            font-weight:normal;
+            padding-left:8px
+            }
+            
+            td.translation {
+            font-size:9pt;
+            font-weight:normal;
+            color:rgb(0,0,240);
+            padding-left:8px
+            }
+            
+            
+            a {
+            text-decoration:none;
+            }
+        </style><script type="text/javascript">
+            
+            function jump(time){
+                document.getElementsByTagName('audio')[0].currentTime=time;
+                document.getElementsByTagName('audio')[0].play();
+            }			
+            
+            function stop(){
+                document.getElementsByTagName('audio')[0].pause();
+            }
+                        
+            function registerAudioListener(){
+                document.getElementsByTagName('audio')[0].addEventListener("timeupdate", updateTime, true);                     
+                document.getElementsByTagName('audio')[0].addEventListener("onpause", updateTime, true);                     
+            }
+            
+            function updateTime(){
+                var player = document.getElementsByTagName('audio')[0]; 
+                var elapsedTime = player.currentTime;        
+                var trs = document.getElementsByTagName('tr');
+                for (var i = 0; i < trs.length; i++) {
+                    tr = trs[i];
+                    start = tr.getAttribute('data-start');
+                    end = tr.getAttribute('data-end');
+                    if ((!player.paused) && (start < elapsedTime) && (end > elapsedTime)){
+                        var children = tr.children;
+                        for (var j = 0; j < children.length; j++) {
+                          var td = children[j];
+                          td.style.backgroundColor = '#E0FFFF';
+                        }                        
+                    } else {
+                        var children = tr.children;
+                        for (var j = 0; j < children.length; j++) {
+                          var td = children[j];
+                          td.style.backgroundColor='';
+                        }                        
+                    }
+                }                        
+            }
+            window.addEventListener("DOMContentLoaded", registerAudioListener, false);
+            
+            </script></head>
+   <body>
+      <div id="head">
+         <audio controls="controls">
+            <source src="/Users/guhl/boxHKW/UNI/21S/SPUND/PRG/media/PRG_CA_schnipsel.wav" type="audio/wav"></source>
+         </audio>
+      </div>
+      <div id="main">
+         <table>
+            <tr data-start="0.0" data-end="1.0133231786752182">
+               <td class="audioLink"><a onClick="jump('-.1');" title="Click to start player at 0.0">&nbsp;</a></td>
+               <td class="numbering">001</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">[dis&nbsp;is&nbsp;auch&nbsp;]</td>
+            </tr>
+            <tr data-start="0.0" data-end="3.163301633430203">
+               <td class="audioLink"><a onClick="jump('-.1');" title="Click to start player at 0.0">&nbsp;</a></td>
+               <td class="numbering">002</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">[also&nbsp;dis&nbsp;(.)&nbsp;dis&nbsp;]wärn&nbsp;ja&nbsp;hier&nbsp;sachen&nbsp;die&nbsp;dann&nbsp;konkret&nbsp;in&nbsp;[die&nbsp;richtung&nbsp;ge][hen&nbsp;]</td>
+            </tr>
+            <tr data-start="2.4499754484417275" data-end="6.893264254935364">
+               <td class="audioLink"><a onClick="jump('2.35');" title="Click to start player at 2.4499754484417275">&nbsp;</a></td>
+               <td class="numbering">003</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ja&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;][deu&nbsp;]tsch&nbsp;als&nbsp;fremdsprache&nbsp;äh&nbsp;musz&nbsp;ich&nbsp;auch&nbsp;definitiv&nbsp;belegen&nbsp;</td>
+            </tr>
+            <tr data-start="6.893264254935364" data-end="7.166594849183285">
+               <td class="audioLink"><a onClick="jump('6.79');" title="Click to start player at 6.893264254935364">&nbsp;</a></td>
+               <td class="numbering">004</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">ja&nbsp;</td>
+            </tr>
+            <tr data-start="7.733255837258242" data-end="14.993183084477401">
+               <td class="audioLink"><a onClick="jump('7.63');" title="Click to start player at 7.733255837258242">&nbsp;</a></td>
+               <td class="numbering">005</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">dis_s&nbsp;auch&nbsp;was&nbsp;was&nbsp;(..)&nbsp;bei&nbsp;mir&nbsp;dranhängt&nbsp;und&nbsp;dann&nbsp;wäre&nbsp;ja&nbsp;sowas&nbsp;(1.1)&nbsp;was&nbsp;(.)&nbsp;was&nbsp;man&nbsp;(0.9)&nbsp;zusammen&nbsp;belegen&nbsp;könnte&nbsp;</td>
+            </tr>
+            <tr data-start="14.993183084477401" data-end="19.58647038781441">
+               <td class="audioLink"><a onClick="jump('14.89');" title="Click to start player at 14.993183084477401">&nbsp;</a></td>
+               <td class="numbering">006</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">dis&nbsp;wär&nbsp;(.)&nbsp;dis&nbsp;wär&nbsp;auch&nbsp;für&nbsp;mich&nbsp;interessant&nbsp;weil&nbsp;ich&nbsp;[(0.3)&nbsp;]zum&nbsp;beispiel&nbsp;mit&nbsp;(0.1)&nbsp;türkischen_&nbsp;</td>
+            </tr>
+            <tr data-start="16.83983124561579" data-end="17.133161639442832">
+               <td class="audioLink"><a onClick="jump('16.74');" title="Click to start player at 16.83983124561579">&nbsp;</a></td>
+               <td class="numbering">007</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ja&nbsp;&nbsp;&nbsp;&nbsp;]</td>
+            </tr>
+            <tr data-start="20.98645635835254" data-end="73.97261208537931">
+               <td class="audioLink"><a onClick="jump('20.89');" title="Click to start player at 20.98645635835254">&nbsp;</a></td>
+               <td class="numbering">008</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">türkischen_&nbsp;n_&nbsp;lern_&nbsp;(.)&nbsp;lernern&nbsp;also&nbsp;(...)&nbsp;äh&nbsp;deutsch&nbsp;als&nbsp;(...)&nbsp;zweitspra&nbsp;[che&nbsp;](1.7)&nbsp;äm_&nbsp;(0.6)&nbsp;interviews&nbsp;viel&nbsp;zu&nbsp;tun&nbsp;habe&nbsp;[und&nbsp;da&nbsp;](..)&nbsp;da&nbsp;wär&nbsp;für&nbsp;mich&nbsp;interessant&nbsp;zu&nbsp;kucken&nbsp;was&nbsp;sind&nbsp;die_&nbsp;(1.0)&nbsp;dis&nbsp;sind&nbsp;interviews&nbsp;aus&nbsp;den&nbsp;aus&nbsp;den_&nbsp;((unclear))&nbsp;achtzigern&nbsp;an&nbsp;[bis&nbsp;](0.9)&nbsp;bis&nbsp;zweitausendzehn&nbsp;(0.9)&nbsp;und&nbsp;was&nbsp;sind&nbsp;da&nbsp;so&nbsp;heute&nbsp;die_&nbsp;was&nbsp;is&nbsp;heute&nbsp;der&nbsp;stand&nbsp;der_&nbsp;(0.6)&nbsp;ähm&nbsp;(...)&nbsp;lerner&nbsp;äh&nbsp;oder&nbsp;nicht&nbsp;der&nbsp;stand&nbsp;aber&nbsp;was&nbsp;sind&nbsp;die&nbsp;(0.6)&nbsp;was&nbsp;sind&nbsp;zum&nbsp;beispiel&nbsp;die&nbsp;methoden&nbsp;die&nbsp;die&nbsp;damals&nbsp;[verwendet&nbsp;haben&nbsp;]und&nbsp;die&nbsp;die&nbsp;heute&nbsp;verwenden&nbsp;in&nbsp;der&nbsp;(1.1)&nbsp;in&nbsp;der&nbsp;äh&nbsp;sprach&nbsp;(...)&nbsp;stands&nbsp;(...)&nbsp;messung&nbsp;zum&nbsp;[beispiel&nbsp;]w&nbsp;was&nbsp;hat&nbsp;sich&nbsp;da&nbsp;verändert&nbsp;also&nbsp;werden&nbsp;da&nbsp;immer&nbsp;noch&nbsp;dieselben&nbsp;methoden&nbsp;verwendet&nbsp;wie&nbsp;in&nbsp;den&nbsp;achtzigern&nbsp;(0.8)&nbsp;oder&nbsp;gibs&nbsp;da&nbsp;(..)&nbsp;gibs&nbsp;da&nbsp;ganz&nbsp;andre&nbsp;verfahren&nbsp;wie&nbsp;man&nbsp;misst&nbsp;wie&nbsp;weit&nbsp;jemand&nbsp;in&nbsp;[seiner&nbsp;entwicklung&nbsp;is&nbsp;]</td>
+            </tr>
+            <tr data-start="27.59972341918028" data-end="27.98638621104319">
+               <td class="audioLink"><a onClick="jump('27.5');" title="Click to start player at 27.59972341918028">&nbsp;</a></td>
+               <td class="numbering">009</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ja&nbsp;&nbsp;]</td>
+            </tr>
+            <tr data-start="32.5796735143802" data-end="33.65966269165247">
+               <td class="audioLink"><a onClick="jump('32.48');" title="Click to start player at 32.5796735143802">&nbsp;</a></td>
+               <td class="numbering">010</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[mh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</td>
+            </tr>
+            <tr data-start="40.512927347429596" data-end="41.10629481912015">
+               <td class="audioLink"><a onClick="jump('40.41');" title="Click to start player at 40.512927347429596">&nbsp;</a></td>
+               <td class="numbering">011</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ja&nbsp;&nbsp;]</td>
+            </tr>
+            <tr data-start="55.03944844172763" data-end="55.852773624611686">
+               <td class="audioLink"><a onClick="jump('54.94');" title="Click to start player at 55.03944844172763">&nbsp;</a></td>
+               <td class="numbering">012</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[mhh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</td>
+            </tr>
+            <tr data-start="63.326032067341416" data-end="63.592696061729626">
+               <td class="audioLink"><a onClick="jump('63.23');" title="Click to start player at 63.326032067341416">&nbsp;</a></td>
+               <td class="numbering">013</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ja&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</td>
+            </tr>
+            <tr data-start="72.97261208537931" data-end="77.09256077763303">
+               <td class="audioLink"><a onClick="jump('72.87');" title="Click to start player at 72.97261208537931">&nbsp;</a></td>
+               <td class="numbering">014</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ja&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;](1.2)&nbsp;tis&nbsp;auf&nbsp;jeden&nbsp;fall&nbsp;sehr&nbsp;interessant&nbsp;</td>
+            </tr>
+            <tr data-start="82.03251127367471" data-end="91.10575368273375">
+               <td class="audioLink"><a onClick="jump('81.93');" title="Click to start player at 82.03251127367471">&nbsp;</a></td>
+               <td class="numbering">015</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">jo&nbsp;(0.6)&nbsp;und&nbsp;auch&nbsp;(.)&nbsp;was&nbsp;(..)&nbsp;was&nbsp;halt&nbsp;d&nbsp;interessen&nbsp;von&nbsp;uns&nbsp;verbindet&nbsp;(2.9)&nbsp;so&nbsp;gro_b&nbsp;</td>
+            </tr>
+            <tr data-start="93.10575368273375" data-end="96.94569515983565">
+               <td class="audioLink"><a onClick="jump('93.01');" title="Click to start player at 93.10575368273375">&nbsp;</a></td>
+               <td class="numbering">016</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">naja&nbsp;also&nbsp;dis&nbsp;für&nbsp;mich&nbsp;besch&nbsp;(0.3)&nbsp;beschränkt&nbsp;sich&nbsp;dis&nbsp;auf&nbsp;die&nbsp;linguistik&nbsp;</td>
+            </tr>
+            <tr data-start="97.3790241507165" data-end="101.3790241507165">
+               <td class="audioLink"><a onClick="jump('97.28');" title="Click to start player at 97.3790241507165">&nbsp;</a></td>
+               <td class="numbering">017</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">[mh&nbsp;hh°&nbsp;(...)&nbsp;h°&nbsp;][°h&nbsp;]</td>
+            </tr>
+            <tr data-start="97.3790241507165" data-end="102.64563803988376">
+               <td class="audioLink"><a onClick="jump('97.28');" title="Click to start player at 97.3790241507165">&nbsp;</a></td>
+               <td class="numbering">018</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">[h°&nbsp;dis&nbsp;war&nbsp;jetz&nbsp;kein&nbsp;ironischer&nbsp;][h&nbsp;dis&nbsp;w&nbsp;(.)&nbsp;is&nbsp;mir&nbsp;so&nbsp;rausgerutscht&nbsp;]nee&nbsp;(.)&nbsp;ähm&nbsp;</td>
+            </tr>
+            <tr data-start="105.76560677422587" data-end="118.21216875438421">
+               <td class="audioLink"><a onClick="jump('105.67');" title="Click to start player at 105.76560677422587">&nbsp;</a></td>
+               <td class="numbering">019</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">abers&nbsp;sis&nbsp;zumindest&nbsp;(.)&nbsp;äh&nbsp;(0.5)&nbsp;dann&nbsp;en&nbsp;seminar_&nbsp;(.)&nbsp;was&nbsp;(.)&nbsp;äh&nbsp;(0.6)&nbsp;für&nbsp;uns&nbsp;beide&nbsp;(..)&nbsp;was&nbsp;bringt&nbsp;egal&nbsp;(..)&nbsp;von&nbsp;welchem&nbsp;(..)&nbsp;standpunkt&nbsp;aus&nbsp;(1.3)&nbsp;man&nbsp;das&nbsp;betrachtet&nbsp;</td>
+            </tr>
+            <tr data-start="119.70546708086982" data-end="120.17879567090891">
+               <td class="audioLink"><a onClick="jump('119.61');" title="Click to start player at 119.70546708086982">&nbsp;</a></td>
+               <td class="numbering">020</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">dieses&nbsp;</td>
+            </tr>
+            <tr data-start="120.58545826235095" data-end="126.55206513678725">
+               <td class="audioLink"><a onClick="jump('120.49');" title="Click to start player at 120.58545826235095">&nbsp;</a></td>
+               <td class="numbering">021</td>
+               <td class="abbreviation">F:</td>
+               <td class="text">nee&nbsp;(0.7)&nbsp;deutsch&nbsp;als&nbsp;fremdsprache&nbsp;[was&nbsp;(.)&nbsp;was&nbsp;man&nbsp;(.)&nbsp;][was&nbsp;wir&nbsp;grade&nbsp;planen&nbsp;h°&nbsp;was&nbsp;wir&nbsp;zusammen&nbsp;°h&nbsp;h°&nbsp;]°h&nbsp;belegen&nbsp;k&nbsp;[°h&nbsp;]</td>
+            </tr>
+            <tr data-start="122.8987684136687" data-end="125.59207475698967">
+               <td class="audioLink"><a onClick="jump('122.8');" title="Click to start player at 122.8987684136687">&nbsp;</a></td>
+               <td class="numbering">022</td>
+               <td class="abbreviation">M:</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[dis&nbsp;(.)&nbsp;deutsch&nbsp;als&nbsp;fremdsprache&nbsp;][((unclear))&nbsp;h°&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</td>
+            </tr>
+            <tr data-start="126.27873454253934" data-end="132.34534041487123">
+               <td class="audioLink"><a onClick="jump('126.18');" title="Click to start player at 126.27873454253934">&nbsp;</a></td>
+               <td class="numbering">023</td>
+               <td class="abbreviation">&nbsp;&nbsp;</td>
+               <td class="text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[nein&nbsp;]weil&nbsp;dis&nbsp;ja&nbsp;weil&nbsp;dis&nbsp;ja&nbsp;(.)&nbsp;n&nbsp;groszes&nbsp;&nbsp;(1.0)&nbsp;ich&nbsp;w&nbsp;ich&nbsp;w&nbsp;h°&nbsp;(...)&nbsp;kann&nbsp;mir&nbsp;dis&nbsp;garnich&nbsp;vorstelln&nbsp;was&nbsp;denn&nbsp;da&nbsp;passiert&nbsp;ob&nbsp;die&nbsp;nur&nbsp;</td>
+            </tr>
+         </table>
+         <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+      </div>
+   </body>
+</html>
