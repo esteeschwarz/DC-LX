@@ -1,0 +1,35 @@
+# _plugins/mermaid_from_markdown_list.rb
+require 'open3'
+
+module Jekyll
+  class MermaidFromMarkdownListTag < Liquid::Block
+    def initialize(tag_name, markup, tokens)
+      super
+    end
+
+    def render(context)
+      # Get the content inside the block (the Markdown list)
+      list_md = super(context).strip
+
+      # Path to your Rust binary (adjust!)
+      binary_path = '/Users/guhl/Documents/GitHub/SPUND-LX/lx-public/HA/DCL/pages/mermaid'
+
+      # Build the command (without the list as an argument)
+      cmd = "#{binary_path}"
+
+         begin
+        Open3.popen3(cmd) do |stdin, stdout, _stderr, _wait_thr|
+          stdin.puts(list_md)
+          stdin.close
+          output = stdout.read
+        end
+        exit_status = $?.exitstatus
+      rescue => e
+        return "<p>Error running rust_binary: #{e.message}</p>"
+      end
+
+    end
+  end
+end
+
+Liquid::Template.register_tag('mermaidlist', Jekyll::MermaidFromMarkdownListTag)
