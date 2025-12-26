@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/DC-LX/assets/xslt/atom.xslt" ?>
+<?xml-stylesheet type="text/css" href="/DC-LX/assets/css/atom.css" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>https://esteeschwarz.github.io/DC-LX/</id>
+	<title>DC - Linguistics</title>
+	<updated>2025-12-26T06:59:29+00:00</updated>
+
+	<subtitle>testing jekyll themes for github pages instance of DCL, FUB.</subtitle>
+
+	
+		
+		<author>
+			
+				<name>esteeschwarz</name>
+			
+			
+			
+		</author>
+	
+
+	<link href="https://esteeschwarz.github.io/DC-LX/atom.xml" rel="self" type="application/rss+xml" />
+	<link href="https://esteeschwarz.github.io/DC-LX/" rel="alternate" type="text/html" />
+
+	<generator uri="http://jekyllrb.com" version="4.4.1">Jekyll</generator>
+
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/linguistics/dcl-pr/</id>
+			<title>DCL site essai</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/linguistics/dcl-pr/" rel="alternate" type="text/html" title="DCL site essai" />
+			<updated>2025-12-22T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>st. schwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary>website project page / Dahlem Center for Linguistics</summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/linguistics/dcl-pr/">
+</content>
+
+			
+				<category term="linguistics" />
+			
+			
+
+			<published>2025-12-22T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/avl/buechner-a/</id>
+			<title>büchner: rezeption &amp; langeweile</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/avl/buechner-a/" rel="alternate" type="text/html" title="büchner: rezeption &amp; langeweile" />
+			<updated>2025-11-30T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>st. schwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/avl/buechner-a/">
+</content>
+
+			
+				<category term="AVL" />
+			
+			
+				<category term="AVL" />
+			
+				<category term="buechner" />
+			
+				<category term="reception" />
+			
+
+			<published>2025-11-30T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/linguistics/smi-a/</id>
+			<title>SMI 2025 - schizophrenie &amp; mental images</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/linguistics/smi-a/" rel="alternate" type="text/html" title="SMI 2025 - schizophrenie &amp; mental images" />
+			<updated>2025-11-26T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>st. schwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/linguistics/smi-a/">&lt;!-- post about globally added from _data/postmeta.csv --&gt;
+&lt;!--
+# info
+class: schizophrenie and mental images; x-student research group, wilck/nenchev, charite berlin (BUA) WS25.   
+task: research questions and hypothesis for group research project
+
+
+# view paper 
+- [draft](../../essais/smi/001) --&gt;
+</content>
+
+			
+				<category term="linguistics" />
+			
+			
+				<category term="psych" />
+			
+				<category term="HA" />
+			
+				<category term="LX" />
+			
+				<category term="corpus" />
+			
+				<category term="CLIP" />
+			
+
+			<published>2025-11-26T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/linguistics/dcl/</id>
+			<title>DCL page essai</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/linguistics/dcl/" rel="alternate" type="text/html" title="DCL page essai" />
+			<updated>2025-11-25T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>esteeschwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary>dahlem center for linguistics webpage essai. THIS site meta</summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/linguistics/dcl/">&lt;h1 id=&quot;16453draftproject&quot;&gt;16453.draft.project&lt;/h1&gt;
+
+&lt;blockquote&gt;&lt;p&gt;this post is continually actualised so כדאי ל  de temps en temps come back and see whats been developed.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;dahlem-center-for-linguistics-site-proposal&quot;&gt;dahlem center for linguistics site proposal&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CMS backend based on github workflow&lt;/li&gt;
+  &lt;li&gt;why:
+    &lt;ul&gt;
+      &lt;li&gt;FU CMS used (wordpress + single sign on) forces users to use wordpress UI or worst case deliver finalised content which authenticated users then post to database &amp;gt; this could prevent users to continually work on posts or post content actively&lt;/li&gt;
+      &lt;li&gt;github offers several static (=no DB needed) approaches to allow unlimited users to create content based on simple .csv tables or .md or plain texts which then are rendered to html frontend which is dependent on framework more or less customizable&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;caveats:
+    &lt;ul&gt;
+      &lt;li&gt;public data storage&lt;/li&gt;
+      &lt;li&gt;anyone with access can edit anything / admins have to keep track of organisation users&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;preliminary&quot;&gt;preliminary&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;target group&lt;/li&gt;
+  &lt;li&gt;who writes
+    &lt;ul&gt;
+      &lt;li&gt;with what capacities
+        &lt;ul&gt;
+          &lt;li&gt;technical&lt;/li&gt;
+          &lt;li&gt;scientifically&lt;/li&gt;
+          &lt;li&gt;time effort&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;whats her use purpose of the center page
+        &lt;ul&gt;
+          &lt;li&gt;landing page for individually set up project page
+            &lt;ul&gt;
+              &lt;li&gt;with only project abstract&lt;/li&gt;
+              &lt;li&gt;(2-fold like now, with distinct project pages behind landingpage which could all be rendered differently (individually, according to the framework used by the project maintainers) and just needed to be pushed to main page)&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;complete project presentation
+            &lt;ul&gt;
+              &lt;li&gt;needs to implement complex built paper?&lt;/li&gt;
+              &lt;li&gt;standard paper layout?
+                &lt;ul&gt;
+                  &lt;li&gt;built-in pdf export extra to online version  – quarto, rmarkdown, python notebooks&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;user interaction needed?
+            &lt;ul&gt;
+              &lt;li&gt;blog format&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;number of metadata to be included and how displayed?
+            &lt;ul class=&quot;task-list&quot;&gt;
+              &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;meta from .csv table, layout template to include preformatted display fields for metadata.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;module&quot;&gt;
+import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs&apos;;
+mermaid.initialize({ startOnLoad: true });
+await mermaid.run({ querySelector: &apos;.language-mermaid&apos; });
+&lt;/script&gt;
+
+&lt;h2 id=&quot;pr-diagram&quot;&gt;pr diagram&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mermaid&quot;&gt;graph TD
+
+T[target group] --&amp;gt;
+WH[who writes] --&amp;gt;
+CP[with what capacities] --&amp;gt;
+		TECH[technical]
+		CP --&amp;gt; SC[scientifically]
+		CP--&amp;gt;EFF[time effort]
+WH --&amp;gt; PU[whats her use purpose of the center page] --&amp;gt;
+		LP[landing page for individually set up project page] --&amp;gt;
+		AB[with only project abstract]
+		--&amp;gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]
+		LP--&amp;gt;CPP[complete project presentation]--&amp;gt;
+			IMP[needs to implement complex built paper?]--&amp;gt;
+			STL[standard paper layout?]--&amp;gt;
+			  BU[built-in pdf export extra to online version --&amp;gt; quarto, rmarkdown, python notebooks]
+		NOW--&amp;gt;UI[user interaction needed?]--&amp;gt;
+			BL[blog format]
+		NOW--&amp;gt;META[number of metadata to be included and how displayed?]--&amp;gt;
+		 CSV[meta from .csv table, layout template to include preformatted display fields for metadata]
+    IMP --&amp;gt; META
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;wks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;../../essais/publx/001/play.html&quot;&gt;link to quarto render essais&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;live&quot;&gt;live&lt;/h2&gt;
+&lt;p&gt;the first essai proposal you see with precisely THIS site. this could be an option and its live playing along the possible frameworks.&lt;/p&gt;
+
+&lt;p&gt;we are experimenting with different theme options (visual appearance) of the page. find the latest essai here: &lt;a href=&quot;https://esteeschwarz.github.io/DC-LX&quot;&gt;https://esteeschwarz.github.io/DC-LX&lt;/a&gt; (to click doesnt make sense if youre just visiting the site (:)&lt;/p&gt;
+
+&lt;h3 id=&quot;issues&quot;&gt;issues&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;were experiencing serious trouble because the local jekyll and ruby (framework and language used to render the pages) versions differ from the github versions used on server. say minor layout improvements dont show up on the live page, e.g. the bottom back-forward posts buttons are not rendered like on my desktop and are messed up…&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;jekyll&quot;&gt;jekyll&lt;/h3&gt;
+&lt;p&gt;the landing page here is rendered by jekyll from simple markdown. this is done automatically via a github action everytime the content changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;quarto&quot;&gt;quarto&lt;/h3&gt;
+&lt;p&gt;many of the single essais presented here as blog entries are rendered as single site from quarto (also markdown) documents.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-things-to-do&quot;&gt;next things to do:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;contact responsible DCL for
+    &lt;ul&gt;
+      &lt;li&gt;what is the actual workflow of to post content
+        &lt;ul&gt;
+          &lt;li&gt;how can i adapt to this with minimal change in routines, to have users not to learn all things anew&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;would there be a person willing to maintain a site hosted with github as proposed and with enough tech skills&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+
+			
+				<category term="linguistics" />
+			
+			
+				<category term="Blogging" />
+			
+				<category term="meta" />
+			
+				<category term="webdesign" />
+			
+				<category term="project" />
+			
+				<category term="mermaid" />
+			
+
+			<published>2025-11-25T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/linguistics/g-mcculloch/</id>
+			<title>LX &amp; public / class project</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/linguistics/g-mcculloch/" rel="alternate" type="text/html" title="LX &amp; public / class project" />
+			<updated>2025-11-22T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>st. schwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/linguistics/g-mcculloch/">&lt;!--
+# info
+class: linguistik &amp; öffentlichkeit, stefanowitsch
+task: analyse einer linguistischen öffentlichkeit anhand vorhandener kategorien
+
+# view
+[view analysis here](../../essais/publx/001) --&gt;
+</content>
+
+			
+				<category term="linguistics" />
+			
+			
+				<category term="LX" />
+			
+				<category term="öffentlichkeit" />
+			
+				<category term="public" />
+			
+
+			<published>2025-11-22T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/avl/sebald/</id>
+			<title>W.G. Sebald temp class docufiction</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/avl/sebald/" rel="alternate" type="text/html" title="W.G. Sebald temp class docufiction" />
+			<updated>2025-11-17T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>st. schwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/avl/sebald/">
+</content>
+
+			
+				<category term="AVL" />
+			
+			
+				<category term="docufiction" />
+			
+				<category term="AVL" />
+			
+				<category term="wg-sebald" />
+			
+
+			<published>2025-11-17T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/linguistics/germanic-ha/</id>
+			<title>germanische sprachen, project drafts</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/linguistics/germanic-ha/" rel="alternate" type="text/html" title="germanische sprachen, project drafts" />
+			<updated>2025-11-15T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>st. schwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/linguistics/germanic-ha/">&lt;h1 id=&quot;index&quot;&gt;index&lt;/h1&gt;
+&lt;h2 id=&quot;disclaimer&quot;&gt;disclaimer&lt;/h2&gt;
+&lt;p&gt;I decided for draft A out of pure interest in sociolinguistic and register/style aspects of language. I see now that it’s maybe not enough associated to structural or systemic aspects covered in class. So I intend to propose 2 more essais:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;B: AI and language development: The influence of new media on the fixation of language.&lt;/li&gt;
+  &lt;li&gt;C: xtitle: The choice of english L1/L2 structures in german &amp;gt;L1 speakers. A corpus based investigation of english language patterns in german term papers of exchange students.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--
+## view 
+[drafts page](../../essais/germanic/001) --&gt;
+</content>
+
+			
+				<category term="linguistics" />
+			
+			
+				<category term="LX" />
+			
+				<category term="sociolinguistics" />
+			
+				<category term="HA" />
+			
+				<category term="shibboleth" />
+			
+				<category term="AI speech" />
+			
+				<category term="L1/L2" />
+			
+				<category term="register" />
+			
+
+			<published>2025-11-15T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/linguistics/publx/</id>
+			<title>linguistik &amp; öffentlichkeit</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/linguistics/publx/" rel="alternate" type="text/html" title="linguistik &amp; öffentlichkeit" />
+			<updated>2025-11-12T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>st. schwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/linguistics/publx/">&lt;h1 id=&quot;info&quot;&gt;info&lt;/h1&gt;
+&lt;p&gt;im zusammenhang zum seminar verhandeln wir hier probleme, die auftauchen könnten, wenn versucht wird, mit linguistischen erkenntnissen an die öffentlichkeit zu treten.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;this post is continually actualised so כדאי ל  de temps en temps come back and see whats been developed.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;grundsätzliches&quot;&gt;grundsätzliches&lt;/h1&gt;
+&lt;p&gt;ich komme, wenn ich versuche, leuten von meiner forschung zu erzählen, immer wieder an grenzen. dieses problem soll hier kurz thema sein.&lt;/p&gt;
+
+&lt;h2 id=&quot;die-sprache&quot;&gt;die sprache&lt;/h2&gt;
+&lt;p&gt;sprache schlieszt hier oberflächlich zuerst die wirkliche sprache ein. also ob der text zb. auf deutsch oder doch unbedingt auf englisch veröffentlicht wird. beide sprachen schlieszen jeweils einige der leser aus.&lt;/p&gt;
+</content>
+
+			
+				<category term="linguistics" />
+			
+			
+				<category term="LX" />
+			
+				<category term="leichte sprache" />
+			
+				<category term="meta" />
+			
+
+			<published>2025-11-12T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/snc/snc/</id>
+			<title>pub essais snc post</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/snc/snc/" rel="alternate" type="text/html" title="pub essais snc post" />
+			<updated>2025-11-10T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>st. schwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary>only testing on frontend</summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/snc/snc/">&lt;h1 id=&quot;snc&quot;&gt;SNC&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;manually triggered wks.&lt;/li&gt;
+  &lt;li&gt;push trigger wks., now remove static wf, wks.&lt;/li&gt;
+  &lt;li&gt;add cats, add post&lt;/li&gt;
+  &lt;li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;try post via ulysses external folder&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;view-paper-just-testing&quot;&gt;view paper: just testing&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;../../ha-docs/spund-pub.pdf&quot;&gt;pdf&lt;/a&gt; / &lt;a href=&quot;../../ha-docs/index.html&quot;&gt;page&lt;/a&gt; / &lt;a href=&quot;../../ha-docs/folien/2025-10-22/index.html&quot;&gt;folien&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;codeblocks&quot;&gt;codeblocks&lt;/h1&gt;
+&lt;p&gt;how code looks: R&lt;/p&gt;
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;get.r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  
+  
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;basis&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;---&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#print(q)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get.r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;rb-test-call&quot;&gt;.rb test call&lt;/h1&gt;
+&lt;p&gt;this Hello should be replaced by a dummy var. its not. was, but no&lt;/p&gt;
+
+&lt;h2 id=&quot;issues&quot;&gt;issues&lt;/h2&gt;
+&lt;h3 id=&quot;render-save&quot;&gt;render save&lt;/h3&gt;
+&lt;p&gt;16514.1: restored _meta_information.html to original : now meta foot is okay, but theres no content in posts (on server, local wks.) wheres csv meta inserted for view, only posts with no &lt;view&gt;. found some more comment out issues, maybe wks only local.&lt;/view&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;issue with comments on pages? did comment out some content in .md
+and did comment out a line in _meta_information.html like
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;start meta...&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--&amp;lt;p---&amp;gt;&lt;/span&gt; instead &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;p&amp;gt; --&amp;gt;&lt;/span&gt;
+    is that an issue for rendering? local renders fine but not on git.
+    now after deleting that comment its still messed up layout.
+    removed in this post commented section. maybe content mustnt be empty.
+push.
+or: maybe sites are not rendered new if content isnt changed but only template.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;solved: grande heureka: it seems as if render the liquid pages on mac has no problems with commented html like above, but on the github linux the pages with such comments are messed up.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;play&quot;&gt;play&lt;/h2&gt;
+&lt;h3 id=&quot;try-embed-fixed&quot;&gt;try embed fixed.&lt;/h3&gt;
+
+&lt;blockquote&gt;&lt;p&gt;this post is continually actualised so כדאי ל  de temps en temps come back and see whats been developed.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;!-- &lt;script type=&quot;module&quot;&gt;
+import mermaid from &apos;https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs&apos;;
+mermaid.initialize({ startOnLoad: true });
+await mermaid.run({ querySelector: &apos;.language-mermaid&apos; });
+&lt;/script&gt;
+ --&gt;
+
+&lt;h3 id=&quot;convert-list-to-mermaid-block&quot;&gt;convert list to mermaid block&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mermaid&quot;&gt;graph TD
+
+    ST[Step 1]
+    UN[understep]
+    ST --&amp;gt; UN
+    ST2[Step 2]
+    UN2[understep 2]
+    ST2 --&amp;gt; UN2
+    ST3[Step 3]
+    UN3[understep 3]
+    ST3 --&amp;gt; UN3
+    NE[next step]
+    UN3 --&amp;gt; NE
+    SO[some step]
+    ST3 --&amp;gt; SO
+    ST4[step 4]
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;working-plain&quot;&gt;working plain&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-mermaid&quot;&gt;graph TD
+
+T[target group] --&amp;gt;
+WH[who writes] --&amp;gt;
+CP[with what capacities] --&amp;gt;
+		TECH[technical]
+		CP --&amp;gt; SC[scientifically]
+		CP--&amp;gt;EFF[time effort]
+WH --&amp;gt; PU[whats her use purpose of the center page] --&amp;gt;
+		LP[landing page for individually set up project page] --&amp;gt;
+		AB[with only project abstract]
+		--&amp;gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]
+		LP--&amp;gt;CPP[complete project presentation]--&amp;gt;
+			IMP[needs to implement complex built paper?]--&amp;gt;
+			STL[standard paper layout?]--&amp;gt;
+			  BU[built-in pdf export extra to online version --&amp;gt; quarto, rmarkdown, python notebooks]
+		NOW--&amp;gt;UI[user interaction needed?]--&amp;gt;
+			BL[blog format]
+		NOW--&amp;gt;META[number of metadata to be included and how displayed?]--&amp;gt;
+		 CSV[meta from .csv table, layout template to include preformatted display fields for metadata]
+    IMP --&amp;gt; META
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Test tag works!&lt;/p&gt;
+</content>
+
+			
+				<category term="snc" />
+			
+			
+				<category term="snc" />
+			
+				<category term="issues" />
+			
+
+			<published>2025-11-10T00:00:00+00:00</published>
+		</entry>
+	
+		<entry>
+			<id>https://esteeschwarz.github.io/DC-LX/linguistics/germanic/</id>
+			<title>germanic languages: yiddish</title>
+			<link href="https://esteeschwarz.github.io/DC-LX/linguistics/germanic/" rel="alternate" type="text/html" title="germanic languages: yiddish" />
+			<updated>2025-10-20T00:00:00+00:00</updated>
+
+			
+				
+				<author>
+					
+						<name>st. schwarz</name>
+					
+					
+					
+				</author>
+			
+			<summary></summary>
+			<content type="html" xml:base="https://esteeschwarz.github.io/DC-LX/linguistics/germanic/">&lt;!--
+# about
+- VLSG germanische sprachen im vergleich, Hüning WS25
+- yiddish grammar paradigms extracted from sketch engine corpus
+- view includes basic transliteration from hebrew type
+
+# view
+- [shiny app](https://ada-sub.dh-index.org/shiny/work/essais/germanic-001/), interactive table of paradigma --&gt;
+</content>
+
+			
+				<category term="linguistics" />
+			
+			
+				<category term="paradigms" />
+			
+				<category term="shiny" />
+			
+				<category term="yiddish" />
+			
+				<category term="germanic" />
+			
+				<category term="LX" />
+			
+				<category term="corpus" />
+			
+
+			<published>2025-10-20T00:00:00+00:00</published>
+		</entry>
+	
+</feed>
