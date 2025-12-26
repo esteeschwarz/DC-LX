@@ -47,19 +47,28 @@ format: post
     <h1>task</h1>
    {{ page.task }}
     {% endif %} -->
-   {% if page.site_link_text and page.ids %}
-   <h1>view</h1>
-       <a href="../../essais/{{ page.ids }}"> {{ page.site_link_text }}</a>
-
-   {% endif %}
+	<!-- <pre><code>snc.16526.code.meta.1
+</code></pre> -->
 {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
 {% assign row = site.data.postmeta | where: "name", page_id | first %}
-
 {% if row %}
   <h3>info</h3>
+
+<table class="postmeta">
+	<thead><tr>
+	<th>key</th><th>value</th></tr></thead>
+	<tbody>
+  <tr><td>class</td><td>{{ row.class }}</td></tr>
+  <tr><td>tutor</td><td>{{ row.tutor }}</td></tr>
+  <tr><td>term</td><td>{{ row.term }}</td></tr></tbody>
+</table>
+{% endif %}
+
+{% if row %}
+  <!-- <h3>info</h3>
   <p>class: {{ row.class }}.</p>
   <p>tutor: {{ row.tutor }}.</p>
-  <p>term: {{ row.term }}.</p>
+  <p>term: {{ row.term }}.</p> -->
 {% if row.subject %}
   <h4>subject:</h4><p>{{ row.subject }}.</p>
 {% endif %}
@@ -78,11 +87,24 @@ format: post
 {% endif %}
 <!-- <p>endif row</p> -->
 {% endif %}
+	
+   {% if page.site_link_text and page.ids %}
+   <h3>see also</h3>
+       <a href="../../essais/{{ page.ids }}"> {{ page.site_link_text }}</a>
+
+   {% endif %}
 
  
 			{{ content }}
 
 </div> <!-- /.articlesection -->
+
+
+
+
+
+
+
 			{% if page.show_meta == true %}
 						  <hr>
 

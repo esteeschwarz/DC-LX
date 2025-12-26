@@ -6,3 +6,135 @@
 	.navitable table {
 		border: none;
 	}
+
+  pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    /* background-color: transparent; */
+    border: none;
+	 /* color: var(--highlighter-rouge-color, #e8eaed); */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+
+    code {
+      background-color: transparent;
+      /* color: inherit; */
+      border: none;
+      padding: 0;
+      font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    }
+  }
+
+  .postmeta table,th,td,tr{
+	background-color: #d1d1;
+	border: 1px solid #d1d1d1;
+
+  }
+	.postmeta tr:nth-child(odd) tr:nth-child(even) {
+	background-color: #d1d1;
+}
+
+  .postmeta th {
+	border-bottom: 1px solid black;
+  }
+
+  .postmeta {
+	width: 100%;
+	font-family: 'Courier New', Courier, monospace;
+  }
+
+.justify-content-between {
+justify-content: space-between !important;
+}
+.d-flex {
+display: flex !important;
+}
+/* .post-navigation {
+
+    &::before {
+      color: var(--text-muted-color);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      content: attr(aria-label);
+    }
+
+    &:first-child {
+      border-radius: v.$radius-lg 0 0 v.$radius-lg;
+      left: 0.5px;
+    }
+
+    &:last-child {
+      border-radius: 0 v.$radius-lg v.$radius-lg 0;
+      right: 0.5px;
+    }
+  } */
+
+  .post-navigation {
+  
+  .btn {
+
+	/* height: 30px;	 */
+	
+  
+    &:not(:hover) {
+      color: var(--link-color);
+      /* color: red; */
+    }
+
+    &:hover {
+      &:not(.disabled)::before {
+        color: red;
+      }
+    }
+
+    &.disabled {
+  
+      pointer-events: auto;
+      cursor: not-allowed;
+      background: none;
+      color: gray;
+    }
+
+    &.btn-outline-primary.disabled:focus {
+      box-shadow: none;
+    }
+
+    &::before {
+      color: var(--text-muted-color);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      content: attr(aria-label);
+	  
+    }
+
+    &:first-child {
+	  /* border:rgba(0, 0, 10, 0.5); */
+      border-radius:  0 1 0;
+      left: 0.5px;
+	  width: 40%;
+    }
+    &:nth-child(even) {
+	height: 10px;
+    }
+
+    &:last-child {
+      border-radius: 0 1 0;
+      right: 0.5px;
+	  text-align: right;
+	  width: 40%;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    margin-top: 0.3rem;
+    white-space: normal;
+  }
+
+} /* .post-navigation */
