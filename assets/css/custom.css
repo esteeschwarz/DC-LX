@@ -117,7 +117,9 @@ display: flex !important;
       border-radius:  0 1 0;
       left: 0.5px;
 	  width: 40%;
-        hover: black;
+        /* hover: black; */
+    /* content: attr(title); */
+
 
     }
     &:nth-child(even) {
@@ -132,14 +134,23 @@ display: flex !important;
       right: 0.5px;
 	  text-align: right;
 	  width: 40%;
+    /* content: attr(title); */
+
     }
   }
+    &:nth-child(odd) {
 
   p {
     font-size: 1.1rem;
     line-height: 1.5rem;
     margin-top: 0.3rem;
     white-space: normal;
+        hover: black;
+
+    display: block;
+  }
+
+  a {
   }
 
 } /* .post-navigation */
