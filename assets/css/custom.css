@@ -48,10 +48,10 @@
 	font-family: 'Courier New', Courier, monospace;
   }
 
-.justify-content-between {
+.justify-content-b {
 justify-content: space-between !important;
 }
-.d-flex {
+.d-fl {
 display: flex !important;
 }
 /* .post-navigation {
