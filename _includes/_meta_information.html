@@ -35,12 +35,12 @@
 	{% if page.previous.url %}
 <a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}" class="btn btn-outline-primary" aria-label="Older"><p>{{ page.previous.title }}</p></a>
 	{% endif %}
-	<a class="button small radius prev" href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a>
+<a class="btn button small radius prev" href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a>
 
-						{% if page.next.url %}
+	{% if page.next.url %}
 
-	<a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}" class="btn btn-outline-primary" aria-label="Newer"><p>{{ page.next.title }}</p></a>
-		{% endif %}
+<a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}" class="btn btn-outline-primary" aria-label="Newer"><p>{{ page.next.title }}</p></a>
+	{% endif %}
 
 </div>
 
