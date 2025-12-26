@@ -9,7 +9,7 @@ permalink: "/essais/"
 ---
 <h3>AVL</h3>
 <ul>
-    {% for post in site.categories.avl %}
+    {% for post in site.categories.AVL %}
     <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
 </ul>
