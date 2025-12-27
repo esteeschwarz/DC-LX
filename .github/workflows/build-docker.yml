@@ -2,7 +2,7 @@ name: Build and publish docker (ruby)
 
 on:
   push:
-    branches: ["main"]
+    branches: ["gh-pages"]
     paths:
       - "docker/**"   # rebuild when Dockerfile changes
   workflow_dispatch:
