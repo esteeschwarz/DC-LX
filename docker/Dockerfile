@@ -1,5 +1,5 @@
 # FROM rocker/r-ver:4.3.1
-FROM ruby/setup-ruby@v1
+FROM ruby/setup-ruby:3.4.1
 # Install system dependencies
 # RUN apt-get update && apt-get install -y --no-install-recommends \
 #     wget \
