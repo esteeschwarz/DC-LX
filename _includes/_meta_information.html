@@ -35,13 +35,13 @@
 <!-- try chripy postnavigation -->
 <div class="post-navigation d-fl justify-content-b" aria-label="Post Navigation"> 
 	{% if page.previous.url %}
-<a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}" class="btn btn-outline-primary" aria-label="Older" title="{{ page.previous.title }}"><span>{{ page.previous.title }}</span>alinkprev</a>
+<a href="{{ site.url }}{{ site.baseurl }}{{ page.previous.url }}" class="btn btn-outline-primary" aria-label="Older" title="{{ page.previous.title }}"><span>{{ page.previous.title }}</span></a>
 	{% endif %}
 <a class="btn button small radius prev" href="{{ site.url }}{{ site.baseurl }}/blog/archive/" title="Blog {{ site.data.language.archive }}">{{ site.data.language.archive }}</a>
 
 	{% if page.next.url %}
 
-<a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}" class="btn btn-outline-primary" aria-label="Newer" title="{{ page.next.title }}"><span>{{ page.next.title }}</span>alinkpost</a>
+<a href="{{ site.url }}{{ site.baseurl }}{{ page.next.url }}" class="btn btn-outline-primary" aria-label="Newer" title="{{ page.next.title }}"><span>{{ page.next.title }}</span></a>
 	{% endif %}
 
 </div>
