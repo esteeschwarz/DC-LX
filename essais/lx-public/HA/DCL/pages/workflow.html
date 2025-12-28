@@ -332,7 +332,23 @@ Figure&nbsp;4: “publishing process next todo”
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-premise-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-premise">sh: 1: ./mermaid-int: Exec format error
+<pre class="mermaid mermaid-js" data-label="fig-premise">graph TD
+    OP[options to avoid the github hosting service are:]
+    TO[to render the pages completely on the contribuer device and deploy only html rendered pages to the restricted FU server -userpage level with no administrative user at the project level-]
+    OP --&gt; TO
+    AF[affords the contribuer to install render services on device]
+    TO --&gt; AF
+    CO[contribuer only pushes pages to site]
+    TO --&gt; CO
+    ED[edited source stays on device]
+    TO --&gt; ED
+    TO2[to use a page hosting server -or userpage level- which allows for admin tasks like installing basic render services -which here would be jekyll, ruby and quarto- and to maintaining these services]
+    OP --&gt; TO2
+    CO2[contribuer needs to edit and push the markdown source which is rendered on the FU server apres]
+    TO2 --&gt; CO2
+    AF2[affords admin poition for maintaing the packages server side]
+    TO2 --&gt; AF2
+
 </pre>
 </div>
 </div>
