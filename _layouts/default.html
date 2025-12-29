@@ -3,6 +3,7 @@ layout: compress
 ---
 <!doctype html>
 <html class="no-js" lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
+
 <!-- <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}"> -->
 
 <head>
@@ -14,6 +15,9 @@ layout: compress
 	{% endunless %}
 
 	{% include _masthead.html %}
+	
+	{% include _q-divs.html %}
+	
 	{{ content }}
 
 	{% unless page.skip_boilerplate %}
@@ -21,5 +25,6 @@ layout: compress
 	{% endunless %}
 
 	{% include _footer_scripts.html %}
+	
 </body>
 </html>

@@ -18,6 +18,9 @@
 
 {% assign title = title | strip_html | escape | strip_newlines %}
 
+{% assign q_cat = "" | strip_html | escape | strip_newlines %}
+{% assign q_tag = "" | strip_html | escape | strip_newlines %}
+
 {% endcapture %}<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
@@ -34,6 +37,7 @@
 
 
 	<script src="{{ url }}/assets/js/chirpy-mim.js"></script>
+	<script src="{{ url }}/assets/js/put-q.js"></script>
 	<link rel="stylesheet" href="{{ url }}/assets/css/custom.css">
 	
 	<script>

@@ -52,10 +52,11 @@ format: post
     {% endif %} -->
 	<!-- <pre><code>snc.16526.code.meta.1
 </code></pre> -->
-{% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
+<!-- {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
 {% assign row = site.data.postmeta | where: "name", page_id | first %}
 {% if row %}
-  <h3>info</h3>
+  <div class="postmeta postmeta--top">  
+	<h3>info</h3>
 
 <table class="postmeta">
 	<thead><tr>
@@ -65,8 +66,12 @@ format: post
   <tr><td>tutor</td><td>{{ row.tutor }}</td></tr>
   <tr><td>term</td><td>{{ row.term }}</td></tr></tbody>
 </table>
-{% endif %}
+{% endif %} -->
 
+<aside class="postmeta--sidebar">
+{% include _postmeta.html %}
+    </aside>
+    <main class="page-content">
 {% if row %}
   <!-- <h3>info</h3>
   <p>class: {{ row.class }}.</p>
@@ -99,7 +104,7 @@ format: post
 
  
 			{{ content }}
-
+</main>
 </div> <!-- /.articlesection -->
 
 
@@ -111,7 +116,7 @@ format: post
 			{% if page.show_meta == true %}
 						  <hr>
 
-			<!-- <p>META:</p> -->
+			<p>NAVI:</p>
 
 			{% include _meta_information.html %}
 			{% endif %}
@@ -132,7 +137,14 @@ format: post
 
 	{% if page.sidebar == "right" %}
 	<div class="medium-4 columns">
+        {% include _meta_information.html %}
+		{% include _postmeta.html %}
+
 		{% include _sidebar.html %}
 	</div><!-- /.medium-4.columns -->
 	{% endif %}
+
+	<!-- <div id="q_cat" aria-label="avl">avl</div>
+	<div id="q_tag" style="display: none;">AVL</div> -->
+
 </div><!-- /.row -->

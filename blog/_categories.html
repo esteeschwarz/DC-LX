@@ -1,0 +1,79 @@
+---
+layout: default
+title: "Blog Archive"
+teaser: "Check out all blog posts in the archive. Click on a headline to read the description."
+breadcrumb: false
+permalink: "blog/archive/"
+---
+<div id="blog-index" class="row">
+	<div class="small-12 columns t30">
+		<h1>{{ page.title }}</h1>
+		{% if page.teaser %}<p class="teaser">{{ page.teaser }}</p>{% endif %}
+
+		<dl class="accordion" data-accordion>
+			{% assign counter = 1 %}
+			{% for post in site.posts limit:1000 %}
+      {% capture page_id %}{{ post.slug | default: post.title | slugify }}{% endcapture %}
+      {% assign row = site.data.postmeta | where: "name", page_id | first %}
+			<dd class="accordion-navigation">
+			<a href="#panel{{ counter }}"><span class="iconfont"></span> {% if post.subheadline %}{{ post.subheadline }} › {% endif %}<strong>{{ post.title }}</strong></a>
+				<div id="panel{{ counter }}" class="content">
+					{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif post.teaser %}{{ post.teaser | strip_html | escape }}<br>{% endif %}
+<!-- from data -->
+					{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif row.subject %} / {{ row.about | strip_html | escape }}<br>{% endif %}
+					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a><br><br>
+
+        </div>
+			</dd>
+			{% assign counter=counter | plus:1 %}
+			{% endfor %}
+		</dl>
+	</div><!-- /.small-12.columns -->
+<!-- test codeblock	<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">get.r</span><span class="o">&lt;-</span><span class="k">function</span><span class="p">(</span><span class="n">s</span><span class="p">){</span><span class="w">
+  </span><span class="n">basis</span><span class="o">&lt;</span><span class="m">-3</span><span class="w">
+  </span><span class="n">x</span><span class="o">&lt;-</span><span class="n">basis</span><span class="o">+</span><span class="n">s</span><span class="w">
+  
+  
+  </span><span class="n">i</span><span class="o">&lt;-</span><span class="n">x</span><span class="o">-</span><span class="n">basis</span><span class="w">
+  </span><span class="n">p</span><span class="o">&lt;-</span><span class="n">i</span><span class="m">-1</span><span class="w">
+  </span><span class="n">q</span><span class="o">&lt;-</span><span class="n">x</span><span class="o">^</span><span class="n">i</span><span class="w">
+  </span><span class="n">y</span><span class="o">&lt;-</span><span class="n">x</span><span class="o">+</span><span class="n">p</span><span class="w">
+  </span><span class="n">z</span><span class="o">&lt;-</span><span class="n">y</span><span class="o">^</span><span class="n">i</span><span class="w">
+  </span><span class="n">q</span><span class="o">&lt;-</span><span class="n">z</span><span class="w">
+  </span><span class="n">r1</span><span class="o">&lt;-</span><span class="n">q</span><span class="o">/</span><span class="n">x</span><span class="w">
+</span><span class="n">r2</span><span class="o">&lt;-</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">r2</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="s2">"---"</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;-</span><span class="n">z</span><span class="o">^</span><span class="n">r2</span><span class="p">)</span><span class="w">
+</span><span class="n">print</span><span class="p">((</span><span class="n">b</span><span class="o">&lt;-</span><span class="n">z</span><span class="o">*</span><span class="m">1</span><span class="o">/</span><span class="n">r1</span><span class="p">))</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">q</span><span class="o">&lt;-</span><span class="p">(</span><span class="n">z</span><span class="o">*</span><span class="m">1</span><span class="o">/</span><span class="n">r1</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="w">
+</span><span class="c1">#print(q)</span><span class="w">
+</span><span class="n">print</span><span class="p">(</span><span class="n">r1</span><span class="o">&lt;-</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">q</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="n">get.r</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>-->
+	<p>Hej Schleule!</p>
+</div><!-- /.row -->
+ <script>
+    // Copy-to-clipboard behavior similar to Chirpy's header button
+    document.querySelectorAll('.code-block').forEach(function (block) {
+      var btn = block.querySelector('.copy-btn');
+      var labelSpan = btn.querySelector('.copy-label');
+
+      btn.addEventListener('click', function () {
+        var codeElement = block.querySelector('pre code');
+        var text = codeElement.innerText.replace(/\n\s+$/g, '\n');
+        navigator.clipboard.writeText(text).then(function () {
+          var original = labelSpan.textContent;
+          labelSpan.textContent = 'Copied';
+          btn.classList.add('copied');
+          setTimeout(function () {
+            labelSpan.textContent = original;
+            btn.classList.remove('copied');
+          }, 2000);
+        });
+      });
+    });
+</script>

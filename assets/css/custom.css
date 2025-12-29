@@ -155,3 +155,43 @@ display: flex !important;
   }
 
 } /* .post-navigation */
+
+/* meta on side */
+/* Mobile: show top, hide sidebar */
+.postmeta--sidebar { display: none; }
+
+/* Desktop: hide top, show sidebar */
+@media (min-width: 768px) {
+  .postmeta--top { display: none; }
+  .postmeta--sidebar { display: block; 
+  width: 100%;}
+}
+
+/* Mobile: postmeta on top */
+.page-layout {
+  display: block;
+}
+
+.postmeta {
+  margin-bottom: 1.5rem;
+  /* width: 100%; */
+}
+
+/* Desktop: postmeta as sidebar */
+@media (min-width: 768px) {
+  .page-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .postmeta {
+    flex: 0 0 250px; /* sidebar width */
+    order: 1;
+  }
+
+  .page-content {
+    flex: 1 1 auto;
+    order: 2;
+  }
+}

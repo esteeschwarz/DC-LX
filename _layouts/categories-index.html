@@ -1,0 +1,64 @@
+---
+layout: page
+---
+
+<h1>Category: <span id="play_cat_h"></span></h1>
+<!-- <p>{{ site.categories[] }}</p> -->
+{% assign all_categories = site.categories %}
+<!-- {% for cat in all_categories %}
+  {% assign cat_name = cat[0] %}
+  <a id="{{ cat_name | slugify }}">{{ cat_name }}</a><span> / </span>
+   <ul>
+    {% for post in cat[1] %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul> 
+{% endfor %} -->
+<p>other categories:</p> <p>{% for cat in all_categories %}  {% assign cat_name = cat[0] %}
+
+         <!-- <a onlick="put_test('avl');">{{ cat_name }}  ·  </a> --> <!-- onclick() not wks with <a> -->
+          <button class="button tiny radius white" onclick="put_test('{{ cat_name }}');">{{ cat_name }}</button>
+
+          {% endfor %}
+		</p>
+
+<button class="button tiny radius white" onclick="put_test('linguistics');">change cat</button>
+
+<div id="play_cat">dummy cat</div>
+<div id="play_tag_div">dummy tag</div>
+<div id="snc">dummy start not chgd</div>
+<div id="apply">dummy start applyF()</div>
+
+<!-- <script>
+     {% assign category = get_cat(); %}
+
+</script> -->
+
+<!-- <div id="current-category" aria-hidden="true" style="display:none;"></div> -->
+
+<h2>content</h2>
+{% include list-posts entries='20' offset='1' %}
+
+<ul id="category-posts-dep" style="display: none;">
+  {% for post in site.posts %}
+    <li data-categories="{{ post.categories | join:',' | escape }}">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<script>
+    // put_cat('avl');
+</script>
+<!-- 
+{% assign all_categories = site.categories %}
+{% for cat in all_categories %}
+  {% assign cat_name = cat[0] %}
+  <h2 id="{{ cat_name | slugify }}">{{ cat_name }}</h2>
+  <ul>
+    {% for post in cat[1] %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+-->

@@ -1,0 +1,19 @@
+<script src="/DC-LX/assets/simple-jekyll-search/simple-jekyll-search.min.js"></script>
+
+<div id="s1">
+    <input id="search-input" 
+           type="search" 
+           aria-label="search" 
+           autocomplete="off" 
+           placeholder="Search...">
+</div>
+
+<div id="search-results"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const window = document.getElementById("search-results");
+    const cat = document.getElementById("q-tag");
+    window.innerHTML = '<article><header><h2><a href="{url}">{title}dummytag</a></h2><div class="post-meta">{categories} {tags}</div></header></article>';
+});
+</script>

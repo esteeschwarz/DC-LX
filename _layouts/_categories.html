@@ -1,0 +1,29 @@
+---
+layout: page
+---
+
+{%- comment -%}
+  Get the category slug from the current URL.
+  For /categories/ethics/ => slug "ethics"
+{%- endcomment -%}
+{% assign segments = page.url | split:'/' %}
+{% assign q_cat = segments | last %}
+{% if q_cat == "" %}
+  {%- assign q_cat = segments[segments.size - 2] -%}
+{% endif %}
+
+<h1>Category: {{ q_cat }}</h1>
+
+<ul>
+    <li>list cat</li>
+  {% for post in site.posts %}
+    {% if post.categories contains q_cat %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<p>neue</p>
+{% include list-posts entries='3' offset='1' category='{ q_cat }' %}
