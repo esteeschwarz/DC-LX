@@ -163,7 +163,7 @@ display: flex !important;
 /* Desktop: hide top, show sidebar */
 @media (min-width: 768px) {
   .postmeta--top { display: none; }
-  .postmeta--sidebar { display: block; 
+  /* .postmeta--sidebar { display: block;  */
   width: 100%;}
 }
 
@@ -175,6 +175,8 @@ display: flex !important;
 .postmeta {
   margin-bottom: 1.5rem;
   /* width: 100%; */
+  margin: 0 0 0;
+  padding: 0 0 0 0;
 }
 
 /* Desktop: postmeta as sidebar */
@@ -188,10 +190,20 @@ display: flex !important;
   .postmeta {
     flex: 0 0 250px; /* sidebar width */
     order: 1;
+     margin: 0 0 0;
+  padding: 0 0 0 0;
   }
 
   .page-content {
     flex: 1 1 auto;
     order: 2;
   }
+}
+
+button .red {
+  color: red;
+}
+#metacatbtn {
+  margin: 0 0 0;
+  color: red;
 }

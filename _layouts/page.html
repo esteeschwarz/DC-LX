@@ -2,8 +2,8 @@
 layout: default
 format: post
 ---
-<div class="row t30">
-	<div class="medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}">
+<div class="row t30", style="max-width: 85%;">
+	<div class='medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}'>
 		<article itemscope itemtype="http://schema.org/Article">
 			<header>
 				{% if page.mermaid %}
@@ -39,44 +39,10 @@ format: post
 			{% endif %}
 
 <div itemprop="articleSection">
-			<!-- <p>test modify page.html</p> -->
-			       <!-- <p>testmodify div content</p> -->
-          <!-- {% if page.class %}
-
-  <h1>info</h1>
-   {{ page.class }}
-       {% endif %}
-{% if page.task %}
-    <h1>task</h1>
-   {{ page.task }}
-    {% endif %} -->
-	<!-- <pre><code>snc.16526.code.meta.1
-</code></pre> -->
-<!-- {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
+{% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
 {% assign row = site.data.postmeta | where: "name", page_id | first %}
-{% if row %}
-  <div class="postmeta postmeta--top">  
-	<h3>info</h3>
 
-<table class="postmeta">
-	<thead><tr>
-	<th>key</th><th>value</th></tr></thead>
-	<tbody>
-  <tr><td>class</td><td>{{ row.class }}</td></tr>
-  <tr><td>tutor</td><td>{{ row.tutor }}</td></tr>
-  <tr><td>term</td><td>{{ row.term }}</td></tr></tbody>
-</table>
-{% endif %} -->
-
-<aside class="postmeta--sidebar">
-{% include _postmeta.html %}
-    </aside>
-    <main class="page-content">
 {% if row %}
-  <!-- <h3>info</h3>
-  <p>class: {{ row.class }}.</p>
-  <p>tutor: {{ row.tutor }}.</p>
-  <p>term: {{ row.term }}.</p> -->
 {% if row.subject %}
   <h4>subject:</h4><p>{{ row.subject }}.</p>
 {% endif %}
@@ -90,7 +56,6 @@ format: post
   <h2>view:</h2>
   <br>
   <a class="button tiny radius" href="{{ row.link }}">{{ row.site_link_text }}</a>
- <!-- <a href="{{ row.link }}">{{ row.site_link_text }}</a> -->
   <br><!-- <p>button if site link</p> -->
 {% endif %}
 <!-- <p>endif row</p> -->
@@ -104,7 +69,7 @@ format: post
 
  
 			{{ content }}
-</main>
+<!-- </main> -->
 </div> <!-- /.articlesection -->
 
 
@@ -125,26 +90,23 @@ format: post
 			{% include _comments.html %}
 			{% endif %}
 		</article>
-	</div><!-- /.medium-8.columns -->
+	</div> 
+	
 
 
 	{% if page.sidebar == "left" %}
 	<div class="medium-4 columns medium-pull-8">
 		{% include _sidebar.html %}
-	</div><!-- /.medium-4.columns -->
+	</div> 
 	{% endif %}
 
 
 	{% if page.sidebar == "right" %}
 	<div class="medium-4 columns">
-        {% include _meta_information.html %}
-		{% include _postmeta.html %}
-
+     
 		{% include _sidebar.html %}
-	</div><!-- /.medium-4.columns -->
+	</div>
 	{% endif %}
 
-	<!-- <div id="q_cat" aria-label="avl">avl</div>
-	<div id="q_tag" style="display: none;">AVL</div> -->
 
-</div><!-- /.row -->
+</div>
