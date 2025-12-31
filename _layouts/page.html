@@ -24,7 +24,7 @@ format: post
 					{% endif %}
 				</figure>
 				{% endif %}
-				{% include _postmeta-grid.html %}
+				{% comment %} {% include _postmeta-grid.html %} {% endcomment %}
 
 				<div itemprop="name">
 					{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}

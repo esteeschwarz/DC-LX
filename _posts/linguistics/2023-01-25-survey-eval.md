@@ -8,8 +8,12 @@ layout: page
 tags:
 - neuropragmatics
 - rating study
+class: neuropragmatik
+task: bewertungsstudie
 site_link_text: survey study
 site_link: ../../essais/eval/nprg/survey_eval
 ids: ../../essais/eval/nprg/survey_eval
 description: bewertungsstudie
+slug: survey-eval
 ---
+
