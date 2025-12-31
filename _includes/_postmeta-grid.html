@@ -1,0 +1,44 @@
+<!-- {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
+{% assign row = site.data.postmeta | where: "name", page_id | first %} -->
+<script>
+localStorage.setItem('q_catValue', '');
+</script>
+<!-- <div class="postmeta--table">   -->
+    <!-- <h3>info</h3> -->
+<div class="panel-q">  
+
+
+<div class="grid-table">
+  <div class="grid-body">
+  <div class="grid-header">
+    <div><span itemprop="name" class="pr20 icon-edit"></span></div>
+    <div><span class="icon-calendar pr20"></span></div>
+    <div><span class="icon-archive pr20"></span></div>
+    <div><span class="icon-price-tag pr10"></span></div>
+    <div>class</div>
+    <div>tutor</div>
+    <div>term</div>
+    <div>SNC</div>
+  </div>
+  <div class="grid-body">
+    <div>{% if page.author %}<a href="{{ author.uri }}" target="_blank"> {{ page.author.name }}</a>{% endif %}</div>
+    <div>{% if page.date %}<time>{{ page.date | date: "%Y-%m-%d" }}</time>{% endif %}</div>
+    <div>{% for category in page.categories %}<span>
+      <a href="{{ site.baseurl }}/categories/">
+        <button style="margin: 0 0 0;" class="tiny radius white"  onclick="link_cat('{{ category }}');">
+          {{ category }}
+        </button>
+      </a>{% endfor %}</div>
+    <div>{% for tag in page.tags %}
+      <span>
+        <a href="{{ site.baseurl }}/{{ tag | slugify | url_encode }}/">{{ tag }}  / </a>
+      </span>{% endfor %}</div>
+    <div>{{ row.class }}</div>
+    <div>{{ row.tutor }}</div>
+    <div>{{ row.term }}</div>
+    <div>16534.table.grid</div>
+  </div>
+  </div>
+</div>
+
+</div>

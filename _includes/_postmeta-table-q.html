@@ -1,0 +1,79 @@
+<!-- {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
+{% assign row = site.data.postmeta | where: "name", page_id | first %} -->
+<script>
+localStorage.setItem('q_catValue', '');
+</script>
+{% if row %}
+<!-- <div class="postmeta--table">   -->
+    <!-- <h3>info</h3> -->
+<div class="panel-q">  
+
+<table class="postmeta-q">
+    <!-- header row -->
+     <thead><tr>
+	<th>
+    <span itemprop="name" class="pr20 icon-edit">
+
+    </th>
+
+    <th>
+    <span class="icon-calendar pr20"></span>
+  </th>
+
+    <th>
+  <span class="icon-archive pr20"></span>
+</th>
+
+      <th>
+        <span class="icon-price-tag pr10"></span>
+      </th>
+
+    <th>class</th>
+
+      <th>tutor</th>
+
+      <th>term</th>
+
+<th>SNC</th>
+</tr></thead>
+<tbody>
+      <tr>
+  <!-- content row -->
+      <td>{% if page.author %}
+					<a href="{{ author.uri }}" target="_blank"> {{ page.author.name }}</a>
+    </span>
+				</span>
+{% endif %}</td>
+
+				 <td>{% if page.date %}<time>
+				{{ page.date | date: "%Y-%m-%d" }}</time>
+				{% endif %}
+</td>
+
+<td>{% for category in page.categories %}<span>
+  <a href="{{ site.baseurl }}/categories/"><button style="margin: 0 0 0;" class="tiny radius white"  onclick="link_cat('{{ category }}');">{{ category }}</button>
+</a>
+          {% endfor %}
+			</td>
+
+        <td>{% for tag in page.tags %}
+          <span><a
+            href="{{ site.baseurl }}/{{ tag | slugify | url_encode }}/">{{ tag }}  / 
+          </a></span> 
+        {% endfor %}
+			</td>
+      
+      <td>{{ row.class }}</td>
+
+<td>{{ row.tutor }}</td>
+      <td>{{ row.term }}</td>
+<td>16534. meta table quer</td>
+  {% assign segments = page.url | split:'/' %}
+{% assign q_cat = segments | last %}
+{% if q_cat == "" %}
+  {%- assign q_cat = segments[segments.size - 2] -%}
+{% endif %}
+</tr></tbody>
+</table>
+{% endif %}
+</div>

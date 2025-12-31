@@ -3,13 +3,13 @@ layout: default
 format: post
 ---
 <div class="row t30", style="max-width: 85%;">
-	<div class='medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}'>
+	<div class='medium-8 columns{% if page.sidebar == "right" %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}'>
 		<article itemscope itemtype="http://schema.org/Article">
 			<header>
 				{% if page.mermaid %}
 				{% include _mermaid.html %}
 				{% endif %}
-				{% if page.image.title %}
+				{% if page.image.title-o %}
 				<figure>
 					<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}" itemprop="image">
 
@@ -24,6 +24,7 @@ format: post
 					{% endif %}
 				</figure>
 				{% endif %}
+				{% include _postmeta-grid.html %}
 
 				<div itemprop="name">
 					{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
@@ -63,7 +64,7 @@ format: post
 	
    {% if page.site_link_text and page.ids %}
    <h3>see also</h3>
-       <a href="../../essais/{{ page.ids }}"> {{ page.site_link_text }}</a>
+       <a href="{{ page.ids }}"> {{ page.site_link_text }}</a>
 
    {% endif %}
 

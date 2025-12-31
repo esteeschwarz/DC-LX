@@ -207,3 +207,48 @@ button .red {
   margin: 0 0 0;
   color: red;
 }
+
+/* meta table grid */
+.grid-table_dep {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  width: 100%;
+  gap: 1px; /* optional: small gap between cells */
+  border-collapse: collapse; /* if you want table-like borders */
+}
+
+.grid-header,
+.grid-body {
+  display: contents; /* so that direct children become grid items */
+}
+
+.grid-header > div,
+.grid-body > div {
+  /* Style like table cells */
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.grid-header > div {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+.reset-container * {
+  all: unset;
+}
+.grid-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  /* grid-template-rows: repeat(auto-fit, minmax(120px, 1fr)); */
+  width: 100%;
+  gap: 1px;
+}
+
+/* Ensure header and body cells align */
+.grid-header,
+.grid-body {
+  display: contents;
+}

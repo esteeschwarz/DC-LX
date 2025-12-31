@@ -10,10 +10,12 @@ pid,name,subject,link,site_link_text,term,class,tutor,about,abstract,wd,level_to
 9,smi-a,research questions and hypothesis for group research project,../../essais/smi/001,draft,WS25,schizophrenie and mental images / x-student research group,wilck/nenchev charite berlin (BUA),"mental images, stable diffusion etc.",,mental-img/HA,2,1,,
 1,coherence,term paper,../../essais/coherence/,paper,SoSe25,sprache und psychose,stefanowitsch,,,psych/HA/paper,3,1,,
 11,buechner-a,a georg buechner reception task,../../essais/buechner-a,class presentation,WS25,georg büchner,mara ruwe,session preparation to: buechner & reception,,szondi/buechner/site,3,1,,
-13,dcl-pr,dahlem center for linguistics project page,../../essais/lx-public/HA/DCL/pages,project view,WS25,linguistik und öffentlichkeit,stefanowitch,workflows and process to DCL,,lx-public/HA/DCL/pages,4,0,DC-LX,linguistics
+13,dcl-pr,dahlem center for linguistics project page,../../essais/lx-public/HA/DCL/pages,project view,WS25,linguistik und öffentlichkeit,stefanowitch,workflows and process to DCL,,lx-public/HA/DCL/pages,4,1,DC-LX,linguistics
 14,platonov,12203.platonov.baugrube,../../essais/10277_platonov,open essai,SoSe20,Arbeiter und Literatur,Chr. Schäfer,12203.platonov.baugrube,,,,1,DC-LX,avl
 15,network-uebung,meyerhoff network visualisation,../../essais/12013_meyerhoff_expo,open visualisation,WS22,variationslinguistik,rosemeyer,meyerhoff network visualisation,,,,1,DC-LX,linguistics
 16,yani,12023_yani_expo,../../essais/12023_yani,page,WS22,corpus linguistics,rosemeyer,class project: yani[final],,,,1,DC-LX,linguistics
 17,meindl-uebung,12042.meindl übungen,../../essais/12042_meindl,page,WS22,corpus linguistics,rosemeyer,meindl chi test essai,,,,1,DC-LX,linguistics
 18,negation,12052.VAR.schwenter.NEG,../../essais/negation,open poster,WS22,variationslinguistik,rosemeyer,"brazilian portuguese, negation",,,,1,DC-LX,linguistics
 19,int002,12025.INT / conversation analysis,../../essais/INT_UE002,page,WS22,interaktionslinguistik,lanwer,transkriptionsübung,,,,1,DC-LX,linguistics
+20,nprg004_eval,audio sample analysis,../../essais/eval/nprg/nprg004_eval,analysis page,WS23,neuropragmatik,pulvermüller,audio analysis,,eval/nprg-eval,3,1,DC-LX,linguistics
+21,survey_eval,NEUROPRAGMATIK rating studie,../../essais/eval/nprg/survey_eval,open evaluation,WS23,neuropragmatik,pulvermüller,bewertungsstudie,,eval/nprg-eval,3,0,DC-LX,linguistics

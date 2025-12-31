@@ -1,11 +1,18 @@
 {% if page.header == NULL and page.header.image_fullwidth == NULL and page.header.pattern == NULL and page.header.background-color == NULL and page.header.title == NULL %}
 
-<div id="masthead-no-image-header">
+<div id="masthead-no-image-header_dep" style="display: none;">
 	<div class="row">
 		<div class="small-12 columns">
 			<a id="logo" href="{{ '/' | absolute_url }}" title="{{ site.title }} – {{ site.slogan }}">
 				<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }} – {{ site.slogan }}">
 			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+<div id="masthead-no-image-header">
+	<div class="row-no" style="background-color: rgba(152, 250, 116, 1);">
+		<div class="small-12-no columns-no" style="padding: 15px;margin-left:10;">
+			<h1>{{ site.title }}</h1><h3>{{ site.slogan }}</h3>
 		</div><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->

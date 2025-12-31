@@ -1,0 +1,114 @@
+---
+layout: default
+format: post
+sidebar: left
+---
+<div class="row t30", style="max-width: 85%;">
+	<div class='medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}'>
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				{% if page.mermaid %}
+				{% include _mermaid.html %}
+				{% endif %}
+				{% if page.image.title %}
+				<figure>
+					<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}" itemprop="image">
+
+					{% if page.image.caption_url and page.image.caption %}
+					<figcaption class="text-right">
+						<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+					</figcaption>
+					{% elsif page.image.caption %}
+					<figcaption class="text-right">
+						{{ page.image.caption }}
+					</figcaption>
+					{% endif %}
+				</figure>
+				{% endif %}
+				{% include _postmeta-grid.html %}
+
+				<div itemprop="name">
+					{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
+					<h1>{{ page.title }}</h1>
+				</div>
+			</header>
+
+
+			{% if page.teaser %}
+			<p class="teaser" itemprop="description">
+				{{ page.teaser }}
+			</p>
+			{% endif %}
+
+<div itemprop="articleSection">
+{% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
+{% assign row = site.data.postmeta | where: "name", page_id | first %}
+
+{% if row %}
+{% if row.subject %}
+  <h4>subject:</h4><p>{{ row.subject }}.</p>
+{% endif %}
+{% if row.about %}
+  <h4>about:</h4><p>{{ row.about }}.</p>
+{% endif %}
+{% if row.abstract %}
+  <h4>abstract:</h4><p>{{ row.abstract }}</p>
+{% endif %}
+{% if row.site_link_text %}
+  <h2>view:</h2>
+  <br>
+  <a class="button tiny radius" href="{{ row.link }}">{{ row.site_link_text }}</a>
+  <br><!-- <p>button if site link</p> -->
+{% endif %}
+<!-- <p>endif row</p> -->
+{% endif %}
+	
+   {% if page.site_link_text and page.ids %}
+   <h3>see also</h3>
+       <a href="../../essais/{{ page.ids }}"> {{ page.site_link_text }}</a>
+
+   {% endif %}
+
+ 
+			{{ content }}
+<!-- </main> -->
+</div> <!-- /.articlesection -->
+
+
+
+
+
+
+
+			{% if page.show_meta == true %}
+						  <hr>
+
+			<p>NAVI:</p>
+
+			{% include _meta_information.html %}
+			{% endif %}
+
+			{% if page.comments == true %}
+			{% include _comments.html %}
+			{% endif %}
+		</article>
+	</div> 
+	
+
+
+	{% if page.sidebar == "left" %}
+	<div class="medium-4 columns medium-pull-8">
+		{% include _sidebar.html %}
+	</div> 
+	{% endif %}
+
+
+	{% if page.sidebar == "right" %}
+	<div class="medium-4 columns">
+     
+		{% include _sidebar.html %}
+	</div>
+	{% endif %}
+
+
+</div>
