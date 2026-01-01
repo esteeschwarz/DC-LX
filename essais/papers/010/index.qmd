@@ -4,7 +4,7 @@ title: DYN responsepaper UWolf
 subtitle: 12305.zum etymologischen gossip
 author: st. schwarz
 date: '2021-07-28'
-categories: avl
+categories: AVL
 layout: page
 tags:
 - poetry
@@ -16,6 +16,7 @@ task: responsepaper uljana wolf
 site_link_text: link to pdf
 site_link: ../../essais/paper/010
 ids: ../../essais/paper/010
+wd: GitHub/DYN_ss22
 description: 12305.zum etymologischen gossip
 slug: paper-dyn-010
 slugt:
