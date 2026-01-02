@@ -41,7 +41,7 @@ format: post
 
 <div itemprop="articleSection">
 {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
-{% assign row = site.data.postmeta | where: "name", page_id | first %}
+{% assign row = site.data.postmeta | where: "slug", page_id | first %}
 
 {% if row %}
 {% if row.subject %}

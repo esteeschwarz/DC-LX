@@ -1,0 +1,25 @@
+---
+index: True
+title: 12282.digitale dramenanalyse HA
+subtitle: 
+author: st. schwarz
+date: '2021-07-28'
+categories: AVL
+layout: page
+tags:
+- german drama
+- DH
+- TEI
+class: digitale dramenanalyse
+tutor: fischer
+term: SS22
+task: term paper
+site_link_text: link to term paper
+site_link: ../../essais/papers/011
+ids: ../../essais/paper/011
+wd: GitHub/DD_ss22
+description: 
+slug: paper-dyn-010
+slugt:
+---
+
