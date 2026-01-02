@@ -1,24 +1,26 @@
 ---
 index: True
-title: DYN responsepaper UWolf
-subtitle: 12305.zum etymologischen gossip
+title: 12313.HUX2021 HA
+subtitle: 'documentation: psycholinguistics experiment: schizophrenia & figurative language'
 author: st. schwarz
-date: '2021-07-28'
-categories: AVL
+date: '2022-08-01'
+categories: linguistics
 layout: page
 tags:
-- poetry
-- gegenwartslyrik
-- avl
-class: dynamiken postdeutscher gegenwartslyrik
-tutor: chiara liso
-task: responsepaper uljana wolf
+- psychoLX
+- empirik
+- experiment
+- figurative language
+- metaphors
+class: soziolinguistik, empirische methoden
+tutor: meinschäfer/schirakowski
+task: term paper experiment documentation
 site_link_text: link to pdf
-site_link: ../../essais/papers/010
-ids: ../../essais/paper/010
-wd: GitHub/DYN_ss22
-description: 12305.zum etymologischen gossip
-slug: paper-dyn-010
+site_link: ../../essais/papers/012
+ids: ../../essais/paper/012
+wd: GitHub/hux2021
+description: 'documentation: psycholinguistics experiment: schizophrenia & figurative language' 
+slug: paper-12-hux21
 slugt:
 ---
 
