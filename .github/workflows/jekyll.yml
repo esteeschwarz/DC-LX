@@ -79,7 +79,7 @@ jobs:
         uses: trendyminds/github-actions-rsync@master
         with:
           RSYNC_OPTIONS: -avzr --delete --exclude=.git --exclude=.gitignore --exclude=Gemfile* --exclude=*.md
-          RSYNC_SOURCE: "${{ needs.build.steps.pages.outputs.base_path }}"
+          RSYNC_SOURCE: ${{ needs.build.steps.pages.outputs.base_path }}
           #RSYNC_TARGET: ${{ secrets.DEPLOY_PATH }}
           RSYNC_TARGET: ./public_html/dclx/
         env:
