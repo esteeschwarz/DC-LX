@@ -27,8 +27,8 @@ author: esteeschwarz
 #
 # url: 'https://esteeschwarz.github.io'
 #baseurl: '/DC-LX'
-url: 'https://stschwarz.userpage.fu-berlin.de/dclx'
-#baseurl: '/dclx'
+url: 'https://stschwarz.userpage.fu-berlin.de'
+baseurl: '/dclx'
 
 # This is for the editing function in _/includes/improve_content
 # Leave it empty if your site is not on GitHub/GitHub Pages
