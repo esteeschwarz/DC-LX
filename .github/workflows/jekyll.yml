@@ -82,7 +82,7 @@ jobs:
         run: |
           mkdir site
           cd site-dist
-          tar -xvf artifact.tar -C ../site/ --strip-components=1
+          tar -xf artifact.tar -C ../site/ --strip-components=1
           cd ..
           rm -rf site-dist/
       - name: chk build
