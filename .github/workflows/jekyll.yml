@@ -69,7 +69,7 @@ jobs:
   # pushzdt:
   #   runs-on: ubuntu-latest
 
-    steps:
+    # steps:
       - name: Deploy via rsync action
         uses: trendyminds/github-actions-rsync@master
         with:
