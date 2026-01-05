@@ -77,7 +77,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: github-pages
-          path: site
+          path: site-dist
+      - name: Extract artifact and cleanup
+        run: |
+          cd site-dist
+          tar -xvf artifact.tar -C ../site/ --strip-components=1
+          cd ..
+          rm -rf site-dist/
       - name: chk build
         run: | 
           ls
