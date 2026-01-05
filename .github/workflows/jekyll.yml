@@ -70,11 +70,16 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      # - name: get site
-      #   uses: actions/download-artifact@v4
-      #   with:
-      #     name: _site
-      #     path: _site
+      - name: get site
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.steps.pages.outputs.base_path }}
+          path: _site
+      - name: chk site
+        run: | 
+          ls
+          ls ${{ needs.build.steps.pages.outputs.base_path }}
+          ls _site
       - name: Deploy via rsync action
         uses: trendyminds/github-actions-rsync@master
         with:
