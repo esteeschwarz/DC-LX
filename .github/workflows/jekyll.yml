@@ -65,3 +65,21 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  pushzdt:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via rsync action
+        uses: trendyminds/github-actions-rsync@master
+        with:
+          RSYNC_OPTIONS: -avzr --delete --exclude=.git --exclude=.gitignore --exclude=Gemfile* --exclude=*.md
+          RSYNC_SOURCE: ./_site/
+          #RSYNC_TARGET: ${{ secrets.DEPLOY_PATH }}
+          RSYNC_TARGET: ./public_html/dclx
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ZDT_SSH_KEY }}
+          SSH_USERNAME: ${{ secrets.ZDT_SSH_USER }}
+          SSH_HOSTNAME: ${{ secrets.ZDT_HOST }}
+          # SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_PORT: 22
