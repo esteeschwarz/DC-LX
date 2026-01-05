@@ -7,19 +7,13 @@ on:
     paths:
       - '_site/**'
 
+  workflow_dispatch:
+
 jobs:
   push zdt:
     runs-on: ubuntu-latest
 
     steps:
-      # - name: Trigger render job on server
-      #   uses: appleboy/ssh-action@v1.0.3
-      #   with:
-      #     host: ${{ secrets.ZDT_HOST }}
-      #     username: ${{ secrets.ZDT_USER }}
-      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
-      #     script: |
-      #       sh p-dclx.sh
       - name: Deploy via rsync action
         uses: trendyminds/github-actions-rsync@master
         with:
