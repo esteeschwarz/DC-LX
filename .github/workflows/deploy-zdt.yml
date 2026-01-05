@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  push zdt:
+  pushzdt:
     runs-on: ubuntu-latest
 
     steps:
