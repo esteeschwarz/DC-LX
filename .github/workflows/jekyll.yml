@@ -55,6 +55,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           name: gihub-pages
+          path: ./_site/
 
   # Deployment job
   deploy:
