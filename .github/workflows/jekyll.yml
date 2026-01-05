@@ -80,6 +80,7 @@ jobs:
           path: site-dist
       - name: Extract artifact and cleanup
         run: |
+          mkdir site
           cd site-dist
           tar -xvf artifact.tar -C ../site/ --strip-components=1
           cd ..
