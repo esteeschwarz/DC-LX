@@ -22,8 +22,8 @@ jobs:
           #RSYNC_TARGET: ${{ secrets.DEPLOY_PATH }}
           RSYNC_TARGET: ./public_html/dclx
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.ZDT_PRIVATE_KEY }}
-          SSH_USERNAME: ${{ secrets.ZDT_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.ZDT_SSH_KEY }}
+          SSH_USERNAME: ${{ secrets.ZDT_SSH_USER }}
           SSH_HOSTNAME: ${{ secrets.ZDT_HOST }}
           # SSH_PORT: ${{ secrets.SSH_PORT }}
           SSH_PORT: 22
