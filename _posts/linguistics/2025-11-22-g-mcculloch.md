@@ -8,6 +8,7 @@ categories: [linguistics]
 tags: [LX,öffentlichkeit,public]
 pin: false
 pid: 7
+slug: g-mcculloch
 ---
 <!--
 # info

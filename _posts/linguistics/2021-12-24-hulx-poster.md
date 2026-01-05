@@ -17,4 +17,5 @@ site_link: ../../essais/poster/hulx
 ids: ../../essais/poster/hulx
 description: Exploring and archiving data from studies of Turkish/German bilingual
   children’s oral production
+slug: hulx-poster
 ---

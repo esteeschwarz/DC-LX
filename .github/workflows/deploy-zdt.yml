@@ -1,0 +1,35 @@
+name: push to zdt
+
+on:
+  push:
+    branches:
+      - gh-pages
+    paths:
+      - '_site/**'
+
+jobs:
+  push zdt:
+    runs-on: ubuntu-latest
+
+    steps:
+      # - name: Trigger render job on server
+      #   uses: appleboy/ssh-action@v1.0.3
+      #   with:
+      #     host: ${{ secrets.ZDT_HOST }}
+      #     username: ${{ secrets.ZDT_USER }}
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     script: |
+      #       sh p-dclx.sh
+      - name: Deploy via rsync action
+        uses: trendyminds/github-actions-rsync@master
+        with:
+          RSYNC_OPTIONS: -avzr --delete --exclude=.git --exclude=.gitignore --exclude=Gemfile* --exclude=*.md
+          RSYNC_SOURCE: ./_site/
+          #RSYNC_TARGET: ${{ secrets.DEPLOY_PATH }}
+          RSYNC_TARGET: ./public_html/dclx
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.ZDT_PRIVATE_KEY }}
+          SSH_USERNAME: ${{ secrets.ZDT_USER }}
+          SSH_HOSTNAME: ${{ secrets.ZDT_HOST }}
+          # SSH_PORT: ${{ secrets.SSH_PORT }}
+          SSH_PORT: 22

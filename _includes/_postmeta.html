@@ -1,11 +1,13 @@
-<!-- {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
-{% assign row = site.data.postmeta | where: "name", page_id | first %} -->
+{% comment %}<!-- {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
+{% assign row = site.data.postmeta | where: "name", page_id | first %} -->{% endcomment %}
 <script>
 localStorage.setItem('q_catValue', '');
 </script>
+{% include _data_fetch.html %}
 {% if row %}
 <!-- <div class="postmeta--table">   -->
     <!-- <h3>info</h3> -->
+
 <div class="panel radius">  
 
 <table class="postmeta">

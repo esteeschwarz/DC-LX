@@ -40,9 +40,11 @@ format: post
 			{% endif %}
 
 <div itemprop="articleSection">
+{% include _data_fetch.html %}
+{% comment %}
 {% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
 {% assign row = site.data.postmeta | where: "slug", page_id | first %}
-
+{% endcomment %}
 {% if row %}
 {% if row.subject %}
   <h4>subject:</h4><p>{{ row.subject }}.</p>

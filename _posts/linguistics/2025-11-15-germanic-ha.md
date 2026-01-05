@@ -12,6 +12,7 @@ description: "term project drafts"
 github-repo: "esteeschwarz/SPUND-LX/tree/main/germanic"
 layout: page
 pid: 6
+slug: germanic-ha
 ---
 
 # index

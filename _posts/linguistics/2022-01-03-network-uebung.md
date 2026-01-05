@@ -12,6 +12,7 @@ tags:
 - ezlinavis
 description: 12013_meyerhoff_expo
 pid: 15
+slug: network-uebung
 ---
 <h1>12013_meyerhoff_expo</h1>
 

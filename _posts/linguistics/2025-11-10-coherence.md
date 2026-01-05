@@ -6,6 +6,7 @@ date: "2025-10-18"
 categories: [linguistics]
 tags: [psych,HA,LX,corpus]
 pid: 1
+slug: coherence
 ---
 
 
