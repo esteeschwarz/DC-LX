@@ -73,18 +73,18 @@ jobs:
       - name: get site
         uses: actions/download-artifact@v4
         with:
-          name: ${{ needs.build.steps.pages.outputs.base_path }}
-          path: _site
+          name: site
+          path: site
       - name: chk site
         run: | 
           ls
-          ls ${{ needs.build.steps.pages.outputs.base_path }}
-          ls _site
+          ls ${{ needs.build.steps.pages.outputs.base_path }}/_site
+          ls site
       - name: Deploy via rsync action
         uses: trendyminds/github-actions-rsync@master
         with:
           RSYNC_OPTIONS: -avzr --delete --exclude=.git --exclude=.gitignore --exclude=Gemfile* --exclude=*.md
-          RSYNC_SOURCE: ${{ needs.build.steps.pages.outputs.base_path }}
+          RSYNC_SOURCE: site
           #RSYNC_TARGET: ${{ secrets.DEPLOY_PATH }}
           RSYNC_TARGET: ./public_html/dclx/
         env:
