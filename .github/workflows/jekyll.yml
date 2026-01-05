@@ -53,6 +53,8 @@ jobs:
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
+        with:
+          name: jekyll-build
 
   # Deployment job
   deploy:
@@ -73,12 +75,12 @@ jobs:
       - name: get site
         uses: actions/download-artifact@v4
         with:
-          name: site
+          name: jekyll-build
           path: site
-      - name: chk site
+      - name: chk build
         run: | 
           ls
-          ls ${{ needs.build.steps.pages.outputs.base_path }}/_site
+          # ls ${{ needs.build.steps.pages.outputs.base_path }}/_site
           ls site
       - name: Deploy via rsync action
         uses: trendyminds/github-actions-rsync@master
