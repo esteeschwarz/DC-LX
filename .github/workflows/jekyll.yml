@@ -70,16 +70,16 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: get site
-        uses: actions/download-artifact@v4
-        with:
-          name: _site
-          path: _site
+      # - name: get site
+      #   uses: actions/download-artifact@v4
+      #   with:
+      #     name: _site
+      #     path: _site
       - name: Deploy via rsync action
         uses: trendyminds/github-actions-rsync@master
         with:
           RSYNC_OPTIONS: -avzr --delete --exclude=.git --exclude=.gitignore --exclude=Gemfile* --exclude=*.md
-          RSYNC_SOURCE: _site
+          RSYNC_SOURCE: "${{ needs.build.steps.pages.outputs.base_path }}"
           #RSYNC_TARGET: ${{ secrets.DEPLOY_PATH }}
           RSYNC_TARGET: ./public_html/dclx/
         env:
