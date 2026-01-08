@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="st. schwarz">
-<meta name="dcterms.date" content="2026-01-08">
-<meta name="description" content="germanic languages project draft C">
 
-<title>English L1/L2 structures in german &gt;L1 speakers</title>
+<title>yakura replique</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -164,49 +181,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#index" id="toc-index" class="nav-link active" data-scroll-target="#index">index</a>
-  <ul class="collapse">
-  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">abstract</a></li>
-  </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#notes-on-replication-study-of-yakura_empirical_2025" id="toc-notes-on-replication-study-of-yakura_empirical_2025" class="nav-link active" data-scroll-target="#notes-on-replication-study-of-yakura_empirical_2025">notes on replication study of: <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (2025)</span></a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="draft-C.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="yakura.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">English L1/L2 structures in german &gt;L1 speakers</h1>
-<p class="subtitle lead">A corpus based investigation of english language patterns in german term papers of exchange students.</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">expose</div>
-    <div class="quarto-category">linguistics</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    germanic languages project draft C
-  </div>
+<h1 class="title">yakura replique</h1>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>st. schwarz </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 8, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -216,27 +207,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!--
-::: {.content-visible when-format="html"}
+<section id="notes-on-replication-study-of-yakura_empirical_2025" class="level2">
+<h2 class="anchored" data-anchor-id="notes-on-replication-study-of-yakura_empirical_2025">notes on replication study of: <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span></h2>
+<p>we started replicating the workflow presented in above study beginning with creating the target corpus. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> built corpora from transcribed youtube video audios and podcasts, referencing an research organisations registry (<span class="citation" data-cites="registry_ror_2025">Registry (<a href="#ref-registry_ror_2025" role="doc-biblioref">2025</a>)</span>) to collect videos from institutional educational youtube channels. we conducted data the same way restricted to german institutions. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> limited the target corpus to 4 years before the introduction of the GPT chat agent on 2022-11-31 up to 2024-05-31. this allows a timebased analysis of hypothesised appearance of AI-speech induced variances.</p>
+<p>we tested the workflow until state of video transcribed using the youtube search API for finding the corresponding video channels, llama3.2 to match the correct channel within the search results, yt-dlp to download the video audio, ffmpeg library to convert to .wav and whisper AI to finally transcribe the audio. all worked well (automatic) with resulting two text from Mannheim University channel youtube contributions. we estimate an overal server runtime of about 10h to download and transcribe all audio to text of above categorized channels.</p>
 
-load pdf [here](.pdf)
-
-:::
--->
-<section id="index" class="level1">
-<h1>index</h1>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">abstract</h2>
-<p>still empty.</p>
-</section>
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-registry_ror_2025" class="csl-entry" role="listitem">
+Registry, Research Organization. 2025. <span>“<span>ROR</span> <span>Data</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.17953395">https://doi.org/10.5281/zenodo.17953395</a>.
+</div>
+<div id="ref-yakura_empirical_2025" class="csl-entry" role="listitem">
+Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, Ignacio Serna, Prateek Gupta, Ivan Soraperra, and Iyad Rahwan. 2025. <span>“Empirical Evidence of <span>Large</span> <span>Language</span> <span>Model</span>’s Influence on Human Spoken Communication.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2409.01754">https://doi.org/10.48550/arXiv.2409.01754</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
