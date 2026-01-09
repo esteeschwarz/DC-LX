@@ -130,6 +130,10 @@ div.csl-indent {
  <span class="dropdown-text">draft B</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./yakura.html">
+ <span class="dropdown-text">yakura replique</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./qa.html">
  <span class="dropdown-text">annotations</span></a>
   </li>  
@@ -181,7 +185,7 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#notes-on-replication-study-of-yakura_empirical_2025" id="toc-notes-on-replication-study-of-yakura_empirical_2025" class="nav-link active" data-scroll-target="#notes-on-replication-study-of-yakura_empirical_2025">notes on replication study of: <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (2025)</span></a></li>
+  <li><a href="#notes-on-replication-study-of-yakura_empirical_2025" id="toc-notes-on-replication-study-of-yakura_empirical_2025" class="nav-link active" data-scroll-target="#notes-on-replication-study-of-yakura_empirical_2025">notes on replication study of <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (2025)</span></a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="yakura.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -208,9 +212,9 @@ div.csl-indent {
 
 
 <section id="notes-on-replication-study-of-yakura_empirical_2025" class="level2">
-<h2 class="anchored" data-anchor-id="notes-on-replication-study-of-yakura_empirical_2025">notes on replication study of: <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span></h2>
-<p>we started replicating the workflow presented in above study beginning with creating the target corpus. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> built corpora from transcribed youtube video audios and podcasts, referencing an research organisations registry (<span class="citation" data-cites="registry_ror_2025">Registry (<a href="#ref-registry_ror_2025" role="doc-biblioref">2025</a>)</span>) to collect videos from institutional educational youtube channels. we conducted data the same way restricted to german institutions. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> limited the target corpus to 4 years before the introduction of the GPT chat agent on 2022-11-31 up to 2024-05-31. this allows a timebased analysis of hypothesised appearance of AI-speech induced variances.</p>
-<p>we tested the workflow until state of video transcribed using the youtube search API for finding the corresponding video channels, llama3.2 to match the correct channel within the search results, yt-dlp to download the video audio, ffmpeg library to convert to .wav and whisper AI to finally transcribe the audio. all worked well (automatic) with resulting two text from Mannheim University channel youtube contributions. we estimate an overal server runtime of about 10h to download and transcribe all audio to text of above categorized channels.</p>
+<h2 class="anchored" data-anchor-id="notes-on-replication-study-of-yakura_empirical_2025">notes on replication study of <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span></h2>
+<p>we started replicating the workflow presented in above study beginning with creating the target corpus. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> built corpora from transcribed youtube video audios and podcasts, referencing a research organisations registry (<span class="citation" data-cites="registry_ror_2025">Registry (<a href="#ref-registry_ror_2025" role="doc-biblioref">2025</a>)</span>) to collect videos from institutional educational youtube channels. we assemlbled data the same way restricted to german institutions. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> limited the target corpus to 4 years before the introduction of the GPT chat agent on 2022-11-31 up to 2024-05-31. this allowed a timebased analysis of hypothesised appearance of AI-speech induced variances.</p>
+<p>we tested the workflow until state of video transcribed using the youtube search API for finding the corresponding video channels, llama3.2 to match the correct channel within the search results, yt-dlp to download the video audio, ffmpeg library to convert to PCM .wav and whisper AI to finally transcribe the audio. all worked well (<a href="https://github.com/esteeschwarz/SPUND-LX/tree/main/germanic/HA/LLM-001.R">script</a>) with resulting two texts from Mannheim University channel youtube contributions. we estimate an overall server runtime of about 10h to download and transcribe to text all audio of above categorized channels.</p>
 
 
 
