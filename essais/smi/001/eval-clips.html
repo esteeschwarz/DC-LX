@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>task001-ul</title>
+<title>CLIP evaluation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -138,57 +173,109 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#research-question-and-hypothesis" id="toc-research-question-and-hypothesis" class="nav-link active" data-scroll-target="#research-question-and-hypothesis">research question and hypothesis</a>
-  <ul class="collapse">
-  <li><a href="#preliminary" id="toc-preliminary" class="nav-link" data-scroll-target="#preliminary">preliminary</a></li>
-  <li><a href="#q" id="toc-q" class="nav-link" data-scroll-target="#q">Q:</a></li>
-  <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis">hypothesis</a></li>
-  </ul></li>
-  <li><a href="#refs" id="toc-refs" class="nav-link" data-scroll-target="#refs">references</a></li>
+  <li><a href="#corpus-clip-scores" id="toc-corpus-clip-scores" class="nav-link active" data-scroll-target="#corpus-clip-scores">corpus clip scores</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">CLIP evaluation</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="research-question-and-hypothesis" class="level1">
-<h1>research question and hypothesis</h1>
-<section id="preliminary" class="level2">
-<h2 class="anchored" data-anchor-id="preliminary">preliminary</h2>
-</section>
-<section id="q" class="level2">
-<h2 class="anchored" data-anchor-id="q">Q:</h2>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="corpus-clip-scores" class="level2">
+<h2 class="anchored" data-anchor-id="corpus-clip-scores">corpus clip scores</h2>
 <ul>
-<li>how do mental images relate in wordfields i.e.&nbsp;what are typical resp. atypical semantic fields in which imageability of patients language increases or decreases?</li>
-<li>how do word categories from concrete to abstract influence imageablity in relation to controls language?</li>
-<li>are there genres/fields which are avoided/promoted?</li>
+<li>data: clip_results.parquet (Ivan Nenchev)</li>
+<li>additional:
+<ul>
+<li>lexical diversity score</li>
+<li>1stPPronoun rate</li>
+<li>exploded clip scores, not mean!</li>
+</ul></li>
 </ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">### wks., proceed from here:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># print(getwd())</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"df4_lim.RData"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">###############################################################</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmerTest)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#print(colnames(df4_lim))</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">head</span>(df4_lim))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  text_chunk_clips filename group text_chunk         ld fstPPr_rate
+1                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804
+2                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804
+3                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804
+4                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804
+5                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804
+6                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dff4 &lt;- df4_lim %&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#   unnest_longer(cl_score)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># dff4 &lt;- df4_lim %&gt;%</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   select(TN, text_chunk, group, ld, fstPPr_rate, cl_score) %&gt;%</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   unnest_longer(cl_score)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># #colnames(dff4)[1]&lt;-"cl_score"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="do">### base R unnesting</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the lengths of each list element</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>list_lengths <span class="ot">&lt;-</span> <span class="fu">sapply</span>(df4_lim<span class="sc">$</span>text_chunk_clips, length)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Expand rows</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>dff4 <span class="ot">&lt;-</span> df4_lim[<span class="fu">rep</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(df4_lim)), list_lengths), ]</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Flatten the list column</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>dff4<span class="sc">$</span>cl_score <span class="ot">&lt;-</span> <span class="fu">unlist</span>(df4_lim<span class="sc">$</span>text_chunk_clips)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Reset rownames</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(dff4) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#colnames(dff4)[grep("text_chunk_clips",colnames(dff4))]&lt;-"cl_score"</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(dff4)[<span class="fu">grep</span>(<span class="st">"filename"</span>,<span class="fu">colnames</span>(dff4))]<span class="ot">&lt;-</span><span class="st">"TN"</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">unique</span>(dff4<span class="sc">$</span>TN))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>character(0)</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> dff4, <span class="fu">aes</span>(<span class="at">x =</span> cl_score,<span class="at">fill =</span> group)) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha=</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Density Plot"</span>, <span class="at">x =</span> <span class="st">"clip score"</span>, <span class="at">y =</span> <span class="st">"Density"</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="eval-clips_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#lm6&lt;-lmer(cl_score~group+(1|TN)+(1|text_chunk)+ld+fstPPr_rate,dff4)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#lm4&lt;-lm(cl_score~group,dff)</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># summary(lm1)</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#print(summary(lm6))</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+
 </section>
-<section id="hypothesis" class="level2">
-<h2 class="anchored" data-anchor-id="hypothesis">hypothesis</h2>
-<p>we assume that:</p>
-<ol type="1">
-<li>violence wordfield increase imageability
-<ol type="1">
-<li>body associated wordfields in contrast decrease imageability</li>
-</ol></li>
-<li>food wordfield decrease imageability</li>
-<li>weather/climate/atmosphere wordfield decrease imageability</li>
-<li>abstract categories increase in imageability</li>
-<li>concrete categories decrease in imageability</li>
-</ol>
-</section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><section id="refs" class="level1">
-<h1>references</h1>
-
-
-</section></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

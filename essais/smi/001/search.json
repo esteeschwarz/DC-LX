@@ -7,6 +7,27 @@
     "text": "16485.1.wf trigger special smi.tr1."
   },
   {
+    "objectID": "task001-ul.html",
+    "href": "task001-ul.html",
+    "title": "research question and hypothesis",
+    "section": "",
+    "text": "how do mental images relate in wordfields i.e. what are typical resp. atypical semantic fields in which imageability of patients language increases or decreases?\nhow do word categories from concrete to abstract influence imageablity in relation to controls language?\nare there genres/fields which are avoided/promoted?\n\n\n\n\nwe assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
+  },
+  {
+    "objectID": "task001-ul.html#q",
+    "href": "task001-ul.html#q",
+    "title": "research question and hypothesis",
+    "section": "",
+    "text": "how do mental images relate in wordfields i.e. what are typical resp. atypical semantic fields in which imageability of patients language increases or decreases?\nhow do word categories from concrete to abstract influence imageablity in relation to controls language?\nare there genres/fields which are avoided/promoted?"
+  },
+  {
+    "objectID": "task001-ul.html#hypothesis",
+    "href": "task001-ul.html#hypothesis",
+    "title": "research question and hypothesis",
+    "section": "",
+    "text": "we assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SMI paper draft",
@@ -28,24 +49,17 @@
     "text": "we assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
   },
   {
-    "objectID": "task001-ul.html",
-    "href": "task001-ul.html",
-    "title": "research question and hypothesis",
+    "objectID": "eval-clips.html",
+    "href": "eval-clips.html",
+    "title": "CLIP evaluation",
     "section": "",
-    "text": "how do mental images relate in wordfields i.e. what are typical resp. atypical semantic fields in which imageability of patients language increases or decreases?\nhow do word categories from concrete to abstract influence imageablity in relation to controls language?\nare there genres/fields which are avoided/promoted?\n\n\n\n\nwe assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
+    "text": "data: clip_results.parquet (Ivan Nenchev)\nadditional:\n\nlexical diversity score\n1stPPronoun rate\nexploded clip scores, not mean!\n\n\n\n### wks., proceed from here:\n# print(getwd())\nload(\"df4_lim.RData\")\n###############################################################\nlibrary(tidyr)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(lme4)\nlibrary(lmerTest)\n#print(colnames(df4_lim))\nprint(head(df4_lim))\n\n  text_chunk_clips filename group text_chunk         ld fstPPr_rate\n1                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n2                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n3                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n4                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n5                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n6                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n\n# dff4 &lt;- df4_lim %&gt;%\n#   unnest_longer(cl_score)\n# dff4 &lt;- df4_lim %&gt;%\n#   select(TN, text_chunk, group, ld, fstPPr_rate, cl_score) %&gt;%\n#   unnest_longer(cl_score)\n# #colnames(dff4)[1]&lt;-\"cl_score\"\n### base R unnesting\n# Get the lengths of each list element\nlist_lengths &lt;- sapply(df4_lim$text_chunk_clips, length)\n\n# Expand rows\ndff4 &lt;- df4_lim[rep(seq_len(nrow(df4_lim)), list_lengths), ]\n\n# Flatten the list column\ndff4$cl_score &lt;- unlist(df4_lim$text_chunk_clips)\n\n# Reset rownames\nrownames(dff4) &lt;- NULL\n#colnames(dff4)[grep(\"text_chunk_clips\",colnames(dff4))]&lt;-\"cl_score\"\ncolnames(dff4)[grep(\"filename\",colnames(dff4))]&lt;-\"TN\"\nprint(unique(dff4$TN))\n\ncharacter(0)\n\nggplot(data = dff4, aes(x = cl_score,fill = group)) +\n  geom_density(alpha=0.5) +\n  labs(title = \"Density Plot\", x = \"clip score\", y = \"Density\") +\n  theme_minimal() \n\n\n\n\n\n\n\n#lm6&lt;-lmer(cl_score~group+(1|TN)+(1|text_chunk)+ld+fstPPr_rate,dff4)\n#lm4&lt;-lm(cl_score~group,dff)\n# summary(lm1)\n#print(summary(lm6))"
   },
   {
-    "objectID": "task001-ul.html#q",
-    "href": "task001-ul.html#q",
-    "title": "research question and hypothesis",
+    "objectID": "eval-clips.html#corpus-clip-scores",
+    "href": "eval-clips.html#corpus-clip-scores",
+    "title": "CLIP evaluation",
     "section": "",
-    "text": "how do mental images relate in wordfields i.e. what are typical resp. atypical semantic fields in which imageability of patients language increases or decreases?\nhow do word categories from concrete to abstract influence imageablity in relation to controls language?\nare there genres/fields which are avoided/promoted?"
-  },
-  {
-    "objectID": "task001-ul.html#hypothesis",
-    "href": "task001-ul.html#hypothesis",
-    "title": "research question and hypothesis",
-    "section": "",
-    "text": "we assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
+    "text": "data: clip_results.parquet (Ivan Nenchev)\nadditional:\n\nlexical diversity score\n1stPPronoun rate\nexploded clip scores, not mean!\n\n\n\n### wks., proceed from here:\n# print(getwd())\nload(\"df4_lim.RData\")\n###############################################################\nlibrary(tidyr)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(lme4)\nlibrary(lmerTest)\n#print(colnames(df4_lim))\nprint(head(df4_lim))\n\n  text_chunk_clips filename group text_chunk         ld fstPPr_rate\n1                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n2                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n3                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n4                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n5                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n6                      &lt;NA&gt;  &lt;NA&gt;       &lt;NA&gt; 0.09351678  0.05801804\n\n# dff4 &lt;- df4_lim %&gt;%\n#   unnest_longer(cl_score)\n# dff4 &lt;- df4_lim %&gt;%\n#   select(TN, text_chunk, group, ld, fstPPr_rate, cl_score) %&gt;%\n#   unnest_longer(cl_score)\n# #colnames(dff4)[1]&lt;-\"cl_score\"\n### base R unnesting\n# Get the lengths of each list element\nlist_lengths &lt;- sapply(df4_lim$text_chunk_clips, length)\n\n# Expand rows\ndff4 &lt;- df4_lim[rep(seq_len(nrow(df4_lim)), list_lengths), ]\n\n# Flatten the list column\ndff4$cl_score &lt;- unlist(df4_lim$text_chunk_clips)\n\n# Reset rownames\nrownames(dff4) &lt;- NULL\n#colnames(dff4)[grep(\"text_chunk_clips\",colnames(dff4))]&lt;-\"cl_score\"\ncolnames(dff4)[grep(\"filename\",colnames(dff4))]&lt;-\"TN\"\nprint(unique(dff4$TN))\n\ncharacter(0)\n\nggplot(data = dff4, aes(x = cl_score,fill = group)) +\n  geom_density(alpha=0.5) +\n  labs(title = \"Density Plot\", x = \"clip score\", y = \"Density\") +\n  theme_minimal() \n\n\n\n\n\n\n\n#lm6&lt;-lmer(cl_score~group+(1|TN)+(1|text_chunk)+ld+fstPPr_rate,dff4)\n#lm4&lt;-lm(cl_score~group,dff)\n# summary(lm1)\n#print(summary(lm6))"
   }
 ]
