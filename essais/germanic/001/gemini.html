@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>methods</title>
+<title>gemini paper</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -135,7 +135,7 @@ div.csl-indent {
   </li>  
         <li>
     <a class="dropdown-item" href="./gemini.html">
- <span class="dropdown-text">methods</span></a>
+ <span class="dropdown-text">gemini paper</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./qa.html">
@@ -189,17 +189,25 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#index" id="toc-index" class="nav-link active" data-scroll-target="#index">index</a>
+  <li><a href="#index" id="toc-index" class="nav-link active" data-scroll-target="#index"><span class="header-section-number">1</span> index</a>
   <ul class="collapse">
-  <li><a href="#the-einleitung" id="toc-the-einleitung" class="nav-link" data-scroll-target="#the-einleitung">the einleitung</a></li>
-  <li><a href="#preliminary" id="toc-preliminary" class="nav-link" data-scroll-target="#preliminary">preliminary</a></li>
-  <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis">hypothesis</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">methods</a>
+  <li><a href="#the-einleitung" id="toc-the-einleitung" class="nav-link" data-scroll-target="#the-einleitung"><span class="header-section-number">1.1</span> the einleitung</a></li>
+  <li><a href="#preliminary" id="toc-preliminary" class="nav-link" data-scroll-target="#preliminary"><span class="header-section-number">1.2</span> preliminary</a></li>
+  <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis"><span class="header-section-number">1.3</span> hypothesis</a>
   <ul class="collapse">
-  <li><a href="#snc" id="toc-snc" class="nav-link" data-scroll-target="#snc">snc</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">data</a></li>
-  <li><a href="#sec-gemini-prompt" id="toc-sec-gemini-prompt" class="nav-link" data-scroll-target="#sec-gemini-prompt">gemini prompt</a></li>
-  <li><a href="#computation" id="toc-computation" class="nav-link" data-scroll-target="#computation">computation</a></li>
+  <li><a href="#next-methods" id="toc-next-methods" class="nav-link" data-scroll-target="#next-methods"><span class="header-section-number">1.3.1</span> next methods</a></li>
+  </ul></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">1.4</span> methods</a>
+  <ul class="collapse">
+  <li><a href="#snc" id="toc-snc" class="nav-link" data-scroll-target="#snc"><span class="header-section-number">1.4.1</span> snc</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">1.4.2</span> data</a></li>
+  <li><a href="#sec-gemini-prompt" id="toc-sec-gemini-prompt" class="nav-link" data-scroll-target="#sec-gemini-prompt"><span class="header-section-number">1.4.3</span> gemini prompt</a></li>
+  <li><a href="#computation" id="toc-computation" class="nav-link" data-scroll-target="#computation"><span class="header-section-number">1.4.4</span> computation</a></li>
+  </ul></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation"><span class="header-section-number">1.5</span> evaluation</a>
+  <ul class="collapse">
+  <li><a href="#basic-descriptive" id="toc-basic-descriptive" class="nav-link" data-scroll-target="#basic-descriptive"><span class="header-section-number">1.5.1</span> basic descriptive</a></li>
+  <li><a href="#sec-lm-1" id="toc-sec-lm-1" class="nav-link" data-scroll-target="#sec-lm-1"><span class="header-section-number">1.5.2</span> linear regression</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -210,7 +218,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">methods</h1>
+<h1 class="title">gemini paper</h1>
 </div>
 
 
@@ -227,31 +235,34 @@ div.csl-indent {
 </header>
 
 
-<section id="index" class="level1">
-<h1>index</h1>
-<section id="the-einleitung" class="level2">
-<h2 class="anchored" data-anchor-id="the-einleitung">the einleitung</h2>
-<p>inspired by the paper <em>Empirical evidence of Large Language Model’s influence on human spoken communication</em>, (<span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span>) who indeed found (evidence) for GPT influenced human language after the introduction of chatGPT we tried to replicate the pipeline of building an AI vocabulary (gpt preferred lemmata) and compare frequencies of gpt-typical words across pre- and post chatGPT human language corpora. The first draft essai proves their hypothesis that LLM generated language manifests within human natural language.</p>
+<section id="index" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> index</h1>
+<section id="the-einleitung" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="the-einleitung"><span class="header-section-number">1.1</span> the einleitung</h2>
+<p>inspired by the paper <em>Empirical evidence of Large Language Model’s influence on human spoken communication <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span></em>, who indeed found (evidence) for GPT influenced human language after the introduction of chatGPT we tried to replicate the pipeline of building an AI vocabulary (gpt preferred lemmata) and compare frequencies of gpt-typical words across pre- and post chatGPT human language corpora. The first draft essai proves their hypothesis that LLM generated language manifests within human natural language.</p>
 </section>
-<section id="preliminary" class="level2">
-<h2 class="anchored" data-anchor-id="preliminary">preliminary</h2>
+<section id="preliminary" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="preliminary"><span class="header-section-number">1.2</span> preliminary</h2>
 <p>Our findings are still limited to a yet very small corpus of texts after the introduction of the google gemini chat agent to the public in 03/2024. In contrast to <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> and out of resources reasons we decided for gemini as basis for our AI generated vocabulary and for another text corpus (german bundestag plenary protocols, <span class="citation" data-cites="dip_dip_2026">DIP (<a href="#ref-dip_dip_2026" role="doc-biblioref">2026</a>)</span>) than youtube/podcast audio for the same reasons. That limits our post-AI corpus to a small timeframe between 03/2024 up to now. With expanding that corpus to a wider spectrum with including other sources we may harden our results.</p>
 </section>
-<section id="hypothesis" class="level2">
-<h2 class="anchored" data-anchor-id="hypothesis">hypothesis</h2>
+<section id="hypothesis" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="hypothesis"><span class="header-section-number">1.3</span> hypothesis</h2>
 <p>following <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> we assumed that the consuming of LLM generated language influences the human production of language such that vocabulary typical for LLM output will be found with higher frequencies in human language corpora dating after chat agents introduction.</p>
+<section id="next-methods" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="next-methods"><span class="header-section-number">1.3.1</span> next methods</h3>
 </section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">methods</h2>
-<section id="snc" class="level3">
-<h3 class="anchored" data-anchor-id="snc">snc</h3>
-<p>16062.1</p>
 </section>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">data</h3>
+<section id="methods" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="methods"><span class="header-section-number">1.4</span> methods</h2>
+<section id="snc" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="snc"><span class="header-section-number">1.4.1</span> snc</h3>
+<p>16062.1.2</p>
+</section>
+<section id="data" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="data"><span class="header-section-number">1.4.2</span> data</h3>
 <p>our human langugae data consists of raw texts from german bundestag plenary protocols (<span class="citation" data-cites="dip_dip_2026">DIP (<a href="#ref-dip_dip_2026" role="doc-biblioref">2026</a>)</span>). the LLM corpus consists of model summaries of a first subset of these texts generated with the following prompt: <a href="#sec-gemini-prompt" class="quarto-xref">Section&nbsp;1.4.3</a>.</p>
-<section id="corpus-subsets" class="level4">
-<h4 class="anchored" data-anchor-id="corpus-subsets">corpus subsets</h4>
+<section id="corpus-subsets" class="level4" data-number="1.4.2.1">
+<h4 data-number="1.4.2.1" class="anchored" data-anchor-id="corpus-subsets"><span class="header-section-number">1.4.2.1</span> corpus subsets</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -276,8 +287,8 @@ div.csl-indent {
 </table>
 </section>
 </section>
-<section id="sec-gemini-prompt" class="level3">
-<h3 class="anchored" data-anchor-id="sec-gemini-prompt">gemini prompt</h3>
+<section id="sec-gemini-prompt" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="sec-gemini-prompt"><span class="header-section-number">1.4.3</span> gemini prompt</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "System prompt: "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
@@ -286,17 +297,223 @@ div.csl-indent {
 </div>
 </div>
 </section>
-<section id="computation" class="level3">
-<h3 class="anchored" data-anchor-id="computation">computation</h3>
-<p>we first devised AI-typical lemma in the model corpus which are distinctive for that corpus using a linear model (R, lme4::glmer()) that calculates a score for each lemma in the corpus</p>
+<section id="computation" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="computation"><span class="header-section-number">1.4.4</span> computation</h3>
+<p>we first devised AI-typical lemmata in the model corpus which are distinctive for that corpus using a linear regression model (R, package lme4::glmer(): <span class="citation" data-cites="bates_fitting_2015">Bates et al. (<a href="#ref-bates_fitting_2015" role="doc-biblioref">2015</a>)</span>) that calculates a score for each lemma in the corpus, see <a href="#fig-gpt.dplot" class="quarto-xref">Figure&nbsp;1</a> and <a href="#fig-densplot01" class="quarto-xref">Figure&nbsp;2</a>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-gpt.dplot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gpt.dplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="gemini_files/figure-html/fig-gpt.dplot-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gpt.dplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: lemma gpt scores over targets
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-densplot01" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-densplot01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="gemini_files/figure-html/fig-densplot01-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-densplot01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: target gpt density
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="evaluation" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="evaluation"><span class="header-section-number">1.5</span> evaluation</h2>
+<section id="basic-descriptive" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="basic-descriptive"><span class="header-section-number">1.5.1</span> basic descriptive</h3>
+<p>to first gather an insight, yet with simple descriptive stats comparing the raw frequencies of gpt-preferred lemmas in pre- and post-gemini onset we find that in the target corpus the occurences of these lemmas increase, only by small amount (see <a href="#tbl-s.df" class="quarto-xref">Table&nbsp;1</a>) and hard to visualise (see <a href="#fig-boxplot01" class="quarto-xref">Figure&nbsp;3</a>). if these findings become relevant, we’ll see in <a href="#sec-lm-1" class="quarto-xref">Section&nbsp;1.5.2</a> where we evaluate the frequencies with a linear regression model.</p>
+<div class="cell">
+<div id="tbl-s.df" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-s.df-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: GPT lemma frequencies (table) over target. (freq / Mtoken)
+</figcaption>
+<div aria-describedby="tbl-s.df-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">target</th>
+<th style="text-align: right;">freq</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">human</td>
+<td style="text-align: right;">0.4028</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">post</td>
+<td style="text-align: right;">0.4287</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DIFF:</td>
+<td style="text-align: right;">0.0259</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-boxplot01" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boxplot01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="gemini_files/figure-html/fig-boxplot01-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: GPT lemma frequencies (boxplot) over target. (freq / Mtoken)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-lm-1" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="sec-lm-1"><span class="header-section-number">1.5.2</span> linear regression</h3>
+<p>to prove descriptive results, we compute the stability of the frequency variance for target and reference corpus with a linear regression model using R’s lme4::lmer() function, cf. <span class="citation" data-cites="bates_fitting_2015">Bates et al. (<a href="#ref-bates_fitting_2015" role="doc-biblioref">2015</a>)</span>. coefficents are printed below, where frequency are the relative lemma frequencies over corpus; target defines reference resp. target corpus[post-gpt] (human/post) and in.gpt as numerical variable representing the gpt-score of the corresponding lemma i.e.&nbsp;wether it scores high (positive values) or low (negative values) in terms of being preferredly used by the chat agent.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: Matrix</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'lmerTest'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:lme4':
+
+    lmer</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:stats':
+
+    step</code></pre>
+</div>
+</div>
+<section id="basic-lm" class="level4" data-number="1.5.2.1">
+<h4 data-number="1.5.2.1" class="anchored" data-anchor-id="basic-lm"><span class="header-section-number">1.5.2.1</span> basic (lm)</h4>
+<p>formula: <code>frequency.relative ~ target * in.gpt</code></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = f.rel ~ target * in.gp, data = lmdf.c)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+ -409.3    -9.9    -9.8    -7.8 15521.0 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       10.52309    0.58950  17.851  &lt; 2e-16 ***
+targetall          0.06232    0.83365   0.075   0.9404    
+targetgpt        632.30872   14.50242  43.600  &lt; 2e-16 ***
+targetpost         0.95434    0.85908   1.111   0.2666    
+in.gp             26.79998    0.75162  35.656  &lt; 2e-16 ***
+targetall:in.gp   -2.30237    1.03887  -2.216   0.0267 *  
+targetgpt:in.gp  -24.86712    2.60445  -9.548  &lt; 2e-16 ***
+targetpost:in.gp   4.24178    1.07704   3.938 8.21e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 162 on 223217 degrees of freedom
+Multiple R-squared:  0.1106,    Adjusted R-squared:  0.1106 
+F-statistic:  3967 on 7 and 223217 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="mixed-effects-model-lmer" class="level4" data-number="1.5.2.2">
+<h4 data-number="1.5.2.2" class="anchored" data-anchor-id="mixed-effects-model-lmer"><span class="header-section-number">1.5.2.2</span> mixed effects model (lmer)</h4>
+<p>formula: <code>frequency.relative ~ target * in.gpt +(1|lemma)</code></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: f.rel ~ target * in.gp + (1 | lemma)
+   Data: lmdf.c
+
+REML criterion at convergence: 2825867
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-60.813  -0.028  -0.026  -0.016 105.684 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ lemma    (Intercept) 10509    102.5   
+ Residual             11031    105.0   
+Number of obs: 223225, groups:  lemma, 110404
+
+Fixed effects:
+                   Estimate Std. Error         df t value Pr(&gt;|t|)    
+(Intercept)       9.103e+00  5.182e-01  2.099e+05  17.568  &lt; 2e-16 ***
+targetall        -6.137e-02  5.403e-01  1.449e+05  -0.114   0.9096    
+targetgpt        -2.801e+02  1.063e+01  1.671e+05 -26.352  &lt; 2e-16 ***
+targetpost       -4.431e-01  6.366e-01  1.935e+05  -0.696   0.4864    
+in.gp             2.329e+01  6.705e-01  1.987e+05  34.738  &lt; 2e-16 ***
+targetall:in.gp   1.435e+00  6.783e-01  1.465e+05   2.116   0.0344 *  
+targetgpt:in.gp   1.268e+02  1.897e+00  1.666e+05  66.827  &lt; 2e-16 ***
+targetpost:in.gp  3.098e+00  7.051e-01  1.471e+05   4.393 1.12e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) trgtll trgtgp trgtps in.gp  trgtl:. trgtg:.
+targetall   -0.521                                            
+targetgpt   -0.029  0.027                                     
+targetpost  -0.583  0.424  0.027                              
+in.gp       -0.117  0.062  0.034  0.069                       
+trgtll:n.gp  0.064 -0.120 -0.033 -0.052 -0.537                
+trgtgpt:n.g  0.025 -0.023 -0.935 -0.024 -0.220  0.218         
+trgtpst:n.g  0.081 -0.059 -0.003 -0.140 -0.509  0.501   0.179 </code></pre>
+</div>
+</div>
+</section>
+<section id="anova-of-mixed-effects-model" class="level4" data-number="1.5.2.3">
+<h4 data-number="1.5.2.3" class="anchored" data-anchor-id="anova-of-mixed-effects-model"><span class="header-section-number">1.5.2.3</span> anova of mixed effects model</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Response: f.rel
+                 Df     Sum Sq   Mean Sq  F value    Pr(&gt;F)    
+target            3  622635042 207545014 7903.933 &lt; 2.2e-16 ***
+in.gp             1  102891443 102891443 3918.413 &lt; 2.2e-16 ***
+target:in.gp      3    3667275   1222425   46.554 &lt; 2.2e-16 ***
+Residuals    223217 5861332083     26258                       
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
 
 
 
+</section>
 </section>
 </section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bates_fitting_2015" class="csl-entry" role="listitem">
+Bates, Douglas, Martin Mächler, Ben Bolker, and Steve Walker. 2015. <span>“Fitting <span>Linear</span> <span>Mixed</span>-<span>Effects</span> <span>Models</span> <span>Using</span> Lme4.”</span> <em>Journal of Statistical Software</em> 67 (1): 1–48. <a href="https://doi.org/10.18637/jss.v067.i01">https://doi.org/10.18637/jss.v067.i01</a>.
+</div>
 <div id="ref-dip_dip_2026" class="csl-entry" role="listitem">
 DIP. 2026. <span>“<span>DIP</span> - <span>Bundestagsprotokolle</span>.”</span> Docs. <em>DIP - API</em>. Berlin. <a href="https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content">https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content</a>.
 </div>

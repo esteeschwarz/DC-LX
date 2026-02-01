@@ -135,7 +135,7 @@ div.csl-indent {
   </li>  
         <li>
     <a class="dropdown-item" href="./gemini.html">
- <span class="dropdown-text">methods</span></a>
+ <span class="dropdown-text">gemini paper</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./qa.html">
@@ -189,10 +189,10 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#notes-on-replication-study-of-yakura_empirical_2025" id="toc-notes-on-replication-study-of-yakura_empirical_2025" class="nav-link active" data-scroll-target="#notes-on-replication-study-of-yakura_empirical_2025">notes on replication study of <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (2025)</span></a></li>
-  <li><a href="#process-on-yakura-replication" id="toc-process-on-yakura-replication" class="nav-link" data-scroll-target="#process-on-yakura-replication">process on yakura replication</a>
+  <li><a href="#notes-on-replication-study-of-yakura_empirical_2025" id="toc-notes-on-replication-study-of-yakura_empirical_2025" class="nav-link active" data-scroll-target="#notes-on-replication-study-of-yakura_empirical_2025"><span class="header-section-number">1</span> notes on replication study of <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (2025)</span></a></li>
+  <li><a href="#process-on-yakura-replication" id="toc-process-on-yakura-replication" class="nav-link" data-scroll-target="#process-on-yakura-replication"><span class="header-section-number">2</span> process on yakura replication</a>
   <ul class="collapse">
-  <li><a href="#sec-gemini-prompt" id="toc-sec-gemini-prompt" class="nav-link" data-scroll-target="#sec-gemini-prompt">gemini prompt</a></li>
+  <li><a href="#sec-gemini-prompt" id="toc-sec-gemini-prompt" class="nav-link" data-scroll-target="#sec-gemini-prompt"><span class="header-section-number">2.1</span> gemini prompt</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="yakura.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -219,17 +219,17 @@ div.csl-indent {
 </header>
 
 
-<section id="notes-on-replication-study-of-yakura_empirical_2025" class="level2">
-<h2 class="anchored" data-anchor-id="notes-on-replication-study-of-yakura_empirical_2025">notes on replication study of <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span></h2>
+<section id="notes-on-replication-study-of-yakura_empirical_2025" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="notes-on-replication-study-of-yakura_empirical_2025"><span class="header-section-number">1</span> notes on replication study of <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span></h2>
 <p>we started replicating the workflow presented in above study beginning with creating the target corpus. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> built corpora from transcribed youtube video audios and podcasts, referencing a research organisations registry (<span class="citation" data-cites="ror_ror_2025">ROR (<a href="#ref-ror_ror_2025" role="doc-biblioref">2025</a>)</span>) to collect videos from institutional educational youtube channels. we assemlbled data the same way restricted to german institutions. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> limited the target corpus to 4 years before the introduction of the GPT chat agent on 2022-11-31 up to 2024-05-31. this allowed a timebased analysis of hypothesised appearance of AI-speech induced variances.</p>
 <p>we tested the workflow until state of video transcribed using the youtube search API for finding the corresponding video channels, llama3.2 to match the correct channel within the search results, yt-dlp to download the video audio, ffmpeg library to convert to PCM .wav and whisper AI to finally transcribe the audio. all worked well (<a href="https://github.com/esteeschwarz/SPUND-LX/tree/main/germanic/HA/LLM-001.R">script</a>) with resulting two texts from Mannheim University channel youtube contributions. we estimate an overall server runtime of about 10h to download and transcribe to text all audio of above categorized channels.</p>
 </section>
-<section id="process-on-yakura-replication" class="level2">
-<h2 class="anchored" data-anchor-id="process-on-yakura-replication">process on yakura replication</h2>
+<section id="process-on-yakura-replication" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="process-on-yakura-replication"><span class="header-section-number">2</span> process on yakura replication</h2>
 <p>after starting with the same pipeline of building a corpus from youtube material, we decided for another alternative out of resource reasons. the current corpus which we will work on is created from german parliamental protocols, freely available (resource reason) here: <span class="citation" data-cites="dip_dip_2026">DIP (<a href="#ref-dip_dip_2026" role="doc-biblioref">2026</a>)</span>. Also we decided for google gemini since working with that model simply costs less than the openAI GPT variant.</p>
 <p>for the beginning we created a subset of protocols from 2021-01-01 to 2021-07-31 which are 38 protocols. to get the model preferred vocabulary we prompted gemini to summarize each protocol in its own words with restricting to not using more than 5% of words from the original text and limited to 300 words/summary. See prompt text <a href="#sec-gemini-prompt" class="quarto-xref">Section&nbsp;2.1</a>. we postag the corpus and devise relative lemma frequencies to get the gemini keywords.</p>
-<section id="sec-gemini-prompt" class="level3">
-<h3 class="anchored" data-anchor-id="sec-gemini-prompt">gemini prompt</h3>
+<section id="sec-gemini-prompt" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="sec-gemini-prompt"><span class="header-section-number">2.1</span> gemini prompt</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "System prompt: "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
