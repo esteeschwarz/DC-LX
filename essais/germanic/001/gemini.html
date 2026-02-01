@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>gemini paper</title>
+<title>methods</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -135,7 +135,7 @@ div.csl-indent {
   </li>  
         <li>
     <a class="dropdown-item" href="./gemini.html">
- <span class="dropdown-text">gemini paper</span></a>
+ <span class="dropdown-text">methods</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./qa.html">
@@ -196,6 +196,7 @@ div.csl-indent {
   <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis">hypothesis</a></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">methods</a>
   <ul class="collapse">
+  <li><a href="#snc" id="toc-snc" class="nav-link" data-scroll-target="#snc">snc</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">data</a></li>
   <li><a href="#sec-gemini-prompt" id="toc-sec-gemini-prompt" class="nav-link" data-scroll-target="#sec-gemini-prompt">gemini prompt</a></li>
   <li><a href="#computation" id="toc-computation" class="nav-link" data-scroll-target="#computation">computation</a></li>
@@ -209,7 +210,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">gemini paper</h1>
+<h1 class="title">methods</h1>
 </div>
 
 
@@ -242,12 +243,37 @@ div.csl-indent {
 </section>
 <section id="methods" class="level2">
 <h2 class="anchored" data-anchor-id="methods">methods</h2>
+<section id="snc" class="level3">
+<h3 class="anchored" data-anchor-id="snc">snc</h3>
+<p>16062.1</p>
+</section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">data</h3>
-<p>our human langugae data consists of raw texts from german bundestag plenary protocols (<span class="citation" data-cites="dip_dip_2026">DIP (<a href="#ref-dip_dip_2026" role="doc-biblioref">2026</a>)</span>). the LLM corpus consists of model summaries of a first subset of these texts generated with the following prompt: <a href="#sec-gemini-prompt" class="quarto-xref">Section&nbsp;1.4.2</a>.</p>
+<p>our human langugae data consists of raw texts from german bundestag plenary protocols (<span class="citation" data-cites="dip_dip_2026">DIP (<a href="#ref-dip_dip_2026" role="doc-biblioref">2026</a>)</span>). the LLM corpus consists of model summaries of a first subset of these texts generated with the following prompt: <a href="#sec-gemini-prompt" class="quarto-xref">Section&nbsp;1.4.3</a>.</p>
 <section id="corpus-subsets" class="level4">
 <h4 class="anchored" data-anchor-id="corpus-subsets">corpus subsets</h4>
-<p><code>{r}knitr::kable(ts)</code></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">target</th>
+<th style="text-align: right;">tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">gemini</td>
+<td style="text-align: right;">3957</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">human-pre</td>
+<td style="text-align: right;">1514663</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">human-post</td>
+<td style="text-align: right;">1458323</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="sec-gemini-prompt" class="level3">
@@ -272,7 +298,7 @@ div.csl-indent {
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-dip_dip_2026" class="csl-entry" role="listitem">
-DIP. 2026. <span>“<span>DIP</span>.”</span> <em>Bundestagsprotokolle</em>. <a href="https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content">https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content</a>.
+DIP. 2026. <span>“<span>DIP</span> - <span>Bundestagsprotokolle</span>.”</span> Docs. <em>DIP - API</em>. Berlin. <a href="https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content">https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content</a>.
 </div>
 <div id="ref-yakura_empirical_2025" class="csl-entry" role="listitem">
 Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, Ignacio Serna, Prateek Gupta, Ivan Soraperra, and Iyad Rahwan. 2025. <span>“Empirical Evidence of <span>Large</span> <span>Language</span> <span>Model</span>’s Influence on Human Spoken Communication.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2409.01754">https://doi.org/10.48550/arXiv.2409.01754</a>.

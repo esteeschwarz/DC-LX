@@ -135,7 +135,7 @@ div.csl-indent {
   </li>  
         <li>
     <a class="dropdown-item" href="./gemini.html">
- <span class="dropdown-text">gemini paper</span></a>
+ <span class="dropdown-text">methods</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./qa.html">
@@ -221,7 +221,7 @@ div.csl-indent {
 
 <section id="notes-on-replication-study-of-yakura_empirical_2025" class="level2">
 <h2 class="anchored" data-anchor-id="notes-on-replication-study-of-yakura_empirical_2025">notes on replication study of <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span></h2>
-<p>we started replicating the workflow presented in above study beginning with creating the target corpus. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> built corpora from transcribed youtube video audios and podcasts, referencing a research organisations registry (<span class="citation" data-cites="registry_ror_2025">Registry (<a href="#ref-registry_ror_2025" role="doc-biblioref">2025</a>)</span>) to collect videos from institutional educational youtube channels. we assemlbled data the same way restricted to german institutions. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> limited the target corpus to 4 years before the introduction of the GPT chat agent on 2022-11-31 up to 2024-05-31. this allowed a timebased analysis of hypothesised appearance of AI-speech induced variances.</p>
+<p>we started replicating the workflow presented in above study beginning with creating the target corpus. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> built corpora from transcribed youtube video audios and podcasts, referencing a research organisations registry (<span class="citation" data-cites="ror_ror_2025">ROR (<a href="#ref-ror_ror_2025" role="doc-biblioref">2025</a>)</span>) to collect videos from institutional educational youtube channels. we assemlbled data the same way restricted to german institutions. <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> limited the target corpus to 4 years before the introduction of the GPT chat agent on 2022-11-31 up to 2024-05-31. this allowed a timebased analysis of hypothesised appearance of AI-speech induced variances.</p>
 <p>we tested the workflow until state of video transcribed using the youtube search API for finding the corresponding video channels, llama3.2 to match the correct channel within the search results, yt-dlp to download the video audio, ffmpeg library to convert to PCM .wav and whisper AI to finally transcribe the audio. all worked well (<a href="https://github.com/esteeschwarz/SPUND-LX/tree/main/germanic/HA/LLM-001.R">script</a>) with resulting two texts from Mannheim University channel youtube contributions. we estimate an overall server runtime of about 10h to download and transcribe to text all audio of above categorized channels.</p>
 </section>
 <section id="process-on-yakura-replication" class="level2">
@@ -248,10 +248,10 @@ div.csl-indent {
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-dip_dip_2026" class="csl-entry" role="listitem">
-DIP. 2026. <span>“<span>DIP</span>.”</span> <em>Bundestagsprotokolle</em>. <a href="https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content">https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content</a>.
+DIP. 2026. <span>“<span>DIP</span> - <span>Bundestagsprotokolle</span>.”</span> Docs. <em>DIP - API</em>. Berlin. <a href="https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content">https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content</a>.
 </div>
-<div id="ref-registry_ror_2025" class="csl-entry" role="listitem">
-Registry, Research Organization. 2025. <span>“<span>ROR</span> <span>Data</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.17953395">https://doi.org/10.5281/zenodo.17953395</a>.
+<div id="ref-ror_ror_2025" class="csl-entry" role="listitem">
+ROR, Research Organization Registry. 2025. <span>“<span>ROR</span> <span>Data</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.17953395">https://doi.org/10.5281/zenodo.17953395</a>.
 </div>
 <div id="ref-yakura_empirical_2025" class="csl-entry" role="listitem">
 Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, Ignacio Serna, Prateek Gupta, Ivan Soraperra, and Iyad Rahwan. 2025. <span>“Empirical Evidence of <span>Large</span> <span>Language</span> <span>Model</span>’s Influence on Human Spoken Communication.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2409.01754">https://doi.org/10.48550/arXiv.2409.01754</a>.
