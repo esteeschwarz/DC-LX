@@ -207,7 +207,8 @@ div.csl-indent {
   <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation"><span class="header-section-number">1.5</span> evaluation</a>
   <ul class="collapse">
   <li><a href="#basic-descriptive" id="toc-basic-descriptive" class="nav-link" data-scroll-target="#basic-descriptive"><span class="header-section-number">1.5.1</span> basic descriptive</a></li>
-  <li><a href="#sec-lm-1" id="toc-sec-lm-1" class="nav-link" data-scroll-target="#sec-lm-1"><span class="header-section-number">1.5.2</span> linear regression</a></li>
+  <li><a href="#responsible-lemmata" id="toc-responsible-lemmata" class="nav-link" data-scroll-target="#responsible-lemmata"><span class="header-section-number">1.5.2</span> responsible lemmata</a></li>
+  <li><a href="#sec-lm-1" id="toc-sec-lm-1" class="nav-link" data-scroll-target="#sec-lm-1"><span class="header-section-number">1.5.3</span> linear regression</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -273,15 +274,15 @@ div.csl-indent {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">gemini</td>
-<td style="text-align: right;">3957</td>
+<td style="text-align: right;">3895</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">human-pre</td>
-<td style="text-align: right;">1514663</td>
+<td style="text-align: right;">1437497</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">human-post</td>
-<td style="text-align: right;">1458323</td>
+<td style="text-align: right;">1363467</td>
 </tr>
 </tbody>
 </table>
@@ -334,7 +335,7 @@ Figure&nbsp;2: target gpt density
 <h2 data-number="1.5" class="anchored" data-anchor-id="evaluation"><span class="header-section-number">1.5</span> evaluation</h2>
 <section id="basic-descriptive" class="level3" data-number="1.5.1">
 <h3 data-number="1.5.1" class="anchored" data-anchor-id="basic-descriptive"><span class="header-section-number">1.5.1</span> basic descriptive</h3>
-<p>to first gather an insight, yet with simple descriptive stats comparing the raw frequencies of gpt-preferred lemmas in pre- and post-gemini onset we find that in the target corpus the occurences of these lemmas increase, only by small amount (see <a href="#tbl-s.df" class="quarto-xref">Table&nbsp;1</a>) and hard to visualise (see <a href="#fig-boxplot01" class="quarto-xref">Figure&nbsp;3</a>). if these findings become relevant, we’ll see in <a href="#sec-lm-1" class="quarto-xref">Section&nbsp;1.5.2</a> where we evaluate the frequencies with a linear regression model.</p>
+<p>to first gather an insight, yet with simple descriptive stats comparing the raw frequencies of gpt-preferred lemmas in pre- and post-gemini onset we find that in the target corpus the occurences of these lemma increase, only by small amount (see <a href="#tbl-s.df" class="quarto-xref">Table&nbsp;1</a>) and hard to visualise (see <a href="#fig-boxplot01" class="quarto-xref">Figure&nbsp;3</a>). if these findings become relevant, we’ll see in <a href="#sec-lm-1" class="quarto-xref">Section&nbsp;1.5.3</a> where we evaluate the frequencies with a linear regression model.</p>
 <div class="cell">
 <div id="tbl-s.df" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -353,15 +354,15 @@ Table&nbsp;1: GPT lemma frequencies (table) over target. (freq / Mtoken)
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">human</td>
-<td style="text-align: right;">0.4028</td>
+<td style="text-align: right;">0.3708</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">post</td>
-<td style="text-align: right;">0.4287</td>
+<td style="text-align: right;">0.3890</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">DIFF:</td>
-<td style="text-align: right;">0.0259</td>
+<td style="text-align: right;">0.0182</td>
 </tr>
 </tbody>
 </table>
@@ -385,9 +386,12 @@ Figure&nbsp;3: GPT lemma frequencies (boxplot) over target. (freq / Mtoken)
 </div>
 </div>
 </section>
-<section id="sec-lm-1" class="level3" data-number="1.5.2">
-<h3 data-number="1.5.2" class="anchored" data-anchor-id="sec-lm-1"><span class="header-section-number">1.5.2</span> linear regression</h3>
-<p>to prove descriptive results, we compute the stability of the frequency variance for target and reference corpus with a linear regression model using R’s lme4::lmer() function, cf. <span class="citation" data-cites="bates_fitting_2015">Bates et al. (<a href="#ref-bates_fitting_2015" role="doc-biblioref">2015</a>)</span>. coefficents are printed below, where frequency are the relative lemma frequencies over corpus; target defines reference resp. target corpus[post-gpt] (human/post) and in.gpt as numerical variable representing the gpt-score of the corresponding lemma i.e.&nbsp;wether it scores high (positive values) or low (negative values) in terms of being preferredly used by the chat agent.</p>
+<section id="responsible-lemmata" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="responsible-lemmata"><span class="header-section-number">1.5.2</span> responsible lemmata</h3>
+</section>
+<section id="sec-lm-1" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="sec-lm-1"><span class="header-section-number">1.5.3</span> linear regression</h3>
+<p>to prove descriptive results, we compute the stability of the frequency increase for target- vs.&nbsp;reference corpus with a linear regression model using R’s lme4::lmer() function, cf. <span class="citation" data-cites="bates_fitting_2015">Bates et al. (<a href="#ref-bates_fitting_2015" role="doc-biblioref">2015</a>)</span>. coefficents are printed below, where frequency are the relative lemma frequencies over corpus; target defines reference resp. target corpus[post-gpt] (human/post) and in.gpt as numerical variable representing the gpt-score of the corresponding lemma i.e.&nbsp;wether it scores high (positive values) or low (negative values) in terms of being preferredly used by the chat agent.</p>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: Matrix</code></pre>
@@ -407,8 +411,8 @@ Attaching package: 'lmerTest'</code></pre>
     step</code></pre>
 </div>
 </div>
-<section id="basic-lm" class="level4" data-number="1.5.2.1">
-<h4 data-number="1.5.2.1" class="anchored" data-anchor-id="basic-lm"><span class="header-section-number">1.5.2.1</span> basic (lm)</h4>
+<section id="basic-lm" class="level4" data-number="1.5.3.1">
+<h4 data-number="1.5.3.1" class="anchored" data-anchor-id="basic-lm"><span class="header-section-number">1.5.3.1</span> basic (lm)</h4>
 <p>formula: <code>frequency.relative ~ target * in.gpt</code></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -417,30 +421,30 @@ Call:
 lm(formula = f.rel ~ target * in.gp, data = lmdf.c)
 
 Residuals:
-    Min      1Q  Median      3Q     Max 
- -409.3    -9.9    -9.8    -7.8 15521.0 
+     Min       1Q   Median       3Q      Max 
+-0.04285 -0.00099 -0.00099 -0.00077  1.57754 
 
 Coefficients:
-                  Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)       10.52309    0.58950  17.851  &lt; 2e-16 ***
-targetall          0.06232    0.83365   0.075   0.9404    
-targetgpt        632.30872   14.50242  43.600  &lt; 2e-16 ***
-targetpost         0.95434    0.85908   1.111   0.2666    
-in.gp             26.79998    0.75162  35.656  &lt; 2e-16 ***
-targetall:in.gp   -2.30237    1.03887  -2.216   0.0267 *  
-targetgpt:in.gp  -24.86712    2.60445  -9.548  &lt; 2e-16 ***
-targetpost:in.gp   4.24178    1.07704   3.938 8.21e-05 ***
+                   Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       1.061e-03  5.421e-05  19.570  &lt; 2e-16 ***
+targetall         5.864e-06  7.666e-05   0.077   0.9390    
+targetgpt         6.128e-02  1.370e-03  44.733  &lt; 2e-16 ***
+targetpost        9.944e-05  7.899e-05   1.259   0.2081    
+in.gp             2.535e-03  6.791e-05  37.333  &lt; 2e-16 ***
+targetall:in.gp  -2.157e-04  9.387e-05  -2.298   0.0215 *  
+targetgpt:in.gp  -1.922e-03  2.404e-04  -7.996 1.30e-15 ***
+targetpost:in.gp  3.859e-04  9.731e-05   3.965 7.33e-05 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 162 on 223217 degrees of freedom
-Multiple R-squared:  0.1106,    Adjusted R-squared:  0.1106 
-F-statistic:  3967 on 7 and 223217 DF,  p-value: &lt; 2.2e-16</code></pre>
+Residual standard error: 0.0149 on 223173 degrees of freedom
+Multiple R-squared:  0.1278,    Adjusted R-squared:  0.1278 
+F-statistic:  4672 on 7 and 223173 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-<section id="mixed-effects-model-lmer" class="level4" data-number="1.5.2.2">
-<h4 data-number="1.5.2.2" class="anchored" data-anchor-id="mixed-effects-model-lmer"><span class="header-section-number">1.5.2.2</span> mixed effects model (lmer)</h4>
+<section id="mixed-effects-model-lmer" class="level4" data-number="1.5.3.2">
+<h4 data-number="1.5.3.2" class="anchored" data-anchor-id="mixed-effects-model-lmer"><span class="header-section-number">1.5.3.2</span> mixed effects model (lmer)</h4>
 <p>formula: <code>frequency.relative ~ target * in.gpt +(1|lemma)</code></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -449,55 +453,55 @@ lmerModLmerTest]
 Formula: f.rel ~ target * in.gp + (1 | lemma)
    Data: lmdf.c
 
-REML criterion at convergence: 2825867
+REML criterion at convergence: -1319734
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--60.813  -0.028  -0.026  -0.016 105.684 
+-70.063  -0.031  -0.028  -0.017 115.436 
 
 Random effects:
- Groups   Name        Variance Std.Dev.
- lemma    (Intercept) 10509    102.5   
- Residual             11031    105.0   
-Number of obs: 223225, groups:  lemma, 110404
+ Groups   Name        Variance  Std.Dev.
+ lemma    (Intercept) 8.870e-05 0.009418
+ Residual             9.543e-05 0.009769
+Number of obs: 223181, groups:  lemma, 110393
 
 Fixed effects:
                    Estimate Std. Error         df t value Pr(&gt;|t|)    
-(Intercept)       9.103e+00  5.182e-01  2.099e+05  17.568  &lt; 2e-16 ***
-targetall        -6.137e-02  5.403e-01  1.449e+05  -0.114   0.9096    
-targetgpt        -2.801e+02  1.063e+01  1.671e+05 -26.352  &lt; 2e-16 ***
-targetpost       -4.431e-01  6.366e-01  1.935e+05  -0.696   0.4864    
-in.gp             2.329e+01  6.705e-01  1.987e+05  34.738  &lt; 2e-16 ***
-targetall:in.gp   1.435e+00  6.783e-01  1.465e+05   2.116   0.0344 *  
-targetgpt:in.gp   1.268e+02  1.897e+00  1.666e+05  66.827  &lt; 2e-16 ***
-targetpost:in.gp  3.098e+00  7.051e-01  1.471e+05   4.393 1.12e-05 ***
+(Intercept)       9.193e-04  4.795e-05  2.101e+05  19.171  &lt; 2e-16 ***
+targetall        -5.765e-06  5.026e-05  1.447e+05  -0.115   0.9087    
+targetgpt        -1.781e-02  1.015e-03  1.676e+05 -17.535  &lt; 2e-16 ***
+targetpost       -3.930e-05  5.911e-05  1.937e+05  -0.665   0.5061    
+in.gp             2.216e-03  6.094e-05  1.992e+05  36.359  &lt; 2e-16 ***
+targetall:in.gp   1.262e-04  6.200e-05  1.463e+05   2.035   0.0419 *  
+targetgpt:in.gp   1.096e-02  1.772e-04  1.672e+05  61.847  &lt; 2e-16 ***
+targetpost:in.gp  2.781e-04  6.444e-05  1.469e+05   4.315  1.6e-05 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Correlation of Fixed Effects:
             (Intr) trgtll trgtgp trgtps in.gp  trgtl:. trgtg:.
-targetall   -0.521                                            
-targetgpt   -0.029  0.027                                     
-targetpost  -0.583  0.424  0.027                              
-in.gp       -0.117  0.062  0.034  0.069                       
-trgtll:n.gp  0.064 -0.120 -0.033 -0.052 -0.537                
-trgtgpt:n.g  0.025 -0.023 -0.935 -0.024 -0.220  0.218         
-trgtpst:n.g  0.081 -0.059 -0.003 -0.140 -0.509  0.501   0.179 </code></pre>
+targetall   -0.524                                            
+targetgpt   -0.028  0.026                                     
+targetpost  -0.585  0.425  0.027                              
+in.gp       -0.118  0.063  0.034  0.070                       
+trgtll:n.gp  0.065 -0.121 -0.034 -0.053 -0.540                
+trgtgpt:n.g  0.025 -0.023 -0.938 -0.023 -0.218  0.214         
+trgtpst:n.g  0.082 -0.059 -0.003 -0.140 -0.512  0.501   0.175 </code></pre>
 </div>
 </div>
 </section>
-<section id="anova-of-mixed-effects-model" class="level4" data-number="1.5.2.3">
-<h4 data-number="1.5.2.3" class="anchored" data-anchor-id="anova-of-mixed-effects-model"><span class="header-section-number">1.5.2.3</span> anova of mixed effects model</h4>
+<section id="anova-of-mixed-effects-model" class="level4" data-number="1.5.3.3">
+<h4 data-number="1.5.3.3" class="anchored" data-anchor-id="anova-of-mixed-effects-model"><span class="header-section-number">1.5.3.3</span> anova of mixed effects model</h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
 Response: f.rel
-                 Df     Sum Sq   Mean Sq  F value    Pr(&gt;F)    
-target            3  622635042 207545014 7903.933 &lt; 2.2e-16 ***
-in.gp             1  102891443 102891443 3918.413 &lt; 2.2e-16 ***
-target:in.gp      3    3667275   1222425   46.554 &lt; 2.2e-16 ***
-Residuals    223217 5861332083     26258                       
+                 Df Sum Sq Mean Sq  F value    Pr(&gt;F)    
+target            3  6.274 2.09120 9421.203 &lt; 2.2e-16 ***
+in.gp             1  0.961 0.96062 4327.761 &lt; 2.2e-16 ***
+target:in.gp      3  0.025 0.00822   37.038 &lt; 2.2e-16 ***
+Residuals    223173 49.537 0.00022                       
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
