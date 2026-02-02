@@ -211,6 +211,7 @@ div.csl-indent {
   <li><a href="#sec-lm-1" id="toc-sec-lm-1" class="nav-link" data-scroll-target="#sec-lm-1"><span class="header-section-number">1.5.3</span> linear regression</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">2</span> references</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="gemini.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -390,7 +391,12 @@ Figure&nbsp;3: GPT lemma frequencies (boxplot) over target. (freq / vH)
 </section>
 <section id="responsible-lemmata" class="level3" data-number="1.5.2">
 <h3 data-number="1.5.2" class="anchored" data-anchor-id="responsible-lemmata"><span class="header-section-number">1.5.2</span> responsible lemmata</h3>
-<p>selection of first 20 lemma that are responsible for the increase of frequency in general</p>
+<p>selection of first 20 lemma that are responsible for the increase of frequency in general.</p>
+<blockquote class="blockquote">
+<p>this list is still in progress since bit complicated to sync descriptive lemma list with the linear model list derived, which looks more realistic for a gpt output but with lot of rubbish in it due to mislemmatization.</p>
+</blockquote>
+<section id="lemma-descriptive-output" class="level4" data-number="1.5.2.1">
+<h4 data-number="1.5.2.1" class="anchored" data-anchor-id="lemma-descriptive-output"><span class="header-section-number">1.5.2.1</span> lemma descriptive output</h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] müssen            deutschland       menschen          liebe            
@@ -401,6 +407,24 @@ Figure&nbsp;3: GPT lemma frequencies (boxplot) over target. (freq / vH)
 348 Levels: abgeordnete aktiv aktuell alice all alltag ... zusammenhalt</code></pre>
 </div>
 </div>
+</section>
+<section id="lemma-linear-model-output" class="level4" data-number="1.5.2.2">
+<h4 data-number="1.5.2.2" class="anchored" data-anchor-id="lemma-linear-model-output"><span class="header-section-number">1.5.2.2</span> lemma linear model output</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "abschlussrede"             "adherehen"                
+ [3] "constraints"               "designed"                 
+ [5] "engagehen"                 "ganztagsbetreuungsplätzen"
+ [7] "geburtstagskinder"         "gegenliebe"               
+ [9] "here's"                    "krämerladen"              
+[11] "mammutsitzung"             "meetehen"                 
+[13] "mitgemischen"              "parlamentariers"          
+[15] "parlamentspartei"          "rumgeschrauben"           
+[17] "schlüsselwörter"           "specific"                 
+[19] "summary"                   "tailored"                 </code></pre>
+</div>
+</div>
+</section>
 </section>
 <section id="sec-lm-1" class="level3" data-number="1.5.3">
 <h3 data-number="1.5.3" class="anchored" data-anchor-id="sec-lm-1"><span class="header-section-number">1.5.3</span> linear regression</h3>
@@ -490,16 +514,19 @@ trgtpst:n.g  0.082 -0.059 -0.003 -0.140 -0.512  0.501   0.175 </code></pre>
 <p>in the fixed effects correlation output of the lmer() model we see that the gpt score increases the target corpus frequency for lemma by <code>0.0695357</code>.</p>
 </section>
 <section id="anova-of-mixed-effects-model" class="level4" data-number="1.5.3.4">
+<h4 data-number="1.5.3.4" class="anchored" data-anchor-id="anova-of-mixed-effects-model"><span class="header-section-number">1.5.3.4</span> anova of mixed effects model</h4>
+</section>
+</section>
+</section>
+</section>
+<section id="references" class="level1" data-number="2">
 
 
 
 
 </section>
-</section>
-</section>
-</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">1.5.3.4 anova of mixed effects model</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">2 references</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-bates_fitting_2015" class="csl-entry" role="listitem">
 Bates, Douglas, Martin Mächler, Ben Bolker, and Steve Walker. 2015. <span>“Fitting <span>Linear</span> <span>Mixed</span>-<span>Effects</span> <span>Models</span> <span>Using</span> Lme4.”</span> <em>Journal of Statistical Software</em> 67 (1): 1–48. <a href="https://doi.org/10.18637/jss.v067.i01">https://doi.org/10.18637/jss.v067.i01</a>.
 </div>
