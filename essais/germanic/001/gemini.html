@@ -241,14 +241,15 @@ div.csl-indent {
 <section id="the-einleitung" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="the-einleitung"><span class="header-section-number">1.1</span> the einleitung</h2>
 <p>inspired by the paper <em>Empirical evidence of Large Language Model’s influence on human spoken communication <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span></em>, who indeed found (evidence) for GPT influenced human language after the introduction of chatGPT we tried to replicate the pipeline of building an AI vocabulary (gpt preferred lemmata) and compare frequencies of gpt-typical words across pre- and post chatGPT human language corpora. The first draft essai proves their hypothesis that LLM generated language manifests within human natural language.</p>
+<p>the embedding of that investigation into the context of the class subject <em>germanische sprachen im vergleich</em> is still due; first idea is the projection of the <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> findings onto a german language corpus and see if these are still valid although that may rather be a pragmatics investigation.</p>
 </section>
 <section id="preliminary" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="preliminary"><span class="header-section-number">1.2</span> preliminary</h2>
-<p>Our findings are still limited to a yet very small corpus of texts after the introduction of the google gemini chat agent to the public in 03/2024. In contrast to <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> and out of resources reasons we decided for gemini as basis for our AI generated vocabulary and for another text corpus (german bundestag plenary protocols, <span class="citation" data-cites="dip_dip_2026">DIP (<a href="#ref-dip_dip_2026" role="doc-biblioref">2026</a>)</span>) than youtube/podcast audio for the same reasons. That limits our post-AI corpus to a small timeframe between 03/2024 up to now. With expanding that corpus to a wider spectrum with including other sources we may harden our results.</p>
+<p>Our findings are still limited to a yet very small corpus of texts after the introduction of the google gemini chat agent to the german public in 03/2024, cf. <span class="citation" data-cites="wikipedia_google_2026">Wikipedia and Google (<a href="#ref-wikipedia_google_2026" role="doc-biblioref">2026</a>)</span>. In contrast to <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> and out of resources considerations we decided for gemini as basis for our AI generated vocabulary and for another text corpus (german bundestag plenary protocols, <span class="citation" data-cites="dip_dip_2026">DIP (<a href="#ref-dip_dip_2026" role="doc-biblioref">2026</a>)</span>) than youtube/podcast audio for the same reasons. That limits our post-AI corpus to a small timeframe between 03/2024 up to now. With expanding that corpus to a wider spectrum with including other sources we may harden our results.</p>
 </section>
 <section id="hypothesis" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="hypothesis"><span class="header-section-number">1.3</span> hypothesis</h2>
-<p>following <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> we assumed that the consuming of LLM generated language influences the human production of language such that vocabulary typical for LLM output will be found with higher frequencies in human language corpora dating after chat agents introduction.</p>
+<p>following <span class="citation" data-cites="yakura_empirical_2025">Yakura et al. (<a href="#ref-yakura_empirical_2025" role="doc-biblioref">2025</a>)</span> we assumed that the consuming of LLM generated language influences the human production of language such that vocabulary typical for LLM output will be found with higher frequencies in human language corpora dating after chat agent introduction.</p>
 <section id="next-methods" class="level3" data-number="1.3.1">
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="next-methods"><span class="header-section-number">1.3.1</span> next methods</h3>
 </section>
@@ -257,7 +258,8 @@ div.csl-indent {
 <h2 data-number="1.4" class="anchored" data-anchor-id="methods"><span class="header-section-number">1.4</span> methods</h2>
 <section id="snc" class="level3" data-number="1.4.1">
 <h3 data-number="1.4.1" class="anchored" data-anchor-id="snc"><span class="header-section-number">1.4.1</span> snc</h3>
-<p>16062.1.2</p>
+<p>16062.1.2.16063.1</p>
+<p>please cf. <span class="citation" data-cites="schwarz_this_2026">Schwarz (<a href="#ref-schwarz_this_2026" role="doc-biblioref">2026</a>)</span> for the corpus building and evaluation script (still messy.)</p>
 </section>
 <section id="data" class="level3" data-number="1.4.2">
 <h3 data-number="1.4.2" class="anchored" data-anchor-id="data"><span class="header-section-number">1.4.2</span> data</h3>
@@ -484,9 +486,8 @@ trgtpst:n.g  0.082 -0.059 -0.003 -0.140 -0.512  0.501   0.175 </code></pre>
 </section>
 <section id="helper-interpretation-to-be-tested" class="level4" data-number="1.5.3.3">
 <h4 data-number="1.5.3.3" class="anchored" data-anchor-id="helper-interpretation-to-be-tested"><span class="header-section-number">1.5.3.3</span> helper interpretation, to be tested</h4>
-<p>the coefficients interesting for us are the in.gp and targetpost:in.gp estimates. here we test the association between the gpt score of a lemma and its estimated frequency and its showing that a general increase of frequency is estimated if the score rises and that for the post-gpt corpus that increase is significant (and not random in data).</p>
-<p>in the correlation output of the lmer() model we see that the gpt score increases the target corpus frequency for lemma by:</p>
-<p><code>0.0695357</code></p>
+<p>the coefficients interesting for us are the in.gp and targetpost:in.gp estimates. here we test the association between the gpt score of a lemma and its estimated frequency and its showing that a general increase of frequency is estimated if the score rises and that for the post-gpt corpus that increase is small but yet significant (and not random in data).</p>
+<p>in the correlation output of the lmer() model we see that the gpt score increases the target corpus frequency for lemma by <code>0.0695357</code>.</p>
 </section>
 <section id="anova-of-mixed-effects-model" class="level4" data-number="1.5.3.4">
 
@@ -504,6 +505,12 @@ Bates, Douglas, Martin Mächler, Ben Bolker, and Steve Walker. 2015. <span>“Fi
 </div>
 <div id="ref-dip_dip_2026" class="csl-entry" role="listitem">
 DIP. 2026. <span>“<span>DIP</span> - <span>Bundestagsprotokolle</span>.”</span> Docs. <em>DIP - API</em>. Berlin. <a href="https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content">https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content</a>.
+</div>
+<div id="ref-schwarz_this_2026" class="csl-entry" role="listitem">
+Schwarz, St. 2026. <span>“This Papers Evaluation Script.”</span> <em>GitHub/Esteeschwarz</em>. Berlin. <a href="https://github.com/esteeschwarz/SPUND-LX">https://github.com/esteeschwarz/SPUND-LX</a>.
+</div>
+<div id="ref-wikipedia_google_2026" class="csl-entry" role="listitem">
+Wikipedia, and Google. 2026. <span>“Google <span>Gemini</span>.”</span> <em>Wikipedia</em>. <a href="https://de.wikipedia.org/w/index.php?title=Google_Gemini&amp;oldid=263426206">https://de.wikipedia.org/w/index.php?title=Google_Gemini&amp;oldid=263426206</a>.
 </div>
 <div id="ref-yakura_empirical_2025" class="csl-entry" role="listitem">
 Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, Ignacio Serna, Prateek Gupta, Ivan Soraperra, and Iyad Rahwan. 2025. <span>“Empirical Evidence of <span>Large</span> <span>Language</span> <span>Model</span>’s Influence on Human Spoken Communication.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2409.01754">https://doi.org/10.48550/arXiv.2409.01754</a>.
