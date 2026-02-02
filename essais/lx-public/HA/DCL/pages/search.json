@@ -1,80 +1,45 @@
 [
   {
-    "objectID": "snc.html",
-    "href": "snc.html",
-    "title": "SNC",
+    "objectID": "page2.html",
+    "href": "page2.html",
+    "title": "draft paper",
     "section": "",
-    "text": "q workflow, didnt find source html dir, wt target\nfetch bib entries from zotero, including notes, and display"
+    "text": "…\n\n\n\nsince we do not really get on information concerning the actual workflows of the content creation to the DCL pages, we will try to propose a more general pipeline to that based on our experiences with publishing. we will introduce possible alternatives to the actual (assumed) workflow and setup and give short insight into what is possible and under which circumstances.\n\n\n\ngenerally the momentary website seems not to be updated very much and although providing a friendly user experience lacks of content that would be integrating the introduced projects development i.e. you are presented a few projects related to linguistics but if you want to explore these deeper or keep updated with research results you realize that its often not more than a teaser with no follow up.\none reason for that as we assume might be a complicated workflow of delivering content or a workflow which does not allow project members to actively participate in content creation besides delivering finalised documents which then are integrated. say it appears to be a rather static process of content creation, not really adapted to the fluidity of academic research processes which tend to be in a progress-state for long time until results are published.\nbut namely the processs and progress of a project is what interests people who dive into scientific research. in times of fluid knowledge being key to understanding the world around one individum, static knowledge production (printed books in contrast to open source datasets and complex interfaces for data exploring or visualising or just uptodate papers and presentations) is one great barrier to open research to the public. the formats most frequently consumed are short knowledge bites in a nice environment. that doesnt mean researchers should not publish seriously, but - if using websites as media at all in times of youtube, tiktok etc. science channels - these websites do have to provide a minimum impression of being uptodate.\n\n\n\nso what is it about a website that gives the reader the impression he is well informed with science news from today? surely a timeline that has not ended a year ago. as blog entries use to display the post date of the contribution mostly automatically, the blog format (which doesnt have to wake reminiscences to a diary at all) seems to be a good choice. normally the content of such a blog based website is fed from a server database to where content is posted via a webclient (web based user interface with more or less convenient editing and layout functionality). that approach affords that there is existing an admin level to the website that grants access to users and maintains the overall functionality of databases and backend (the server side of the blog). an often used and easy customizable backend for blog sites is wordpress but there are more open source and paid alternatives; the FU backend used for the current DCL sites seems to be provided by justrelate.com, a closed enterprise solution. And thats why…\n\n\n\nthe usually well known windows philosophy boils down to “security by obscurity”. well known in contrast to all elaborate approaches by the other providers of operating systems. the same may be said about content management systems which may be secure of being just not open sourced, and the same may be said about website content in general which can be transparent or disclosed."
   },
   {
-    "objectID": "snc.html#section",
-    "href": "snc.html#section",
-    "title": "SNC",
+    "objectID": "page2.html#abstract",
+    "href": "page2.html#abstract",
+    "title": "draft paper",
     "section": "",
-    "text": "q workflow, didnt find source html dir, wt target\nfetch bib entries from zotero, including notes, and display"
+    "text": "…"
   },
   {
-    "objectID": "snc.html#section-2",
-    "href": "snc.html#section-2",
-    "title": "SNC",
-    "section": "16013.",
-    "text": "16013.\n\n1\n\ndclx workflow push _site to userpage"
-  },
-  {
-    "objectID": "workflow.html",
-    "href": "workflow.html",
-    "title": "workflow",
+    "objectID": "page2.html#preliminary",
+    "href": "page2.html#preliminary",
+    "title": "draft paper",
     "section": "",
-    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\ngraph TD\n\nCR[create content] --&gt;\ndcl[in blog repo]\nCR--&gt;wd[in working repo]--&gt;ml\ndcl--&gt;se[single post]\ndcl--&gt;ml[multilayer]\nse--&gt;fm[content format markdown, no python/R embedding or complex sites. restricted to jekyll render]\nml--&gt;fmm[content may include complex page built from RMarkdown, Quarto or Python notebooks or any other framework]\no2[option 2]\n\n\n\n\nFigure 1: “publishing process options diagram”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]\nwd--&gt;p2\ns1--&gt;wd\n\n\n\n\nFigure 2: “publishing process setup status quo”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT: quarto page]--&gt;\ndcl[jekyll site: dcl: essais folder]\nwd[working dir: GIT]--&gt;wd2[spund-lx/lx-public/HA/DCL/pages]--&gt;level1[complete quarto site folder including .qmd and quarto.yml]\nlevel1--&gt;ch[changes]--&gt;r1[trigger rendering process]--&gt;\ngit1[render via github actions]--&gt;p2\nr1--&gt;srv1[render on target server]--&gt;updcl[update DCL essais]--&gt;p2\ndcl--&gt;p1[post entry]--&gt;l1[link to 2nd layer: project page]--&gt;p2\np2[2nd layer: project display]\nch--&gt;rloc[docs rendered locally]--&gt;p2\nr1--&gt;p2\nwd--&gt;csv[.csv metadata table of essais]--&gt;ch--&gt;chk1[is the project on DCL]--&gt;pdcl1[yes]\ns1--&gt;wd\npdcl1--&gt;r1\npdcl1--&gt;rloc\nchk1--&gt;pdcl0[no]--&gt;crp[create project page]--&gt;crman[manually]\ncrp--&gt;crcsv[on base of metadata.csv]--&gt;csv--&gt;pub1[publish]--&gt;p2\n\n\n\n\nFigure 3: “publishing process forward”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ncrcsv[create .csv metadata table]--&gt;\nitem[new project item]\nwf[update render git workflow]--&gt;wf1[to fire on changes in]--&gt;csv[.csv metadata table]\ncrcsv--&gt;csv--&gt;item--&gt;inc[includes]--&gt;meta--&gt;m1[render dir relative to working dir]\nmeta--&gt;m2[tags]\nmeta--&gt;m3[cats]\n\n\n\n\n\nFigure 4: “publishing process next todo”\n\n\n\n\n\n\n\n\n\n\n\nthere’s premises we have to clear off before developing to great extend\n\nif it will be (and thats not sure) possible at all to use github as storage and render platform that would deploy the pages to an FU server where the DCL page is hosted. there can be administrative concerns about providing or hosting the backend at github with everybody able to read the source code of the site. this should generally be no issue because there doesnt have to be stored any material exceeding what is displayed as html anyway thus accessible, but coming from this,\n\n\n\n\n\n\n\ngraph TD\n    OP[options to avoid the github hosting service are:]\n    TO[to render the pages completely on the contribuer device and deploy only html rendered pages to the restricted FU server -userpage level with no administrative user at the project level-]\n    OP --&gt; TO\n    AF[affords the contribuer to install render services on device]\n    TO --&gt; AF\n    CO[contribuer only pushes pages to site]\n    TO --&gt; CO\n    ED[edited source stays on device]\n    TO --&gt; ED\n    TO2[to use a page hosting server -or userpage level- which allows for admin tasks like installing basic render services -which here would be jekyll, ruby and quarto- and to maintaining these services]\n    OP --&gt; TO2\n    CO2[contribuer needs to edit and push the markdown source which is rendered on the FU server apres]\n    TO2 --&gt; CO2\n    AF2[affords admin poition for maintaing the packages server side]\n    TO2 --&gt; AF2\n\n\n\n\n\nFigure 5: contribute options"
+    "text": "since we do not really get on information concerning the actual workflows of the content creation to the DCL pages, we will try to propose a more general pipeline to that based on our experiences with publishing. we will introduce possible alternatives to the actual (assumed) workflow and setup and give short insight into what is possible and under which circumstances."
   },
   {
-    "objectID": "workflow.html#section",
-    "href": "workflow.html#section",
-    "title": "workflow",
+    "objectID": "page2.html#status-quo",
+    "href": "page2.html#status-quo",
+    "title": "draft paper",
     "section": "",
-    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\ngraph TD\n\nCR[create content] --&gt;\ndcl[in blog repo]\nCR--&gt;wd[in working repo]--&gt;ml\ndcl--&gt;se[single post]\ndcl--&gt;ml[multilayer]\nse--&gt;fm[content format markdown, no python/R embedding or complex sites. restricted to jekyll render]\nml--&gt;fmm[content may include complex page built from RMarkdown, Quarto or Python notebooks or any other framework]\no2[option 2]\n\n\n\n\nFigure 1: “publishing process options diagram”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]\nwd--&gt;p2\ns1--&gt;wd\n\n\n\n\nFigure 2: “publishing process setup status quo”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT: quarto page]--&gt;\ndcl[jekyll site: dcl: essais folder]\nwd[working dir: GIT]--&gt;wd2[spund-lx/lx-public/HA/DCL/pages]--&gt;level1[complete quarto site folder including .qmd and quarto.yml]\nlevel1--&gt;ch[changes]--&gt;r1[trigger rendering process]--&gt;\ngit1[render via github actions]--&gt;p2\nr1--&gt;srv1[render on target server]--&gt;updcl[update DCL essais]--&gt;p2\ndcl--&gt;p1[post entry]--&gt;l1[link to 2nd layer: project page]--&gt;p2\np2[2nd layer: project display]\nch--&gt;rloc[docs rendered locally]--&gt;p2\nr1--&gt;p2\nwd--&gt;csv[.csv metadata table of essais]--&gt;ch--&gt;chk1[is the project on DCL]--&gt;pdcl1[yes]\ns1--&gt;wd\npdcl1--&gt;r1\npdcl1--&gt;rloc\nchk1--&gt;pdcl0[no]--&gt;crp[create project page]--&gt;crman[manually]\ncrp--&gt;crcsv[on base of metadata.csv]--&gt;csv--&gt;pub1[publish]--&gt;p2\n\n\n\n\nFigure 3: “publishing process forward”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ncrcsv[create .csv metadata table]--&gt;\nitem[new project item]\nwf[update render git workflow]--&gt;wf1[to fire on changes in]--&gt;csv[.csv metadata table]\ncrcsv--&gt;csv--&gt;item--&gt;inc[includes]--&gt;meta--&gt;m1[render dir relative to working dir]\nmeta--&gt;m2[tags]\nmeta--&gt;m3[cats]\n\n\n\n\n\nFigure 4: “publishing process next todo”\n\n\n\n\n\n\n\n\n\n\n\nthere’s premises we have to clear off before developing to great extend\n\nif it will be (and thats not sure) possible at all to use github as storage and render platform that would deploy the pages to an FU server where the DCL page is hosted. there can be administrative concerns about providing or hosting the backend at github with everybody able to read the source code of the site. this should generally be no issue because there doesnt have to be stored any material exceeding what is displayed as html anyway thus accessible, but coming from this,\n\n\n\n\n\n\n\ngraph TD\n    OP[options to avoid the github hosting service are:]\n    TO[to render the pages completely on the contribuer device and deploy only html rendered pages to the restricted FU server -userpage level with no administrative user at the project level-]\n    OP --&gt; TO\n    AF[affords the contribuer to install render services on device]\n    TO --&gt; AF\n    CO[contribuer only pushes pages to site]\n    TO --&gt; CO\n    ED[edited source stays on device]\n    TO --&gt; ED\n    TO2[to use a page hosting server -or userpage level- which allows for admin tasks like installing basic render services -which here would be jekyll, ruby and quarto- and to maintaining these services]\n    OP --&gt; TO2\n    CO2[contribuer needs to edit and push the markdown source which is rendered on the FU server apres]\n    TO2 --&gt; CO2\n    AF2[affords admin poition for maintaing the packages server side]\n    TO2 --&gt; AF2\n\n\n\n\n\nFigure 5: contribute options"
+    "text": "generally the momentary website seems not to be updated very much and although providing a friendly user experience lacks of content that would be integrating the introduced projects development i.e. you are presented a few projects related to linguistics but if you want to explore these deeper or keep updated with research results you realize that its often not more than a teaser with no follow up.\none reason for that as we assume might be a complicated workflow of delivering content or a workflow which does not allow project members to actively participate in content creation besides delivering finalised documents which then are integrated. say it appears to be a rather static process of content creation, not really adapted to the fluidity of academic research processes which tend to be in a progress-state for long time until results are published.\nbut namely the processs and progress of a project is what interests people who dive into scientific research. in times of fluid knowledge being key to understanding the world around one individum, static knowledge production (printed books in contrast to open source datasets and complex interfaces for data exploring or visualising or just uptodate papers and presentations) is one great barrier to open research to the public. the formats most frequently consumed are short knowledge bites in a nice environment. that doesnt mean researchers should not publish seriously, but - if using websites as media at all in times of youtube, tiktok etc. science channels - these websites do have to provide a minimum impression of being uptodate."
   },
   {
-    "objectID": "mermaids.html",
-    "href": "mermaids.html",
-    "title": "mermaids",
+    "objectID": "page2.html#whats-the-news",
+    "href": "page2.html#whats-the-news",
+    "title": "draft paper",
     "section": "",
-    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[SETUP]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]"
+    "text": "so what is it about a website that gives the reader the impression he is well informed with science news from today? surely a timeline that has not ended a year ago. as blog entries use to display the post date of the contribution mostly automatically, the blog format (which doesnt have to wake reminiscences to a diary at all) seems to be a good choice. normally the content of such a blog based website is fed from a server database to where content is posted via a webclient (web based user interface with more or less convenient editing and layout functionality). that approach affords that there is existing an admin level to the website that grants access to users and maintains the overall functionality of databases and backend (the server side of the blog). an often used and easy customizable backend for blog sites is wordpress but there are more open source and paid alternatives; the FU backend used for the current DCL sites seems to be provided by justrelate.com, a closed enterprise solution. And thats why…"
   },
   {
-    "objectID": "mermaids.html#section",
-    "href": "mermaids.html#section",
-    "title": "mermaids",
+    "objectID": "page2.html#the-git-alternative",
+    "href": "page2.html#the-git-alternative",
+    "title": "draft paper",
     "section": "",
-    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[SETUP]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]"
-  },
-  {
-    "objectID": "index.html#preliminary-link-assembly",
-    "href": "index.html#preliminary-link-assembly",
-    "title": "bib embed head",
-    "section": "preliminary link assembly",
-    "text": "preliminary link assembly\n\n“Phlow/Feeling-Responsive: »Feeling Responsive« Is a Free Flexible Theme for Jekyll Built on Foundation Framework. You Can Use It for Your Company Site, as a Portfolio or as a Blog.” (n.d.)\n\nthe theme used in the latest version of my DCL site proposal. resembles of the original layout theme used for the FU pages, still lot simpler. the jekyll base allows for not always but possible adaptations i am horsing around with ce moment…\n\n“Chirpy” (2025)\n\n\na basic theme for the display styling of a jekyll page. well documented for starting a jekyll page.\n\n\n“Quarto” (2025)\n\n\na framework for rendering markdown to html or pdf\n\n\nwith complex built in capacities to include R or Python scripting.\n\n\n“Jekyll • Simple, Blog-Aware, Static Sites” (2025)\n\n\na framework to render markdown to html pages which then easily can be hosted on github or private server."
-  },
-  {
-    "objectID": "index.html#snc",
-    "href": "index.html#snc",
-    "title": "bib embed head",
-    "section": "snc",
-    "text": "snc\n\nno new\nworkflow in menu\n\n\n\n\nTable 1: publication in categories"
-  },
-  {
-    "objectID": "play.html",
-    "href": "play.html",
-    "title": "preliminary",
-    "section": "",
-    "text": "graph TD\n\nT[target group] --&gt;\nWH[who writes] --&gt;\nCP[with what capacities] --&gt;\n        TECH[technical]\n        CP --&gt; SC[scientifically]\n        CP--&gt;EFF[time effort]\nWH --&gt; PU[whats her use purpose of the center page] --&gt;\n        LP[landing page for individually set up project page] --&gt;\n        AB[with only project abstract]\n        --&gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]\n        LP--&gt;CPP[complete project presentation]--&gt;\n            IMP[needs to implement complex built paper?]--&gt;\n            STL[standard paper layout?]--&gt;\n              BU[built-in pdf export extra to online version --&gt; quarto, rmarkdown, python notebooks]\n        NOW--&gt;UI[user interaction needed?]--&gt;\n            BL[blog format]\n        NOW--&gt;META[number of metadata to be included and how displayed?]--&gt;\n         CSV[meta from .csv table, layout template to include preformatted display fields for metadata]\n    IMP --&gt; META"
-  },
-  {
-    "objectID": "play.html#snc",
-    "href": "play.html#snc",
-    "title": "preliminary",
-    "section": "",
-    "text": "graph TD\n\nT[target group] --&gt;\nWH[who writes] --&gt;\nCP[with what capacities] --&gt;\n        TECH[technical]\n        CP --&gt; SC[scientifically]\n        CP--&gt;EFF[time effort]\nWH --&gt; PU[whats her use purpose of the center page] --&gt;\n        LP[landing page for individually set up project page] --&gt;\n        AB[with only project abstract]\n        --&gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]\n        LP--&gt;CPP[complete project presentation]--&gt;\n            IMP[needs to implement complex built paper?]--&gt;\n            STL[standard paper layout?]--&gt;\n              BU[built-in pdf export extra to online version --&gt; quarto, rmarkdown, python notebooks]\n        NOW--&gt;UI[user interaction needed?]--&gt;\n            BL[blog format]\n        NOW--&gt;META[number of metadata to be included and how displayed?]--&gt;\n         CSV[meta from .csv table, layout template to include preformatted display fields for metadata]\n    IMP --&gt; META"
+    "text": "the usually well known windows philosophy boils down to “security by obscurity”. well known in contrast to all elaborate approaches by the other providers of operating systems. the same may be said about content management systems which may be secure of being just not open sourced, and the same may be said about website content in general which can be transparent or disclosed."
   },
   {
     "objectID": "survey.html",
@@ -117,5 +82,82 @@
     "title": "DCL status-quo questionary",
     "section": "survey NO",
     "text": "survey NO\nit was not possible for us to get responses to our survey."
+  },
+  {
+    "objectID": "play.html",
+    "href": "play.html",
+    "title": "preliminary",
+    "section": "",
+    "text": "graph TD\n\nT[target group] --&gt;\nWH[who writes] --&gt;\nCP[with what capacities] --&gt;\n        TECH[technical]\n        CP --&gt; SC[scientifically]\n        CP--&gt;EFF[time effort]\nWH --&gt; PU[whats her use purpose of the center page] --&gt;\n        LP[landing page for individually set up project page] --&gt;\n        AB[with only project abstract]\n        --&gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]\n        LP--&gt;CPP[complete project presentation]--&gt;\n            IMP[needs to implement complex built paper?]--&gt;\n            STL[standard paper layout?]--&gt;\n              BU[built-in pdf export extra to online version --&gt; quarto, rmarkdown, python notebooks]\n        NOW--&gt;UI[user interaction needed?]--&gt;\n            BL[blog format]\n        NOW--&gt;META[number of metadata to be included and how displayed?]--&gt;\n         CSV[meta from .csv table, layout template to include preformatted display fields for metadata]\n    IMP --&gt; META"
+  },
+  {
+    "objectID": "play.html#snc",
+    "href": "play.html#snc",
+    "title": "preliminary",
+    "section": "",
+    "text": "graph TD\n\nT[target group] --&gt;\nWH[who writes] --&gt;\nCP[with what capacities] --&gt;\n        TECH[technical]\n        CP --&gt; SC[scientifically]\n        CP--&gt;EFF[time effort]\nWH --&gt; PU[whats her use purpose of the center page] --&gt;\n        LP[landing page for individually set up project page] --&gt;\n        AB[with only project abstract]\n        --&gt; NOW[2-fold like now, with distinct project pages behind landingpage which could all be rendered differently individually, according to the framework used by the project maintainers and just needed to be pushed to main page]\n        LP--&gt;CPP[complete project presentation]--&gt;\n            IMP[needs to implement complex built paper?]--&gt;\n            STL[standard paper layout?]--&gt;\n              BU[built-in pdf export extra to online version --&gt; quarto, rmarkdown, python notebooks]\n        NOW--&gt;UI[user interaction needed?]--&gt;\n            BL[blog format]\n        NOW--&gt;META[number of metadata to be included and how displayed?]--&gt;\n         CSV[meta from .csv table, layout template to include preformatted display fields for metadata]\n    IMP --&gt; META"
+  },
+  {
+    "objectID": "index.html#preliminary-link-assembly",
+    "href": "index.html#preliminary-link-assembly",
+    "title": "bib embed head",
+    "section": "preliminary link assembly",
+    "text": "preliminary link assembly\n\n“Phlow/Feeling-Responsive: »Feeling Responsive« Is a Free Flexible Theme for Jekyll Built on Foundation Framework. You Can Use It for Your Company Site, as a Portfolio or as a Blog.” (n.d.)\n\nthe theme used in the latest version of my DCL site proposal. resembles of the original layout theme used for the FU pages, still lot simpler. the jekyll base allows for not always but possible adaptations i am horsing around with ce moment…\n\n“Chirpy” (2025)\n\n\na basic theme for the display styling of a jekyll page. well documented for starting a jekyll page.\n\n\n“Quarto” (2025)\n\n\na framework for rendering markdown to html or pdf\n\n\nwith complex built in capacities to include R or Python scripting.\n\n\n“Jekyll • Simple, Blog-Aware, Static Sites” (2025)\n\n\na framework to render markdown to html pages which then easily can be hosted on github or private server."
+  },
+  {
+    "objectID": "index.html#snc",
+    "href": "index.html#snc",
+    "title": "bib embed head",
+    "section": "snc",
+    "text": "snc\n\nno new\nworkflow in menu\n\n\n\n\nTable 1: publication in categories"
+  },
+  {
+    "objectID": "mermaids.html",
+    "href": "mermaids.html",
+    "title": "mermaids",
+    "section": "",
+    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[SETUP]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]"
+  },
+  {
+    "objectID": "mermaids.html#section",
+    "href": "mermaids.html#section",
+    "title": "mermaids",
+    "section": "",
+    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[SETUP]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]"
+  },
+  {
+    "objectID": "workflow.html",
+    "href": "workflow.html",
+    "title": "workflow",
+    "section": "",
+    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\ngraph TD\n\nCR[create content] --&gt;\ndcl[in blog repo]\nCR--&gt;wd[in working repo]--&gt;ml\ndcl--&gt;se[single post]\ndcl--&gt;ml[multilayer]\nse--&gt;fm[content format markdown, no python/R embedding or complex sites. restricted to jekyll render]\nml--&gt;fmm[content may include complex page built from RMarkdown, Quarto or Python notebooks or any other framework]\no2[option 2]\n\n\n\n\nFigure 1: “publishing process options diagram”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]\nwd--&gt;p2\ns1--&gt;wd\n\n\n\n\nFigure 2: “publishing process setup status quo”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT: quarto page]--&gt;\ndcl[jekyll site: dcl: essais folder]\nwd[working dir: GIT]--&gt;wd2[spund-lx/lx-public/HA/DCL/pages]--&gt;level1[complete quarto site folder including .qmd and quarto.yml]\nlevel1--&gt;ch[changes]--&gt;r1[trigger rendering process]--&gt;\ngit1[render via github actions]--&gt;p2\nr1--&gt;srv1[render on target server]--&gt;updcl[update DCL essais]--&gt;p2\ndcl--&gt;p1[post entry]--&gt;l1[link to 2nd layer: project page]--&gt;p2\np2[2nd layer: project display]\nch--&gt;rloc[docs rendered locally]--&gt;p2\nr1--&gt;p2\nwd--&gt;csv[.csv metadata table of essais]--&gt;ch--&gt;chk1[is the project on DCL]--&gt;pdcl1[yes]\ns1--&gt;wd\npdcl1--&gt;r1\npdcl1--&gt;rloc\nchk1--&gt;pdcl0[no]--&gt;crp[create project page]--&gt;crman[manually]\ncrp--&gt;crcsv[on base of metadata.csv]--&gt;csv--&gt;pub1[publish]--&gt;p2\n\n\n\n\nFigure 3: “publishing process forward”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ncrcsv[create .csv metadata table]--&gt;\nitem[new project item]\nwf[update render git workflow]--&gt;wf1[to fire on changes in]--&gt;csv[.csv metadata table]\ncrcsv--&gt;csv--&gt;item--&gt;inc[includes]--&gt;meta--&gt;m1[render dir relative to working dir]\nmeta--&gt;m2[tags]\nmeta--&gt;m3[cats]\n\n\n\n\n\nFigure 4: “publishing process next todo”\n\n\n\n\n\n\n\n\n\n\n\nthere’s premises we have to clear off before developing to great extend\n\nif it will be (and thats not sure) possible at all to use github as storage and render platform that would deploy the pages to an FU server where the DCL page is hosted. there can be administrative concerns about providing or hosting the backend at github with everybody able to read the source code of the site. this should generally be no issue because there doesnt have to be stored any material exceeding what is displayed as html anyway thus accessible, but coming from this,\n\n\n\n\n\n\n\ngraph TD\n    OP[options to avoid the github hosting service are:]\n    TO[to render the pages completely on the contribuer device and deploy only html rendered pages to the restricted FU server -userpage level with no administrative user at the project level-]\n    OP --&gt; TO\n    AF[affords the contribuer to install render services on device]\n    TO --&gt; AF\n    CO[contribuer only pushes pages to site]\n    TO --&gt; CO\n    ED[edited source stays on device]\n    TO --&gt; ED\n    TO2[to use a page hosting server -or userpage level- which allows for admin tasks like installing basic render services -which here would be jekyll, ruby and quarto- and to maintaining these services]\n    OP --&gt; TO2\n    CO2[contribuer needs to edit and push the markdown source which is rendered on the FU server apres]\n    TO2 --&gt; CO2\n    AF2[affords admin poition for maintaing the packages server side]\n    TO2 --&gt; AF2\n\n\n\n\n\nFigure 5: contribute options"
+  },
+  {
+    "objectID": "workflow.html#section",
+    "href": "workflow.html#section",
+    "title": "workflow",
+    "section": "",
+    "text": "ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.\n\n\n\n\n\n\n\n\ngraph TD\n\nCR[create content] --&gt;\ndcl[in blog repo]\nCR--&gt;wd[in working repo]--&gt;ml\ndcl--&gt;se[single post]\ndcl--&gt;ml[multilayer]\nse--&gt;fm[content format markdown, no python/R embedding or complex sites. restricted to jekyll render]\nml--&gt;fmm[content may include complex page built from RMarkdown, Quarto or Python notebooks or any other framework]\no2[option 2]\n\n\n\n\nFigure 1: “publishing process options diagram”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT]--&gt;\ndcl[jekyll site: dcl]\nwd[working dir: spund-lx]\ndcl--&gt;p1[post display]--&gt;\np2[2nd layer: project display]\nwd--&gt;p2\ns1--&gt;wd\n\n\n\n\nFigure 2: “publishing process setup status quo”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ns1[CONTENT: quarto page]--&gt;\ndcl[jekyll site: dcl: essais folder]\nwd[working dir: GIT]--&gt;wd2[spund-lx/lx-public/HA/DCL/pages]--&gt;level1[complete quarto site folder including .qmd and quarto.yml]\nlevel1--&gt;ch[changes]--&gt;r1[trigger rendering process]--&gt;\ngit1[render via github actions]--&gt;p2\nr1--&gt;srv1[render on target server]--&gt;updcl[update DCL essais]--&gt;p2\ndcl--&gt;p1[post entry]--&gt;l1[link to 2nd layer: project page]--&gt;p2\np2[2nd layer: project display]\nch--&gt;rloc[docs rendered locally]--&gt;p2\nr1--&gt;p2\nwd--&gt;csv[.csv metadata table of essais]--&gt;ch--&gt;chk1[is the project on DCL]--&gt;pdcl1[yes]\ns1--&gt;wd\npdcl1--&gt;r1\npdcl1--&gt;rloc\nchk1--&gt;pdcl0[no]--&gt;crp[create project page]--&gt;crman[manually]\ncrp--&gt;crcsv[on base of metadata.csv]--&gt;csv--&gt;pub1[publish]--&gt;p2\n\n\n\n\nFigure 3: “publishing process forward”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngraph TD\n\ncrcsv[create .csv metadata table]--&gt;\nitem[new project item]\nwf[update render git workflow]--&gt;wf1[to fire on changes in]--&gt;csv[.csv metadata table]\ncrcsv--&gt;csv--&gt;item--&gt;inc[includes]--&gt;meta--&gt;m1[render dir relative to working dir]\nmeta--&gt;m2[tags]\nmeta--&gt;m3[cats]\n\n\n\n\n\nFigure 4: “publishing process next todo”\n\n\n\n\n\n\n\n\n\n\n\nthere’s premises we have to clear off before developing to great extend\n\nif it will be (and thats not sure) possible at all to use github as storage and render platform that would deploy the pages to an FU server where the DCL page is hosted. there can be administrative concerns about providing or hosting the backend at github with everybody able to read the source code of the site. this should generally be no issue because there doesnt have to be stored any material exceeding what is displayed as html anyway thus accessible, but coming from this,\n\n\n\n\n\n\n\ngraph TD\n    OP[options to avoid the github hosting service are:]\n    TO[to render the pages completely on the contribuer device and deploy only html rendered pages to the restricted FU server -userpage level with no administrative user at the project level-]\n    OP --&gt; TO\n    AF[affords the contribuer to install render services on device]\n    TO --&gt; AF\n    CO[contribuer only pushes pages to site]\n    TO --&gt; CO\n    ED[edited source stays on device]\n    TO --&gt; ED\n    TO2[to use a page hosting server -or userpage level- which allows for admin tasks like installing basic render services -which here would be jekyll, ruby and quarto- and to maintaining these services]\n    OP --&gt; TO2\n    CO2[contribuer needs to edit and push the markdown source which is rendered on the FU server apres]\n    TO2 --&gt; CO2\n    AF2[affords admin poition for maintaing the packages server side]\n    TO2 --&gt; AF2\n\n\n\n\n\nFigure 5: contribute options"
+  },
+  {
+    "objectID": "snc.html",
+    "href": "snc.html",
+    "title": "SNC",
+    "section": "",
+    "text": "q workflow, didnt find source html dir, wt target\nfetch bib entries from zotero, including notes, and display"
+  },
+  {
+    "objectID": "snc.html#section",
+    "href": "snc.html#section",
+    "title": "SNC",
+    "section": "",
+    "text": "q workflow, didnt find source html dir, wt target\nfetch bib entries from zotero, including notes, and display"
+  },
+  {
+    "objectID": "snc.html#section-2",
+    "href": "snc.html#section-2",
+    "title": "SNC",
+    "section": "16013.",
+    "text": "16013.\n\n1\n\ndclx workflow push _site to userpage"
   }
 ]

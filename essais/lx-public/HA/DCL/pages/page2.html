@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>workflow</title>
+<title>draft paper</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,9 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <!-- HTML simply prints the inner text -->
 <!-- 16482.snc -->
 <script type="application/latex">
@@ -167,10 +164,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">16523</a>
+  <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro">intro</a>
   <ul class="collapse">
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">1</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2</a></li>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">abstract</a></li>
+  <li><a href="#preliminary" id="toc-preliminary" class="nav-link" data-scroll-target="#preliminary">preliminary</a></li>
+  <li><a href="#status-quo" id="toc-status-quo" class="nav-link" data-scroll-target="#status-quo">status quo</a></li>
+  <li><a href="#whats-the-news" id="toc-whats-the-news" class="nav-link" data-scroll-target="#whats-the-news">what’s the news</a></li>
+  <li><a href="#the-git-alternative" id="toc-the-git-alternative" class="nav-link" data-scroll-target="#the-git-alternative">the git alternative</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -180,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">workflow</h1>
+<h1 class="title">draft paper</h1>
 </div>
 
 
@@ -197,179 +197,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">16523</h2>
-<section id="section-1" class="level3">
-<h3 class="anchored" data-anchor-id="section-1">1</h3>
-<p>ich stehe jetzt vor der herausforderung, diesen beitrag (project page as 2nd layer site in dcl multisite layout) so convenient wie möglich zu veröffentlichen.</p>
-<section id="options" class="level4">
-<h4 class="anchored" data-anchor-id="options">options</h4>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-workflow-pub" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-workflow-pub-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-workflow-pub">
-graph TD
-
-CR[create content] --&gt;
-dcl[in blog repo]
-CR--&gt;wd[in working repo]--&gt;ml
-dcl--&gt;se[single post]
-dcl--&gt;ml[multilayer]
-se--&gt;fm[content format markdown, no python/R embedding or complex sites. restricted to jekyll render]
-ml--&gt;fmm[content may include complex page built from RMarkdown, Quarto or Python notebooks or any other framework]
-o2[option 2]
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-workflow-pub-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: “publishing process options diagram”
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="intro" class="level1">
+<h1>intro</h1>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">abstract</h2>
+<p>…</p>
 </section>
-<section id="preliminary-setup-status-quo" class="level4">
-<h4 class="anchored" data-anchor-id="preliminary-setup-status-quo">preliminary: setup, status quo</h4>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-setup" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-setup">graph TD
-
-s1[CONTENT]--&gt;
-dcl[jekyll site: dcl]
-wd[working dir: spund-lx]
-dcl--&gt;p1[post display]--&gt;
-p2[2nd layer: project display]
-wd--&gt;p2
-s1--&gt;wd
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: “publishing process setup status quo”
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="preliminary" class="level2">
+<h2 class="anchored" data-anchor-id="preliminary">preliminary</h2>
+<p>since we do not really get on information concerning the actual workflows of the content creation to the DCL pages, we will try to propose a more general pipeline to that based on our experiences with publishing. we will introduce possible alternatives to the actual (assumed) workflow and setup and give short insight into what is possible and under which circumstances.</p>
 </section>
-<section id="goal-integrate-new-project-page-in-blog" class="level4">
-<h4 class="anchored" data-anchor-id="goal-integrate-new-project-page-in-blog">goal: integrate new project page in blog</h4>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-howto" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-howto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-howto">graph TD
-
-s1[CONTENT: quarto page]--&gt;
-dcl[jekyll site: dcl: essais folder]
-wd[working dir: GIT]--&gt;wd2[spund-lx/lx-public/HA/DCL/pages]--&gt;level1[complete quarto site folder including .qmd and quarto.yml]
-level1--&gt;ch[changes]--&gt;r1[trigger rendering process]--&gt;
-git1[render via github actions]--&gt;p2
-r1--&gt;srv1[render on target server]--&gt;updcl[update DCL essais]--&gt;p2
-dcl--&gt;p1[post entry]--&gt;l1[link to 2nd layer: project page]--&gt;p2
-p2[2nd layer: project display]
-ch--&gt;rloc[docs rendered locally]--&gt;p2
-r1--&gt;p2
-wd--&gt;csv[.csv metadata table of essais]--&gt;ch--&gt;chk1[is the project on DCL]--&gt;pdcl1[yes]
-s1--&gt;wd
-pdcl1--&gt;r1
-pdcl1--&gt;rloc
-chk1--&gt;pdcl0[no]--&gt;crp[create project page]--&gt;crman[manually]
-crp--&gt;crcsv[on base of metadata.csv]--&gt;csv--&gt;pub1[publish]--&gt;p2
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-howto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: “publishing process forward”
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="status-quo" class="level2">
+<h2 class="anchored" data-anchor-id="status-quo">status quo</h2>
+<p>generally the momentary website seems not to be updated very much and although providing a friendly user experience lacks of content that would be integrating the introduced projects development i.e.&nbsp;you are presented a few projects related to linguistics but if you want to explore these deeper or keep updated with research results you realize that its often not more than a teaser with no follow up.</p>
+<p>one reason for that as we assume might be a complicated workflow of delivering content or a workflow which does not allow project members to actively participate in content creation besides delivering finalised documents which then are integrated. say it appears to be a rather static process of content creation, not really adapted to the fluidity of academic research processes which tend to be in a progress-state for long time until results are published.</p>
+<p>but namely the processs and progress of a project is what interests people who dive into scientific research. in times of fluid knowledge being key to understanding the world around one individum, static knowledge production (printed books in contrast to open source datasets and complex interfaces for data exploring or visualising or just uptodate papers and presentations) is one great barrier to open research to the public. the formats most frequently consumed are short knowledge bites in a nice environment. that doesnt mean researchers should not publish seriously, but - if using websites as media at all in times of youtube, tiktok etc. science channels - these websites do have to provide a minimum impression of being uptodate.</p>
 </section>
-<section id="todo-next-steps-to-project-page" class="level4">
-<h4 class="anchored" data-anchor-id="todo-next-steps-to-project-page">todo: next steps to project page</h4>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-todo" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-todo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-todo">graph TD
-
-crcsv[create .csv metadata table]--&gt;
-item[new project item]
-wf[update render git workflow]--&gt;wf1[to fire on changes in]--&gt;csv[.csv metadata table]
-crcsv--&gt;csv--&gt;item--&gt;inc[includes]--&gt;meta--&gt;m1[render dir relative to working dir]
-meta--&gt;m2[tags]
-meta--&gt;m3[cats]
-
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-todo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: “publishing process next todo”
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="whats-the-news" class="level2">
+<h2 class="anchored" data-anchor-id="whats-the-news">what’s the news</h2>
+<p>so what is it about a website that gives the reader the impression he is well informed with science news from today? surely a timeline that has not ended a year ago. as blog entries use to display the post date of the contribution mostly automatically, the blog format (which doesnt have to wake reminiscences to a diary at all) seems to be a good choice. normally the content of such a blog based website is fed from a server database to where content is posted via a webclient (web based user interface with more or less convenient editing and layout functionality). that approach affords that there is existing an admin level to the website that grants access to users and maintains the overall functionality of databases and backend (the server side of the blog). an often used and easy customizable backend for blog sites is wordpress but there are more open source and paid alternatives; the FU backend used for the current DCL sites seems to be provided by justrelate.com, a closed enterprise solution. And thats why…</p>
 </section>
-</section>
-<section id="section-2" class="level3">
-<h3 class="anchored" data-anchor-id="section-2">2</h3>
-<section id="issues" class="level4">
-<h4 class="anchored" data-anchor-id="issues">issues</h4>
-<p>there’s premises we have to clear off before developing to great extend</p>
-<ul>
-<li>if it will be (and thats not sure) possible at all to use github as storage and render platform that would deploy the pages to an FU server where the DCL page is hosted. there can be administrative concerns about providing or hosting the backend at github with everybody able to read the source code of the site. this should generally be no issue because there doesnt have to be stored any material exceeding what is displayed as html anyway thus accessible, but coming from this,</li>
-</ul>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div id="fig-premise" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-premise-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-premise">graph TD
-    OP[options to avoid the github hosting service are:]
-    TO[to render the pages completely on the contribuer device and deploy only html rendered pages to the restricted FU server -userpage level with no administrative user at the project level-]
-    OP --&gt; TO
-    AF[affords the contribuer to install render services on device]
-    TO --&gt; AF
-    CO[contribuer only pushes pages to site]
-    TO --&gt; CO
-    ED[edited source stays on device]
-    TO --&gt; ED
-    TO2[to use a page hosting server -or userpage level- which allows for admin tasks like installing basic render services -which here would be jekyll, ruby and quarto- and to maintaining these services]
-    OP --&gt; TO2
-    CO2[contribuer needs to edit and push the markdown source which is rendered on the FU server apres]
-    TO2 --&gt; CO2
-    AF2[affords admin poition for maintaing the packages server side]
-    TO2 --&gt; AF2
-
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-premise-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: contribute options
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="the-git-alternative" class="level2">
+<h2 class="anchored" data-anchor-id="the-git-alternative">the git alternative</h2>
+<p>the usually well known windows philosophy boils down to “security by obscurity”. well known in contrast to all elaborate approaches by the other providers of operating systems. the same may be said about content management systems which may be secure of being just not open sourced, and the same may be said about website content in general which can be transparent or disclosed.</p>
 
 
-</section>
 </section>
 </section>
 
