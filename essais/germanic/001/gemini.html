@@ -340,7 +340,7 @@ Figure&nbsp;2: target gpt density
 <div id="tbl-s.df" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-s.df-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: GPT lemma frequencies (table) over target. (freq / Mtoken)
+Table&nbsp;1: GPT lemma frequencies (table) over target. (freq / vH)
 </figcaption>
 <div aria-describedby="tbl-s.df-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -388,29 +388,21 @@ Figure&nbsp;3: GPT lemma frequencies (boxplot) over target. (freq / Mtoken)
 </section>
 <section id="responsible-lemmata" class="level3" data-number="1.5.2">
 <h3 data-number="1.5.2" class="anchored" data-anchor-id="responsible-lemmata"><span class="header-section-number">1.5.2</span> responsible lemmata</h3>
+<p>selection of first 20 lemma that are responsible for the increase of frequency in general</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] müssen            deutschland       menschen          liebe            
+ [5] stehen            mehr              sagen             einsetzen        
+ [9] herausforderungen wichtig           aktuell           interessen       
+[13] partei            wichtiger         arbeiten          arbeitsplätze    
+[17] berlin            bleiben           bürger            bürgerinnen      
+348 Levels: abgeordnete aktiv aktuell alice all alltag ... zusammenhalt</code></pre>
+</div>
+</div>
 </section>
 <section id="sec-lm-1" class="level3" data-number="1.5.3">
 <h3 data-number="1.5.3" class="anchored" data-anchor-id="sec-lm-1"><span class="header-section-number">1.5.3</span> linear regression</h3>
 <p>to prove descriptive results, we compute the stability of the frequency increase for target- vs.&nbsp;reference corpus with a linear regression model using R’s lme4::lmer() function, cf. <span class="citation" data-cites="bates_fitting_2015">Bates et al. (<a href="#ref-bates_fitting_2015" role="doc-biblioref">2015</a>)</span>. coefficents are printed below, where frequency are the relative lemma frequencies over corpus; target defines reference resp. target corpus[post-gpt] (human/post) and in.gpt as numerical variable representing the gpt-score of the corresponding lemma i.e.&nbsp;wether it scores high (positive values) or low (negative values) in terms of being preferredly used by the chat agent.</p>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: Matrix</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'lmerTest'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:lme4':
-
-    lmer</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:stats':
-
-    step</code></pre>
-</div>
-</div>
 <section id="basic-lm" class="level4" data-number="1.5.3.1">
 <h4 data-number="1.5.3.1" class="anchored" data-anchor-id="basic-lm"><span class="header-section-number">1.5.3.1</span> basic (lm)</h4>
 <p>formula: <code>frequency.relative ~ target * in.gpt</code></p>
@@ -490,22 +482,14 @@ trgtpst:n.g  0.082 -0.059 -0.003 -0.140 -0.512  0.501   0.175 </code></pre>
 </div>
 </div>
 </section>
-<section id="anova-of-mixed-effects-model" class="level4" data-number="1.5.3.3">
-<h4 data-number="1.5.3.3" class="anchored" data-anchor-id="anova-of-mixed-effects-model"><span class="header-section-number">1.5.3.3</span> anova of mixed effects model</h4>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Analysis of Variance Table
+<section id="helper-interpretation-to-be-tested" class="level4" data-number="1.5.3.3">
+<h4 data-number="1.5.3.3" class="anchored" data-anchor-id="helper-interpretation-to-be-tested"><span class="header-section-number">1.5.3.3</span> helper interpretation, to be tested</h4>
+<p>the coefficients interesting for us are the in.gp and targetpost:in.gp estimates. here we test the association between the gpt score of a lemma and its estimated frequency and its showing that a general increase of frequency is estimated if the score rises and that for the post-gpt corpus that increase is significant (and not random in data).</p>
+<p>in the correlation output of the lmer() model we see that the gpt score increases the target corpus frequency for lemma by:</p>
+<p><code>0.0695357</code></p>
+</section>
+<section id="anova-of-mixed-effects-model" class="level4" data-number="1.5.3.4">
 
-Response: f.rel
-                 Df Sum Sq Mean Sq  F value    Pr(&gt;F)    
-target            3  6.274 2.09120 9421.203 &lt; 2.2e-16 ***
-in.gp             1  0.961 0.96062 4327.761 &lt; 2.2e-16 ***
-target:in.gp      3  0.025 0.00822   37.038 &lt; 2.2e-16 ***
-Residuals    223173 49.537 0.00022                       
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-</div>
-</div>
 
 
 
@@ -514,7 +498,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">1.5.3.4 anova of mixed effects model</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-bates_fitting_2015" class="csl-entry" role="listitem">
 Bates, Douglas, Martin Mächler, Ben Bolker, and Steve Walker. 2015. <span>“Fitting <span>Linear</span> <span>Mixed</span>-<span>Effects</span> <span>Models</span> <span>Using</span> Lme4.”</span> <em>Journal of Statistical Software</em> 67 (1): 1–48. <a href="https://doi.org/10.18637/jss.v067.i01">https://doi.org/10.18637/jss.v067.i01</a>.
 </div>
