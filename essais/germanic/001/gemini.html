@@ -486,8 +486,8 @@ trgtpst:n.g  0.082 -0.059 -0.003 -0.140 -0.512  0.501   0.175 </code></pre>
 </section>
 <section id="helper-interpretation-to-be-tested" class="level4" data-number="1.5.3.3">
 <h4 data-number="1.5.3.3" class="anchored" data-anchor-id="helper-interpretation-to-be-tested"><span class="header-section-number">1.5.3.3</span> helper interpretation, to be tested</h4>
-<p>the coefficients interesting for us are the in.gp and targetpost:in.gp estimates. here we test the association between the gpt score of a lemma and its estimated frequency and its showing that a general increase of frequency is estimated if the score rises and that for the post-gpt corpus that increase is small but yet significant (and not random in data).</p>
-<p>in the correlation output of the lmer() model we see that the gpt score increases the target corpus frequency for lemma by <code>0.0695357</code>.</p>
+<p>the coefficients interesting for us are the in.gp and targetpost:in.gp estimates. here we test the association between the gpt score of a lemma and its estimated frequency and its showing that a general increase of frequency is estimated if the score rises (=the lemma is within the lemmas preferred used by gemini) and that for the post-gpt corpus that increase <code>2.78\times 10^{-4}</code> (30.25%) is significant (and not random in data).</p>
+<p>in the fixed effects correlation output of the lmer() model we see that the gpt score increases the target corpus frequency for lemma by <code>0.0695357</code>.</p>
 </section>
 <section id="anova-of-mixed-effects-model" class="level4" data-number="1.5.3.4">
 
