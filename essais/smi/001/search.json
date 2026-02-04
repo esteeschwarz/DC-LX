@@ -7,25 +7,18 @@
     "text": "16485.1.wf trigger special smi.tr1."
   },
   {
-    "objectID": "task001-ul.html",
-    "href": "task001-ul.html",
-    "title": "research question and hypothesis",
+    "objectID": "eval-clips.html",
+    "href": "eval-clips.html",
+    "title": "CLIP evaluation",
     "section": "",
-    "text": "how do mental images relate in wordfields i.e. what are typical resp. atypical semantic fields in which imageability of patients language increases or decreases?\nhow do word categories from concrete to abstract influence imageablity in relation to controls language?\nare there genres/fields which are avoided/promoted?\n\n\n\n\nwe assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
+    "text": "data: clip_results.parquet (Ivan Nenchev)\nadditional:\n\nlexical diversity score\n1stPPronoun rate\nexploded clip scores, not mean!\n\n\n\n\n\n\n\n\n\n\n\nLinear mixed model fit by REML. t-tests use Satterthwaite's method [\nlmerModLmerTest]\nFormula: cl_score ~ group + (1 | TN) + (1 | text_chunk) + ld + fstPPr_rate\n   Data: dff4\n\nREML criterion at convergence: -406293.2\n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n-4.7324 -0.5891 -0.0624  0.4691  6.2275 \n\nRandom effects:\n Groups     Name        Variance  Std.Dev.\n text_chunk (Intercept) 1.631e-03 0.040381\n TN         (Intercept) 7.633e-05 0.008737\n Residual               1.476e-03 0.038419\nNumber of obs: 113900, groups:  text_chunk, 3653; TN, 29\n\nFixed effects:\n             Estimate Std. Error        df t value Pr(&gt;|t|)    \n(Intercept)  0.234962   0.010406 27.942796  22.579  &lt; 2e-16 ***\ngroupscz     0.023571   0.004146 28.049269   5.685 4.26e-06 ***\nld          -0.026691   0.034733 36.448483  -0.768    0.447    \nfstPPr_rate -0.189069   0.122592 24.946504  -1.542    0.136    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n            (Intr) grpscz ld    \ngroupscz    -0.217              \nld          -0.731  0.280       \nfstPPr_rate -0.696 -0.261  0.105"
   },
   {
-    "objectID": "task001-ul.html#q",
-    "href": "task001-ul.html#q",
-    "title": "research question and hypothesis",
+    "objectID": "eval-clips.html#corpus-clip-scores",
+    "href": "eval-clips.html#corpus-clip-scores",
+    "title": "CLIP evaluation",
     "section": "",
-    "text": "how do mental images relate in wordfields i.e. what are typical resp. atypical semantic fields in which imageability of patients language increases or decreases?\nhow do word categories from concrete to abstract influence imageablity in relation to controls language?\nare there genres/fields which are avoided/promoted?"
-  },
-  {
-    "objectID": "task001-ul.html#hypothesis",
-    "href": "task001-ul.html#hypothesis",
-    "title": "research question and hypothesis",
-    "section": "",
-    "text": "we assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
+    "text": "data: clip_results.parquet (Ivan Nenchev)\nadditional:\n\nlexical diversity score\n1stPPronoun rate\nexploded clip scores, not mean!\n\n\n\n\n\n\n\n\n\n\n\nLinear mixed model fit by REML. t-tests use Satterthwaite's method [\nlmerModLmerTest]\nFormula: cl_score ~ group + (1 | TN) + (1 | text_chunk) + ld + fstPPr_rate\n   Data: dff4\n\nREML criterion at convergence: -406293.2\n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n-4.7324 -0.5891 -0.0624  0.4691  6.2275 \n\nRandom effects:\n Groups     Name        Variance  Std.Dev.\n text_chunk (Intercept) 1.631e-03 0.040381\n TN         (Intercept) 7.633e-05 0.008737\n Residual               1.476e-03 0.038419\nNumber of obs: 113900, groups:  text_chunk, 3653; TN, 29\n\nFixed effects:\n             Estimate Std. Error        df t value Pr(&gt;|t|)    \n(Intercept)  0.234962   0.010406 27.942796  22.579  &lt; 2e-16 ***\ngroupscz     0.023571   0.004146 28.049269   5.685 4.26e-06 ***\nld          -0.026691   0.034733 36.448483  -0.768    0.447    \nfstPPr_rate -0.189069   0.122592 24.946504  -1.542    0.136    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n            (Intr) grpscz ld    \ngroupscz    -0.217              \nld          -0.731  0.280       \nfstPPr_rate -0.696 -0.261  0.105"
   },
   {
     "objectID": "index.html",
@@ -49,17 +42,80 @@
     "text": "we assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
   },
   {
-    "objectID": "eval-clips.html",
-    "href": "eval-clips.html",
-    "title": "CLIP evaluation",
+    "objectID": "qa.html",
+    "href": "qa.html",
+    "title": "annotations",
     "section": "",
-    "text": "data: clip_results.parquet (Ivan Nenchev)\nadditional:\n\nlexical diversity score\n1stPPronoun rate\nexploded clip scores, not mean!\n\n\n\n\n\n\n\n\n\n\n\nLinear mixed model fit by REML. t-tests use Satterthwaite's method [\nlmerModLmerTest]\nFormula: cl_score ~ group + (1 | TN) + (1 | text_chunk) + ld + fstPPr_rate\n   Data: dff4\n\nREML criterion at convergence: -406293.2\n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n-4.7324 -0.5891 -0.0624  0.4691  6.2275 \n\nRandom effects:\n Groups     Name        Variance  Std.Dev.\n text_chunk (Intercept) 1.631e-03 0.040381\n TN         (Intercept) 7.633e-05 0.008737\n Residual               1.476e-03 0.038419\nNumber of obs: 113900, groups:  text_chunk, 3653; TN, 29\n\nFixed effects:\n             Estimate Std. Error        df t value Pr(&gt;|t|)    \n(Intercept)  0.234962   0.010406 27.941448  22.579  &lt; 2e-16 ***\ngroupscz     0.023571   0.004146 28.049230   5.685 4.26e-06 ***\nld          -0.026691   0.034733 36.450429  -0.768    0.447    \nfstPPr_rate -0.189069   0.122592 24.946454  -1.542    0.136    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n            (Intr) grpscz ld    \ngroupscz    -0.217              \nld          -0.731  0.280       \nfstPPr_rate -0.696 -0.261  0.105"
+    "text": "0.0.1 notes on (bsi_wie_2025?)\n\n\n\nTable 1, BSI: annotations\n\n\nid\nannotations\n\n\n\n\n\n\n\n\n\n0.0.2 notes on (yakura_empirical_2025?)\n\n\n\nTable 2, Yakura, LLM influence: annotations\n\n\nid\nannotations"
   },
   {
-    "objectID": "eval-clips.html#corpus-clip-scores",
-    "href": "eval-clips.html#corpus-clip-scores",
-    "title": "CLIP evaluation",
+    "objectID": "task001-ul.html",
+    "href": "task001-ul.html",
+    "title": "1 research question and hypothesis",
     "section": "",
-    "text": "data: clip_results.parquet (Ivan Nenchev)\nadditional:\n\nlexical diversity score\n1stPPronoun rate\nexploded clip scores, not mean!\n\n\n\n\n\n\n\n\n\n\n\nLinear mixed model fit by REML. t-tests use Satterthwaite's method [\nlmerModLmerTest]\nFormula: cl_score ~ group + (1 | TN) + (1 | text_chunk) + ld + fstPPr_rate\n   Data: dff4\n\nREML criterion at convergence: -406293.2\n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n-4.7324 -0.5891 -0.0624  0.4691  6.2275 \n\nRandom effects:\n Groups     Name        Variance  Std.Dev.\n text_chunk (Intercept) 1.631e-03 0.040381\n TN         (Intercept) 7.633e-05 0.008737\n Residual               1.476e-03 0.038419\nNumber of obs: 113900, groups:  text_chunk, 3653; TN, 29\n\nFixed effects:\n             Estimate Std. Error        df t value Pr(&gt;|t|)    \n(Intercept)  0.234962   0.010406 27.941448  22.579  &lt; 2e-16 ***\ngroupscz     0.023571   0.004146 28.049230   5.685 4.26e-06 ***\nld          -0.026691   0.034733 36.450429  -0.768    0.447    \nfstPPr_rate -0.189069   0.122592 24.946454  -1.542    0.136    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n            (Intr) grpscz ld    \ngroupscz    -0.217              \nld          -0.731  0.280       \nfstPPr_rate -0.696 -0.261  0.105"
+    "text": "how do mental images relate in wordfields i.e. what are typical resp. atypical semantic fields in which imageability of patients language increases or decreases?\nhow do word categories from concrete to abstract influence imageablity in relation to controls language?\nare there genres/fields which are avoided/promoted?\n\n\n\n\nwe assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
+  },
+  {
+    "objectID": "task001-ul.html#q",
+    "href": "task001-ul.html#q",
+    "title": "1 research question and hypothesis",
+    "section": "",
+    "text": "how do mental images relate in wordfields i.e. what are typical resp. atypical semantic fields in which imageability of patients language increases or decreases?\nhow do word categories from concrete to abstract influence imageablity in relation to controls language?\nare there genres/fields which are avoided/promoted?"
+  },
+  {
+    "objectID": "task001-ul.html#hypothesis",
+    "href": "task001-ul.html#hypothesis",
+    "title": "1 research question and hypothesis",
+    "section": "",
+    "text": "we assume that:\n\nviolence wordfield increase imageability\n\nbody associated wordfields in contrast decrease imageability\n\nfood wordfield decrease imageability\nweather/climate/atmosphere wordfield decrease imageability\nabstract categories increase in imageability\nconcrete categories decrease in imageability"
+  },
+  {
+    "objectID": "paper.html",
+    "href": "paper.html",
+    "title": "SMI paper",
+    "section": "",
+    "text": "16065.1"
+  },
+  {
+    "objectID": "paper.html#snc",
+    "href": "paper.html#snc",
+    "title": "SMI paper",
+    "section": "",
+    "text": "16065.1"
+  },
+  {
+    "objectID": "paper.html#preliminary",
+    "href": "paper.html#preliminary",
+    "title": "SMI paper",
+    "section": "2.1 preliminary",
+    "text": "2.1 preliminary\n\nembedding into class subject\n[…]"
+  },
+  {
+    "objectID": "paper.html#data",
+    "href": "paper.html#data",
+    "title": "SMI paper",
+    "section": "4.1 data",
+    "text": "4.1 data\nour corpus consists of interview transcripts available in raw text which were tokenised and segmented into 10-unit chunks for further processing, Section 4.2.\n\n4.1.1 corpus stats\nknitr::kable(ts) [insert corpus stats]"
+  },
+  {
+    "objectID": "paper.html#sec-clip-01",
+    "href": "paper.html#sec-clip-01",
+    "title": "SMI paper",
+    "section": "4.2 clip score computation",
+    "text": "4.2 clip score computation\nthe computation of clip scores was done using HU resources with a python script cf. Nenchev (2026)"
+  },
+  {
+    "objectID": "paper.html#basic-descriptive",
+    "href": "paper.html#basic-descriptive",
+    "title": "SMI paper",
+    "section": "5.1 basic descriptive",
+    "text": "5.1 basic descriptive"
+  },
+  {
+    "objectID": "paper.html#sec-lm-1",
+    "href": "paper.html#sec-lm-1",
+    "title": "SMI paper",
+    "section": "5.2 linear regression",
+    "text": "5.2 linear regression\nto prove descriptive results, we compute the stability […] with a linear regression model using R’s lme4::lmer() function, cf. Bates et al. (2015). coefficents are printed below […]\n\n5.2.1 basic (lm)\nformula: frequency.relative ~ target * in.gpt\n\n\n5.2.2 mixed effects model (lmer)\nformula: frequency.relative ~ target * in.gpt +(1|lemma)\n\n5.2.2.1 helper interpretation, to be tested\nthe coefficients interesting for us are"
   }
 ]

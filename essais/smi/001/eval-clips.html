@@ -77,7 +77,6 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="https://esteeschwarz.github.io/DC-LX/assets/css/icons.css">
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -109,6 +108,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./eval-clips.html">
  <span class="dropdown-text">CLIP evaluation</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./paper.html">
+ <span class="dropdown-text">SMI paper</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -138,9 +141,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#corpus-clip-scores" id="toc-corpus-clip-scores" class="nav-link active" data-scroll-target="#corpus-clip-scores">corpus clip scores</a></li>
+  <li><a href="#corpus-clip-scores" id="toc-corpus-clip-scores" class="nav-link active" data-scroll-target="#corpus-clip-scores"><span class="header-section-number">1</span> corpus clip scores</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="eval-clips.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -164,8 +167,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="corpus-clip-scores" class="level2">
-<h2 class="anchored" data-anchor-id="corpus-clip-scores">corpus clip scores</h2>
+<section id="corpus-clip-scores" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="corpus-clip-scores"><span class="header-section-number">1</span> corpus clip scores</h2>
 <ul>
 <li>data: clip_results.parquet (Ivan Nenchev)</li>
 <li>additional:
@@ -204,10 +207,10 @@ Number of obs: 113900, groups:  text_chunk, 3653; TN, 29
 
 Fixed effects:
              Estimate Std. Error        df t value Pr(&gt;|t|)    
-(Intercept)  0.234962   0.010406 27.941448  22.579  &lt; 2e-16 ***
-groupscz     0.023571   0.004146 28.049230   5.685 4.26e-06 ***
-ld          -0.026691   0.034733 36.450429  -0.768    0.447    
-fstPPr_rate -0.189069   0.122592 24.946454  -1.542    0.136    
+(Intercept)  0.234962   0.010406 27.942796  22.579  &lt; 2e-16 ***
+groupscz     0.023571   0.004146 28.049269   5.685 4.26e-06 ***
+ld          -0.026691   0.034733 36.448483  -0.768    0.447    
+fstPPr_rate -0.189069   0.122592 24.946504  -1.542    0.136    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
