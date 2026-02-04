@@ -126,10 +126,17 @@
     "text": "5.1 basic descriptive"
   },
   {
+    "objectID": "paper.html#visuals",
+    "href": "paper.html#visuals",
+    "title": "SMI paper",
+    "section": "5.2 visuals",
+    "text": "5.2 visuals\n[…] raffael script (commit hash!) from ggl-doc: Richter (2026)"
+  },
+  {
     "objectID": "paper.html#sec-lm-1",
     "href": "paper.html#sec-lm-1",
     "title": "SMI paper",
-    "section": "5.2 linear regression",
-    "text": "5.2 linear regression\nto prove descriptive results, we compute the stability […] with a linear regression model using R’s lme4::lmer() function, cf. Bates et al. (2015). coefficents are printed below […]\n\n5.2.1 basic (lm)\nformula: frequency.relative ~ target * in.gpt\n\n\n5.2.2 mixed effects model (lmer)\nformula: frequency.relative ~ target * in.gpt +(1|lemma)\n\n5.2.2.1 helper interpretation, to be tested\nthe coefficients interesting for us are"
+    "section": "5.3 linear regression",
+    "text": "5.3 linear regression\nto prove descriptive results, we compute the stability […] with a linear regression model using R’s lme4::lmer() function, cf. Bates et al. (2015). coefficents are printed below […]\n\n5.3.1 basic (lm)\nformula: frequency.relative ~ target * in.gpt\n\n\n5.3.2 mixed effects model (lmer)\nformula: frequency.relative ~ target * in.gpt +(1|lemma)\n\n5.3.2.1 helper interpretation, to be tested\nthe coefficients interesting for us are"
   }
 ]
