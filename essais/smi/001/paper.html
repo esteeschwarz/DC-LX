@@ -258,7 +258,30 @@ div.csl-indent {
 <p>our corpus consists of interview transcripts available in raw text which were tokenised and segmented into 10-unit chunks for further processing, <a href="#sec-clip-01" class="quarto-xref">Section&nbsp;4.2</a>.</p>
 <section id="corpus-stats" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="corpus-stats"><span class="header-section-number">4.1.1</span> corpus stats</h3>
-<p><code>knitr::kable(ts)</code> [insert corpus stats]</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">dataset</th>
+<th style="text-align: left;">group</th>
+<th style="text-align: right;">participants</th>
+<th style="text-align: right;">tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">HC</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">21650</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">SCZ</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">92250</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="sec-clip-01" class="level2" data-number="4.2">
@@ -270,21 +293,144 @@ div.csl-indent {
 <h1 data-number="5"><span class="header-section-number">5</span> results</h1>
 <section id="basic-descriptive" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="basic-descriptive"><span class="header-section-number">5.1</span> basic descriptive</h2>
+<p>first simple descriptive stats insights which are to test for stability…</p>
+<div class="cell">
+<div id="tbl-s.df" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-s.df-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: mean clip scores (table) over groups
+</figcaption>
+<div aria-describedby="tbl-s.df-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">dataset</th>
+<th style="text-align: left;">group</th>
+<th style="text-align: right;">mean_clip</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">hc</td>
+<td style="text-align: right;">0.2213</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">scz</td>
+<td style="text-align: right;">0.2398</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">DIFF:</td>
+<td style="text-align: right;">-0.0185</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
 </section>
 <section id="visuals" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="visuals"><span class="header-section-number">5.2</span> visuals</h2>
-<p>[…] raffael script (commit hash!) from ggl-doc: <span class="citation" data-cites="richter_evaluation_2026">Richter (<a href="#ref-richter_evaluation_2026" role="doc-biblioref">2026</a>)</span></p>
+<p>[…]</p>
+<p>raffael script (commit hash!) from ggl-doc: <span class="citation" data-cites="richter_evaluation_2026">Richter (<a href="#ref-richter_evaluation_2026" role="doc-biblioref">2026</a>)</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="paper_files/figure-html/clip-dens-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>clip score density plot</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-boxplot01" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boxplot01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="paper_files/figure-html/fig-boxplot01-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boxplot01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: mean clip scores (boxplot) over groups.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="sec-lm-1" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="sec-lm-1"><span class="header-section-number">5.3</span> linear regression</h2>
 <p>to prove descriptive results, we compute the stability […] with a linear regression model using R’s lme4::lmer() function, cf. <span class="citation" data-cites="bates_fitting_2015">Bates et al. (<a href="#ref-bates_fitting_2015" role="doc-biblioref">2015</a>)</span>. coefficents are printed below […]</p>
 <section id="basic-lm" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="basic-lm"><span class="header-section-number">5.3.1</span> basic (lm)</h3>
-<p>formula: <code>frequency.relative ~ target * in.gpt</code></p>
+<p>formula: <code>clipscore ~ group</code></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = cl_score ~ group, data = dff4)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.21020 -0.04017 -0.00256  0.03779  0.27403 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 0.2213234  0.0003823  578.94   &lt;2e-16 ***
+groupscz    0.0184706  0.0004248   43.48   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.05625 on 113898 degrees of freedom
+Multiple R-squared:  0.01633,   Adjusted R-squared:  0.01632 
+F-statistic:  1891 on 1 and 113898 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
 </section>
 <section id="mixed-effects-model-lmer" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="mixed-effects-model-lmer"><span class="header-section-number">5.3.2</span> mixed effects model (lmer)</h3>
-<p>formula: <code>frequency.relative ~ target * in.gpt +(1|lemma)</code></p>
+<p>formula: <code>clipscore ~ group + (1|TN)+(1|text_chunk)+ld+fstPPr_rate</code> &lt; positing random effects for participant and token and fixed effects for type/token ratio (lexical diversity factor) and 1st-person-pronoun rate.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: cl_score ~ group + (1 | TN) + (1 | text_chunk) + ld + fstPPr_rate
+   Data: dff4
+
+REML criterion at convergence: -406293.2
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.7324 -0.5891 -0.0624  0.4691  6.2275 
+
+Random effects:
+ Groups     Name        Variance  Std.Dev.
+ text_chunk (Intercept) 1.631e-03 0.040381
+ TN         (Intercept) 7.633e-05 0.008737
+ Residual               1.476e-03 0.038419
+Number of obs: 113900, groups:  text_chunk, 3653; TN, 29
+
+Fixed effects:
+             Estimate Std. Error        df t value Pr(&gt;|t|)    
+(Intercept)  0.234962   0.010406 27.942796  22.579  &lt; 2e-16 ***
+groupscz     0.023571   0.004146 28.049269   5.685 4.26e-06 ***
+ld          -0.026691   0.034733 36.448483  -0.768    0.447    
+fstPPr_rate -0.189069   0.122592 24.946504  -1.542    0.136    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) grpscz ld    
+groupscz    -0.217              
+ld          -0.731  0.280       
+fstPPr_rate -0.696 -0.261  0.105</code></pre>
+</div>
+</div>
 <section id="helper-interpretation-to-be-tested" class="level4" data-number="5.3.2.1">
 <h4 data-number="5.3.2.1" class="anchored" data-anchor-id="helper-interpretation-to-be-tested"><span class="header-section-number">5.3.2.1</span> helper interpretation, to be tested</h4>
 <p>the coefficients interesting for us are</p>

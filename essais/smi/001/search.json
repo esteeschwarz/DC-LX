@@ -109,7 +109,7 @@
     "href": "paper.html#data",
     "title": "SMI paper",
     "section": "4.1 data",
-    "text": "4.1 data\nour corpus consists of interview transcripts available in raw text which were tokenised and segmented into 10-unit chunks for further processing, Section 4.2.\n\n4.1.1 corpus stats\nknitr::kable(ts) [insert corpus stats]"
+    "text": "4.1 data\nour corpus consists of interview transcripts available in raw text which were tokenised and segmented into 10-unit chunks for further processing, Section 4.2.\n\n4.1.1 corpus stats\n\n\n\ndataset\ngroup\nparticipants\ntokens\n\n\n\n\n1\nHC\n13\n21650\n\n\n1\nSCZ\n16\n92250"
   },
   {
     "objectID": "paper.html#sec-clip-01",
@@ -123,20 +123,20 @@
     "href": "paper.html#basic-descriptive",
     "title": "SMI paper",
     "section": "5.1 basic descriptive",
-    "text": "5.1 basic descriptive"
+    "text": "5.1 basic descriptive\nfirst simple descriptive stats insights which are to test for stability…\n\n\n\n\nTable 1: mean clip scores (table) over groups\n\n\n\n\n\n\ndataset\ngroup\nmean_clip\n\n\n\n\n1\nhc\n0.2213\n\n\n1\nscz\n0.2398\n\n\n1\nDIFF:\n-0.0185"
   },
   {
     "objectID": "paper.html#visuals",
     "href": "paper.html#visuals",
     "title": "SMI paper",
     "section": "5.2 visuals",
-    "text": "5.2 visuals\n[…] raffael script (commit hash!) from ggl-doc: Richter (2026)"
+    "text": "5.2 visuals\n[…]\nraffael script (commit hash!) from ggl-doc: Richter (2026)\n\n\n\n\n\nclip score density plot\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: mean clip scores (boxplot) over groups."
   },
   {
     "objectID": "paper.html#sec-lm-1",
     "href": "paper.html#sec-lm-1",
     "title": "SMI paper",
     "section": "5.3 linear regression",
-    "text": "5.3 linear regression\nto prove descriptive results, we compute the stability […] with a linear regression model using R’s lme4::lmer() function, cf. Bates et al. (2015). coefficents are printed below […]\n\n5.3.1 basic (lm)\nformula: frequency.relative ~ target * in.gpt\n\n\n5.3.2 mixed effects model (lmer)\nformula: frequency.relative ~ target * in.gpt +(1|lemma)\n\n5.3.2.1 helper interpretation, to be tested\nthe coefficients interesting for us are"
+    "text": "5.3 linear regression\nto prove descriptive results, we compute the stability […] with a linear regression model using R’s lme4::lmer() function, cf. Bates et al. (2015). coefficents are printed below […]\n\n5.3.1 basic (lm)\nformula: clipscore ~ group\n\n\n\nCall:\nlm(formula = cl_score ~ group, data = dff4)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-0.21020 -0.04017 -0.00256  0.03779  0.27403 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 0.2213234  0.0003823  578.94   &lt;2e-16 ***\ngroupscz    0.0184706  0.0004248   43.48   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.05625 on 113898 degrees of freedom\nMultiple R-squared:  0.01633,   Adjusted R-squared:  0.01632 \nF-statistic:  1891 on 1 and 113898 DF,  p-value: &lt; 2.2e-16\n\n\n\n\n5.3.2 mixed effects model (lmer)\nformula: clipscore ~ group + (1|TN)+(1|text_chunk)+ld+fstPPr_rate &lt; positing random effects for participant and token and fixed effects for type/token ratio (lexical diversity factor) and 1st-person-pronoun rate.\n\n\nLinear mixed model fit by REML. t-tests use Satterthwaite's method [\nlmerModLmerTest]\nFormula: cl_score ~ group + (1 | TN) + (1 | text_chunk) + ld + fstPPr_rate\n   Data: dff4\n\nREML criterion at convergence: -406293.2\n\nScaled residuals: \n    Min      1Q  Median      3Q     Max \n-4.7324 -0.5891 -0.0624  0.4691  6.2275 \n\nRandom effects:\n Groups     Name        Variance  Std.Dev.\n text_chunk (Intercept) 1.631e-03 0.040381\n TN         (Intercept) 7.633e-05 0.008737\n Residual               1.476e-03 0.038419\nNumber of obs: 113900, groups:  text_chunk, 3653; TN, 29\n\nFixed effects:\n             Estimate Std. Error        df t value Pr(&gt;|t|)    \n(Intercept)  0.234962   0.010406 27.942796  22.579  &lt; 2e-16 ***\ngroupscz     0.023571   0.004146 28.049269   5.685 4.26e-06 ***\nld          -0.026691   0.034733 36.448483  -0.768    0.447    \nfstPPr_rate -0.189069   0.122592 24.946504  -1.542    0.136    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nCorrelation of Fixed Effects:\n            (Intr) grpscz ld    \ngroupscz    -0.217              \nld          -0.731  0.280       \nfstPPr_rate -0.696 -0.261  0.105\n\n\n\n5.3.2.1 helper interpretation, to be tested\nthe coefficients interesting for us are"
   }
 ]
