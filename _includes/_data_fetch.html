@@ -1,2 +1,2 @@
-{% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
-{% assign row = site.data.postmeta | where: "slug", page_id | first %}
+<div>{% capture page_id %}{{ page.slug | default: page.title | slugify }}{% endcapture %}
+{% assign row = site.data.postmeta | where: "slug", page_id | first %}</div>

@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: default
 ---
+<div class="row t30", style="max-width: 85%;">
 
 <h1>Category: <span id="play_cat_h"></span></h1>
 {% assign all_categories = site.categories %}
@@ -48,15 +49,4 @@ layout: page
 <script>
     // put_cat('avl');
 </script>
-<!-- 
-{% assign all_categories = site.categories %}
-{% for cat in all_categories %}
-  {% assign cat_name = cat[0] %}
-  <h2 id="{{ cat_name | slugify }}">{{ cat_name }}</h2>
-  <ul>
-    {% for post in cat[1] %}
-      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-{% endfor %}
--->
+</div>

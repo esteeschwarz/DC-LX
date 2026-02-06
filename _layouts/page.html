@@ -2,13 +2,12 @@
 layout: default
 format: post
 ---
-<div style = "display: {% if page.grid !='' %}{{ page.grid }};{% else %} block;{% endif %}" >
-				{% include _postmeta-gr.html %}
-				</div>
+<div style = "display: {% if page.grid !='' %}{{ page.grid }};{% else %} block;{% endif %}">{% include _postmeta-gr.html %}
+</div>
 
 <div class="row t30", style="max-width: 85%;">
 	<!-- <div class='medium-8 columns{% if page.sidebar == "right" %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}'> -->
-	<div class='medium-8 columns{% if page.sidebar == "right" %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}'>
+	<div class='medium-8 columns{% if page.sidebar == "right" %} medium-offest+2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}'>
 		<article itemscope itemtype="http://schema.org/Article">
 			<header>
 				{% if page.mermaid %}

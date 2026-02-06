@@ -43,6 +43,7 @@
   /* margin: 5px; */
   /* align: center; */
   margin-inline: auto;
+  display: none;
  }
  .postmeta-gr table,th,td,tr{
   /* width: 90%;
@@ -232,6 +233,31 @@ button .red {
   margin: 0 0 0;
   color: red;
 }
+
+.grid-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.cell {
+  border: 1px solid #ccc;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.cell-head {
+  background: #f3f3f3;
+  font-weight: bold;
+  padding: 6px 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.cell-body {
+  padding: 8px;
+}
+
+
 
 /* meta table grid */
 .grid-table_dep {

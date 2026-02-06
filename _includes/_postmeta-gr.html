@@ -1,8 +1,52 @@
 {% include _data_fetch.html %}
-<!-- <script>
+<script>
 localStorage.setItem('q_catValue', '');
-</script> -->
-<table class="postmeta-gr">
+</script>
+<div class="grid-table">
+  <div class="cell">
+    <div class="cell-head"><span itemprop="name" class="pr20 icon-edit"></span></div>
+    <div class="cell-body">{% if page.author %}
+					<a href="{{ author.uri }}" target="_blank"> {{ page.author }}</a></span>{% endif %}</div>
+  </div>
+
+  <div class="cell">
+    <div class="cell-head"><span class="icon-calendar pr20"></span></div>
+    <div class="cell-body">{% if page.date %}<time>
+				{{ page.date | date: "%Y-%m-%d" }}</time>
+				{% endif %}</div>
+  </div>
+<div class="cell">
+    <div class="cell-head"><span class="icon-archive pr20"></span></div>
+    <div class="cell-body">{% for category in page.categories %}<span>
+            <a href="{{ site.baseurl }}/categories/"><button style="margin: 0 0 0;" class="tiny radius white"  onclick="link_cat('{{ category }}');">{{ category }}</button>
+</a>
+          {% endfor %}</div>
+  </div>
+
+  <div class="cell">
+    <div class="cell-head"><span class="icon-price-tag pr10"></span></div>
+    <div class="cell-body">{% for tag in page.tags %}
+          <span><a
+            href="{{ site.baseurl }}/{{ tag | slugify | url_encode }}/">{{ tag }}  / 
+          </a></span> 
+        {% endfor %}</div>
+  </div>
+<div class="cell">
+    <div class="cell-head">CLASS</div>
+    <div class="cell-body">{{ row.class }}</div>
+  </div>
+
+  <div class="cell">
+    <div class="cell-head">TUTOR</div>
+    <div class="cell-body">{{ row.tutor }}</div>
+  </div>
+<div class="cell">
+    <div class="cell-head">TERM</div>
+    <div class="cell-body">{{ row.term }}</div>
+  </div>
+</div>
+
+<!-- <table class="postmeta-gr">
 	<tbody>
   <tr>
     <td><span itemprop="name" class="pr20 icon-edit"></td><td>{% if page.author %}
@@ -39,5 +83,4 @@ localStorage.setItem('q_catValue', '');
   <td>SNC</td><td>16533</td>
   <td>issue</td><td>table from _postmeta.html, inserted include aside page.html</td>
 </tr></tbody>
-</table>
-<!-- </div> -->
+</table> -->
