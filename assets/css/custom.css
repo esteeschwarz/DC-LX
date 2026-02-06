@@ -38,6 +38,23 @@
 	.postmeta tr:nth-child(odd) tr:nth-child(even) {
 	background-color: #d1d1;
 }
+ .postmeta-gr{
+  width: 97%;
+  /* margin: 5px; */
+  /* align: center; */
+  margin-inline: auto;
+ }
+ .postmeta-gr table,th,td,tr{
+  /* width: 90%;
+  margin: 4%; */
+	background-color: #d1d1;
+	border: 1px solid #d1d1d1;
+
+  }
+	.postmeta-gr td:nth-child(odd) {
+	background-color: #d1d4;
+  /* background-color: transparent; */
+}
 
   .postmeta th {
 	border-bottom: 1px solid black;
@@ -184,7 +201,9 @@ display: flex !important;
   margin: 0 0 0;
   padding: 0 0 0 0;
 }
-
+.showmeta {
+  display: block;
+}
 /* Desktop: postmeta as sidebar */
 @media (min-width: 768px) {
   .page-layout {

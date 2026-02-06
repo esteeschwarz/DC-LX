@@ -22,7 +22,9 @@ localStorage.setItem('q_catValue', '');
     <div>SNC</div>
   </div>
   <div class="grid-body">
-    <div>{% if page.author %}<a href="{{ author.uri }}" target="_blank"> {{ page.author.name }}</a>{% endif %}</div>
+        <div class="grid-header"><span itemprop="name" class="pr20 icon-edit"></span></div>
+<div>{% if page.author %}<a href="{{ author.uri }}" target="_blank"> {{ page.author }}</a>{% endif %}</div>
+    <div class="grid-header"><span class="icon-calendar pr20"></span></div>
     <div>{% if page.date %}<time>{{ page.date | date: "%Y-%m-%d" }}</time>{% endif %}</div>
     <div>{% for category in page.categories %}<span>
       <a href="{{ site.baseurl }}/categories/">

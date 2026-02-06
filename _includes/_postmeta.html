@@ -4,11 +4,11 @@
 localStorage.setItem('q_catValue', '');
 </script>
 {% include _data_fetch.html %}
-{% if row %}
-<!-- <div class="postmeta--table">   -->
-    <!-- <h3>info</h3> -->
+{ ifrow } 
+<div class="postmeta--table">  
+    <h3>play</h3>
 
-<div class="panel radius">  
+<!-- <div class="panel radius">   -->
 
 <table class="postmeta">
 	<tr>
@@ -16,7 +16,7 @@ localStorage.setItem('q_catValue', '');
 	<th>key</th><th>value</th></tr></thead>
 	<tbody>
   <tr><td><span itemprop="name" class="pr20 icon-edit"></td><td>{% if page.author %}
-					<a href="{{ author.uri }}" target="_blank"> {{ page.author.name }}</a></span>
+					<a href="{{ author.uri }}" target="_blank"> {{ page.author }}</a></span>
 				</span>
 				{% endif %}</td></tr>
   <tr><td><span class="icon-calendar pr20"></span></td><td>
@@ -45,5 +45,5 @@ localStorage.setItem('q_catValue', '');
   <tr><td>SNC</td><td>16533</td></tr>
   <tr><td>issue</td><td>table from _postmeta.html, inserted include aside page.html</td></tr></tbody>
 </table>
-{% endif %}
+<!-- {% comment %}{% endif %}{% endcomment %} -->
 </div>
