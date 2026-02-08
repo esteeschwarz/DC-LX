@@ -1,0 +1,9 @@
+<div id="{{ include.target | escape }}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ '/assets/js/remote-md.js' | relative_url }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    loadRemoteMarkdown('{{ include.target | escape }}', '{{ include.url | escape }}');
+  });
+</script>
