@@ -18,11 +18,10 @@ permalink: "blog/archive/"
 			<dd class="accordion-navigation">
 			<a href="#panel{{ counter }}"><span class="iconfont"></span> {% if post.subheadline %}{{ post.subheadline }} › {% endif %}<strong>{{ post.title }}</strong></a>
 				<div id="panel{{ counter }}" class="content">
+          <a class="btn button small radius prev" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}">{{ site.data.language.read_more }}</a><br>
 					{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif post.teaser %}{{ post.teaser | strip_html | escape }}<br>{% endif %}
 <!-- from data -->
-					{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif row.subject %} / {{ row.about | strip_html | escape }}<br>{% endif %}
-					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"><strong>{{ site.data.language.read_more }}</strong></a><br><br>
-
+					{% if post.meta_description %}{{ post.meta_description | strip_html | escape }}{% elsif row.subject %} / {{ row.about | strip_html | escape }}{% endif %}
         </div>
 			</dd>
 			{% assign counter=counter | plus:1 %}
