@@ -116,7 +116,7 @@
     "href": "gemini.html#basic-descriptive",
     "title": "gemini paper",
     "section": "5.1 basic descriptive",
-    "text": "5.1 basic descriptive\nto first gather an insight, yet with simple descriptive stats comparing the raw frequencies of gpt-preferred lemmas in pre- and post-gemini onset we find that in the target corpus the occurences of these lemma increase, only by small amount (see Table 1) and hard to visualise (see Figure 3). if these findings become relevant, we’ll see in Section 5.3 where we evaluate the frequencies with a linear regression model.\n\n\n\n\nTable 1: GPT lemma frequencies (table) over target. (freq / vH)\n\n\n\n\n\n\ntarget\nfreq\n\n\n\n\nhuman\n0.3708\n\n\npost\n0.3890\n\n\nDIFF:\n0.0182\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: GPT lemma frequencies (boxplot) over target. (freq / vH)"
+    "text": "5.1 basic descriptive\nto first gather an insight, yet with simple descriptive stats comparing the raw frequencies of gpt-preferred lemmas in pre- and post-gemini onset we find that in the target corpus the occurences of these lemma increase, only by small amount (see Table 1) and hard to visualise (see Figure 3). wether these findings become relevant, we’ll see in Section 5.3 where we evaluate the frequencies with a linear regression model.\n\n\n\n\nTable 1: GPT lemma frequencies (table) over target. (freq / vH)\n\n\n\n\n\n\ntarget\nfreq\n\n\n\n\nhuman\n0.3708\n\n\npost\n0.3890\n\n\nDIFF:\n0.0182\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: GPT lemma frequencies (boxplot) over target. (freq / vH)"
   },
   {
     "objectID": "gemini.html#responsible-lemmata",
