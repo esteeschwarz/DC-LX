@@ -1,0 +1,154 @@
+# annotations
+
+2025-11-15
+
+
+
+
+
+
+
+
+
+
+
+
+
+## notes on
+
+paper: BSI (2025)
+
+<!--  -->
+
+| id | annotations |
+|---:|:---|
+| 1 | Wie KI unsere Sprache verändert – Eine empirische Studie |
+| 2 | Die Grenze zwischen Werkzeug und Gegenüber, zwischen Medium und Partner, wird dabei zunehmend durchlässig. Der Sprachgebrauch selbst wird zum Ort der Aushandlung: zwischen individueller Intention und algorithmischer Interpretation. Dieses neue Spannungsfeld erzeugt – so die zentrale These dieser Studie – neue Sprachgewohnheiten, veränderte semantische Ökonomien und möglicherweise sogar emergente Sprachformen, die sich jenseits etablierter kultureller und linguistischer Ordnungssysteme bewegen |
+| 3 | Es entsteht eine hybride Sprachpraxis, die Merkmale von Alltagssprache, Programmiersprache, ökonomischer Instruktion, metaphorischer Verdichtung und affektiver Andeutung kombiniert – ein Phänomen, das wir im weiteren Verlauf dieser Studie als Promptlinguistik bezeichnen werden. |
+| 4 | Promptlinguistik |
+| 5 | Nutzer beginnen zunehmend, in einer Art Promptlogik zu denken und zu sprechen. Diese Logik folgt nicht der klassischen Satzstruktur oder narrativen Kohärenz, sondern ist geprägt von zielgerichteter Instruktion, semantischer Kompression, elliptischen Formulierungen und reduzierter Kontextualisierung |
+| 6 | Der Kommunikationsstil verschiebt sich von einem syntaktisch vollständigen, sozialen Text hin zu einem effizienzorientierten, oft kryptisch anmutenden Sprachgebrauch |
+| 7 | Diese Entwicklung lässt sich als Kognitionskompression begreifen – ein psycholinguistischer Prozess, bei dem sprachliche Komplexität reduziert wird, um mentale Entlastung, Output-Beschleunigung und Interaktionsökonomie zu erreichen |
+| 8 | Prompten wird zur „sprechenden Skizze“ – nicht mehr zur Mitteilung, sondern zur Initialzündung algorithmischer Leistung. |
+| 9 | Prompting ist in vielen Fällen nicht mehr klar als Englisch, Deutsch oder Spanisch identifizierbar, sondern als transkultureller, maschinenadaptierter Idiolekt |
+| 10 | eröffnet zugleich neue Perspektiven auf eine mögliche Globalgrammatik der Mensch-MaschineInteraktion. |
+| 11 | zielt die vorliegende Studie darauf ab, den Wandel sprachlicher und kommunikativer Muster im Kontext der Nutzung generativer KI systematisch zu erfassen und differenziert zu analysieren |
+| 12 | Nutzergruppe von 112 Heavy AI Usern, die über einen Zeitraum von mindestens drei Monaten eine besonders intensive Interaktion mit generativen Sprachmodellen –vorrangig ChatGPT – aufwiesen |
+| 13 | Entsteht durch die Mensch-Maschine-Interaktion ein emergentes, transkulturelles „Meta-Idiolekt“– eine neue Ebene symbolischer Ordnung zwischen Natur-, Kunst- und Programmiersprachen? |
+| 14 | Ziel ist es, ein erstes kognitiv-semiotisches Mapping der neuen Sprachlandschaft im Zeitalter generativer KI zu entwerfen |
+| 15 | Menschen streben danach, bei gleichbleibender Ergebnisqualität möglichst wenig kognitive Energie aufzuwenden (Kahneman, 2011). |
+| 16 | Erwartungshaltung, dass die Maschine semantische Lücken „mitdenkt“ , also kontextuelle Implikaturen und Nuancen selbstständig ergänzt |
+| 17 | kompensatorisches semantisches Vertrauen |
+| 18 | Diese Sprachveränderung steht nicht im Gegensatz zur Intelligenz des Users, sondern ist Anpassung an das System: Sie basiert auf gelerntem Promptingverhalten, das durch Erfahrung mit dem Modell bestärkt wird. Die Sprache wird maschinen-kompatibel – nicht mehr menschlich-vollständig, sondern systemadäquat |
+| 19 | zeigen, dass bei intensiver Nutzung generativer KI die durchschnittliche Promptlänge signifikant abnimmt, während die semantische Dichte steigt |
+| 20 | kognitive Prozesse nicht auf das Gehirn beschränkt sind, sondern sich über Werkzeuge und Umweltstrukturen erweitern können |
+| 21 | Generative KI kann unter dieser Perspektive als externes semantisches Kognitionsorgan verstanden werden – ein „sprachlicher Cortex außerhalb des Körpers“ , der jedoch aktiv am Denkprozess teilnimmt. |
+| 22 | Verarbeitungsflüssigkeit (Processing Fluency). |
+| 23 | kognitive Bevorzugung von flüssiger Information wirkt sich nachweislich auf Urteile, Entscheidungen und Gedächtnisprozesse aus |
+| 24 | kein Zeichen sprachlicher Degradation, sondern Ausdruck einer anpassungsfähigen Sprachintelligenz, die erkennt, dass komplexe Ästhetik nicht belohnt wird –während funktionale Direktheit zu besseren Ergebnissen führt. |
+| 25 | sprachliche Verlagerung vom Ausdruck zum Effekt – das Ziel ist nicht die Formulierung als solche, sondern die Antizipation eines möglichst optimalen Outputs. Sprache wird zur strategischen Handlung, nicht mehr zur sozialen Äußerung. |
+| 26 | Komplexe Idiome, Metaphern oder poetische Strukturen aus spezifischen Sprachkulturen funktionieren weniger zuverlässig – während reduzierte, direktive, entkontextualisierte Sprache überdurchschnittlich effektiv ist |
+| 27 | Symbolische Interaktionismus als soziologische Theorieperspektive geht davon aus, dass soziale Wirklichkeit nicht objektiv vorliegt, sondern in sozialen Interaktionen hergestellt, verhandelt und symbolisch codiert wird |
+| 28 | Bedeutung nicht in Dingen selbst liegt, sondern im Prozess der Bedeutungszuweisung durch Akteure. |
+| 29 | Sprache |
+| 30 | Hier deutet sich eine bislang unerforschte Form an: Symbolische Interaktion ohne Intentionalität – aber mit Wirkung. Der symbolische Wert der Interaktion entsteht nicht aus dem Bewusstsein des Gegenübers, sondern aus der Wiedererkennbarkeit, Kontinuität und Reproduzierbarkeit interaktiver Schemata |
+| 31 | symbolischer Interaktionismus 2.0 |
+| 32 | In deutlicher Abgrenzung zur Vorstellung einer festgelegten „Bedeutung der Wörter“ entwickelte Wittgenstein das Konzept der Sprachspiele, das Sprache nicht als ein starres Abbild von Wirklichkeit, sondern als regelgeleitete, kontextabhängige Praxis begreift |
+| 33 | Sprache ist demnach kein System aus Zeichen und Referenten, sondern ein Handeln mit Zeichen, das sich an implizite Regeln knüpft, die situativ ausgehandelt werden |
+| 34 | neue Form von Sprachspiel |
+| 35 | Ein Prompt ist kein Satz im klassischen Sinne, sondern ein Sprechakt mit funktionaler Zielsetzung |
+| 36 | In der Interaktion mit generativer KI entwickelt sich zunehmend eine neue Form davon: der Prompt-Idiolekt |
+| 37 | Die Bedeutung eines Prompt-Satzes erschließt sich nicht aus dem Satz selbst, sondern aus der historischen Interaktionspraxis zwischen User und Maschine. Damit entsteht eine Art privater Sprachspielraum, der weder mit natürlicher Sprache noch mit Programmiersprache vollständig deckungsgleich ist |
+| 38 | Die Bedeutung eines Prompts liegt nicht im linguistischen Gehalt, sondern in seiner funktionalen Performanz im System |
+| 39 | Konzept des Cognitive Offloading |
+| 40 | Sprache wird zur Startfläche algorithmischer Leistung, nicht mehr zur detaillierten Abbildung des eigenen Denkens. |
+| 41 | Syntaktisch komplexe Strukturen, wie sie etwa durch Nebensätze, Konnektoren, explizite Subjekt-Prädikat-Relationen oder rhetorische Absicherungen gekennzeichnet sind, weichen zunehmend minimalistischen, kommandierenden oder referenzbasierten Sprachmustern |
+| 42 | inwiefern Nutzer das eigene Kommunikationsverhalten als funktional transformiert wahrnehmen – und ob sie bewusst oder unbewusst beginnen, Sprache im Sinne einer kondensierten Steuerungslogik zu verwenden |
+| 43 | Es bildet sich ein idiosynkratischer Sprachraum aus, ein Prompt-Idiolekt, der weder dem Standardregister der Alltagssprache noch dem Code der maschinellen Sprache vollständig entspricht – sondern etwas Drittes ist: ein hybridisiertes Steuerungssystem, das durch wechselseitige Eingewöhnung emergiert |
+| 44 | dialogischen Ko-Evolution mit einem System, das nicht intentional, aber responsiv ist. Die KI lernt nicht individuell, aber sie reagiert in berechenbarer Weise auf bestimmte semantische Muster – und der Mensch wiederum passt seine Sprache an diese Reaktionslogik an. Aus dieser Rückkopplung entsteht eine Form funktional stabilisierter Ausdrucksweisen, die zugleich persönlich markiert und maschinenadaptiert ist |
+| 45 | Für Außenstehende sind diese sprachlichen Gebilde oftmals schwer nachvollziehbar. Ihre Bedeutung erschließt sich nicht aus der Semantik selbst, sondern aus der Interaktionserfahrung, die sie rahmt |
+| 46 | Gebrauchsmuster, die nur im konkreten Sprachspiel ihren Sinn entfalten |
+| 47 | eine Art semantischer Gewöhnung, bei der sich Sprache zunehmend vom sozialen Code der zwischenmenschlichen Kommunikation entfernt. |
+| 48 | Empirisch ließe sich diese Annahme über die Analyse wiederkehrender Formulierungen, Prompt-Muster und sprachlicher Kürzel erfassen, ergänzt durch Drittbeurteilungen hinsichtlich Verständlichkeit und Kontextklarheit |
+| 49 | eröffnet damit den Zugang zu einem bislang kaum erforschten Phänomen: der semantischen Selbstorganisation zwischen Mensch und Maschine |
+| 50 | Processing Fluency |
+| 51 | das Erleben, Sprache nicht mehr im klassischen Sinne “bilden” zu müssen, sondern sie lediglich als Steuerbefehl zu setzen. |
+| 52 | Interaktion mit generativer KI bei Nutzer zu einem gesteigerten Erleben von Kommunikationsökonomie und subjektiver Sprachkontrolle führt |
+| 53 | Gefühl manifestiert sich nicht nur in der Präferenz für knappe Sprache, sondern auch in einer veränderten Erwartungshaltung gegenüber Kommunikation generell: Sie soll funktionieren, nicht verweilen; sie soll auslösen, nicht aushandeln; sie soll klar sein, nicht offen. |
+| 54 | psychologischen Zustand, in dem Sprache weniger als soziales Band denn als symbolisches Steuerungsinstrument verstanden wird – ein Zustand, der nicht nur die KI-Nutzung selbst, sondern auch darüber hinausgehende Kommunikationsgewohnheiten nachhaltig prägen kann. |
+| 55 | Ein deutschsprachiger Prompt wie „Mach es kürzer. Empathisch. Bulletpoints. “funktioniert in englischer, spanischer oder französischer Übersetzung nahezu gleich gut. Die operative Sprachebene ist nicht mehr idiomatisch, sondern algorithmisch organisiert. Damit entsteht eine Form der Sprache, die sich über nationale Konventionen hinwegsetzt – eine emergente Maschinensprache, die sich durch ihre technische Anschlussfähigkeit definiert, nicht durch ihren kulturellen Resonanzraum. |
+| 56 | handelt es sich um eine funktionale, transkulturelle Sprache zweiter Ordnung – eine Sprache, die nicht dem zwischenmenschlichen Verstehen, sondern der Optimierung maschineller Antwortlogik dient |
+| 57 | Ihre Grammatik ist eine Grammatik der Maschinenlesbarkeit, nicht der sozialen Sensibilität |
+| 58 | plausibel anzunehmen, dass Nutzer:innen – unabhängig von ihrer jeweiligen Muttersprache – ähnliche sprachliche Muster im Umgang mit der KI entwickeln. |
+| 59 | potenzielle Entwicklung einer neuen, nicht-natursprachlichen, aber humanadaptierten Sprachebene – eine Sprache, die nicht Ausdruck kultureller Differenz, sondern funktionale Antwort auf algorithmische Konvergenz ist |
+| 60 | Hypothese 4: |
+| 61 | verweist auf einen weitreichenden Transfermechanismus: KI-basierte Sprachgewohnheiten sind nicht an das Interface gebunden, sondern setzen sich als kulturelle Technik durch |
+| 62 | zugrundeliegende Hypothese lautet deshalb, dass Menschen, die generative KI intensiv nutzen, in anderen schriftsprachlichen Kontexten eine deutlich erhöhte Neigung zu sprachlicher Verkürzung, funktionaler Struktur und semantischer Direktheit zeigen |
+| 63 | Vielmehr handelt es sich um eine maschinenkompatible Sprachökonomie, die nicht auf Selbstverwirklichung, sondern auf funktionaler Output-Optimierung beruht |
+| 64 | Die Ausbildung individueller Prompt-Stile ist nicht lediglich ein Nebenprodukt intensiver Nutzung, sondern ein zentraler Marker einer neuen Mensch-Maschine-Kommunikation. |
+| 65 | Sprache wird nicht mehr in erster Linie als Werkzeug sozialer Kohäsion begriffen, sondern als Mittel semantischer Beherrschung. Aus dem Nutzer wird ein Prompt-Operator, aus dem Dialog eine Steuerstruktur |
+| 66 | Dabei entsteht eine Art semantische „Lowest Common Denominator“-Sprache: reduziert, anschlussfähig, funktional |
+| 67 | Bedeutung entsteht nicht mehr im sozialen Gebrauch einer bestimmten Sprachkultur, sondern in der Rekurrenz funktionaler Semantik, die durch maschinelles Lernen validiert wird. Die Maschine produziert keinen kulturellen Sinn – aber sie „belohnt“funktionale Sprache durch qualitativ hochwertige Reaktionen. |
+| 68 | signifikante stilistische Verlagerung hin zu Kürze, Direktheit und reduzierter Kontextualisierung – selbst in Konstellationen, in denen früher elaborierte oder höflichkeitsorientierte Sprache verwendet wurde. |
+| 69 | Was im Maschinenraum der Sprache gelernt wurde, wirkt in den sozialen Raum hinein – durch Nachahmung, durch Habituation, durch entlastende Wirksamkeit. |
+| 70 | Dabei wird Sprache nicht „verarmt“ , sondern umprogrammiert: weg von kultureller Einschreibung, hin zu systemischer Wirkung. |
+| 71 | kündigt sich ein möglicher kultureller Paradigmenwechsel an: das Verschwinden sprachlicher Höflichkeitsformeln, das Schrumpfen von narrativen Einschüben, das Verschwinden emotionaler Zwischentöne |
+| 72 | Es zählt nicht mehr, wie etwas gesagt wird, sondern dass es funktioniert. Der performative Charakter des Sozialen wird verdrängt durch eine neue Grammatik der Funktionssprache |
+| 73 | Our findings should be taken as an invitation to revisit the common assumption that LLMs respond best to lower perplexity prompts containing simple and frequent words and grammatical structures. We find numerous cases where LLMs do not learn from the data distribution in the way one would assume based on perplexity scores and linguistic intuition |
+| 74 | Overall, our findings contradict Gonen et al. (2022) and indicate that the success of high or low perplexity prompts is particular to any combination of dataset and model |
+| 75 | In general, we do not find that frequent synonyms lead to better performance |
+
+BSI: annotations
+
+## notes on
+
+paper: Yakura et al. (2025)
+
+<!--  -->
+
+<!-- !expr 'tblcap2' -->
+
+| id | annotations |
+|---:|:---|
+| 76 | yakura-llm |
+| 77 | We detect a measurable and abrupt increase in the use of words preferentially generated by ChatGPT—such as delve, comprehend, boast, swift, and meticulous—after its release. These findings suggest a scenario where machines, originally trained on human data and subsequently exhibiting their own cultural traits, can, in turn, measurably reshape human culture |
+| 78 | cultural feedback loop in which cultural traits circulate bidirectionally between humans and machines |
+| 79 | the erosion of linguistic and cultural diversity, and the risks of scalable manipulation |
+| 80 | the challenge is not if AI systems influence society, but how profoundly and in which direction. |
+| 81 | The outcome is a linguistic and behavioral profile that, while rooted in human language, exhibits systematic biases that distinguish it from organic human communication |
+| 82 | ChatGPT exhibits a persistent preference for normative and socially desirable communication patterns, such as politeness, neutrality, and conflict avoidance—traits that are conventionally emphasized in professional settings |
+| 83 | These tendencies reveal a self-consistent communicative style that differentiates ChatGPT’s language from spontaneous human interaction |
+| 84 | ChatGPT also demonstrates systematic lexical biases that reflect its training data and optimization process |
+| 85 | these linguistic shifts stem primarily from direct machine-to-human transmission—such as speakers reading from ChatGPT-co-authored materials—rather than reflecting an internalized cultural trait |
+| 86 | We then found a clear post-ChatGPT increase in the usage of delve—the word with the highest GPT score—rising in all categories except Sports |
+| 87 | This suggests a two-phase diffusion process, where the words preferred by the LLM first gains traction in fields with greater exposure to content influenced by ChatGPT, such as in academic environments, before filtering into more informal discourse |
+| 88 | These findings indicate that AI-driven linguistic shifts are not confined to structured, scripted communication. Instead, they suggest a plausible deeper process of linguistic adaptation, where certain words become embedded in everyday speech rather than simply being imitated. |
+| 89 | This linguistic influence is not confined to domains where LLM-generated text is integrated by early adopters—such as academia, science, and technology—but it is spreading to other domains, such as education and business. |
+| 90 | the mechanisms underlying this adoption remain unknown. This can be the result of either direct imitation \[51\], cognitive ease \[52\], or deeper integration into human thinking processes \[53\], or the combination of all three. |
+| 91 | The uptake of words preferred by LLMs in real-time human-human interactions suggests a deeper cognitive process at play—potentially an internalization of AI-driven linguistic patterns. |
+| 92 | this measurable shift marks a precedent: machines trained on human culture are now generating cultural traits that humans adopt, effectively closing a cultural feedback loop. |
+| 93 | these traits no longer remain confined to interactions between humans and AI systems but instead can diffuse further throughout human-human communication. |
+
+Yakura, LLM influence: annotations
+
+<div id="refs" class="references csl-bib-body hanging-indent"
+entry-spacing="0">
+
+<div id="ref-bsi_wie_2025" class="csl-entry">
+
+BSI, Brand Science Institute. 2025. “Wie KI Unsere Sprache Verändert –
+Eine Empirische Studie.”
+<https://www.bsi.ag/cases/104-case-studie-wie-ki-unsere-sprache-veraendert---eine-empirische-studie.html>.
+
+</div>
+
+<div id="ref-yakura_empirical_2025" class="csl-entry">
+
+Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, Ignacio Serna,
+Prateek Gupta, Ivan Soraperra, and Iyad Rahwan. 2025. “Empirical
+Evidence of Large Language Model’s Influence on Human Spoken
+Communication.” arXiv. <https://doi.org/10.48550/arXiv.2409.01754>.
+
+</div>
+
+</div>
