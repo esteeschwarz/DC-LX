@@ -133,23 +133,21 @@ paper: Yakura et al. (2025)
 
 Yakura, LLM influence: annotations
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
 <div id="ref-bsi_wie_2025" class="csl-entry">
 
-BSI, Brand Science Institute. 2025. “Wie KI Unsere Sprache Verändert –
-Eine Empirische Studie.”
+BSI, Brand Science Institute. 2025. *Wie KI Unsere Sprache Verändert –
+Eine Empirische Studie*.
 <https://www.bsi.ag/cases/104-case-studie-wie-ki-unsere-sprache-veraendert---eine-empirische-studie.html>.
 
 </div>
 
 <div id="ref-yakura_empirical_2025" class="csl-entry">
 
-Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, Ignacio Serna,
-Prateek Gupta, Ivan Soraperra, and Iyad Rahwan. 2025. “Empirical
-Evidence of Large Language Model’s Influence on Human Spoken
-Communication.” arXiv. <https://doi.org/10.48550/arXiv.2409.01754>.
+Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, et al. 2025.
+*Empirical Evidence of Large Language Model’s Influence on Human Spoken
+Communication*. arXiv. <https://doi.org/10.48550/arXiv.2409.01754>.
 
 </div>
 

@@ -1,6 +1,6 @@
 # gemini paper
 
-2026-04-04
+2026-06-12
 
 
 
@@ -261,8 +261,7 @@ the gpt score correlates with the target corpus frequency for lemma by
 
 # references
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
 <div id="ref-bates_fitting_2015" class="csl-entry">
 
@@ -275,14 +274,14 @@ Statistical Software* 67 (1): 1–48.
 
 <div id="ref-dip_dip_2026" class="csl-entry">
 
-DIP. 2026. “DIP - Bundestagsprotokolle.” Docs. *DIP - API*. Berlin.
+DIP. 2026. “DIP - Bundestagsprotokolle.” Docs. In *DIP - API*. Berlin.
 <https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content>.
 
 </div>
 
 <div id="ref-schwarz_this_2026" class="csl-entry">
 
-Schwarz, St. 2026. “This Papers Corpus Build & Evaluation Scripts.”
+Schwarz, St. 2026. “This Papers Corpus Build & Evaluation Scripts.” In
 *GitHub/Esteeschwarz*. Berlin.
 <https://github.com/esteeschwarz/SPUND-LX/blob/main/germanic/HA/>.
 
@@ -290,17 +289,16 @@ Schwarz, St. 2026. “This Papers Corpus Build & Evaluation Scripts.”
 
 <div id="ref-wikipedia_google_2026" class="csl-entry">
 
-Wikipedia, and Google. 2026. “Google Gemini.” *Wikipedia*.
+Wikipedia, and Google. 2026. “Google Gemini.” In *Wikipedia*.
 <https://de.wikipedia.org/w/index.php?title=Google_Gemini&oldid=263426206>.
 
 </div>
 
 <div id="ref-yakura_empirical_2025" class="csl-entry">
 
-Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, Ignacio Serna,
-Prateek Gupta, Ivan Soraperra, and Iyad Rahwan. 2025. “Empirical
-Evidence of Large Language Model’s Influence on Human Spoken
-Communication.” arXiv. <https://doi.org/10.48550/arXiv.2409.01754>.
+Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, et al. 2025.
+*Empirical Evidence of Large Language Model’s Influence on Human Spoken
+Communication*. arXiv. <https://doi.org/10.48550/arXiv.2409.01754>.
 
 </div>
 

@@ -1,6 +1,6 @@
 # xtitle/AI
 st. schwarz
-2026-04-04
+2026-06-12
 
 
 
@@ -191,17 +191,15 @@ reference based patterns.
 
 # References
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
 <div id="ref-abrami_german_2022" class="csl-entry">
 
 Abrami, Giuseppe, Mevlüt Bagci, Leon Hammerla, and Alexander Mehler.
 2022. “German Parliamentary Corpus (GerParCor).” In *Proceedings of the
 Thirteenth Language Resources and Evaluation Conference*, edited by
-Nicoletta Calzolari, Frédéric Béchet, Philippe Blache, Khalid Choukri,
-Christopher Cieri, Thierry Declerck, Sara Goggi, et al., 1900–1906.
-Marseille, France: European Language Resources Association.
+Nicoletta Calzolari, Frédéric Béchet, Philippe Blache, et al. European
+Language Resources Association.
 <https://aclanthology.org/2022.lrec-1.202/>.
 
 </div>
@@ -216,8 +214,8 @@ Talk Like ChatGPT.” *The Washington Post*, August.
 
 <div id="ref-noauthor_automatic_nodate" class="csl-entry">
 
-“Automatic Register Identification for the Open Web Using Multilingual
-Deep Learning.” n.d. Accessed January 3, 2026.
+*Automatic Register Identification for the Open Web Using Multilingual
+Deep Learning*. n.d. Accessed January 3, 2026.
 <https://arxiv.org/html/2406.19892v3>.
 
 </div>
@@ -233,22 +231,22 @@ Statistical Software* 67 (1): 1–48.
 
 <div id="ref-bsi_wie_2025" class="csl-entry">
 
-BSI, Brand Science Institute. 2025. “Wie KI Unsere Sprache Verändert –
-Eine Empirische Studie.”
+BSI, Brand Science Institute. 2025. *Wie KI Unsere Sprache Verändert –
+Eine Empirische Studie*.
 <https://www.bsi.ag/cases/104-case-studie-wie-ki-unsere-sprache-veraendert---eine-empirische-studie.html>.
 
 </div>
 
 <div id="ref-dip_dip_2026" class="csl-entry">
 
-DIP. 2026. “DIP - Bundestagsprotokolle.” Docs. *DIP - API*. Berlin.
+DIP. 2026. “DIP - Bundestagsprotokolle.” Docs. In *DIP - API*. Berlin.
 <https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content>.
 
 </div>
 
 <div id="ref-duke_upress_critical_2025" class="csl-entry">
 
-Duke UPress. 2025. “Critical AI.”
+Duke UPress. 2025. *Critical AI*.
 <https://www.dukeupress.edu/critical-ai>.
 
 </div>
@@ -256,15 +254,15 @@ Duke UPress. 2025. “Critical AI.”
 <div id="ref-flach_collostructions_2021" class="csl-entry">
 
 Flach, Susanne. 2021. “Collostructions: An R Implementation for the
-Family of Collostructional Methods. Package Version v.0.2.0.” *GitHub -
-Skeptikantin*. <https://github.com/skeptikantin>.
+Family of Collostructional Methods. Package Version v.0.2.0.” In
+*GitHub - Skeptikantin*. <https://github.com/skeptikantin>.
 
 </div>
 
 <div id="ref-fobbe_r_2026" class="csl-entry">
 
-Fobbe, Sean. 2026. “\[R\] Source Code Des ’Corpus Der Plenarprotokolle
-Des Deutschen Bundestages’ (CPP-BT-Source).” Zenodo.
+Fobbe, Sean. 2026. *\[R\] Source Code Des ’Corpus Der Plenarprotokolle
+Des Deutschen Bundestages’ (CPP-BT-Source)*. Zenodo.
 <https://doi.org/10.5281/zenodo.18177197>.
 
 </div>
@@ -280,7 +278,7 @@ Für Literaturwissenschaft Und Linguistik* 55 (2): 379–405.
 <div id="ref-kraus_studie_2025" class="csl-entry">
 
 Krauß, Patrick, and FAU U. 2025. “Studie Zeigt: KI Lernt Sprachregeln
-Beim Lesen.” *FAU*.
+Beim Lesen.” In *FAU*.
 <https://www.fau.de/2025/11/news/forschung/studie-ki-lernt-sprachregeln-beim-lesen/>.
 
 </div>
@@ -291,30 +289,30 @@ Leidinger, Alina, Robert van Rooij, and Ekaterina Shutova. 2023. “The
 Language of Prompting: What Linguistic Properties Make a Prompt
 Successful?” In *Findings of the Association for Computational
 Linguistics: EMNLP 2023*, edited by Houda Bouamor, Juan Pino, and Kalika
-Bali, 9210–32. Singapore: Association for Computational Linguistics.
+Bali. Association for Computational Linguistics.
 <https://doi.org/10.18653/v1/2023.findings-emnlp.618>.
 
 </div>
 
 <div id="ref-milicka_ai_2025" class="csl-entry">
 
-Milička, Jiří, Anna Marklová, and Václav Cvrček. 2025. “AI Brown and AI
+Milička, Jiří, Anna Marklová, and Václav Cvrček. 2025. *AI Brown and AI
 Koditex: LLM-Generated Corpora Comparable to Traditional Corpora of
-English and Czech Texts.” <https://doi.org/10.48550/arxiv.2509.22996>.
+English and Czech Texts*. <https://doi.org/10.48550/arxiv.2509.22996>.
 
 </div>
 
 <div id="ref-ramirez_chatgpt_2025" class="csl-entry">
 
 Ramirez, Vanessa Bates. 2025. “ChatGPT Is Changing the Words We Use in
-Conversation.” *Scientific American*.
+Conversation.” In *Scientific American*.
 <https://www.scientificamerican.com/article/chatgpt-is-changing-the-words-we-use-in-conversation/>.
 
 </div>
 
 <div id="ref-ror_ror_2025" class="csl-entry">
 
-ROR, Research Organization Registry. 2025. “ROR Data.” Zenodo.
+ROR, Research Organization Registry. 2025. *ROR Data*. Zenodo.
 <https://doi.org/10.5281/zenodo.17953395>.
 
 </div>
@@ -330,7 +328,7 @@ Language* 2024 (3): 61–86. <https://hal.science/hal-04999057>.
 
 <div id="ref-schwarz_this_2026" class="csl-entry">
 
-Schwarz, St. 2026. “This Papers Corpus Build & Evaluation Scripts.”
+Schwarz, St. 2026. “This Papers Corpus Build & Evaluation Scripts.” In
 *GitHub/Esteeschwarz*. Berlin.
 <https://github.com/esteeschwarz/SPUND-LX/blob/main/germanic/HA/>.
 
@@ -340,21 +338,21 @@ Schwarz, St. 2026. “This Papers Corpus Build & Evaluation Scripts.”
 
 Shrivastava, Disha, Hugo Larochelle, and Daniel Tarlow. 2023.
 “Repository-Level Prompt Generation for Large Language Models of Code.”
-In *Proceedings of the 40th International Conference on Machine
-Learning*, 202:31693–715. ICML’23. Honolulu, Hawaii, USA: JMLR.org.
+*Proceedings of the 40th International Conference on Machine Learning*
+(Honolulu, Hawaii, USA), ICML’23, vol. 202 (July): 31693–715.
 
 </div>
 
 <div id="ref-vechta_u_beyond_2024" class="csl-entry">
 
-Vechta U. 2024. “Beyond Prompting.”
+Vechta U. 2024. *Beyond Prompting*.
 <https://www.uni-vechta.de/beyondprompting/news/details/projekt-beyond-prompting-erfolgreiche-drittmitteleinwerbung>.
 
 </div>
 
 <div id="ref-wikipedia_google_2026" class="csl-entry">
 
-Wikipedia, and Google. 2026. “Google Gemini.” *Wikipedia*.
+Wikipedia, and Google. 2026. “Google Gemini.” In *Wikipedia*.
 <https://de.wikipedia.org/w/index.php?title=Google_Gemini&oldid=263426206>.
 
 </div>
@@ -371,10 +369,9 @@ Translation* 8 (5): 102–10.
 
 <div id="ref-yakura_empirical_2025" class="csl-entry">
 
-Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, Ignacio Serna,
-Prateek Gupta, Ivan Soraperra, and Iyad Rahwan. 2025. “Empirical
-Evidence of Large Language Model’s Influence on Human Spoken
-Communication.” arXiv. <https://doi.org/10.48550/arXiv.2409.01754>.
+Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, et al. 2025.
+*Empirical Evidence of Large Language Model’s Influence on Human Spoken
+Communication*. arXiv. <https://doi.org/10.48550/arXiv.2409.01754>.
 
 </div>
 

@@ -87,8 +87,7 @@ literature, which may be easier accessible.
 
 # References
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
 <div id="ref-arhammar_beitrage_2000" class="csl-entry">
 
@@ -115,21 +114,22 @@ Journal of Linguistics*.
 
 Gorter, Durk. 1994. “A New Sociolinguistic Survey of the Frisian
 Language Situation.” *Journal of Multilingual and Multicultural
-Development*. <https://doi.org/10.1080/03096564.1994.11784030>.
+Development*, ahead of print.
+<https://doi.org/10.1080/03096564.1994.11784030>.
 
 </div>
 
 <div id="ref-heeringa_dialect_2001" class="csl-entry">
 
 Heeringa, Wilbert, and John Nerbonne. 2001. “Dialect Distance and
-Speaker Perception: The Case of Frisian.” In *Computer Methods in
+Speaker Perception: The Case of Frisian.” *Computer Methods in
 Dialectometry*.
 
 </div>
 
 <div id="ref-heyen_digitale_2021" class="csl-entry">
 
-Heyen, H. 2021. “Digitale Nordfriesische Kommunikation. \#Hokerbeest?”
+Heyen, H. 2021. *Digitale Nordfriesische Kommunikation. \#Hokerbeest?*
 
 </div>
 
@@ -172,15 +172,15 @@ in Urban German.” *Zeitschrift Für Dialektologie Und Linguistik*.
 <div id="ref-niebuhr_pointed_2015" class="csl-entry">
 
 Niebuhr, Oliver, and Jarich Hoekstra. 2015. “Pointed and Plateau-Shaped
-Pitch Accents in North Frisian (Fering).” *Linguistische Berichte*.
-<https://doi.org/10.1515/lp-2015-0013>.
+Pitch Accents in North Frisian (Fering).” *Linguistische Berichte*,
+ahead of print. <https://doi.org/10.1515/lp-2015-0013>.
 
 </div>
 
 <div id="ref-sefaria_judges_2025" class="csl-entry">
 
-Sefaria. 2025. “Judges 12.6. Sefaria: A Living Library of Jewish Texts
-Online.”
+Sefaria. 2025. *Judges 12.6. Sefaria: A Living Library of Jewish Texts
+Online*.
 <https://www.sefaria.org/Judges.12.6?lang=bi&with=all&lang2=en>.
 
 </div>
@@ -195,15 +195,15 @@ Trudgill, Peter. 2006. “Shibboleths and Social Meaning.” In
 <div id="ref-voeten_listener_2024" class="csl-entry">
 
 Voeten, Chris, Anne-Fleur Pinget, Markus Kingma, Nora Stefan, and Hans
-Van de Velde. 2024. “Listener Factors in Accent Recognition: A
-Perceptual-Dialectology Study of Frisian.”
+Van de Velde. 2024. *Listener Factors in Accent Recognition: A
+Perceptual-Dialectology Study of Frisian*.
 
 </div>
 
 <div id="ref-wolf_etymologischer_2021" class="csl-entry">
 
 Wolf, Uljana. 2021. *Etymologischer Gossip: Essays Und Reden / Uljana
-Wolf.* 1. Auflage. Kookbooks Reihe Essay 7. Berlin: kookbooks.
+Wolf.* 1. Auflage. Kookbooks Reihe Essay 7. Kookbooks.
 
 </div>
 

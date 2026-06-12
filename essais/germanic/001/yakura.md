@@ -1,6 +1,6 @@
 # yakura replique
 esteeschwarz
-2026-04-04
+2026-06-12
 
 
 
@@ -67,29 +67,27 @@ gemini keywords.
 
 > please preview/follow paper [here](gemini.html).
 
-<div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
+<div id="refs" class="references csl-bib-body hanging-indent">
 
 <div id="ref-dip_dip_2026" class="csl-entry">
 
-DIP. 2026. “DIP - Bundestagsprotokolle.” Docs. *DIP - API*. Berlin.
+DIP. 2026. “DIP - Bundestagsprotokolle.” Docs. In *DIP - API*. Berlin.
 <https://dip.bundestag.de/%C3%BCber-dip/hilfe/api#content>.
 
 </div>
 
 <div id="ref-ror_ror_2025" class="csl-entry">
 
-ROR, Research Organization Registry. 2025. “ROR Data.” Zenodo.
+ROR, Research Organization Registry. 2025. *ROR Data*. Zenodo.
 <https://doi.org/10.5281/zenodo.17953395>.
 
 </div>
 
 <div id="ref-yakura_empirical_2025" class="csl-entry">
 
-Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, Ignacio Serna,
-Prateek Gupta, Ivan Soraperra, and Iyad Rahwan. 2025. “Empirical
-Evidence of Large Language Model’s Influence on Human Spoken
-Communication.” arXiv. <https://doi.org/10.48550/arXiv.2409.01754>.
+Yakura, Hiromu, Ezequiel Lopez-Lopez, Levin Brinkmann, et al. 2025.
+*Empirical Evidence of Large Language Model’s Influence on Human Spoken
+Communication*. arXiv. <https://doi.org/10.48550/arXiv.2409.01754>.
 
 </div>
 
