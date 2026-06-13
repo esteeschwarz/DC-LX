@@ -1,6 +1,6 @@
 # 12293.wolf gossip satz für satz
 esteeschwarz
-2026-06-12
+2026-06-13
 
 
 
@@ -33,7 +33,7 @@ tutor: chiara liso
 term: SS22  
 &#10;-----
 authored: st. schwarz  
-snc: #16127::2026-06-12 17:58:50.563206   
+snc: #16127::2026-06-13 09:18:00.986287   
 [<<< back to paper <<<](https://esteeschwarz.github.io/DC-LX/essais/germanic/001/gemini.html)
 ::: -->
 
